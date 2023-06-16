@@ -1,0 +1,5 @@
+
+User-agent:*
+Disallow:
+
+Sitemap: https://oscc-ysyx-web-project.github.io/ysyx-website/sitemap.xml
