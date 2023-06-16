@@ -1,0 +1,9 @@
+// place your custom styles here
+.theme-hope-content:not(.custom) {
+    max-width: var(--home-page-width);
+    padding: 0px;
+}
+.vp-navbar .vp-nav-links,
+.dropdown-wrapper .nav-link {
+    font-size: 0.9rem;
+}
