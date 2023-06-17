@@ -6,8 +6,8 @@
     <link>https://oscc-ysyx-web-project.github.io/ysyx-website/</link>
     <description>一生一芯的官方网站</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 16 Jun 2023 11:48:04 GMT</pubDate>
-    <lastBuildDate>Fri, 16 Jun 2023 11:48:04 GMT</lastBuildDate>
+    <pubDate>Sat, 17 Jun 2023 06:17:13 GMT</pubDate>
+    <lastBuildDate>Sat, 17 Jun 2023 06:17:13 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>Copyright by Miao Yuyang</copyright>
@@ -16,6 +16,44 @@
       <url>https://oscc-ysyx-web-project.github.io/ysyx-website/logo.png</url>
       <link>https://oscc-ysyx-web-project.github.io/ysyx-website/</link>
     </image>
+    <item>
+      <title></title>
+      <link>https://oscc-ysyx-web-project.github.io/ysyx-website/board/official/</link>
+      <guid>https://oscc-ysyx-web-project.github.io/ysyx-website/board/official/</guid>
+      <source url="https://oscc-ysyx-web-project.github.io/ysyx-website/rss.xml"></source>
+      <description>板卡简介 板卡型号 .page-title { display: none; }</description>
+      <author>myyerrol@126.com (Miao Yuyang)</author>
+      <pubDate>Sat, 17 Jun 2023 06:15:09 GMT</pubDate>
+      <content:encoded><![CDATA[<h2> 板卡简介</h2>
+<h2> 板卡型号</h2>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>内容1</title>
+      <link>https://oscc-ysyx-web-project.github.io/ysyx-website/board/official/boards/board-1/</link>
+      <guid>https://oscc-ysyx-web-project.github.io/ysyx-website/board/official/boards/board-1/</guid>
+      <source url="https://oscc-ysyx-web-project.github.io/ysyx-website/rss.xml">内容1</source>
+      <description>二级标题 三级标题 四级标题</description>
+      <author>myyerrol@126.com (Miao Yuyang)</author>
+      <pubDate>Sat, 17 Jun 2023 06:15:09 GMT</pubDate>
+      <content:encoded><![CDATA[<h2> 二级标题</h2>
+<h3> 三级标题</h3>
+<h4> 四级标题</h4>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>内容2</title>
+      <link>https://oscc-ysyx-web-project.github.io/ysyx-website/board/official/boards/board-2/</link>
+      <guid>https://oscc-ysyx-web-project.github.io/ysyx-website/board/official/boards/board-2/</guid>
+      <source url="https://oscc-ysyx-web-project.github.io/ysyx-website/rss.xml">内容2</source>
+      <description>二级标题 三级标题 四级标题</description>
+      <author>myyerrol@126.com (Miao Yuyang)</author>
+      <pubDate>Sat, 17 Jun 2023 06:15:09 GMT</pubDate>
+      <content:encoded><![CDATA[<h2> 二级标题</h2>
+<h3> 三级标题</h3>
+<h4> 四级标题</h4>
+]]></content:encoded>
+    </item>
     <item>
       <title>学生成果</title>
       <link>https://oscc-ysyx-web-project.github.io/ysyx-website/achieve/achieve-student.html</link>

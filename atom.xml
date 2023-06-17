@@ -11,7 +11,7 @@
   <icon>https://oscc-ysyx-web-project.github.io/ysyx-website/logo.png</icon>
   <logo>https://oscc-ysyx-web-project.github.io/ysyx-website/logo.png</logo>
   <rights>Copyright by Miao Yuyang</rights>
-  <updated>2023-06-16T11:48:04.310Z</updated>
+  <updated>2023-06-17T06:17:13.241Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://oscc-ysyx-web-project.github.io/ysyx-website/atom.xml"/>
   <link rel="alternate" href="https://oscc-ysyx-web-project.github.io/ysyx-website/"/>
@@ -20,6 +20,82 @@
     <email>myyerrol@126.com</email>
     <uri>https://myyerrol.github.io</uri>
   </contributor>
+  <entry>
+    <title type="text"></title>
+    <id>https://oscc-ysyx-web-project.github.io/ysyx-website/board/official/</id>
+    <link href="https://oscc-ysyx-web-project.github.io/ysyx-website/board/official/"/>
+    <updated>2023-06-17T06:15:09.000Z</updated>
+    <summary type="html"><![CDATA[<h2> 板卡简介</h2>
+<h2> 板卡型号</h2>
+]]></summary>
+    <content type="html"><![CDATA[<h2> 板卡简介</h2>
+<h2> 板卡型号</h2>
+]]></content>
+    <author>
+      <name>Miao Yuyang</name>
+      <email>myyerrol@126.com</email>
+      <uri>https://myyerrol.github.io</uri>
+    </author>
+    <contributor>
+      <name>Miao Yuyang</name>
+      <email>myyerrol@126.com</email>
+      <uri>https://myyerrol.github.io</uri>
+    </contributor>
+    <published>2023-06-17T06:15:09.000Z</published>
+    <rights>Copyright by Miao Yuyang</rights>
+  </entry>
+  <entry>
+    <title type="text">内容1</title>
+    <id>https://oscc-ysyx-web-project.github.io/ysyx-website/board/official/boards/board-1/</id>
+    <link href="https://oscc-ysyx-web-project.github.io/ysyx-website/board/official/boards/board-1/"/>
+    <updated>2023-06-17T06:15:09.000Z</updated>
+    <summary type="html"><![CDATA[<h2> 二级标题</h2>
+<h3> 三级标题</h3>
+<h4> 四级标题</h4>
+]]></summary>
+    <content type="html"><![CDATA[<h2> 二级标题</h2>
+<h3> 三级标题</h3>
+<h4> 四级标题</h4>
+]]></content>
+    <author>
+      <name>Miao Yuyang</name>
+      <email>myyerrol@126.com</email>
+      <uri>https://myyerrol.github.io</uri>
+    </author>
+    <contributor>
+      <name>Miao Yuyang</name>
+      <email>myyerrol@126.com</email>
+      <uri>https://myyerrol.github.io</uri>
+    </contributor>
+    <published>2023-06-17T06:15:09.000Z</published>
+    <rights>Copyright by Miao Yuyang</rights>
+  </entry>
+  <entry>
+    <title type="text">内容2</title>
+    <id>https://oscc-ysyx-web-project.github.io/ysyx-website/board/official/boards/board-2/</id>
+    <link href="https://oscc-ysyx-web-project.github.io/ysyx-website/board/official/boards/board-2/"/>
+    <updated>2023-06-17T06:15:09.000Z</updated>
+    <summary type="html"><![CDATA[<h2> 二级标题</h2>
+<h3> 三级标题</h3>
+<h4> 四级标题</h4>
+]]></summary>
+    <content type="html"><![CDATA[<h2> 二级标题</h2>
+<h3> 三级标题</h3>
+<h4> 四级标题</h4>
+]]></content>
+    <author>
+      <name>Miao Yuyang</name>
+      <email>myyerrol@126.com</email>
+      <uri>https://myyerrol.github.io</uri>
+    </author>
+    <contributor>
+      <name>Miao Yuyang</name>
+      <email>myyerrol@126.com</email>
+      <uri>https://myyerrol.github.io</uri>
+    </contributor>
+    <published>2023-06-17T06:15:09.000Z</published>
+    <rights>Copyright by Miao Yuyang</rights>
+  </entry>
   <entry>
     <title type="text">学生成果</title>
     <id>https://oscc-ysyx-web-project.github.io/ysyx-website/achieve/achieve-student.html</id>
