@@ -43,10 +43,13 @@ export default hopeTheme({
     lastUpdated: true,
     contributors: true,
     editLink: false,
+    docsRepo: "repo",
     docsBranch: "main",
     docsDir: "src/",
     // 页脚
+    footer: "GPL协议 | 版权所有 © 2023-present 一生一芯Web团队",
     // copyright: false,
+    displayFooter: true,
     // 杂项
     toc: true,
 
@@ -66,10 +69,7 @@ export default hopeTheme({
             sidebar: zhSidebar,
             metaLocales: {
                 editLink: "在 GitHub 上编辑此页",
-            },
-            footer: "GPL协议 | 版权所有 © 2023-present 一生一芯Web团队",
-            // copyright: false,
-            displayFooter: true
+            }
         }
     },
 
@@ -77,36 +77,43 @@ export default hopeTheme({
     plugins: {
         blog: false,
         comment: false,
-        copyright: false,
+        copyright: {
+            author: "myyerrol",
+            license: "GPL-3.0",
+            triggerWords: 1,
+            global: true,
+            disableCopy: false,
+            disableSelection: false
+        },
         feed: {
-            rss: true
+            rss: true,
+            rssOutputFilename: "rss.xml"
         },
         mdEnhance: {
-            // 图片
+            gfm: true,
+            container: true,
+            linkCheck: "dev",
+            vPre: true,
+            tabs: true,
+            codetabs: true,
+            align: true,
+            attrs: true,
+            sup: true,
+            sub: true,
+            footnote: true,
+            mark: true,
             figure: true,
             imgLazyload: true,
             imgMark: true,
             imgSize: true,
-
-            align: true,
-            attrs: true,
-            chart: true,
-            codetabs: true,
-            container: true,
-            demo: true,
-            echarts: true,
-            flowchart: true,
-            gfm: true,
+            tasklist: true,
             include: true,
             katex: true,
-            mark: true,
+            mathjax: true,
+            chart: true,
+            echarts: true,
+            flowchart: true,
             mermaid: true,
-            playground: {
-                presets: ["ts", "vue"],
-            },
-            presentation: {
-                plugins: ["highlight", "math", "search", "notes", "zoom"]
-            },
             stylize: [{
                 matcher: "Recommended",
                 replacer: ({ tag }) => {
@@ -118,12 +125,17 @@ export default hopeTheme({
                         };
                 }
             }],
-            sub: true,
-            sup: true,
-            tabs: true,
-            vPre: true,
-            vuePlayground: true
+            playground: {
+                presets: ["ts", "vue"],
+            },
+            vuePlayground: true,
+            demo: true,
+            presentation: {
+                plugins: ["highlight", "math", "search", "notes", "zoom"]
+            },
+            delay: 800
         },
+        pwa: false,
         components: {
             components: ["AudioPlayer",
                          "Badge",
@@ -133,6 +145,14 @@ export default hopeTheme({
                          "StackBlitz",
                          "VideoPlayer",
                          "YouTube"]
-        }
+        },
+        git: true,
+        prismjs: true,
+        photoSwipe: true,
+        readingTime: {
+            wordPerMinute: 300
+        },
+        seo: true,
+        sitemap: true
     }
 });
