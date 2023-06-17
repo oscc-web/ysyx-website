@@ -11,15 +11,341 @@
   <icon>https://oscc-ysyx-web-project.github.io/ysyx-website/logo.png</icon>
   <logo>https://oscc-ysyx-web-project.github.io/ysyx-website/logo.png</logo>
   <rights>Copyright by Miao Yuyang</rights>
-  <updated>2023-06-17T07:59:15.541Z</updated>
+  <updated>2023-06-17T11:51:11.525Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://oscc-ysyx-web-project.github.io/ysyx-website/atom.xml"/>
   <link rel="alternate" href="https://oscc-ysyx-web-project.github.io/ysyx-website/"/>
+  <category term="项目介绍"/>
   <contributor>
     <name>Miao Yuyang</name>
     <email>myyerrol@126.com</email>
     <uri>https://myyerrol.github.io</uri>
   </contributor>
+  <entry>
+    <title type="text">团队招聘</title>
+    <id>https://oscc-ysyx-web-project.github.io/ysyx-website/job/job-team/</id>
+    <link href="https://oscc-ysyx-web-project.github.io/ysyx-website/job/job-team/"/>
+    <updated>2023-06-17T11:49:14.000Z</updated>
+    <summary type="html"><![CDATA[<h2> 团队简介</h2>
+<p>开源芯片社区（OSCC）由中科院计算所，北京开源芯片研究院，深圳鹏程实验室等共同打造，致力于成为国内外开源处理器芯片领域的拓荒者和领导者。面向指令集架构开源免费的发展趋势，不断推进开源设计验证平台与处理器芯片底层相关技术的演化和革新，打通从处理器芯片前端设计到SoC设计再到后端版图设计的开发全流程，并与广大爱好者和高校企业携手建设覆盖基础理论和创新应用的开源软硬件生态系统。此外，作为处理器芯片人才培养的重要基地，开源芯片社区下属的"一生一芯"计划将持续优化教学培养体系，让更多感兴趣的学生有机会能够带着自己设计的芯片毕业，将有利推动处理器芯片在国内的普及和发展。</p>]]></summary>
+    <content type="html"><![CDATA[<h2> 团队简介</h2>
+<p>开源芯片社区（OSCC）由中科院计算所，北京开源芯片研究院，深圳鹏程实验室等共同打造，致力于成为国内外开源处理器芯片领域的拓荒者和领导者。面向指令集架构开源免费的发展趋势，不断推进开源设计验证平台与处理器芯片底层相关技术的演化和革新，打通从处理器芯片前端设计到SoC设计再到后端版图设计的开发全流程，并与广大爱好者和高校企业携手建设覆盖基础理论和创新应用的开源软硬件生态系统。此外，作为处理器芯片人才培养的重要基地，开源芯片社区下属的"一生一芯"计划将持续优化教学培养体系，让更多感兴趣的学生有机会能够带着自己设计的芯片毕业，将有利推动处理器芯片在国内的普及和发展。</p>
+<h2> 核心理念</h2>
+<p>我们始终认为<strong>重大领域的突破靠的不仅是技术的积累，更重要的是始终保持一颗对技术的热爱之心</strong>。如果你对处理器芯片相关技术非常感兴趣，有着不达目的绝不善罢甘休的决心和意志，且同时愿意和他人分享自己的创新想法和成果，那你就是我们一直在努力寻找的人。<strong>我们不看重你的学校是985或211还是双非，也不看你的所学专业和综测排名，只要你的技术水平和发展潜力能通过我们设立的选拔机制，就能获得与国内优秀学生一起追逐梦想的宝贵机会</strong>。在这里你收获的内容包括但不限于：大大拓宽自己的学术视野，探索更多前沿的处理器芯片技术；有机会与团队成员一起实现某个有意思的想法；锤炼面对困难时的心理素质以及独立解决问题的能力。</p>
+<h2> 招聘内容</h2>
+<ul>
+<li><a href="./job-submit">申请方法</a></li>
+<li><a href="./job-objects">实习岗位</a></li>
+</ul>
+<h2> 注意事项 ❤️❤</h2>
+<ul>
+<li>我们长期开放实习生岗位，欢迎加入我们。</li>
+<li>此页面用于共享和跟踪“一生一芯”项目组的实习和招聘信息，会保持长期更新。</li>
+</ul>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content>
+    <author>
+      <name>Miao Yuyang</name>
+      <email>myyerrol@126.com</email>
+      <uri>https://myyerrol.github.io</uri>
+    </author>
+    <contributor>
+      <name>Miao Yuyang</name>
+      <email>myyerrol@126.com</email>
+      <uri>https://myyerrol.github.io</uri>
+    </contributor>
+    <published>2023-06-17T11:49:14.000Z</published>
+    <rights>Copyright by Miao Yuyang</rights>
+  </entry>
+  <entry>
+    <title type="text">实习岗位</title>
+    <id>https://oscc-ysyx-web-project.github.io/ysyx-website/job/job-team/job-objects.html</id>
+    <link href="https://oscc-ysyx-web-project.github.io/ysyx-website/job/job-team/job-objects.html"/>
+    <updated>2023-06-17T11:49:14.000Z</updated>
+    <summary type="html"><![CDATA[<h2> 01 高性能开源模拟器设计实习生</h2>
+<p><strong>工作内容</strong></p>
+<ul>
+<li>为<a href="https://github.com/OSCPU/NutShell" target="_blank" rel="noopener noreferrer">Nutshell处理器</a>开发时钟周期精确处理器模型，撰写开发文档，参与果壳后续维护，编写和重构一生一芯TLB、MMU、BPU等相关部件讲义。</li>
+<li>为<a href="https://github.com/chipsalliance/rocket-chip" target="_blank" rel="noopener noreferrer">Boom处理器</a>开发时钟周期精确处理器模型，撰写开发文档，编写一生一芯乱序处理器讲义。</li>
+<li>为玄铁系列处理器开发时钟周期精确处理器模型，将工业级代码设计思想写入一生一芯讲义。</li>
+</ul>]]></summary>
+    <content type="html"><![CDATA[<h2> 01 高性能开源模拟器设计实习生</h2>
+<p><strong>工作内容</strong></p>
+<ul>
+<li>为<a href="https://github.com/OSCPU/NutShell" target="_blank" rel="noopener noreferrer">Nutshell处理器</a>开发时钟周期精确处理器模型，撰写开发文档，参与果壳后续维护，编写和重构一生一芯TLB、MMU、BPU等相关部件讲义。</li>
+<li>为<a href="https://github.com/chipsalliance/rocket-chip" target="_blank" rel="noopener noreferrer">Boom处理器</a>开发时钟周期精确处理器模型，撰写开发文档，编写一生一芯乱序处理器讲义。</li>
+<li>为玄铁系列处理器开发时钟周期精确处理器模型，将工业级代码设计思想写入一生一芯讲义。</li>
+</ul>
+<p><strong>投递要求</strong></p>
+<ul>
+<li>CS/EE专业在读本科或研究生（含博士/硕士），可以在线实习，待遇面议。</li>
+<li>具有积极主动的工作态度，具备较强的学习能力，良好的分析能力、解决问题能力、沟通能力和团队协作能力。</li>
+<li>熟悉CPU微架构、gem5模拟器、SystemC的同学优先。</li>
+<li>参与过“一生一芯”计划且完成A线的同学优先。</li>
+<li>熟悉modern c++且具有面向对象编程思想，掌握c++相关调试技巧。</li>
+<li>能熟练看波形对RTL代码进行debug并熟练使用进行git协作开发，有良好的代码注释习惯。</li>
+<li>实习期至少12个月以上。</li>
+</ul>
+<h2> 02 开源处理器核移植实习生</h2>
+<p><strong>工作内容</strong></p>
+<ul>
+<li>阅读开源处理器核源代码，如BOOM，Rocket-chip等现有开源处理器，阅读过程中添加注释。</li>
+<li>一生一芯SoC片上总线协议是AXI4-Full，需要把开源核都改成AXI4总线。</li>
+<li>接入一生一芯iverilog-soc，在仿真环境中，通过所有测试集。</li>
+<li>撰写相关文档，要求内容详实，来介绍将开源处理器核接入一生一芯SoC，学习和解决问题的过程。</li>
+<li>配合后端老师完成VCS仿真和DC综合，根据返回报告，清除相应warning和bug。</li>
+</ul>
+<p><strong>投递要求</strong></p>
+<ul>
+<li>在读本科或研究生（含博士/硕士），支持在线实习，待遇面议。</li>
+<li>具有积极主动的工作态度，具备较强的学习能力，良好的分析能力、解决问题能力、沟通能力和团队协作能力。</li>
+<li>熟悉AXI4-Full和AXI4-Lite总线协议。</li>
+<li>熟悉Verilog，System Verilog，Chisel，Spinal等多种语言者优先。</li>
+<li>熟悉CPU微架构，熟悉计算机体系结构者优先。</li>
+<li>参与过"一生一芯"计划者优先。</li>
+</ul>
+<h2> 03 开源IP设计实习生（数字方向）</h2>
+<p><strong>工作内容</strong></p>
+<ul>
+<li>使用Systemverilog的可综合语法实现接口IP的设计，开发和维护工作（VGA，PS/2，I2C，I2S，SPI，UART等）。</li>
+<li>根据SoC架构设计需求，实现高性能IP的设计和开发工作（SDRAM，DDR1，DDR2，USB HOST，AMBA片上互联网络等）。</li>
+<li>搭建简易Testbench对IP进行基础功能验证。</li>
+<li>使用AXI/APB作为IP的总线接口，接入一生一芯的SoC。</li>
+</ul>
+<p><strong>投递要求</strong></p>
+<ul>
+<li>在读本科或研究生（含博士/硕士），支持在线实习，待遇面议。</li>
+<li>具有积极主动的工作态度，具备较强的学习能力，良好的分析能力、解决问题能力、沟通能力和团队协作能力。</li>
+<li>熟悉AXI4-Full和APB4协议。</li>
+<li>有IP开发经验者优先，熟悉计算机体系结构者优先。</li>
+<li>会使用UVM搭建通用验证平台者优先。</li>
+<li>参加过"一生一芯"计划者优先。</li>
+</ul>
+<h2> 04 IP/SoC验证实习生（数字方向）</h2>
+<p><strong>工作内容</strong></p>
+<ul>
+<li>参与一生一芯项目组开源IP的验证，根据规格进行功能分解，搭建验证环境并编写测试用例。</li>
+<li>根据SoC架构设计需求，参与制定SoC完整验证方案，协助架构和后端团队开展SoC功能和性能分析。</li>
+<li>参与搭建IP/SoC规范化验证流程，并完善相关技术文档。</li>
+<li>跟踪国内外新的IC验证技术和开源框架发展，尝试使用Cocotb探索一生一芯SoC开源验证方案。</li>
+</ul>
+<p><strong>投递要求</strong></p>
+<ul>
+<li>在读本科或研究生（含博士/硕士），需要线下实习，待遇面议。</li>
+<li>具有积极主动的工作态度，具备较强的学习能力，良好的分析能力、解决问题能力、沟通能力和团队协作能力。</li>
+<li>熟悉System Verilog语言，了解UVM验证方法学，能熟练使用Makefile，Python和系统Shell进行脚本编程。</li>
+<li>熟悉常见标准IP的协议，具有处理器或IP实际验证经验的优先。</li>
+<li>熟练使用vcs，nc-verilog，modelsim等仿真工具，以及PLI，DPI编程接口的优先。</li>
+</ul>
+<h2> 05 SoC架构设计实习生（数字方向）</h2>
+<p><strong>工作内容</strong></p>
+<ul>
+<li>参与不同规格一生一芯流片用SoC的需求分析，架构演进以及功能集成设计。</li>
+<li>开发、维护并改进流片用SoC仿真框架（iverilog/verilator/vcs）。</li>
+<li>协助开源处理器核接入到SoC仿真环境，参与SoC子部件的预综合，为后端团队提供PPA优化参考。</li>
+<li>完成SoC子部件（总线，时钟，复位，调试模块）的代码开发、集成和功能仿真，能在FPGA上搭建完整的SoC验证环境，并持续优化。</li>
+<li>参与SoC仿真用CI/CD平台维护工作，并协助后端团队解决代码接入的问题。</li>
+<li>支持验证和硬件工程师对芯片的bringup和底层软件驱动调试工作。</li>
+<li>跟踪国内外开源SoC架构设计的前沿进展，参与一生一芯流片用SoC生成器项目的设计和开发。</li>
+<li>学习并探索全开源逻辑综合工具链（Yosys+abc）的使用，并接入到一生一芯/iEDA后端工具链中。</li>
+<li>负责SoC架构设计文档的编写和改进。</li>
+</ul>
+<p><strong>投递要求</strong></p>
+<ul>
+<li>在读本科或研究生（含博士/硕士），需要线下实习，待遇面议（实习）。</li>
+<li>电子、信息工程、通讯、计算机、自动化，或其他相关专业硕士学历，类别不限（学术/工程硕士均可，校招）。</li>
+<li>在数字设计和验证方面有2~3年或以上的工作经验（社招）。</li>
+<li>理解一生一芯项目的发展愿景，并认可开源技术在芯片设计领域的应用。</li>
+<li>具有积极主动的工作态度，具备较强的学习能力，良好的分析能力、解决问题能力、沟通能力和团队协作能力。</li>
+<li>熟练掌握Verilog或SystemVerilog语言，数字电路设计原理，SoC数字集成和FPGA逻辑设计相关知识，有良好的代码设计规范。</li>
+<li>熟悉AMBA系列总线（AXI/AHB/APB）和各个常见标准外设（SPI/I2C/GPIO）的协议，具有系统架构分析和优化能力（性能，功耗，面积）。</li>
+<li>能熟练使用各种EDA设计和验证工具，具备前后端协同开发和静态时序分析经验，有实际工程流片经历。</li>
+</ul>
+<p><strong>加分选项</strong></p>
+<ul>
+<li>具有良好的计算机体系结构知识，熟悉RV32/64指令集和微架构设计。</li>
+<li>熟练使用Python/Bash/Perl/Tcl等脚本语言。</li>
+<li>参与过多个复杂IP的设计或者验证，比如DDR，USB HOST，PCIE，ETHERNET，总线互联网络等。</li>
+<li>有带队或者培养新人经验。</li>
+</ul>
+<h2> 06 后端物理设计实习生</h2>
+<p><strong>工作内容</strong></p>
+<ul>
+<li>负责一生一芯以及开源iEDA流片项目的后端物理设计，负责芯片项目从NETLIST到GDSII的后端物理实现。</li>
+<li>参与后端团队的SoC芯片架构探索，能协同前端团队优化芯片的PPA。</li>
+<li>跟踪国内外各开源EDA工具（OpenRoad/SiliconCompiler/OpenTimer等）的进度并形成报告，能持续优化开源iEDA的Flow。</li>
+<li>参与后端项目设计开发流程规范的搭建，并进行持续优化。</li>
+<li>参与后端项目的流程化管理，能详细地对项目进度、质量以及风险进行管控。</li>
+<li>编写和完善开源iEDA的流程文档。</li>
+</ul>
+<p><strong>投递要求</strong></p>
+<ul>
+<li>在读本科或研究生（含博士/硕士），需要线下实习，待遇面议（实习）。</li>
+<li>微电子，集成电路及电子工程相关专业，或其他相关专业硕士学历，类别不限（学术/工程硕士均可，校招）。</li>
+<li>具有2~3年或以上的大型SoC后端设计经验，至少在40nm及以下的工艺节点有2款芯片的成功tapeout经验，具有28nm及以下制程的相关经验者优先（社招）。</li>
+<li>具有积极主动的工作态度，具备较强的学习能力，良好的分析能力、解决问题能力、沟通能力和团队协作能力。</li>
+<li>有良好的数字电路以及半导体知识基础，对数字后端流程有基本的认识，了解SoC前后端设计流程，具有丰富的综合、STA和timing fix经验。</li>
+<li>精通STA Flow和Formal Flow，熟悉Synopsys/Cadence等公司专业的综合、STA工具，并熟练掌握UNIX/LINUX操作系统及Python/shell/Tcl等脚本语言。</li>
+</ul>
+<p><strong>加分选项</strong></p>
+<ul>
+<li>有良好的脚本阅读和开发能力（Python、Tcl和后端Flow），阅读或者开发过大型Python项目。</li>
+<li>能熟练使用主流商业数字后端EDA工具或者有过28nm及以下制程实际流片经验的优先。</li>
+<li>具有高速电路物理设计经验，了解或者使用过开源后端EDA工具的优先。</li>
+<li>有带队或者培养新人经验。</li>
+</ul>
+<h2> 07 PCB板卡设计实习生</h2>
+<p><strong>工作内容</strong></p>
+<ul>
+<li>负责一生一芯项目批量用PCB板卡的设计和投板。</li>
+<li>负责开源EDA流片项目PCB板卡的设计和投板。</li>
+<li>编写和完善板卡设计文档。</li>
+</ul>
+<p><strong>投递要求</strong></p>
+<ul>
+<li>在读本科或研究生（含博士/硕士），可以在线实习，待遇面议。</li>
+<li>具有积极主动的工作态度，具备较强的学习能力，良好的分析能力、解决问题能力、沟通能力和团队协作能力。</li>
+<li>能熟练使用任意一款工具（Altium Designer/Allegro/LCEDA/KiCAD/PADS/Eagle）进行板卡设计。</li>
+<li>能独立完成原理图的设计、BOM选型和管理、原理图和PCB封装库制作、PCB板布局布线。</li>
+<li>具备基本的数字电路Layout经验，熟悉常见信号的布线规则。能依照信号类型正确设置DRC参数，能在保证高质量布局布线的基础上优化设计。</li>
+<li>有高速信号、高密度器件Layout经验的优先，投递简历时请附上自己之前设计的板卡原理图和布局布线截屏或者链接。</li>
+<li>使用立创LCEDA或者KiCAD进行设计的优先。</li>
+<li>参加过电子设计比赛的优先，熟悉PCB、拼版制作要求、物料管理和SMT工艺流程的优先。</li>
+</ul>
+<h2> 08 嵌入式软件实习生</h2>
+<p><strong>工作内容</strong></p>
+<ul>
+<li>负责一生一芯和开源iEDA板卡的硬件以及软件调试，协助后端团队完成SoC硅后验证。</li>
+<li>参与设计、开发和维护板卡的BSP。</li>
+<li>负责编写和完善板卡调试和流程文档。</li>
+</ul>
+<p><strong>投递要求</strong></p>
+<ul>
+<li>在读本科或研究生（含博士/硕士），可以在线实习，待遇面议。</li>
+<li>具有积极主动的工作态度，具备较强的学习能力，良好的分析能力、解决问题能力、沟通能力和团队协作能力。</li>
+<li>有嵌入式板卡调试经验，有良好的C语言基础，能独立完成板卡的硬件调试，能快速准确地定位问题。</li>
+<li>熟悉RV32/64指令集和RISCV工具链的优先，熟悉QEMU并在RV32/64上有过Linux移植经验的优先。</li>
+<li>参与过“一生一芯”计划以及熟悉南大AM运行环境的优先。</li>
+</ul>
+<h2> 09 Web前端开发实习生</h2>
+<p><strong>工作内容</strong>：</p>
+<ul>
+<li>参与开源芯片社区<a href="https://oscc.cc" target="_blank" rel="noopener noreferrer">OSCC</a>及其下属各个子项目前端页面的开发工作。</li>
+<li>制订并实现满足前后端数据传输需求的Web接口规范。</li>
+<li>负责编写Web前端开发规范、流程与总结文档。</li>
+</ul>
+<p><strong>投递要求</strong>：</p>
+<ul>
+<li>掌握最基本的HTML/CSS/JavaScript/TypeScript。</li>
+<li>掌握前端开发框架Vue全家桶（Vue3+Vite+Vue Router+Vuex/Pinia）。</li>
+<li>掌握ECMAScript 6新特性（如箭头函数、Promise异步等）。</li>
+<li>掌握界面响应式布局的原理与实现，有UI设计相关的知识或经验。</li>
+<li>掌握AJAX/AXIOS数据请求响应原理与使用。</li>
+<li>了解Event Loop、Web Assembly、PWA、Canvas/WebGL等技术。</li>
+<li>了解Electron或Tauri等跨平台应用框架。</li>
+<li>能够使用Git进行版本控制，了解并愿意遵循GitHub风格的协同开发模式。</li>
+<li>先前参与过Web前端项目开发的优先。</li>
+<li>对Web前端页面如何与传统软件相融合有自己想法的优先。</li>
+</ul>
+<h2> 10 Web后端开发实习生</h2>
+<p><strong>工作内容</strong>：</p>
+<ul>
+<li>参与开源芯片社区<a href="https://oscc.cc" target="_blank" rel="noopener noreferrer">OSCC</a>及其下属各个子项目后端逻辑的开发工作。</li>
+<li>设计并搭建一个安全可靠的网站后端架构，用于抵挡恶意攻击并满足用户高并发访问需求。</li>
+<li>根据文档创建数据库表并设计合理的表间关系，保证数据增删改查效率的最大化。</li>
+<li>负责编写Web后端开发规范、流程与总结文档。</li>
+</ul>
+<p><strong>投递要求</strong>：</p>
+<ul>
+<li>掌握基本的计算机网络原理，熟悉TCP/IP、HTTP(S)等协议的概念与用法。</li>
+<li>掌握GET、POST等常用数据请求响应的原理与用法。</li>
+<li>掌握GNU/Linux环境下的基本操作。</li>
+<li>掌握常用后端开发框架的使用方法（如Express、SSH、SSM等）。</li>
+<li>掌握Apache/Nginx反向代理按需配置，能够维护网站部署环境的长期安全运行。</li>
+<li>掌握MySQL/Oracle/MongoDB或其他任意一款数据库的用法。</li>
+<li>掌握基本的数据结构（如列表、映射）和算法知识。</li>
+<li>掌握后端语言的特性与用法。</li>
+<li>熟悉服务器日常配置与维护（如DNS配置、内网穿透等）。</li>
+<li>能够使用Git进行版本控制，了解并愿意遵循GitHub风格的协同开发模式。</li>
+<li>有使用任意后端语言或框架进行实际网站开发的经历，且愿意学习并使用<code>Nodejs</code>+<code>Express</code>+<code>MongoDB</code>开发项目的优先。</li>
+</ul>
+<h2> 11 Web开源工具链实习生</h2>
+<p><strong>工作内容</strong>：</p>
+<ul>
+<li>参与开源IP设计、开源SoC生成、开源EDA等Web平台的前后端开发工作（主要偏向前端）。</li>
+<li>与IP/Soc以及物理后端实习生一起讨论制订各平台的发展方向，满足用户的使用需求。</li>
+<li>负责编写Web平台开发规范、流程与总结文档。</li>
+</ul>
+<p><strong>投递要求</strong>：</p>
+<ul>
+<li>满足<a href="#9-web%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E5%AE%9E%E4%B9%A0%E7%94%9F">《Web前端开发实习生》</a>岗位<strong>投递要求</strong>中的所有内容。</li>
+<li>满足<a href="#10-web%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%AE%9E%E4%B9%A0%E7%94%9F">《Web后端开发实习生》</a>岗位<strong>投递要求</strong>中的部分内容（只需了解Web基本知识、数据库、后端开发框架即可）。</li>
+<li>了解Web跨平台开发、容器虚拟化、云端大数据等技术。</li>
+<li>了解现有云端平台（如腾讯文档、立创EDA）所使用的一些关键技术。</li>
+<li>对处理器芯片感兴趣，课上或课下学习过一定的数字电路或体系结构知识。</li>
+<li>具备良好的自学能力，能够独立学习并解决一些跟处理器芯片相关的技术问题。</li>
+<li>对嵌入式开发感兴趣，曾做过单片机应用开发或绘制过PCB电路板的优先。</li>
+<li>参与过“一生一芯”计划的优先。</li>
+</ul>
+<h2> 12 学习成长追踪小组实习生</h2>
+<p><strong>工作内容</strong>：</p>
+<ul>
+<li>联系并对接所需追踪学员，协商追踪小组与学员沟通的具体时间和形式。</li>
+<li>完成日常会议预定及会议安排梳理的工作。</li>
+<li>整理、归纳收集到的基本追踪信息材料。</li>
+</ul>
+<p><strong>投递要求</strong>：</p>
+<ul>
+<li>有良好的沟通能力及团队合作能力。</li>
+<li>现阶段在北京学习，并接受每月1～2次线下会面工作的在读本科生或研究生。</li>
+<li>有“一生一芯”项目学习经历的同学优先。</li>
+</ul>
+]]></content>
+    <author>
+      <name>Miao Yuyang</name>
+      <email>myyerrol@126.com</email>
+      <uri>https://myyerrol.github.io</uri>
+    </author>
+    <contributor>
+      <name>Miao Yuyang</name>
+      <email>myyerrol@126.com</email>
+      <uri>https://myyerrol.github.io</uri>
+    </contributor>
+    <published>2023-06-17T11:49:14.000Z</published>
+    <rights>Copyright by Miao Yuyang</rights>
+  </entry>
+  <entry>
+    <title type="text">申请方法</title>
+    <id>https://oscc-ysyx-web-project.github.io/ysyx-website/job/job-team/job-submit.html</id>
+    <link href="https://oscc-ysyx-web-project.github.io/ysyx-website/job/job-team/job-submit.html"/>
+    <updated>2023-06-17T11:49:14.000Z</updated>
+    <summary type="html"><![CDATA[<p>向<a href="mailto:opensource-talents@bosc.ac.cn">该邮箱</a>发送您的岗位申请，具体要求如下：</p>
+<ul>
+<li>在邮件标题处注明【岗位编号-姓名-手机号码-学校】（兼职实习的小伙伴可以用 "兼职" 取代 "学校"）。</li>
+<li>在邮件正文处编写第一部分内容：必包含【实现意向】（线上还是线下）、【起始时间】、【实习时长】。</li>
+<li>在邮件正文处编写第二部分内容：必包含【自我介绍】、【岗位认识】等内容（不超过400字）。</li>
+<li>发送时邮件须附带个人简历，没有PDF格式简历的邮件不保证会收到回复。</li>
+</ul>]]></summary>
+    <content type="html"><![CDATA[<p>向<a href="mailto:opensource-talents@bosc.ac.cn">该邮箱</a>发送您的岗位申请，具体要求如下：</p>
+<ul>
+<li>在邮件标题处注明【岗位编号-姓名-手机号码-学校】（兼职实习的小伙伴可以用 "兼职" 取代 "学校"）。</li>
+<li>在邮件正文处编写第一部分内容：必包含【实现意向】（线上还是线下）、【起始时间】、【实习时长】。</li>
+<li>在邮件正文处编写第二部分内容：必包含【自我介绍】、【岗位认识】等内容（不超过400字）。</li>
+<li>发送时邮件须附带个人简历，没有PDF格式简历的邮件不保证会收到回复。</li>
+</ul>
+]]></content>
+    <author>
+      <name>Miao Yuyang</name>
+      <email>myyerrol@126.com</email>
+      <uri>https://myyerrol.github.io</uri>
+    </author>
+    <contributor>
+      <name>Miao Yuyang</name>
+      <email>myyerrol@126.com</email>
+      <uri>https://myyerrol.github.io</uri>
+    </contributor>
+    <published>2023-06-17T11:49:14.000Z</published>
+    <rights>Copyright by Miao Yuyang</rights>
+  </entry>
   <entry>
     <title type="text">成果展示</title>
     <id>https://oscc-ysyx-web-project.github.io/ysyx-website/achieve/</id>
@@ -241,24 +567,6 @@
     <rights>Copyright by Miao Yuyang</rights>
   </entry>
   <entry>
-    <title type="text">自行培养</title>
-    <id>https://oscc-ysyx-web-project.github.io/ysyx-website/job/job-self.html</id>
-    <link href="https://oscc-ysyx-web-project.github.io/ysyx-website/job/job-self.html"/>
-    <updated>2023-06-16T11:41:37.000Z</updated>
-    <author>
-      <name>Miao Yuyang</name>
-      <email>myyerrol@126.com</email>
-      <uri>https://myyerrol.github.io</uri>
-    </author>
-    <contributor>
-      <name>Miao Yuyang</name>
-      <email>myyerrol@126.com</email>
-      <uri>https://myyerrol.github.io</uri>
-    </contributor>
-    <published>2023-06-16T11:41:37.000Z</published>
-    <rights>Copyright by Miao Yuyang</rights>
-  </entry>
-  <entry>
     <title type="text">高校推荐</title>
     <id>https://oscc-ysyx-web-project.github.io/ysyx-website/job/job-university.html</id>
     <link href="https://oscc-ysyx-web-project.github.io/ysyx-website/job/job-university.html"/>
@@ -277,23 +585,18 @@
     <rights>Copyright by Miao Yuyang</rights>
   </entry>
   <entry>
-    <title type="text">往期介绍</title>
+    <title type="text">往期回顾</title>
     <id>https://oscc-ysyx-web-project.github.io/ysyx-website/project/project-intro-past.html</id>
     <link href="https://oscc-ysyx-web-project.github.io/ysyx-website/project/project-intro-past.html"/>
-    <updated>2023-06-16T11:41:37.000Z</updated>
+    <updated>2023-06-17T11:49:40.000Z</updated>
     <summary type="html"><![CDATA[<h2> 第一期</h2>
-<p>第一期“一生一芯”计划于2019年8月27日正式启动，中国科学院大学的五位2016级本科生主导设计一款64位RISC-V处理器芯片，经过四个月高强度的开发联调和两个月的测试验证工作，2020年6月芯片终于被成功点亮，可成功运行GNU/Linux操作系统并在终端打印国科大的Logo。这款芯片称为“果壳”（与国科大谐音），学生成功移植并运行国科大教学操作系统UCAS-Core，实现了“带着自己设计的处理器芯片毕业”的目标。</p>
-<!-- ![](/resources/images/develop-process-1.1.jpg)
-
-![](/resources/images/develop-process-1.2.jpg) -->]]></summary>
+<p>2019年8月27日，中国科学院大学的5位2016级本科生与教学团队在包云岗老师的办公室里开了一次气氛轻松但意义重大的动员大会，会上讨论制订了处理器芯片总体设计方案，确定了技术路线、基础平台、开发环境、流片工艺等内容，至此<strong>第一期“一生一芯”计划正式启动</strong>。随后在4个月高强度的开发过程中，5位同学在教学团队的带领下负责实现处理器芯片各个核心功能模块，尽管很多专业知识是课堂上没有介绍过的，但是学生们通过查阅资料独立解决了开发中所遇到的各种问题。最终经过学生们和教学团队的共同努力，第一期“一生一芯”处理器芯片顺利被点亮，<strong>能够成功运行GNU/Linux操作系统并在终端中打印国科大的Logo</strong>。</p>]]></summary>
     <content type="html"><![CDATA[<h2> 第一期</h2>
-<p>第一期“一生一芯”计划于2019年8月27日正式启动，中国科学院大学的五位2016级本科生主导设计一款64位RISC-V处理器芯片，经过四个月高强度的开发联调和两个月的测试验证工作，2020年6月芯片终于被成功点亮，可成功运行GNU/Linux操作系统并在终端打印国科大的Logo。这款芯片称为“果壳”（与国科大谐音），学生成功移植并运行国科大教学操作系统UCAS-Core，实现了“带着自己设计的处理器芯片毕业”的目标。</p>
-<!-- ![](/resources/images/develop-process-1.1.jpg)
-
-![](/resources/images/develop-process-1.2.jpg) -->
+<p>2019年8月27日，中国科学院大学的5位2016级本科生与教学团队在包云岗老师的办公室里开了一次气氛轻松但意义重大的动员大会，会上讨论制订了处理器芯片总体设计方案，确定了技术路线、基础平台、开发环境、流片工艺等内容，至此<strong>第一期“一生一芯”计划正式启动</strong>。随后在4个月高强度的开发过程中，5位同学在教学团队的带领下负责实现处理器芯片各个核心功能模块，尽管很多专业知识是课堂上没有介绍过的，但是学生们通过查阅资料独立解决了开发中所遇到的各种问题。最终经过学生们和教学团队的共同努力，第一期“一生一芯”处理器芯片顺利被点亮，<strong>能够成功运行GNU/Linux操作系统并在终端中打印国科大的Logo</strong>。</p>
 <h2> 第二期</h2>
-<p>第二期“一生一芯”计划于2020年秋季启动，成功吸引了来自浙江大学、南京大学、西北工业大学、哈尔滨工业大学（深圳）等高校的11名学生加入。与此同时“一生一芯”团队探索了全新的处理器集成模式，降低了流片成本和风险。</p>
+<p>第二期“一生一芯”计划于2020年秋季正式启动，<strong>学生组成不再仅限于中国科学院大学的在校本科生</strong>，而是成功吸引了来自浙江大学、南京大学、西北工业大学、哈尔滨工业大学（深圳）等高校的共11名优秀同学的报名加入。除参与计划人数增加以外，第二期“一生一芯”教学团队的人员配置也得到了进一步升级，计算所和浙大2位老师加入教学团队，6位2016级国科大本科生担任助教（包括第一期“一生一芯”计划的5位同学以及1位负责FPGA仿真平台的同学），为本期同学在关键开发节点提供技术指导。最终经过几个月的独立开发与调试验证，<strong>11名同学全部完成了处理器核设计并进行了流片</strong>。</p>
 <h2> 第三期</h2>
+<p>第三期“一生一芯”计划于2021年7月7日正式启动，力求把处理器芯片设计人才培养与开源处理器芯片生态构建结合起来，<strong>培养既掌握处理器芯片架构设计领域知识，又具备处理器芯片设计制造全流程经验的专业人才</strong>。第三期报名人数总计为760人，参加学生覆盖168所国内外高校（含国外30所）。从学生的角度统计，在报名人数中，在校生共625人，占比82%；同时较多已毕业的学生也对处理器芯片设计感兴趣。在校生中，本硕博各年级均有分布，其中本科生占比44%，硕士生占比50%，硕博士占比6%。从年级细分来看，报名最多的五个年级分别是：研一（27%），大三（23%），研二（14%），大二（11%），大四（7%）。从报名数据上可以得知第三期“一生一芯”计划开始进入跨区域大规模人才阶段，最后完成流片的人数也相较前几期有了很大的提升。</p>
 <p>第三期“一生一芯”计划于2021年7月7日正式启动，报名对外开放，报名人数总计760人，参加学生覆盖168所国内外高校（含国外30所）。为了应对大规模人才培养的挑战，项目组首次尝试建立“让学生指导学生”的流程。讲座、答疑、进度检查、SoC集成验证和后端物理设计，皆由学生完成，工程师仅在最后阶段参与芯片后端的检视工作并提出改进的建议。前端助教共计27人，负责准备讲义和其它辅助材料，组织报告和答疑，并跟进学生的学习情况；SoC团队共计4人，负责收集学生提交的处理器代码并进行SoC集成和集成后的验证工作；IC后端团队共5人，负责芯片的物理设计，生成可流片的GDSII版图。在上述流程的支撑下，流片学生达到了50余人。</p>
 <!-- ![](/resources/images/develop-process-3.1.jpg)
 
@@ -303,12 +606,14 @@
 <h2> 第四期</h2>
 <p>第四期“一生一芯”计划于2022年2月启动，报名人数达到了1700余人，覆盖了国内外300余所高校，第一批13名学生达成流片指标，于2023年1月流片。第四期的采用新的教学理念和方法，首先是降低坡度，项目组将学习流程依次划分为预学习、基础、进阶和专家共四个阶段，其中预学习阶段的引入让基础欠缺的学生查缺补漏，从而使他们能够更平滑地过渡到正式学习阶段。第二是提高标准，本期对学生的学习质量提出了更高要求，不仅要理解软件程序是如何一步步在硬件芯片上运行，还要锻炼学生独立解决未知问题的能力，助教只提供关键节点的引导，鼓励学生主动探索问题的解决方案。</p>
 <!-- ![](/resources/images/develop-process-4.1.jpg) -->
+<h2> 第五期</h2>
 ]]></content>
     <author>
       <name>Miao Yuyang</name>
       <email>myyerrol@126.com</email>
       <uri>https://myyerrol.github.io</uri>
     </author>
+    <category term="项目介绍"/>
     <contributor>
       <name>Miao Yuyang</name>
       <email>myyerrol@126.com</email>
@@ -321,29 +626,37 @@
     <title type="text">项目概述</title>
     <id>https://oscc-ysyx-web-project.github.io/ysyx-website/project/project-intro.html</id>
     <link href="https://oscc-ysyx-web-project.github.io/ysyx-website/project/project-intro.html"/>
-    <updated>2023-06-16T11:41:37.000Z</updated>
+    <updated>2023-06-17T11:49:40.000Z</updated>
     <summary type="html"><![CDATA[<h2> 背景现状</h2>
-<p>我国正在经历的芯片设计人才危机直接导致国内IT人才结构失衡，使得中国庞大的IT产业建立在国外软硬件系统平台之上，很多关键技术被国外“卡脖子”，国家安全受到威胁。若要解决上述问题，就必须立足国家当前面临的紧迫问题和未来战略需求，超前布局处理器芯片这一关键领域紧缺人才的培养，创新培养模式。然而，由于高端处理器芯片设计和生产成本不断增加，相关技术难度不断加大，所以目前只有极少数条件较好的大学和科研机构能够从事这方面的研究。这导致相关人才数量非常有限，远不能满足国家对该领域高端人才的迫切需求。</p>
-<p>针对上述情况，中国科学院大学（简称“国科大”）计算机科学与技术学院立足已有的理论课堂与实验教学，联合中国科学院计算技术研究所（简称“计算所”）的科研工程支撑团队，于2019年8月启动了“一生一芯”计划。</p>]]></summary>
+<p>我国计算机专业当前所面临的较为突出的人才培养问题，主要体现在计算机应用开发人员数量相对饱和，而底层软硬件研发人才匮乏，<strong>特别是计算机处理器芯片设计人才严重不足</strong>。经统计，2008到2017十年间的ISCA（体系结构顶级会议）论文的第一作者，有20%为中国国籍（美国本土为25%）。但与之相对，<strong>这些作者中有85%选择在美国就业，仅有4%在中国就业</strong>。大量学生到国外学习处理器芯片设计，毕业后留在美国工作。中美两国在高水平处理器芯片人才方面的差距，固然与过去多年中国处理器芯片的产业环境有关，但同时也与国内高校的处理器芯片人才培养方式密切相关。</p>]]></summary>
     <content type="html"><![CDATA[<h2> 背景现状</h2>
-<p>我国正在经历的芯片设计人才危机直接导致国内IT人才结构失衡，使得中国庞大的IT产业建立在国外软硬件系统平台之上，很多关键技术被国外“卡脖子”，国家安全受到威胁。若要解决上述问题，就必须立足国家当前面临的紧迫问题和未来战略需求，超前布局处理器芯片这一关键领域紧缺人才的培养，创新培养模式。然而，由于高端处理器芯片设计和生产成本不断增加，相关技术难度不断加大，所以目前只有极少数条件较好的大学和科研机构能够从事这方面的研究。这导致相关人才数量非常有限，远不能满足国家对该领域高端人才的迫切需求。</p>
-<p>针对上述情况，中国科学院大学（简称“国科大”）计算机科学与技术学院立足已有的理论课堂与实验教学，联合中国科学院计算技术研究所（简称“计算所”）的科研工程支撑团队，于2019年8月启动了“一生一芯”计划。</p>
-<p>经过数期的尝试和发展，如今“一生一芯”计划已成为一个开放社区性质的公益教学项目。</p>
-<h2> 意义目标</h2>
-<p>为解决当前芯片“卡脖子”问题，并面向未来计算机系统领域拔尖人才需求，“一生一芯”项目组以开源处理器芯片为切入点，以处理器芯片敏捷开发方法为实验手段，贯通计算机科学（CS）与电子信息工程（EE）专业课程，突出科教融合特色，理论与实践并重，通过教学流片计划实现硅上处理器教学，培养芯片和系统全栈式拔尖人才。</p>
-<p>“一生一芯”的核心理念是“让一个学生可以带着自己设计的一颗处理器芯片毕业”，通过理论与实践并重的教学机制降低芯片设计门槛，让更多学生参与到芯片设计的每一个环节中。</p>
-<p>“公益性”是“一生一芯”的重要属性。“一生一芯”报名和学习是免费的，在校生和毕业生都可以参加“一生一芯”的学习，并为在校生免费流片。只要对芯片学习有浓厚的兴趣，不论年级，专业和学校，甚至是零基础，都可以参加报名和学习。</p>
-<h2> 培养理念</h2>
-<p>在战略层面，“一生一芯”计划主要有三个目标。第一，打破教育资源不平衡的壁垒，让所有对处理器芯片设计感兴趣的学生，无论学校、年级、专业和基础，都有机会参与到处理器芯片的学习中，这对提升我国高校处理器芯片教育的普及有着非常重要且积极的意义。第二，突破传统课程的边界，尝试构建融合EE和CS的全栈人才培养方案。“一生一芯”计划的核心是构建一套软硬件协同、并打通前后端全链条的处理器芯片教学流程，让学生不仅懂得如何用代码设计处理器芯片，而且要理解程序如何在自己设计的处理器芯片上运行，同时还要了解处理器芯片的代码如何转变成可流片版图。第三，鼓励参加计划的学生进入软硬件开源社区和企业，努力攻克我国目前亟需解决的各个卡脖子领域，同时也将这些领域的成果沉淀到教学方案中，吸引更多学生参与“一生一芯”计划，实现良性的正向循环。</p>
-<!-- ![](/resources/images/training-concept-1.jpg) -->
-<p>在教学层面，“一生一芯”计划首先是坡度低，项目团队按照处理器芯片教学的难度将培训流程划分为多个阶段，其中预学习阶段的引入将提升零基础学生的学习积极性，从而使他们能够相对平滑地过渡到处理器芯片的正式学习中，而且每个阶段均设置了相应的游戏运行目标，增加趣味性的同时也能激励学生去不断探索设计和实现功能更强大的处理器芯片。第二是高标准，不仅要求学生理解软件程序是如何一步步在硬件电路上运行的，还要锻炼学生独立解决未知问题的能力，助教只提供对关键节点的引导，鼓励主动探索找到问题的解决方案。</p>
-<!-- ![](/resources/images/training-concept-2.jpg) -->
+<p>我国计算机专业当前所面临的较为突出的人才培养问题，主要体现在计算机应用开发人员数量相对饱和，而底层软硬件研发人才匮乏，<strong>特别是计算机处理器芯片设计人才严重不足</strong>。经统计，2008到2017十年间的ISCA（体系结构顶级会议）论文的第一作者，有20%为中国国籍（美国本土为25%）。但与之相对，<strong>这些作者中有85%选择在美国就业，仅有4%在中国就业</strong>。大量学生到国外学习处理器芯片设计，毕业后留在美国工作。中美两国在高水平处理器芯片人才方面的差距，固然与过去多年中国处理器芯片的产业环境有关，但同时也与国内高校的处理器芯片人才培养方式密切相关。</p>
+<p>我国正在经历的处理器芯片设计人才危机直接导致国内IT人才结构失衡，使得中国庞大的IT产业建立在国外软硬件系统平台之上，很多关键技术被国外“卡脖子”，国家安全受到威胁。若要解决这个问题，<strong>就必须立足国家当前面临的紧迫问题和未来战略需求，超前布局处理器芯片这一关键领域紧缺人才的培养，创新培养模式</strong>。然而，由于高端处理器芯片设计和生产成本不断增加，相关技术难度不断加大，所以目前只有极少数条件较好的大学和科研机构能够从事这方面的研究并培养少量人才。这远不能满足国家对该领域高端人才的迫切需求。</p>
+<p>针对上述情况，中国科学院大学（简称“国科大”）计算机科学与技术学院立足已有的理论课堂与实验教学，联合中国科学院计算技术研究所（简称“计算所”）的科研工程支撑团队，于2019年8月启动了“一生一芯”开源处理器芯片教学流片实践项目计划，<strong>至此形成了计算机系统方向理论课、实验研讨课与实践项目的有机衔接和贯通式实践训练</strong>。</p>
+<div class="hint-container info">
+<p class="hint-container-title">扩展资料</p>
+<p>20世纪80年代，全美上千所大学中只有不到100位教授和学生从事半导体相关的研究。为此，美国国防部高级研究计划署 (DARPA) 在1981年启动MOSIS 项目，资助大学开展处理器芯片研究，并提供流片服务，通过MPW模式大幅降低处理器芯片设计门槛。40余年来，MOSIS为大学和研究机构流了60000多款处理器芯片，培养了数十万名学生。由此可见，降低处理器芯片设计门槛，可大幅促进处理器芯片技术发展，同时提高人才培养效率。</p>
+</div>
+<h2> 目标理念</h2>
+<p>为解决当前处理器芯片“卡脖子”问题，并面向未来计算机系统领域拔尖人才需求，<strong>“一生一芯”教学团队提出“计算机系统能力3.0”处理器芯片人才培养目标</strong>。即以开源处理器芯片为切入点，以处理器芯片敏捷开发方法为实验手段，将计算机科学（CS）与电子信息工程（EE）专业课程进行贯通式设计，突出科教融合与产学研融合特色，理论与实践并重，通过教学流片计划实现硅上处理器芯片教学，培养计算机系统领域全栈式拔尖人才。</p>
+<p>“一生一芯”的核心理念，<strong>简单来说就是“让一个学生可以带着自己设计的一颗处理器芯片毕业”</strong>，希望能通过理论与实践并重的教学机制来降低处理器芯片设计门槛，让更多的学生能够全流程的参与到处理器芯片设计的每一个环节中。</p>
+<p>“公益性”是“一生一芯"的重要属性。“一生一芯”报名和学习是免费的，在校生和已毕业的都可以来参加“一生一芯”的学习，但是因为经费有限，免费流片只针对在校生。只要对处理器芯片学习有浓厚的兴趣，想在处理器芯片方向发展的同学，零基础都可以加入，<strong>不论年级，专业和学校，都可以来报名</strong>。</p>
+<div class="hint-container info">
+<p class="hint-container-title">扩展资料</p>
+<p>“计算机系统能力3.0”处理器芯片人才培养的理念是用开源技术、做开源处理器芯片、育处理器芯片人才。具体来讲，为培养具有计算机系统能力的“卡脖子”处理器芯片人才，贯通计算机（CS）本科阶段系统方向核心课程与实践内容，包括组成原理、体系结构、操作系统、编译等软硬件课程，并延展至电子信息（EE）专业，包括片上系统SoC与处理器芯片后端设计等课程。基于开源软硬件生态形成处理器芯片人才培养体系，探索“硅上做教学”。即学生自行设计处理器芯片，提交版图文件至处理器芯片代工厂（Foundry）进行流片，并在回片后进行测试调试和运行操作系统。</p>
+</div>
+<h2> 总体介绍</h2>
+<p>在战略层面，“一生一芯”计划主要有三个目标。<strong>第一，打破教育资源不平衡的壁垒</strong>。让所有对处理器芯片设计感兴趣的学生，无论学校、年级、专业和基础，都有机会参与到处理器芯片的学习中，这对提升我国高校处理器芯片教育的普及有着非常重要且积极的意义。<strong>第二，突破传统课程的边界，尝试构建融合EE和CS的全栈人才培养方案。</strong>“一生一芯”计划的核心是构建一套软硬件协同、并打通前后端全链条的处理器芯片教学流程，让学生不仅懂得如何用代码设计处理器芯片，而且要理解程序如何在自己设计的处理器芯片上运行，同时还要了解处理器芯片的代码如何转变成可流片版图。<strong>第三，鼓励参加计划的学生进入软硬件开源社区和企业，努力攻克我国目前亟需解决的各个卡脖子领域</strong>。同时也将这些领域的成果沉淀到教学方案中，吸引更多学生参与“一生一芯”计划，实现良性的正向循环。</p>
+<figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/project-intro-1.jpg" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<p>在教学层面，“一生一芯”计划<strong>首先是坡度低</strong>。项目团队按照处理器芯片教学的难度将培训流程划分为多个阶段，其中预学习阶段的引入将提升零基础学生的学习积极性，从而使他们能够相对平滑地过渡到处理器芯片的正式学习中，而且每个阶段均设置了相应的游戏运行目标，增加趣味性的同时也能激励学生去不断探索设计和实现功能更强大的处理器芯片。<strong>第二是高标准</strong>。不仅要求学生理解软件程序是如何一步步在硬件电路上运行的，还要锻炼学生独立解决未知问题的能力，助教只提供对关键节点的引导，鼓励主动探索找到问题的解决方案。</p>
+<figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/project-intro-2.jpg" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
 ]]></content>
     <author>
       <name>Miao Yuyang</name>
       <email>myyerrol@126.com</email>
       <uri>https://myyerrol.github.io</uri>
     </author>
+    <category term="项目介绍"/>
     <contributor>
       <name>Miao Yuyang</name>
       <email>myyerrol@126.com</email>
