@@ -6,8 +6,8 @@
     <link>https://oscc-ysyx-web-project.github.io/ysyx-website/</link>
     <description>一生一芯的官方网站</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 17 Jun 2023 12:51:33 GMT</pubDate>
-    <lastBuildDate>Sat, 17 Jun 2023 12:51:33 GMT</lastBuildDate>
+    <pubDate>Sat, 17 Jun 2023 13:31:44 GMT</pubDate>
+    <lastBuildDate>Sat, 17 Jun 2023 13:31:44 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>Copyright by Miao Yuyang</copyright>
@@ -17,6 +17,7 @@
       <link>https://oscc-ysyx-web-project.github.io/ysyx-website/</link>
     </image>
     <category>项目介绍</category>
+    <category>报名参与</category>
     <item>
       <title>团队招聘</title>
       <link>https://oscc-ysyx-web-project.github.io/ysyx-website/job/job-team/</link>
@@ -336,24 +337,131 @@
       <link>https://oscc-ysyx-web-project.github.io/ysyx-website/board/official/</link>
       <guid>https://oscc-ysyx-web-project.github.io/ysyx-website/board/official/</guid>
       <source url="https://oscc-ysyx-web-project.github.io/ysyx-website/rss.xml"></source>
-      <description>板卡简介 板卡型号 .page-title { display: none; }</description>
+      <description>板卡简介 本页面为星空单板计算机的 wiki 首页。星空(StarrySky)系列 单板计算机(Single Board Computer, SBC) (https://en.wikipedia.org/wiki/Single-board_computer) 是2023年3月份 一生一芯项目组 () 在吸收前期多款测试板卡的设计经验后，专门规划设计的一...</description>
       <author>myyerrol@126.com (Miao Yuyang)</author>
       <pubDate>Sat, 17 Jun 2023 06:15:09 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 板卡简介</h2>
+<p>本页面为星空单板计算机的 <strong>wiki</strong> 首页。星空(StarrySky)系列 <a href="https://en.wikipedia.org/wiki/Single-board_computer" target="_blank" rel="noopener noreferrer">单板计算机(Single Board Computer, SBC)</a> 是2023年3月份 <a href="">一生一芯项目组</a> 在吸收前期多款测试板卡的设计经验后，专门规划设计的一款基于 <strong>一生一芯流片SoC</strong> 的官方板卡，用于评估和展示一生一芯SoC的丰富外设应用。项目组独立完成了星空系列单板计算机的硬件设计，生产管理，教程编写和包装视觉设计。短期目标希望能够依托每年2~3次一生一芯SoC的流片持续打磨星空板卡的软硬件系统，提供一款，长期目标是基于系列化的板卡提供轻量级的开源设计，用于。</p>
+<h2> 概念</h2>
+<p>星空开发板以</p>
+<h2> 板卡版本约定</h2>
+<!-- 开发进度图 -->
 <h2> 板卡型号</h2>
+<p>下面展示了所有板卡的wiki页面，可以点击下面卡片中的 <em><strong>详细信息</strong></em> 跳转到特定板卡的页面。</p>
 ]]></content:encoded>
     </item>
     <item>
-      <title>内容1</title>
+      <title>开发wiki</title>
       <link>https://oscc-ysyx-web-project.github.io/ysyx-website/board/official/boards/board-1/</link>
       <guid>https://oscc-ysyx-web-project.github.io/ysyx-website/board/official/boards/board-1/</guid>
-      <source url="https://oscc-ysyx-web-project.github.io/ysyx-website/rss.xml">内容1</source>
-      <description>二级标题 三级标题 四级标题</description>
+      <source url="https://oscc-ysyx-web-project.github.io/ysyx-website/rss.xml">开发wiki</source>
+      <description>开发入门 开箱检查 同学们收到板卡后，请先按照下面的列表检查板卡和配件是否齐全： 板卡包装盒 x1; 开发板+FPGA核心板 (使用网格防静电袋包装); 耗材 (使用硬质防静电袋包装); 正方形晶振 x2; W25Q128JVSIQ x2; Type-C线缆x1; FPGA JTAG烧写器和线缆x1; 包装所有内容可以见下图： 上电测试 板卡在发放前已...</description>
       <author>myyerrol@126.com (Miao Yuyang)</author>
       <pubDate>Sat, 17 Jun 2023 06:15:09 GMT</pubDate>
-      <content:encoded><![CDATA[<h2> 二级标题</h2>
-<h3> 三级标题</h3>
-<h4> 四级标题</h4>
+      <content:encoded><![CDATA[<h2> 开发入门</h2>
+<h3> 开箱检查</h3>
+<p>同学们收到板卡后，请先按照下面的列表检查板卡和配件是否齐全：</p>
+<ul>
+<li>板卡包装盒 x1</li>
+<li>开发板+FPGA核心板 <strong>(使用网格防静电袋包装)</strong></li>
+<li>耗材 <strong>(使用硬质防静电袋包装)</strong>
+<ul>
+<li>正方形晶振 x2</li>
+<li>W25Q128JVSIQ x2</li>
+</ul>
+</li>
+<li>Type-C线缆x1</li>
+<li>FPGA JTAG烧写器和线缆x1</li>
+</ul>
+<p>包装所有内容可以见下图：</p>
+<h3> 上电测试</h3>
+<p>板卡在发放前已经提前烧录好了测试程序，可以用来检测硬件是否能够正常工作，以下wiki均采用 *** Win11专业版 版本22616.1 *** 作为测试平台，Win10 和 Win11 均可以。</p>
+<ul>
+<li>安装串口驱动</li>
+</ul>
+<p>我们三期板卡上用的串口芯片是CP2102，所以需要提前在电脑上安装CP2102串口的驱动，否则电脑无法识别出CP2102的串口。如果大家电脑上已经安装过该驱动，则不需要再次安装。具体检查方法如下：</p>
+<p>同学们先将配件中的绿联的mini usb线缆(黑色)的一头插入到三期PCB板卡的mini usb口中，另一头插入到电脑的USB口中，然后按下WIN+X组合键，在弹出的选项中点击 <em><strong>设备管理器</strong></em> 选项，如果 <em><strong>设备管理器---&gt;端口(COM和LPT)</strong></em> 中显示类似下图中带有CP210x字样的端口图标，则说明串口驱动已经安装成功，不需要再安装CP2102驱动：</p>
+<p>图片.svg</p>
+<div class="hint-container tip">
+<p class="hint-container-title">提示</p>
+<p>上图端口图标后圆括号中的 COMx 后接着的数字不一定是图中的15，这个是电脑自动分配的，对测试没有影响。</p>
+</div>
+<p>如果在 <em><strong>其他设备</strong></em> 选项中出现类似下图中的黄色叹号图标，则说明电脑没有安装过CP2102的驱动，需要使用我们提供的软件包安装相应的CP2102驱动：</p>
+<p>CP2102驱动的具体安装方法如下：同学们需要先进入 <code>ysyx3_pcb_software/cp2102 driver</code> 目录中，然后双击 <code>CP2102xVCPInstaller_x64.exe</code> 来安装64位驱动。同学们的电脑如果只支持32位的话，则双击 <code>CP2102xVCPInstaller_x86.exe</code> 来安装32位驱动：</p>
+<p>之后按照安装程序引导界面来安装驱动。当驱动安装完成后，再次使用前面介绍的方法打开设备管理器，如果在 <em><strong>端口(COM和LPT)</strong></em> 中显示出CP2102的端口号，则说明驱动安装成功。</p>
+<p>::: detail CP2102设备识别问题
+如果在 <em><strong>其他设备</strong></em> 选项中出现 <strong>Verifone USB to Printer</strong> 或者 <strong>Verifone USB to Modem</strong> ，则说明电脑已经安装过CP2102的驱动，但是没有被成功识别出来：</p>
+<p>:::</p>
+<ul>
+<li>安装串口调试软件</li>
+</ul>
+<div class="hint-container tip">
+<p class="hint-container-title">Implicit CR in every LF 选项含义</p>
+<p>由于我们板卡上的测试程序是使用 <strong><code>"\n"(LF)</code></strong> 进行换行的，但是Win下换行格式是 <strong><code>"\r\n"(CR LF)</code></strong> ，所以需要设置PuTTY在每次接收到 <strong><code>"\n"(LF)</code></strong> 时在其前面隐式添加 <strong><code>"\r"(CR)</code></strong> ，这样才能在 Win 下正确地显示换行。这个选项与 Win，Linux 和 Mac 系统下对换行的处理方式不同有关，感兴趣的同学们可以自行上网了解相关内容。</p>
+</div>
+<p>至此，板卡的硬件测试完成，下面将更加详细地介绍板卡上的各个部分。</p>
+<div class="hint-container info">
+<p class="hint-container-title">板卡或者耗材损坏/缺失/丢失怎么办？</p>
+<ul>
+<li>每个板卡在发放给学生前都会进行硬件和软件测试，若自快递签收后一周内，板卡，FPGA损坏，或者耗材有缺失，可以联系项目组更换。</li>
+<li>项目组会在板卡中额外提供若干耗材 (晶振和Flash)，若消耗完毕或丢失，项目组可提供参考网购链接，由同学们自行购买。</li>
+</ul>
+</div>
+<h3> 板卡介绍</h3>
+<h4> 硬件设计</h4>
+<div class="hint-container tip">
+<p class="hint-container-title">提示</p>
+<p>板卡上的机械开关选用的是 1.27mm 间距的微动拨码开关。这种开关每一位拨码比较小，直接用手不好拨动，可以使用带尖头的拨动。</p>
+</div>
+<div class="hint-container danger">
+<p class="hint-container-title">调试注意事项</p>
+<p>请同学们在实际操作板卡前仔细阅读并确认下面各个注意事项内容，尤其是之前没有嵌入式调试经历的同学，请务必遵守下面的各注意事项：</p>
+</div>
+<div class="hint-container danger">
+<p class="hint-container-title">机械开关切换</p>
+<p>简单说的话，就是上电后，除了三期SoC板卡和黑金FPGA核心板上的复位按钮可以按动之外，板卡的机械开关和接插件都不要带电按动和插接。带电操作可能会导致板卡的电源网络出现较大的浪涌电流，影响板卡的工作稳定性，甚至会烧坏板卡，而非正确的热插拔操作可能会使得芯片出现闩锁效应，可能会损坏芯片。</p>
+</div>
+<div class="hint-container info">
+<p class="hint-container-title">Custom Title</p>
+<p>A custom information container with <code>code</code>, <a href="#demo">link</a>.</p>
+<div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></div>
+<div class="hint-container note">
+<p class="hint-container-title">Custom Title</p>
+<p>A custom note container with <code>code</code>, <a href="#demo">link</a>.</p>
+<div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></div>
+<div class="hint-container tip">
+<p class="hint-container-title">Custom Title</p>
+<p>A custom tip container with <code>code</code>, <a href="#demo">link</a>.</p>
+<div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></div>
+<div class="hint-container warning">
+<p class="hint-container-title">Custom Title</p>
+<p>A custom warning container with <code>code</code>, <a href="#demo">link</a>.</p>
+<div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></div>
+<div class="hint-container danger">
+<p class="hint-container-title">Custom Title</p>
+<p>A custom danger container with <code>code</code>, <a href="#demo">link</a>.</p>
+<div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></div>
+<details class="hint-container details"><summary>Custom Title</summary>
+<p>A custom details container with <code>code</code>, <a href="#demo">link</a>.</p>
+<div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></details>
+<div class="hint-container info">
+<p class="hint-container-title">Custom info</p>
+</div>
+<div class="hint-container note">
+<p class="hint-container-title">Custom note</p>
+</div>
+<div class="hint-container tip">
+<p class="hint-container-title">Custom tip</p>
+</div>
+<div class="hint-container warning">
+<p class="hint-container-title">Custom warning</p>
+</div>
+<div class="hint-container danger">
+<p class="hint-container-title">Custom danger</p>
+</div>
+<h2> 其他资源</h2>
+<h2> 常见问题</h2>
+<h2> 硅后测试</h2>
 ]]></content:encoded>
     </item>
     <item>
@@ -496,8 +604,63 @@
       <link>https://oscc-ysyx-web-project.github.io/ysyx-website/signup/signup-notice.html</link>
       <guid>https://oscc-ysyx-web-project.github.io/ysyx-website/signup/signup-notice.html</guid>
       <source url="https://oscc-ysyx-web-project.github.io/ysyx-website/rss.xml">报名需知</source>
+      <description>报名流程 了解计划 在正式报名参加“一生一芯”计划之前，请先阅读 填写问卷 创建记录 开始学习 “一生一芯”致力于培养芯片设计人才，包括体系结构设计、RTL开发、SoC集成验证和后端物理设计等。所有对芯片设计感兴趣的同学（在校或已毕业），都欢迎随时报名参加“一生一芯”。 // import Qrcode from &amp;apos;qrcode.vue&amp;apos; const ...</description>
       <author>myyerrol@126.com (Miao Yuyang)</author>
+      <category>报名参与</category>
       <pubDate>Fri, 16 Jun 2023 11:41:37 GMT</pubDate>
+      <content:encoded><![CDATA[<h2> 报名流程</h2>
+<h3> 了解计划</h3>
+<p>在正式报名参加“一生一芯”计划之前，请先阅读</p>
+<h3> 填写问卷</h3>
+<h3> 创建记录</h3>
+<h3> 开始学习</h3>
+<p>“一生一芯”致力于培养芯片设计人才，包括体系结构设计、RTL开发、SoC集成验证和后端物理设计等。所有对芯片设计感兴趣的同学（在校或已毕业），都欢迎随时报名参加“一生一芯”。</p>
+<!-- > #### info:: 获取项目信息和最新动态
+> -->
+<!-- > | QQ **3**群 | QQ **2**群<badge type="solid red">已满</badge> | QQ **1**群<badge type="solid red">已满</badge> |
+> |:---------------:|:---------------:|:---------------:|
+> | <a qr-code :href="QGroup_3" target="_blank"><qrcode :value="QGroup_3" level="L" render-as="svg" background="#FFFA" foreground="var(--c-brand-dark)" margin="3" /></a> | <a qr-code :href="QGroup_2" target="_blank"><qrcode :value="QGroup_2" level="L" render-as="svg" background="#FFFA" foreground="var(--ct-gray-light)" margin="2" /></a> | <a qr-code :href="QGroup_1" target="_blank"><qrcode :value="QGroup_1" level="L" render-as="svg" background="#FFFA" foreground="var(--ct-gray-light)" margin="2" /></a> |
+> | <a :href="QGroup_3" target="_blank">621039593</a> | <a :href="QGroup_2" target="_blank">528994030</a> | <a :href="QGroup_1" target="_blank">663797655</a> | -->
+<h2> 了解计划</h2>
+<p>在决定是否报名之前，你可以通过以下途径了解“一生一芯”</p>
+<ul>
+<li>观看<a href="https://www.bilibili.com/video/BV12e4y1Y76i/" target="_blank" rel="noopener noreferrer">"一生一芯"概述 - 第五期"一生一芯"教学视频回放 - P1</a>
+<ul>
+<li><a href="https://ysyx.oscc.cc/slides/2205/01.html#/" target="_blank" rel="noopener noreferrer">课件</a></li>
+</ul>
+</li>
+<li>阅读<a href="/ysyx-website/signup/faq.html" target="blank">报名常见问题</a></li>
+</ul>
+<h2> 立即报名</h2>
+<p>请大家先填写  ，填写成功后弹出的「序号」，即为大家在 “一生一芯” 的「学号」，请大家务必记住。</p>
+<p>如果一不小心没记住学号，也不用重复提交申请，填写【<a href="https://docs.qq.com/sheet/DT0tNUENtZ2RHWWJ2?tab=BB08J2" target="_blank" rel="noopener noreferrer">忘记了学号？</a>】这个文档，助教会定期查看，并把你的学号反馈上去。</p>
+<blockquote>
+<p>报名助教或实习，可以发送简历到 <a href="mailto:opensource-talents@bosc.ac.cn?subject=%E4%B8%80%E7%94%9F%E4%B8%80%E8%8A%AF%E5%AE%9E%E4%B9%A0%E7%94%B3%E8%AF%B7&amp;body=%E8%AF%B7%E6%B3%A8%E6%98%8E%E3%80%8C%E6%96%B9%E5%90%91%E3%80%8D%E3%80%81%E3%80%8C%E5%A7%93%E5%90%8D%E3%80%8D%E3%80%81%E3%80%8C%E5%AD%A6%E6%A0%A1%EF%BC%88%E6%88%96%E6%89%80%E5%B1%9E%E6%9C%BA%E6%9E%84%EF%BC%89%E3%80%8D">实习生招聘邮箱</a>，注明【方向-姓名-学校】</p>
+</blockquote>
+<h2> 创建记录</h2>
+<p>大家在学习过程中，请务必详细记录自己的学习过程，这是助教掌握大家学习进展，指导大家学习方法的重要参考。
+为此，请大家填写“学习记录表”和“实验报告”。</p>
+<blockquote>
+<p><a href="https://docs.qq.com/sheet/DT2RPaWFzVGlzaG1T" target="_blank" rel="noopener noreferrer">学习记录表(模板)</a></p>
+<p>请大家复制一份到自己的账号，并打开 “可查看” 权限</p>
+<p>实验报告的模板可自定义，主要包括：</p>
+<ul>
+<li>遇到的问题和思考</li>
+<li>你的其它想法, 例如实验心得, 对提供帮助的同学的感谢等</li>
+<li>如果有粘贴代码和贴图，请附上对应的详细解释</li>
+</ul>
+</blockquote>
+<h2> 课程学习</h2>
+<!-- <container flex-row flex-center>
+    <btn
+        type="solid gray-brand"
+        to="../../schedule.html"
+        style="display: inline-block; padding: 1em 2em;"
+    >
+        课程主页传送门
+    </btn>
+</container> -->
+]]></content:encoded>
     </item>
   </channel>
 </rss>
