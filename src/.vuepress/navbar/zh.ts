@@ -7,28 +7,14 @@ export const zhNavbar = navbar([
         text: "项目介绍",
         icon: "shield",
         prefix: "/project/",
-        children: [{
-            text: "项目概述",
-            icon: "bullseye",
-            link: "project-intro"
-        }, {
-            text: "往期介绍",
-            icon: "route",
-            link: "project-intro-past"
-        }]
+        children: ["project-intro.md",
+                   "project-intro-past.md"]
     }, {
         text: "报名参与",
         icon: "computer",
         prefix: "/signup/",
-        children: [{
-            text: "报名需知",
-            icon: "flag",
-            link: "signup-notice"
-        }, {
-            text: "常见问题",
-            icon: "circle-question",
-            link: "signup-faq"
-        }]
+        children: ["signup-notice.md",
+                   "signup-faq.md"]
     },
     zhCourse,
     zhBoard,
@@ -40,15 +26,8 @@ export const zhNavbar = navbar([
         text: "成果展示",
         icon: "star",
         prefix: "/achieve/",
-        children: [{
-            text: "助教团队",
-            icon: "person-chalkboard",
-            link: "achieve-teacher"
-        }, {
-            text: "学生成果",
-            icon: "graduation-cap",
-            link: "achieve-student"
-        }]
+        children: ["achieve-teacher.md",
+                   "achieve-student.md"]
     }, {
         text: "兴趣小组",
         icon: "layer-group",
@@ -57,22 +36,12 @@ export const zhNavbar = navbar([
         text: "推荐&招聘",
         icon: "book",
         prefix: "/job/",
-        children: [{
-            text: "高校推荐",
-            icon: "building-columns",
-            link: "job-university"
-        }, {
-            text: "企业招聘",
-            icon: "building",
-            link: "job-company"
-        }, {
-            text: "自行培养",
-            icon: "user",
-            link: "job-self"
-        }]
+        children: ["job-university.md",
+                   "job-company.md",
+                   "job-self.md"]
     }, {
         text: "联系我们",
         icon: "address-card",
         link: "/contact/"
-    },
+    }
 ]);
