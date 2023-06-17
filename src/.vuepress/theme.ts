@@ -47,7 +47,7 @@ export default hopeTheme({
     docsBranch: "main",
     docsDir: "src/",
     // 页脚
-    footer: "GPL协议 | 版权所有 © 2023-present 一生一芯Web团队",
+    footer: "GPL协议 | 版权所有 © 2023-现在 一生一芯Web团队",
     // copyright: false,
     displayFooter: true,
     // 杂项
