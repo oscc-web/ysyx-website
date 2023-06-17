@@ -46,7 +46,7 @@ export default hopeTheme({
     docsBranch: "main",
     docsDir: "src/",
     // 页脚
-    copyright: false,
+    // copyright: false,
     // 杂项
     toc: true,
 
@@ -57,7 +57,7 @@ export default hopeTheme({
     fullscreen: false,
     backToTop: true,
     pure: false,
-    print: true,
+    print: false,
 
     // 主题语言配置
     locales: {
@@ -68,7 +68,7 @@ export default hopeTheme({
                 editLink: "在 GitHub 上编辑此页",
             },
             footer: "GPL协议 | 版权所有 © 2023-present 一生一芯Web团队",
-            copyright: false,
+            // copyright: false,
             displayFooter: true
         }
     },
@@ -104,7 +104,9 @@ export default hopeTheme({
             playground: {
                 presets: ["ts", "vue"],
             },
-            presentation: ["highlight", "math", "search", "notes", "zoom"],
+            presentation: {
+                plugins: ["highlight", "math", "search", "notes", "zoom"]
+            },
             stylize: [{
                 matcher: "Recommended",
                 replacer: ({ tag }) => {
