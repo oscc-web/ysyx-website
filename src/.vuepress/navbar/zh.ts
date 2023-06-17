@@ -7,14 +7,14 @@ export const zhNavbar = navbar([
         text: "项目介绍",
         icon: "shield",
         prefix: "/project/",
-        children: ["project-intro.md",
-                   "project-intro-past.md"]
+        children: ["project-intro",
+                   "project-intro-past"]
     }, {
         text: "报名参与",
         icon: "computer",
         prefix: "/signup/",
-        children: ["signup-notice.md",
-                   "signup-faq.md"]
+        children: ["signup-notice",
+                   "signup-faq"]
     },
     zhCourse,
     zhBoard,
@@ -26,8 +26,8 @@ export const zhNavbar = navbar([
         text: "成果展示",
         icon: "star",
         prefix: "/achieve/",
-        children: ["achieve-teacher.md",
-                   "achieve-student.md"]
+        children: ["achieve-teacher",
+                   "achieve-student"]
     }, {
         text: "兴趣小组",
         icon: "layer-group",
@@ -36,9 +36,9 @@ export const zhNavbar = navbar([
         text: "推荐&招聘",
         icon: "book",
         prefix: "/job/",
-        children: ["job-university.md",
-                   "job-company.md",
-                   "job-self.md"]
+        children: ["job-university",
+                   "job-company",
+                   "job-team/"]
     }, {
         text: "联系我们",
         icon: "address-card",

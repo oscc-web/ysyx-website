@@ -7,10 +7,10 @@ heroAlt: "项目标志"
 tagline: "从零开始创造属于你的开源处理器芯片"
 actions:
     - text: "项目介绍"
-      link: "/docs/intro/background-now/"
+      link: "/project/project-intro.md"
       type: "primary"
-    - text: "立即报名"
-      link: "/docs/signup/notice/"
+    - text: "报名参与"
+      link: "/signup/signup-notice.md"
       type: "default"
 features:
     - title: "报名与学习全部免费"

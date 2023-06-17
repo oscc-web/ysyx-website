@@ -5,27 +5,33 @@ export const zhSidebar = sidebar({
     "/project/": [{
         text: "项目介绍",
         icon: "shield",
-        children: ["project-intro.md",
-                   "project-intro-past.md"]
+        children: ["project-intro",
+                   "project-intro-past"]
     }],
     "/signup/": [{
         text: "报名参与",
         icon: "computer",
-        children: ["signup-notice.md",
-                   "signup-faq.md"]
+        children: ["signup-notice",
+                   "signup-faq"]
     }],
     "/board/official/boards/": zhBoard,
     "/achieve/": [{
         text: "成果展示",
         icon: "star",
-        children: ["achieve-teacher.md",
-                   "achieve-student.md"]
+        children: ["achieve-teacher",
+                   "achieve-student"]
     }],
     "/job/": [{
         text: "推荐&招聘",
         icon: "book",
-        children: ["job-university.md",
-                   "job-company.md",
-                   "job-self.md"]
+        children: ["job-university",
+                   "job-company",
+                   {
+                       text: "团队招聘",
+                       icon: "user",
+                       prefix: "job-team/",
+                       children: ["job-submit",
+                                  "job-objects"]
+                   }]
     }]
 });
