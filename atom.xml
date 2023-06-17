@@ -11,7 +11,7 @@
   <icon>https://oscc-ysyx-web-project.github.io/ysyx-website/logo.png</icon>
   <logo>https://oscc-ysyx-web-project.github.io/ysyx-website/logo.png</logo>
   <rights>Copyright by Miao Yuyang</rights>
-  <updated>2023-06-17T11:51:11.525Z</updated>
+  <updated>2023-06-17T12:51:33.524Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://oscc-ysyx-web-project.github.io/ysyx-website/atom.xml"/>
   <link rel="alternate" href="https://oscc-ysyx-web-project.github.io/ysyx-website/"/>
@@ -588,25 +588,27 @@
     <title type="text">往期回顾</title>
     <id>https://oscc-ysyx-web-project.github.io/ysyx-website/project/project-intro-past.html</id>
     <link href="https://oscc-ysyx-web-project.github.io/ysyx-website/project/project-intro-past.html"/>
-    <updated>2023-06-17T11:49:40.000Z</updated>
+    <updated>2023-06-17T12:49:40.000Z</updated>
     <summary type="html"><![CDATA[<h2> 第一期</h2>
 <p>2019年8月27日，中国科学院大学的5位2016级本科生与教学团队在包云岗老师的办公室里开了一次气氛轻松但意义重大的动员大会，会上讨论制订了处理器芯片总体设计方案，确定了技术路线、基础平台、开发环境、流片工艺等内容，至此<strong>第一期“一生一芯”计划正式启动</strong>。随后在4个月高强度的开发过程中，5位同学在教学团队的带领下负责实现处理器芯片各个核心功能模块，尽管很多专业知识是课堂上没有介绍过的，但是学生们通过查阅资料独立解决了开发中所遇到的各种问题。最终经过学生们和教学团队的共同努力，第一期“一生一芯”处理器芯片顺利被点亮，<strong>能够成功运行GNU/Linux操作系统并在终端中打印国科大的Logo</strong>。</p>]]></summary>
     <content type="html"><![CDATA[<h2> 第一期</h2>
 <p>2019年8月27日，中国科学院大学的5位2016级本科生与教学团队在包云岗老师的办公室里开了一次气氛轻松但意义重大的动员大会，会上讨论制订了处理器芯片总体设计方案，确定了技术路线、基础平台、开发环境、流片工艺等内容，至此<strong>第一期“一生一芯”计划正式启动</strong>。随后在4个月高强度的开发过程中，5位同学在教学团队的带领下负责实现处理器芯片各个核心功能模块，尽管很多专业知识是课堂上没有介绍过的，但是学生们通过查阅资料独立解决了开发中所遇到的各种问题。最终经过学生们和教学团队的共同努力，第一期“一生一芯”处理器芯片顺利被点亮，<strong>能够成功运行GNU/Linux操作系统并在终端中打印国科大的Logo</strong>。</p>
+<figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/project-intro-process-1.1.jpg" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/project-intro-process-1.2.jpg" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
 <h2> 第二期</h2>
 <p>第二期“一生一芯”计划于2020年秋季正式启动，<strong>学生组成不再仅限于中国科学院大学的在校本科生</strong>，而是成功吸引了来自浙江大学、南京大学、西北工业大学、哈尔滨工业大学（深圳）等高校的共11名优秀同学的报名加入。除参与计划人数增加以外，第二期“一生一芯”教学团队的人员配置也得到了进一步升级，计算所和浙大2位老师加入教学团队，6位2016级国科大本科生担任助教（包括第一期“一生一芯”计划的5位同学以及1位负责FPGA仿真平台的同学），为本期同学在关键开发节点提供技术指导。最终经过几个月的独立开发与调试验证，<strong>11名同学全部完成了处理器核设计并进行了流片</strong>。</p>
 <h2> 第三期</h2>
-<p>第三期“一生一芯”计划于2021年7月7日正式启动，力求把处理器芯片设计人才培养与开源处理器芯片生态构建结合起来，<strong>培养既掌握处理器芯片架构设计领域知识，又具备处理器芯片设计制造全流程经验的专业人才</strong>。第三期报名人数总计为760人，参加学生覆盖168所国内外高校（含国外30所）。从学生的角度统计，在报名人数中，在校生共625人，占比82%；同时较多已毕业的学生也对处理器芯片设计感兴趣。在校生中，本硕博各年级均有分布，其中本科生占比44%，硕士生占比50%，硕博士占比6%。从年级细分来看，报名最多的五个年级分别是：研一（27%），大三（23%），研二（14%），大二（11%），大四（7%）。从报名数据上可以得知第三期“一生一芯”计划开始进入跨区域大规模人才阶段，最后完成流片的人数也相较前几期有了很大的提升。</p>
-<p>第三期“一生一芯”计划于2021年7月7日正式启动，报名对外开放，报名人数总计760人，参加学生覆盖168所国内外高校（含国外30所）。为了应对大规模人才培养的挑战，项目组首次尝试建立“让学生指导学生”的流程。讲座、答疑、进度检查、SoC集成验证和后端物理设计，皆由学生完成，工程师仅在最后阶段参与芯片后端的检视工作并提出改进的建议。前端助教共计27人，负责准备讲义和其它辅助材料，组织报告和答疑，并跟进学生的学习情况；SoC团队共计4人，负责收集学生提交的处理器代码并进行SoC集成和集成后的验证工作；IC后端团队共5人，负责芯片的物理设计，生成可流片的GDSII版图。在上述流程的支撑下，流片学生达到了50余人。</p>
-<!-- ![](/resources/images/develop-process-3.1.jpg)
-
-![](/resources/images/develop-process-3.2.jpg)
-
-![](/resources/images/develop-process-3.3.jpg) -->
+<p>第三期“一生一芯”计划于2021年7月7日正式启动，力求把处理器芯片设计人才培养与开源处理器芯片生态构建结合起来，<strong>培养既掌握处理器芯片架构设计领域知识，又具备处理器芯片设计制造全流程经验的专业人才</strong>。第三期报名人数总计为760人，参加学生覆盖168所国内外高校（含国外30所）。从学生的角度统计，在报名人数中，在校生共625人，占比82%；同时较多已毕业的学生也对处理器芯片设计感兴趣。在校生中，本硕博各年级均有分布，其中本科生占比44%，硕士生占比50%，硕博士占比6%。从年级细分来看，报名最多的五个年级分别是：研一（27%），大三（23%），研二（14%），大二（11%），大四（7%）。从报名数据上看，<strong>第三期“一生一芯”计划已正式进入到跨区域大规模人才培训阶段</strong>。</p>
+<p>为了应对大规模人才培养所带来的人力成本上的巨大挑战，项目组<strong>首次尝试建立了一套“让学生指导学生”的教学流程</strong>。讲座答疑、进度检查、SoC集成验证和后端物理设计等内容全部由学生们独立完成，工程师仅在最后阶段参与芯片后端的检视工作并提出改进的建议，这不仅从根本上解决了师资力量供需不平衡的问题，同时也培养了一批技术水平出色且心理素质过硬的助教团队，为后续推动“一生一芯“计划向前发展奠定了坚实的基础。前端助教共计27人，主要负责准备讲义和其他辅助材料，组织报告和答疑，并跟进学生的学习情况；SoC团队共计4人，主要负责收集学生提交的处理器代码并进行SoC集成和集成后的验证工作；IC后端团队共5人，主要负责芯片的物理设计，生成可流片的GDSII版图。在上述流程的支撑下，本期流片学生人数达到了50余人。</p>
+<figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/project-intro-process-3.1.jpg" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/project-intro-process-3.2.jpg" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/project-intro-process-3.3.jpg" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
 <h2> 第四期</h2>
-<p>第四期“一生一芯”计划于2022年2月启动，报名人数达到了1700余人，覆盖了国内外300余所高校，第一批13名学生达成流片指标，于2023年1月流片。第四期的采用新的教学理念和方法，首先是降低坡度，项目组将学习流程依次划分为预学习、基础、进阶和专家共四个阶段，其中预学习阶段的引入让基础欠缺的学生查缺补漏，从而使他们能够更平滑地过渡到正式学习阶段。第二是提高标准，本期对学生的学习质量提出了更高要求，不仅要理解软件程序是如何一步步在硬件芯片上运行，还要锻炼学生独立解决未知问题的能力，助教只提供关键节点的引导，鼓励学生主动探索问题的解决方案。</p>
-<!-- ![](/resources/images/develop-process-4.1.jpg) -->
+<p>在汲取参与第三期计划各同学所总结的宝贵经验之后，项目团队对第四期“一生一芯”计划的目标进行了梳理，明确了“一生一芯”计划的三步走战略，第一步是打破教育资源不平衡的壁垒，让那些对处理器芯片设计非常感兴趣的双非高校学生也能有机会参与到处理器芯片全流程学习中来，这对提升我国高校处理器芯片教育的普及有着非常重要且积极的意义；第二步是突破传统课程的边界，融合EE和CS的全栈人才培养。<strong>第四期“一生一芯”计划的核心是要构建一套软硬件协同设计理念并将其贯穿到整个处理器芯片教学流程中</strong>，让学生们不仅明白如何用代码设计处理器芯片，还要了解处理器芯片是如何被制作出来的，即处理器芯片从设计到制造全流程；第三步是鼓励参加过计划的同学进入软硬件开源社区，努力攻克我国目前亟需解决的各个卡脖子领域，最终通过关键领域的重大突破来吸引更多学生参与到“一生一芯”计划的学习中，从而实现一个良性的正向循环。</p>
+<p>第四期“一生一芯”报名人数为1753人，覆盖国内外共328所高校，报名人数相较上期增长130.0%，高校覆盖增长率为95.2%，说明随着第三期“一生一芯”计划的开展，有更多的学生认可教学团队提出的大规模人才培养方案，教学规模开始逐步扩大。第四期“一生一芯”计划分为四个培养阶段，其中学习到B阶段的总计98人，学习到A阶段的总计101人，通过答辩完成流片的总计16人，持续学习人数总计215人，在提升学习难度的情况下，本期持续学习人数与上期基本保持持平，而且随着学习阶段的深入，本科生和研究生的人数并没有出现明显的一边倒情况，这说明<strong>无论是刚接触专业知识的零基础学生，还是已经从事相关领域研究工作的学者，都能很好地适应“一生一芯”所提供的培养方案</strong>。</p>
+<figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/project-intro-process-4.1.jpg" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
 <h2> 第五期</h2>
+<p>未完待续</p>
 ]]></content>
     <author>
       <name>Miao Yuyang</name>
@@ -626,12 +628,14 @@
     <title type="text">项目概述</title>
     <id>https://oscc-ysyx-web-project.github.io/ysyx-website/project/project-intro.html</id>
     <link href="https://oscc-ysyx-web-project.github.io/ysyx-website/project/project-intro.html"/>
-    <updated>2023-06-17T11:49:40.000Z</updated>
+    <updated>2023-06-17T12:49:40.000Z</updated>
     <summary type="html"><![CDATA[<h2> 背景现状</h2>
 <p>我国计算机专业当前所面临的较为突出的人才培养问题，主要体现在计算机应用开发人员数量相对饱和，而底层软硬件研发人才匮乏，<strong>特别是计算机处理器芯片设计人才严重不足</strong>。经统计，2008到2017十年间的ISCA（体系结构顶级会议）论文的第一作者，有20%为中国国籍（美国本土为25%）。但与之相对，<strong>这些作者中有85%选择在美国就业，仅有4%在中国就业</strong>。大量学生到国外学习处理器芯片设计，毕业后留在美国工作。中美两国在高水平处理器芯片人才方面的差距，固然与过去多年中国处理器芯片的产业环境有关，但同时也与国内高校的处理器芯片人才培养方式密切相关。</p>]]></summary>
     <content type="html"><![CDATA[<h2> 背景现状</h2>
 <p>我国计算机专业当前所面临的较为突出的人才培养问题，主要体现在计算机应用开发人员数量相对饱和，而底层软硬件研发人才匮乏，<strong>特别是计算机处理器芯片设计人才严重不足</strong>。经统计，2008到2017十年间的ISCA（体系结构顶级会议）论文的第一作者，有20%为中国国籍（美国本土为25%）。但与之相对，<strong>这些作者中有85%选择在美国就业，仅有4%在中国就业</strong>。大量学生到国外学习处理器芯片设计，毕业后留在美国工作。中美两国在高水平处理器芯片人才方面的差距，固然与过去多年中国处理器芯片的产业环境有关，但同时也与国内高校的处理器芯片人才培养方式密切相关。</p>
+<figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/project-intro-background-1.jpg" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
 <p>我国正在经历的处理器芯片设计人才危机直接导致国内IT人才结构失衡，使得中国庞大的IT产业建立在国外软硬件系统平台之上，很多关键技术被国外“卡脖子”，国家安全受到威胁。若要解决这个问题，<strong>就必须立足国家当前面临的紧迫问题和未来战略需求，超前布局处理器芯片这一关键领域紧缺人才的培养，创新培养模式</strong>。然而，由于高端处理器芯片设计和生产成本不断增加，相关技术难度不断加大，所以目前只有极少数条件较好的大学和科研机构能够从事这方面的研究并培养少量人才。这远不能满足国家对该领域高端人才的迫切需求。</p>
+<figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/project-intro-background-2.jpg" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
 <p>针对上述情况，中国科学院大学（简称“国科大”）计算机科学与技术学院立足已有的理论课堂与实验教学，联合中国科学院计算技术研究所（简称“计算所”）的科研工程支撑团队，于2019年8月启动了“一生一芯”开源处理器芯片教学流片实践项目计划，<strong>至此形成了计算机系统方向理论课、实验研讨课与实践项目的有机衔接和贯通式实践训练</strong>。</p>
 <div class="hint-container info">
 <p class="hint-container-title">扩展资料</p>
@@ -641,15 +645,16 @@
 <p>为解决当前处理器芯片“卡脖子”问题，并面向未来计算机系统领域拔尖人才需求，<strong>“一生一芯”教学团队提出“计算机系统能力3.0”处理器芯片人才培养目标</strong>。即以开源处理器芯片为切入点，以处理器芯片敏捷开发方法为实验手段，将计算机科学（CS）与电子信息工程（EE）专业课程进行贯通式设计，突出科教融合与产学研融合特色，理论与实践并重，通过教学流片计划实现硅上处理器芯片教学，培养计算机系统领域全栈式拔尖人才。</p>
 <p>“一生一芯”的核心理念，<strong>简单来说就是“让一个学生可以带着自己设计的一颗处理器芯片毕业”</strong>，希望能通过理论与实践并重的教学机制来降低处理器芯片设计门槛，让更多的学生能够全流程的参与到处理器芯片设计的每一个环节中。</p>
 <p>“公益性”是“一生一芯"的重要属性。“一生一芯”报名和学习是免费的，在校生和已毕业的都可以来参加“一生一芯”的学习，但是因为经费有限，免费流片只针对在校生。只要对处理器芯片学习有浓厚的兴趣，想在处理器芯片方向发展的同学，零基础都可以加入，<strong>不论年级，专业和学校，都可以来报名</strong>。</p>
+<figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/project-intro-goal.jpg" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
 <div class="hint-container info">
 <p class="hint-container-title">扩展资料</p>
 <p>“计算机系统能力3.0”处理器芯片人才培养的理念是用开源技术、做开源处理器芯片、育处理器芯片人才。具体来讲，为培养具有计算机系统能力的“卡脖子”处理器芯片人才，贯通计算机（CS）本科阶段系统方向核心课程与实践内容，包括组成原理、体系结构、操作系统、编译等软硬件课程，并延展至电子信息（EE）专业，包括片上系统SoC与处理器芯片后端设计等课程。基于开源软硬件生态形成处理器芯片人才培养体系，探索“硅上做教学”。即学生自行设计处理器芯片，提交版图文件至处理器芯片代工厂（Foundry）进行流片，并在回片后进行测试调试和运行操作系统。</p>
 </div>
 <h2> 总体介绍</h2>
 <p>在战略层面，“一生一芯”计划主要有三个目标。<strong>第一，打破教育资源不平衡的壁垒</strong>。让所有对处理器芯片设计感兴趣的学生，无论学校、年级、专业和基础，都有机会参与到处理器芯片的学习中，这对提升我国高校处理器芯片教育的普及有着非常重要且积极的意义。<strong>第二，突破传统课程的边界，尝试构建融合EE和CS的全栈人才培养方案。</strong>“一生一芯”计划的核心是构建一套软硬件协同、并打通前后端全链条的处理器芯片教学流程，让学生不仅懂得如何用代码设计处理器芯片，而且要理解程序如何在自己设计的处理器芯片上运行，同时还要了解处理器芯片的代码如何转变成可流片版图。<strong>第三，鼓励参加计划的学生进入软硬件开源社区和企业，努力攻克我国目前亟需解决的各个卡脖子领域</strong>。同时也将这些领域的成果沉淀到教学方案中，吸引更多学生参与“一生一芯”计划，实现良性的正向循环。</p>
-<figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/project-intro-1.jpg" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/project-intro-total-1.jpg" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
 <p>在教学层面，“一生一芯”计划<strong>首先是坡度低</strong>。项目团队按照处理器芯片教学的难度将培训流程划分为多个阶段，其中预学习阶段的引入将提升零基础学生的学习积极性，从而使他们能够相对平滑地过渡到处理器芯片的正式学习中，而且每个阶段均设置了相应的游戏运行目标，增加趣味性的同时也能激励学生去不断探索设计和实现功能更强大的处理器芯片。<strong>第二是高标准</strong>。不仅要求学生理解软件程序是如何一步步在硬件电路上运行的，还要锻炼学生独立解决未知问题的能力，助教只提供对关键节点的引导，鼓励主动探索找到问题的解决方案。</p>
-<figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/project-intro-2.jpg" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/project-intro-total-2.jpg" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
 ]]></content>
     <author>
       <name>Miao Yuyang</name>
