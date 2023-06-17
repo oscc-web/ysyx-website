@@ -1,18 +1,14 @@
 export const zhBoard = {
     text: "板卡资料",
     icon: "book",
-    prefix: "/docs/",
+    prefix: "/board/",
     children: [{
-        text: "项目介绍",
-        icon: "shield",
-        link: "intro/background-now/"
+        text: "官方板卡",
+        icon: "bolt",
+        link: "official/"
     }, {
-        text: "立即报名",
-        icon: "computer",
-        link: "signup/notice/"
-    }, {
-        text: "学习讲义",
-        icon: "school",
-        link: "notes/main/"
+        text: "扩展模块",
+        icon: "robot",
+        link: "third-party/"
     }]
 }

@@ -14,18 +14,18 @@ export const zhSidebar = sidebar({
         children: ["signup-notice.md",
                    "signup-faq.md"]
     }],
-    "/board/": zhBoard,
+    "/board/official/boards/": zhBoard,
     "/achieve/": [{
         text: "成果展示",
         icon: "star",
-        children: ["achieve-teacher",
-                   "achieve-student"]
+        children: ["achieve-teacher.md",
+                   "achieve-student.md"]
     }],
     "/job/": [{
         text: "推荐&招聘",
         icon: "book",
-        children: ["job-university",
-                   "job-company",
-                   "job-self"]
+        children: ["job-university.md",
+                   "job-company.md",
+                   "job-self.md"]
     }]
 });
