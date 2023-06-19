@@ -39,21 +39,6 @@
         title: "标题：星空 V1.2",
         funcs: "简介：主要面向一生一芯三期的板卡",
         link:  "board-1/"
-    }, {
-        image: "https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board-1.jpg",
-        title: "标题：星空V1.3",
-        funcs: "功能：xxx",
-        link: "board-2/"
-    }, {
-        image: "https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board-1.jpg",
-        title: "标题：星空V2.0",
-        funcs: "功能：xxx",
-        link:  "board-3/"
-    }, {
-        image: "https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board-1.jpg",
-        title: "标题：xxx",
-        funcs: "功能：xxx",
-        link:  "board-4/"
     }];
 </script>
 
