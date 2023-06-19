@@ -6,8 +6,8 @@
     <link>https://oscc-ysyx-web-project.github.io/ysyx-website/</link>
     <description>一生一芯的官方网站</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 17 Jun 2023 13:31:44 GMT</pubDate>
-    <lastBuildDate>Sat, 17 Jun 2023 13:31:44 GMT</lastBuildDate>
+    <pubDate>Mon, 19 Jun 2023 10:26:51 GMT</pubDate>
+    <lastBuildDate>Mon, 19 Jun 2023 10:26:51 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>Copyright by Miao Yuyang</copyright>
@@ -337,25 +337,26 @@
       <link>https://oscc-ysyx-web-project.github.io/ysyx-website/board/official/</link>
       <guid>https://oscc-ysyx-web-project.github.io/ysyx-website/board/official/</guid>
       <source url="https://oscc-ysyx-web-project.github.io/ysyx-website/rss.xml"></source>
-      <description>板卡简介 本页面为星空单板计算机的 wiki 首页。星空(StarrySky)系列 单板计算机(Single Board Computer, SBC) (https://en.wikipedia.org/wiki/Single-board_computer) 是2023年3月份 一生一芯项目组 () 在吸收前期多款测试板卡的设计经验后，专门规划设计的一...</description>
+      <description>板卡简介 本页面为星空单板计算机的 开发文档 首页。星空(StarrySky)系列 单板计算机(Single Board Computer, SBC) (https://en.文档pedia.org/文档/Single-board_computer) 是2023年3月份 一生一芯项目组 (https://ysyx.oscc.cc/) 在吸收前期多款测试...</description>
       <author>myyerrol@126.com (Miao Yuyang)</author>
       <pubDate>Sat, 17 Jun 2023 06:15:09 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 板卡简介</h2>
-<p>本页面为星空单板计算机的 <strong>wiki</strong> 首页。星空(StarrySky)系列 <a href="https://en.wikipedia.org/wiki/Single-board_computer" target="_blank" rel="noopener noreferrer">单板计算机(Single Board Computer, SBC)</a> 是2023年3月份 <a href="">一生一芯项目组</a> 在吸收前期多款测试板卡的设计经验后，专门规划设计的一款基于 <strong>一生一芯流片SoC</strong> 的官方板卡，用于评估和展示一生一芯SoC的丰富外设应用。项目组独立完成了星空系列单板计算机的硬件设计，生产管理，教程编写和包装视觉设计。短期目标希望能够依托每年2~3次一生一芯SoC的流片持续打磨星空板卡的软硬件系统，提供一款，长期目标是基于系列化的板卡提供轻量级的开源设计，用于。</p>
-<h2> 概念</h2>
+<p>本页面为星空单板计算机的 <strong>开发文档</strong> 首页。星空(StarrySky)系列 <a href="https://en.xn--pedia-xx0kj9n.org/%E6%96%87%E6%A1%A3/Single-board_computer" target="_blank" rel="noopener noreferrer">单板计算机(Single Board Computer, SBC)</a> 是2023年3月份 <a href="https://ysyx.oscc.cc/" target="_blank" rel="noopener noreferrer">一生一芯项目组</a> 在吸收前期多款测试板卡的设计经验后，专门规划设计的一款基于 <strong>一生一芯流片SoC</strong> 的官方板卡，用于评估和展示一生一芯SoC的丰富外设应用。项目组独立完成了星空系列单板计算机的硬件设计，生产管理，教程编写和包装视觉设计。短期目标希望能够依托每年2~3次一生一芯SoC的流片持续打磨星空板卡的软硬件系统，为开源社区提供一款稳定，，长期目标是围绕星空系列化板卡建立轻量级的开源设计，用于。</p>
+<h2> 概念设计</h2>
 <p>星空开发板以</p>
-<h2> 板卡版本约定</h2>
+<h2> </h2>
+<h2> 版本约定</h2>
 <!-- 开发进度图 -->
 <h2> 板卡型号</h2>
-<p>下面展示了所有板卡的wiki页面，可以点击下面卡片中的 <em><strong>详细信息</strong></em> 跳转到特定板卡的页面。</p>
+<p>下面展示了所有板卡的 <strong>开发文档</strong> 页面，可以点击下面卡片中的 <em><strong>详细信息</strong></em> 跳转到特定板卡的页面。</p>
 ]]></content:encoded>
     </item>
     <item>
-      <title>开发wiki</title>
+      <title>wiki</title>
       <link>https://oscc-ysyx-web-project.github.io/ysyx-website/board/official/boards/board-1/</link>
       <guid>https://oscc-ysyx-web-project.github.io/ysyx-website/board/official/boards/board-1/</guid>
-      <source url="https://oscc-ysyx-web-project.github.io/ysyx-website/rss.xml">开发wiki</source>
-      <description>开发入门 开箱检查 同学们收到板卡后，请先按照下面的列表检查板卡和配件是否齐全： 板卡包装盒 x1; 开发板+FPGA核心板 (使用网格防静电袋包装); 耗材 (使用硬质防静电袋包装); 正方形晶振 x2; W25Q128JVSIQ x2; Type-C线缆x1; FPGA JTAG烧写器和线缆x1; 包装所有内容可以见下图： 上电测试 板卡在发放前已...</description>
+      <source url="https://oscc-ysyx-web-project.github.io/ysyx-website/rss.xml">wiki</source>
+      <description>开发入门 开箱检查 同学们收到板卡后，请先按照下面的列表检查板卡和配件是否齐全： 板卡包装盒 x1; 开发板+FPGA核心板 (使用网格防静电袋包装); 耗材 (使用硬质防静电袋包装); 正方形晶振 x2; W25Q128JVSIQ x2; Type-C USB线缆 x1; FPGA JTAG烧写器和线缆 x1; 包装所有内容可以见下图： 板卡介绍 主...</description>
       <author>myyerrol@126.com (Miao Yuyang)</author>
       <pubDate>Sat, 17 Jun 2023 06:15:09 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 开发入门</h2>
@@ -370,36 +371,68 @@
 <li>W25Q128JVSIQ x2</li>
 </ul>
 </li>
-<li>Type-C线缆x1</li>
-<li>FPGA JTAG烧写器和线缆x1</li>
+<li>Type-C USB线缆 x1</li>
+<li>FPGA JTAG烧写器和线缆 x1</li>
 </ul>
 <p>包装所有内容可以见下图：</p>
+<h3> 板卡介绍</h3>
+<p>主要介绍，先放一张图，然后依照图序分别展开介绍每个功能外设。</p>
+<p>板卡正面.png</p>
+<p>板卡反面.png</p>
 <h3> 上电测试</h3>
-<p>板卡在发放前已经提前烧录好了测试程序，可以用来检测硬件是否能够正常工作，以下wiki均采用 *** Win11专业版 版本22616.1 *** 作为测试平台，Win10 和 Win11 均可以。</p>
+<p>板卡在发放前已经提前烧录好了测试程序，可以用来检测硬件是否能够正常工作，以下wiki均采用 <strong>Win11专业版</strong> 作为测试平台，Win10 和 Win11 均可以。</p>
 <ul>
 <li>安装串口驱动</li>
 </ul>
 <p>我们三期板卡上用的串口芯片是CP2102，所以需要提前在电脑上安装CP2102串口的驱动，否则电脑无法识别出CP2102的串口。如果大家电脑上已经安装过该驱动，则不需要再次安装。具体检查方法如下：</p>
-<p>同学们先将配件中的绿联的mini usb线缆(黑色)的一头插入到三期PCB板卡的mini usb口中，另一头插入到电脑的USB口中，然后按下WIN+X组合键，在弹出的选项中点击 <em><strong>设备管理器</strong></em> 选项，如果 <em><strong>设备管理器---&gt;端口(COM和LPT)</strong></em> 中显示类似下图中带有CP210x字样的端口图标，则说明串口驱动已经安装成功，不需要再安装CP2102驱动：</p>
-<p>图片.svg</p>
+<p>同学们先将配件中的 Type-C USB 线缆的一头插入到三期PCB板卡的 USB 口中，另一头插入到电脑的 USB 口中，然后按下 <em><strong>WIN+X</strong></em> 组合键，在弹出的选项中点击 <em><strong>设备管理器</strong></em> 选项，如果 <em><strong>设备管理器---&gt;端口(COM和LPT)</strong></em> 中显示类似下图中带有 <code>CP210x</code> 字样的端口图标，则说明串口驱动已经安装成功，不需要再安装 CP2102 驱动：</p>
+<figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/cp2102-1.png" alt="设备管理器显示CP2102端口" tabindex="0" loading="lazy"><figcaption>设备管理器显示CP2102端口</figcaption></figure>
 <div class="hint-container tip">
 <p class="hint-container-title">提示</p>
-<p>上图端口图标后圆括号中的 COMx 后接着的数字不一定是图中的15，这个是电脑自动分配的，对测试没有影响。</p>
+<p>上图端口图标后圆括号中的 <strong><code>COMx</code></strong> 后接着的数字不一定是图中的 <strong><code>15</code></strong>，这个是电脑自动分配的，对测试没有影响。</p>
 </div>
 <p>如果在 <em><strong>其他设备</strong></em> 选项中出现类似下图中的黄色叹号图标，则说明电脑没有安装过CP2102的驱动，需要使用我们提供的软件包安装相应的CP2102驱动：</p>
+<figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/cp2102-2.png" alt="在其他设备中出现黄色叹号" tabindex="0" loading="lazy"><figcaption>在其他设备中出现黄色叹号</figcaption></figure>
 <p>CP2102驱动的具体安装方法如下：同学们需要先进入 <code>ysyx3_pcb_software/cp2102 driver</code> 目录中，然后双击 <code>CP2102xVCPInstaller_x64.exe</code> 来安装64位驱动。同学们的电脑如果只支持32位的话，则双击 <code>CP2102xVCPInstaller_x86.exe</code> 来安装32位驱动：</p>
+<figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/cp2102-3.png" alt="安装CP2102驱动程序" tabindex="0" loading="lazy"><figcaption>安装CP2102驱动程序</figcaption></figure>
 <p>之后按照安装程序引导界面来安装驱动。当驱动安装完成后，再次使用前面介绍的方法打开设备管理器，如果在 <em><strong>端口(COM和LPT)</strong></em> 中显示出CP2102的端口号，则说明驱动安装成功。</p>
-<p>::: detail CP2102设备识别问题
-如果在 <em><strong>其他设备</strong></em> 选项中出现 <strong>Verifone USB to Printer</strong> 或者 <strong>Verifone USB to Modem</strong> ，则说明电脑已经安装过CP2102的驱动，但是没有被成功识别出来：</p>
-<p>:::</p>
+<details class="hint-container details"><summary>CP2102 设备识别问题</summary>
+<p>如果在 <em><strong>其他设备</strong></em> 选项中显示 <strong>Verifone USB to Printer</strong> 或者 <strong>Verifone USB to Modem</strong> ，则说明电脑已经安装过CP2102的驱动，但是没有被成功识别出来：</p>
+<figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/cp2102-prb-1.png" alt="CP2102设备识别问题" tabindex="0" loading="lazy"><figcaption>CP2102设备识别问题</figcaption></figure>
+<p>此时需要更新下驱动，具体方法如下：</p>
+<ul>
+<li>右键 <strong>Verifone USB to Printer</strong> 或者 <strong>Verifone USB to Modem</strong> 并点击更新驱动选项：</li>
+</ul>
+<figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/cp2102-prb-2.png" alt="右键点击更新驱动" tabindex="0" loading="lazy"><figcaption>右键点击更新驱动</figcaption></figure>
+<ul>
+<li>然后在弹出的窗口中点击 <em><strong>让我从计算机上的可用驱动程序程序列表中选取</strong></em> ：</li>
+</ul>
+<figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/cp2102-prb-3.png" alt="从电脑上选取驱动程序" tabindex="0" loading="lazy"><figcaption>从电脑上选取驱动程序</figcaption></figure>
+<ul>
+<li>在弹出的窗口中，选择显示 <em><strong>所有设备</strong></em> ，并点击 <em><strong>下一页</strong></em> ：</li>
+</ul>
+<figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/cp2102-prb-4.png" alt="选择设备类型" tabindex="0" loading="lazy"><figcaption>选择设备类型</figcaption></figure>
+<ul>
+<li>在弹出的窗口的左边设备列表中选择 <em><strong>Silicon Labs</strong></em> ，然后在右边详细列表中选择第一个，然后点击 <em><strong>下一页</strong></em> ：</li>
+</ul>
+<figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/cp2102-prb-5.png" alt="选择驱动程序" tabindex="0" loading="lazy"><figcaption>选择驱动程序</figcaption></figure>
+<ul>
+<li>在弹出的警告框中，点击 <em><strong>是</strong></em> ：</li>
+</ul>
+<figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/cp2102-prb-6.png" alt="更新驱动" tabindex="0" loading="lazy"><figcaption>更新驱动</figcaption></figure>
+<p>这样重新插入 USB 线缆后，就可以在设备管理器中显示出端口号了。</p>
+</details>
 <ul>
 <li>安装串口调试软件</li>
 </ul>
+<p>当电脑能够成功识别出 CP2102 端口号后，需要使用串口调试软件来和板卡进行通信。目前市场上常用的串口调试软件有很多，比如Minicom、MobaXterm、Xshell、SecureCRT、Cutecom和WindTerm 等等，<strong>本wiki选择的串口调试软件是MobaXterm</strong>。</p>
+<figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/mobaxterm-intro-1.png" alt="MobaXterm软件" tabindex="0" loading="lazy"><figcaption>MobaXterm软件</figcaption></figure>
+<p>MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL等多种协议的强大终端工具。可以访问 <a href="https://mobaxterm.mobatek.net/" target="_blank" rel="noopener noreferrer">MobaXterm的官网</a> 获得更加详细的信息。同学们需要从官网上下载。</p>
 <div class="hint-container tip">
 <p class="hint-container-title">Implicit CR in every LF 选项含义</p>
 <p>由于我们板卡上的测试程序是使用 <strong><code>"\n"(LF)</code></strong> 进行换行的，但是Win下换行格式是 <strong><code>"\r\n"(CR LF)</code></strong> ，所以需要设置PuTTY在每次接收到 <strong><code>"\n"(LF)</code></strong> 时在其前面隐式添加 <strong><code>"\r"(CR)</code></strong> ，这样才能在 Win 下正确地显示换行。这个选项与 Win，Linux 和 Mac 系统下对换行的处理方式不同有关，感兴趣的同学们可以自行上网了解相关内容。</p>
 </div>
-<p>至此，板卡的硬件测试完成，下面将更加详细地介绍板卡上的各个部分。</p>
+<p>至此，板卡的硬件测试完成，下面将更加详细地介绍板卡。</p>
 <div class="hint-container info">
 <p class="hint-container-title">板卡或者耗材损坏/缺失/丢失怎么办？</p>
 <ul>
@@ -407,8 +440,6 @@
 <li>项目组会在板卡中额外提供若干耗材 (晶振和Flash)，若消耗完毕或丢失，项目组可提供参考网购链接，由同学们自行购买。</li>
 </ul>
 </div>
-<h3> 板卡介绍</h3>
-<h4> 硬件设计</h4>
 <div class="hint-container tip">
 <p class="hint-container-title">提示</p>
 <p>板卡上的机械开关选用的是 1.27mm 间距的微动拨码开关。这种开关每一位拨码比较小，直接用手不好拨动，可以使用带尖头的拨动。</p>
@@ -421,48 +452,38 @@
 <p class="hint-container-title">机械开关切换</p>
 <p>简单说的话，就是上电后，除了三期SoC板卡和黑金FPGA核心板上的复位按钮可以按动之外，板卡的机械开关和接插件都不要带电按动和插接。带电操作可能会导致板卡的电源网络出现较大的浪涌电流，影响板卡的工作稳定性，甚至会烧坏板卡，而非正确的热插拔操作可能会使得芯片出现闩锁效应，可能会损坏芯片。</p>
 </div>
-<div class="hint-container info">
-<p class="hint-container-title">Custom Title</p>
-<p>A custom information container with <code>code</code>, <a href="#demo">link</a>.</p>
-<div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></div>
-<div class="hint-container note">
-<p class="hint-container-title">Custom Title</p>
-<p>A custom note container with <code>code</code>, <a href="#demo">link</a>.</p>
-<div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></div>
-<div class="hint-container tip">
-<p class="hint-container-title">Custom Title</p>
-<p>A custom tip container with <code>code</code>, <a href="#demo">link</a>.</p>
-<div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></div>
 <div class="hint-container warning">
-<p class="hint-container-title">Custom Title</p>
-<p>A custom warning container with <code>code</code>, <a href="#demo">link</a>.</p>
-<div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></div>
+<p class="hint-container-title">复位功能注意事项</p>
+<ul>
+<li>由于测试板卡上没有<strong>上电自动复位电路</strong>，所以需要同学们在板卡上电后按动复位开关执行<strong>一次手动复位</strong>。</li>
+<li>由于复位开关是机械开关，且板卡<strong>没有设计去抖电路</strong>，另外FPGA板卡侧复位和SoC测试板卡侧复位是<strong>异步的</strong>，如果三期SoC板卡的复位在FPGA板卡复位之前完成，则会由于发送的访存请求得不到响应而卡死，进而导致串口只输出 <code>Loading program size ...</code> 。此时只需再次按动三期SoC板卡上的复位开关即可。但是强烈建议每次执行程序前先按一下FPGA核心板上的复位按钮，然后再按一下三期板卡上的复位开关，这样能够尽可能确保复位的正确性。另外复位开关的按动时间需要长一些。</li>
+</ul>
+</div>
 <div class="hint-container danger">
 <p class="hint-container-title">Custom Title</p>
 <p>A custom danger container with <code>code</code>, <a href="#demo">link</a>.</p>
 <div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></div>
-<details class="hint-container details"><summary>Custom Title</summary>
-<p>A custom details container with <code>code</code>, <a href="#demo">link</a>.</p>
-<div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></details>
+<h3> 硬件设计</h3>
 <div class="hint-container info">
-<p class="hint-container-title">Custom info</p>
+<p class="hint-container-title">设计约束</p>
 </div>
-<div class="hint-container note">
-<p class="hint-container-title">Custom note</p>
+<div class="hint-container info">
+<p class="hint-container-title">设计插曲</p>
 </div>
-<div class="hint-container tip">
-<p class="hint-container-title">Custom tip</p>
-</div>
-<div class="hint-container warning">
-<p class="hint-container-title">Custom warning</p>
-</div>
-<div class="hint-container danger">
-<p class="hint-container-title">Custom danger</p>
-</div>
+<h3> 程序烧写和测试</h3>
+<h3> FPGA板卡外设</h3>
 <h2> 其他资源</h2>
-<h2> 常见问题</h2>
-<h2> 硅后测试</h2>
+<p>对接PPT内容，你可以从这里获得。</p>
+<h3> 硅后测试</h3>
+<h2> 文档勘误与致谢</h2>
+<p>项目组鼓励和欢迎同学们对本文档提出宝贵的意见和反馈，目前项目组使用 <a href="https://github.com/oscc-ysyx-web-project/ysyx-website/issues" target="_blank" rel="noopener noreferrer">Github issue</a> 来追踪这些反馈，本wiki致力于遵守开源软件开发中公认的最佳实践，所以当你觉得有提出的必要时，请大胆地发起issue吧！😄</p>
+<h3> 致谢列表</h3>
+<ul>
+<li>感谢粟金伦同学在测试板卡时发现的板卡插接深度不够可能导致板卡信号断路问题，现在已经补充到相关注意事项中。</li>
+<li>感谢粟金伦同学建议使用 PuTTY/MobaXterm 软件来做板卡测试流程演示用的串口上位机软件，本文档已经使用 MobaXterm 重写了有关章节。</li>
+</ul>
 ]]></content:encoded>
+      <enclosure url="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/cp2102-1.png" type="image/png"/>
     </item>
     <item>
       <title>内容2</title>
@@ -604,13 +625,13 @@
       <link>https://oscc-ysyx-web-project.github.io/ysyx-website/signup/signup-notice.html</link>
       <guid>https://oscc-ysyx-web-project.github.io/ysyx-website/signup/signup-notice.html</guid>
       <source url="https://oscc-ysyx-web-project.github.io/ysyx-website/rss.xml">报名需知</source>
-      <description>报名流程 了解计划 在正式报名参加“一生一芯”计划之前，请先阅读 填写问卷 创建记录 开始学习 “一生一芯”致力于培养芯片设计人才，包括体系结构设计、RTL开发、SoC集成验证和后端物理设计等。所有对芯片设计感兴趣的同学（在校或已毕业），都欢迎随时报名参加“一生一芯”。 // import Qrcode from &amp;apos;qrcode.vue&amp;apos; const ...</description>
+      <description>报名流程 了解计划 在正式报名参加“一生一芯”计划之前，请先阅读《项目概述》 (/ysyx-website/project/project-intro.html)部分 填写问卷 创建记录 开始学习 “一生一芯”致力于培养芯片设计人才，包括体系结构设计、RTL开发、SoC集成验证和后端物理设计等。所有对芯片设计感兴趣的同学（在校或已毕业），都欢迎随时报名...</description>
       <author>myyerrol@126.com (Miao Yuyang)</author>
       <category>报名参与</category>
       <pubDate>Fri, 16 Jun 2023 11:41:37 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 报名流程</h2>
 <h3> 了解计划</h3>
-<p>在正式报名参加“一生一芯”计划之前，请先阅读</p>
+<p>在正式报名参加“一生一芯”计划之前，请先阅读<a href="/ysyx-website/project/project-intro.html" target="blank">《项目概述》</a>部分</p>
 <h3> 填写问卷</h3>
 <h3> 创建记录</h3>
 <h3> 开始学习</h3>
