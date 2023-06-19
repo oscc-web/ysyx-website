@@ -23,7 +23,7 @@ flowchart LR
 
 ### 了解计划
 
-在正式报名参加“一生一芯”计划之前，请先阅读
+在正式报名参加“一生一芯”计划之前，请先阅读[《项目概述》](/ysyx-website/project/project-intro.html)部分
 
 ### 填写问卷
 
