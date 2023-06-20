@@ -29,7 +29,9 @@ flowchart LR
 
 除了网站中的《项目概述》之外，**我们还提供了以下资料供大家了解“一生一芯”计划**。总之，“一生一芯”致力于培养芯片设计人才，包括体系结构设计、RTL开发、SoC集成验证和后端物理设计等。所有对芯片设计感兴趣的同学（在校或已毕业），都欢迎随时报名参加“一生一芯”。
 
-- [概述视频](https://www.bilibili.com/video/BV12e4y1Y76i/)
+<BiliBili bvid="BV12e4y1Y76i" />
+
+<!-- - [概述视频](https://www.bilibili.com/video/BV12e4y1Y76i/) -->
 - [介绍课件](https://ysyx.oscc.cc/slides/2205/01.html#/)
 - [常见问题](./signup-faq.html)
 
