@@ -9,9 +9,30 @@ toc: false
 本页面为星空单板计算机的 **开发文档** 首页。星空(StarrySky)系列 [单板计算机(Single Board Computer, SBC)](https://en.文档pedia.org/文档/Single-board_computer) 是2023年3月份 [一生一芯项目组](https://ysyx.oscc.cc/) 在吸收前期多款测试板卡的设计经验后，专门规划设计的一款基于 **一生一芯流片SoC** 的官方板卡，用于评估和展示一生一芯SoC的丰富外设应用。项目组独立完成了星空系列单板计算机的硬件设计，生产管理，教程编写和包装视觉设计。短期目标希望能够依托每年2~3次一生一芯SoC的流片持续打磨星空板卡的软硬件系统，为开源社区提供一款稳定，，长期目标是围绕星空系列化板卡建立轻量级的开源设计，用于。
 
 ## 概念设计
-星空开发板以
-## 
+星空开发板以。为了能够更好地，通过头脑风暴，项目组最终确定选用 **星空** 作为板卡的正式名字，
 
+![板卡名字头脑风暴](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/name-1.png)
+
+
+设计风格：白色底以清晰展示底部众多logo，参考苹果和大疆的白底色简约风格，顶面设计有logo和众多支持单位的logo，为主功能面。底面为板卡的DXF线稿图，体现简约geek风
+
+![星空开发板盒型刀版设计](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/package-1.png)
+
+包装具体制造参数如下：
+- 盒型：后开带锁扣扣底
+- 内尺寸：135X37X105 mm
+- 外尺寸：136X38X107 mm
+- 制造尺寸：135.6X37.6X106.1 mm
+- 材质：350g白卡纸，厚度0.5mm，亚膜工艺
+
+![星空开发板盒型刀版设计图](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/package-1.png)
+
+设计需求：使用几何结构展示星空背景
+设计元素：1. 星座 2. 卫星 3. 星轨，流星雨
+
+几何图案：使用点表征过孔(狭义)和星星(广义)，使用线类比芯片或PCB中的过孔(狭义)和行星轨迹(广义)，展示一种“点->线”的连接(动静变化)。星座(群体，静态)。宛若流星(个体，动态)，而众多流星汇聚一起构成流星雨(群体，动态)，而流星雨恰好是夜晚星空中最浪漫而美丽的景象
+
+![星空开发板盒型3D渲染](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/package-3d.png)
 
 ## 版本约定
 
