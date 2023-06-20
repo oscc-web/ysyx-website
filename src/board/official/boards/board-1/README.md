@@ -1,5 +1,5 @@
 ---
-title: "wiki"
+title: "文档"
 copyright: false
 breadcrumb: false
 pageInfo: false
@@ -29,7 +29,7 @@ toc: false
 
 
 ### 上电测试
-板卡在发放前已经提前烧录好了测试程序，可以用来检测硬件是否能够正常工作，以下wiki均采用 **Win11专业版** 作为测试平台，Win10 和 Win11 均可以。
+板卡在发放前已经提前烧录好了测试程序，可以用来检测硬件是否能够正常工作，以下文档均采用 **Win11专业版** 作为测试平台，Win10 和 Win11 均可以。
 
 * 安装串口驱动
 
@@ -87,12 +87,21 @@ CP2102驱动的具体安装方法如下：同学们需要先进入 `ysyx3_pcb_so
 
 - 安装串口调试软件
 
-当电脑能够成功识别出 CP2102 端口号后，需要使用串口调试软件来和板卡进行通信。目前市场上常用的串口调试软件有很多，比如Minicom、MobaXterm、Xshell、SecureCRT、Cutecom和WindTerm 等等，**本wiki选择的串口调试软件是MobaXterm**。
+当电脑能够成功识别出 CP2102 端口号后，需要使用串口调试软件来和板卡进行通信。目前市场上常用的串口调试软件有很多，比如Minicom、MobaXterm、Xshell、SecureCRT、Cutecom和WindTerm 等等，**本文档选择的串口调试软件是MobaXterm**。
 
 ![MobaXterm软件](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/mobaxterm-intro-1.png)
 
-MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL等多种协议的强大终端工具。可以访问 [MobaXterm的官网](https://mobaxterm.mobatek.net/) 获得更加详细的信息。同学们需要从官网上下载。
+MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL等多种协议的强大终端工具。可以访问 [MobaXterm的官网](https://mobaxterm.mobatek.net/) 获得更加详细的信息。同学们需要从官网上下载并自行安装该软件。
 
+::: info 串口调试软件选择
+推荐同学们使用MobaXterm软件，但是同学们也可以自行选择其他串口调试软件使用。
+:::
+
+当安装完MobaXterm后，打开该软件，会显示类似下图的界面：
+
+![MobaXterm软件](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/mobaxterm-intro-2.png)
+
+然后使用
 
 ::: tip Implicit CR in every LF 选项含义
 由于我们板卡上的测试程序是使用 **`"\n"(LF)`** 进行换行的，但是Win下换行格式是 **`"\r\n"(CR LF)`** ，所以需要设置PuTTY在每次接收到 **`"\n"(LF)`** 时在其前面隐式添加 **`"\r"(CR)`** ，这样才能在 Win 下正确地显示换行。这个选项与 Win，Linux 和 Mac 系统下对换行的处理方式不同有关，感兴趣的同学们可以自行上网了解相关内容。
@@ -152,7 +161,7 @@ const a = 1;
 
 ### 硅后测试
 ## 文档勘误与致谢
-项目组鼓励和欢迎同学们对本文档提出宝贵的意见和反馈，目前项目组使用 [Github issue](https://github.com/oscc-ysyx-web-project/ysyx-website/issues) 来追踪这些反馈，本wiki致力于遵守开源软件开发中公认的最佳实践，所以当你觉得有提出的必要时，请大胆地发起issue吧！:smile:
+项目组鼓励和欢迎同学们对本文档提出宝贵的意见和反馈，目前项目组使用 [Github issue](https://github.com/oscc-ysyx-web-project/ysyx-website/issues) 来追踪这些反馈，本文档致力于遵守开源软件开发中公认的最佳实践，所以当你觉得有提出的必要时，请大胆地发起issue吧！:smile:
 
 ### 致谢列表
 - 感谢粟金伦同学在测试板卡时发现的板卡插接深度不够可能导致板卡信号断路问题，现在已经补充到相关注意事项中。
