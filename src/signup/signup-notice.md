@@ -33,6 +33,43 @@ flowchart LR
 - [介绍课件](https://ysyx.oscc.cc/slides/2205/01.html#/)
 - [常见问题](./signup-faq.html)
 
+::: info 交流渠道
+> | QQ 3群 | QQ 2群 <el-badge value="已满"></el-badge> | QQ 1群 <el-badge value="已满"></el-badge> |
+> |:---:|:---:|:---:|
+> | <a qrcode-container :href="qrcodeGroup3" target="_blank"><qrcode-vue :value="qrcodeGroup3" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> | <a qrcode-container href="" target="_blank"><qrcode-vue :value="qrcodeGroup2" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> | <a qrcode-container href="" target="_blank"><qrcode-vue :value="qrcodeGroup1" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> |
+> | <a :href="qrcodeGroup3" target="_blank">621039593</a> | <a :href="qrcodeGroup2" target="_blank">528994030</a> | <a :href="qrcodeGroup1" target="_blank">663797655</a> |
+:::
+
+<style lang="scss" scoped>
+    [qrcode-container] {
+        display: block;
+        border-radius: 5px;
+        overflow: hidden;
+        width: 100px;
+        height: 100px;
+    }
+</style>
+
+<script>
+    import QrcodeVue from "qrcode.vue";
+
+    export default {
+        data() {
+            return {
+                qrcodeRenderAs: "svg",
+                qrcodeMargin: 3,
+                qrcodeLevel: "L",
+                qrcodeGroup1: "https://qm.qq.com/cgi-bin/qm/qr?k=qfzc76aZKhWiGsvvwyD0FKItOzT4oOAM&authKey=GZkf718BlVaHpRoAvWWI89nK+Mx3AF5pDmPgkhByS29A6mUzokmRaBjtCFwDRnGx&noverify=0",
+                qrcodeGroup2: "https://qm.qq.com/cgi-bin/qm/qr?k=CpWjuhJiMhyf3vLL5d3mFKoknUPhI0-w&authKey=S1VNGrCvTn4wkwk0UQVKTZbhXBay0jHN6D4eQ7DHPuFTYoKLuyDHIAKwyHWPl3sm&noverify=0",
+                qrcodeGroup3: "http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=Z3w4cAQ3YMp1SGhKVEYE6_C0w2XzJEhO&authKey=3nj56P2ItNDezb9o%2FgqaOs09%2FNX0UWLSRXM41FpQ6Vua8iQRGWI%2FvNNHdRRdtTLu&noverify=0&group_code=621039593"
+            }
+        },
+        components: {
+            QrcodeVue
+        }
+    }
+</script>
+
 ::: warning 注意事项
 :::
 
@@ -63,37 +100,12 @@ flowchart LR
     <el-button size="large"
                type="primary"
                style="height:45px; font-size:16px;"
-               @click="jumpToCourseHomeFunc">课程主页传送门
+               @click="jumpToCourseHome">课程主页传送门
     </el-button>
 </el-row>
 
 <script setup>
-    const jumpToCourseHomeFunc = () => {
+    const jumpToCourseHome = () => {
         window.open("https://ysyx.oscc.cc/docs/schedule.html", "_blank");
     }
 </script>
-
-<!-- <script setup>
-// import Qrcode from 'qrcode.vue'
-const
-    QGroup_1 = "https://qm.qq.com/cgi-bin/qm/qr?k=qfzc76aZKhWiGsvvwyD0FKItOzT4oOAM&authKey=GZkf718BlVaHpRoAvWWI89nK+Mx3AF5pDmPgkhByS29A6mUzokmRaBjtCFwDRnGx&noverify=0",
-    QGroup_2 = "https://qm.qq.com/cgi-bin/qm/qr?k=CpWjuhJiMhyf3vLL5d3mFKoknUPhI0-w&authKey=S1VNGrCvTn4wkwk0UQVKTZbhXBay0jHN6D4eQ7DHPuFTYoKLuyDHIAKwyHWPl3sm&noverify=0",
-    QGroup_3 = "http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=Z3w4cAQ3YMp1SGhKVEYE6_C0w2XzJEhO&authKey=3nj56P2ItNDezb9o%2FgqaOs09%2FNX0UWLSRXM41FpQ6Vua8iQRGWI%2FvNNHdRRdtTLu&noverify=0&group_code=621039593"
-</script>
-
-<style lang="scss" scoped>
-    [qr-code] {
-        display: block;
-        border-radius: 5px;
-        overflow: hidden;
-        width: 100px;
-        height: 100px;
-    }
-</style> -->
-
-<!-- > #### info:: 获取项目信息和最新动态
-> -->
-<!-- > | QQ **3**群 | QQ **2**群<badge type="solid red">已满</badge> | QQ **1**群<badge type="solid red">已满</badge> |
-> |:---------------:|:---------------:|:---------------:|
-> | <a qr-code :href="QGroup_3" target="_blank"><qrcode :value="QGroup_3" level="L" render-as="svg" background="#FFFA" foreground="var(--c-brand-dark)" margin="3" /></a> | <a qr-code :href="QGroup_2" target="_blank"><qrcode :value="QGroup_2" level="L" render-as="svg" background="#FFFA" foreground="var(--ct-gray-light)" margin="2" /></a> | <a qr-code :href="QGroup_1" target="_blank"><qrcode :value="QGroup_1" level="L" render-as="svg" background="#FFFA" foreground="var(--ct-gray-light)" margin="2" /></a> |
-> | <a :href="QGroup_3" target="_blank">621039593</a> | <a :href="QGroup_2" target="_blank">528994030</a> | <a :href="QGroup_1" target="_blank">663797655</a> | -->

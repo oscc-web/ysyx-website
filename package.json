@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.1.0",
-    "element-plus": "^2.3.6"
+    "element-plus": "^2.3.6",
+    "qrcode.vue": "^3.4.0"
   }
 }
