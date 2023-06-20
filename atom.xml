@@ -11,7 +11,7 @@
   <icon>https://oscc-ysyx-web-project.github.io/ysyx-website/logo.png</icon>
   <logo>https://oscc-ysyx-web-project.github.io/ysyx-website/logo.png</logo>
   <rights>Copyright by Miao Yuyang</rights>
-  <updated>2023-06-19T13:45:05.760Z</updated>
+  <updated>2023-06-20T01:52:38.912Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://oscc-ysyx-web-project.github.io/ysyx-website/atom.xml"/>
   <link rel="alternate" href="https://oscc-ysyx-web-project.github.io/ysyx-website/"/>
@@ -851,7 +851,7 @@
     <title type="text">报名需知</title>
     <id>https://oscc-ysyx-web-project.github.io/ysyx-website/signup/signup-notice.html</id>
     <link href="https://oscc-ysyx-web-project.github.io/ysyx-website/signup/signup-notice.html"/>
-    <updated>2023-06-19T13:43:22.000Z</updated>
+    <updated>2023-06-20T01:50:31.000Z</updated>
     <summary type="html"><![CDATA[<h2> 报名流程</h2>
 <p>报名参与“一生一芯”计划其实非常简单，只需依次完成上图中的4个步骤即可。</p>
 <h3> 1、了解计划</h3>
@@ -866,6 +866,32 @@
 <li><a href="https://ysyx.oscc.cc/slides/2205/01.html#/" target="_blank" rel="noopener noreferrer">介绍课件</a></li>
 <li><a href="/ysyx-website/signup/signup-faq.html" target="blank">常见问题</a></li>
 </ul>
+<div class="hint-container info">
+<p class="hint-container-title">交流渠道</p>
+<blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">QQ 3群</th>
+<th style="text-align:center">QQ 2群 </th>
+<th style="text-align:center">QQ 1群 </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><a qrcode-container="" :href="qrcodeGroup3" target="_blank"></a></td>
+<td style="text-align:center"><a qrcode-container="" href="" target="_blank"></a></td>
+<td style="text-align:center"><a qrcode-container="" href="" target="_blank"></a></td>
+</tr>
+<tr>
+<td style="text-align:center"><a :href="qrcodeGroup3" target="_blank">621039593</a></td>
+<td style="text-align:center"><a :href="qrcodeGroup2" target="_blank">528994030</a></td>
+<td style="text-align:center"><a :href="qrcodeGroup1" target="_blank">663797655</a></td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</div>
 <div class="hint-container warning">
 <p class="hint-container-title">注意事项</p>
 </div>
@@ -888,29 +914,6 @@
 </ul>
 <h3> 4、开始学习</h3>
 
-<!-- <script setup>
-// import Qrcode from 'qrcode.vue'
-const
-    QGroup_1 = "https://qm.qq.com/cgi-bin/qm/qr?k=qfzc76aZKhWiGsvvwyD0FKItOzT4oOAM&authKey=GZkf718BlVaHpRoAvWWI89nK+Mx3AF5pDmPgkhByS29A6mUzokmRaBjtCFwDRnGx&noverify=0",
-    QGroup_2 = "https://qm.qq.com/cgi-bin/qm/qr?k=CpWjuhJiMhyf3vLL5d3mFKoknUPhI0-w&authKey=S1VNGrCvTn4wkwk0UQVKTZbhXBay0jHN6D4eQ7DHPuFTYoKLuyDHIAKwyHWPl3sm&noverify=0",
-    QGroup_3 = "http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=Z3w4cAQ3YMp1SGhKVEYE6_C0w2XzJEhO&authKey=3nj56P2ItNDezb9o%2FgqaOs09%2FNX0UWLSRXM41FpQ6Vua8iQRGWI%2FvNNHdRRdtTLu&noverify=0&group_code=621039593"
-</script>
-
-<style lang="scss" scoped>
-    [qr-code] {
-        display: block;
-        border-radius: 5px;
-        overflow: hidden;
-        width: 100px;
-        height: 100px;
-    }
-</style> -->
-<!-- > #### info:: 获取项目信息和最新动态
-> -->
-<!-- > | QQ **3**群 | QQ **2**群<badge type="solid red">已满</badge> | QQ **1**群<badge type="solid red">已满</badge> |
-> |:---------------:|:---------------:|:---------------:|
-> | <a qr-code :href="QGroup_3" target="_blank"><qrcode :value="QGroup_3" level="L" render-as="svg" background="#FFFA" foreground="var(--c-brand-dark)" margin="3" /></a> | <a qr-code :href="QGroup_2" target="_blank"><qrcode :value="QGroup_2" level="L" render-as="svg" background="#FFFA" foreground="var(--ct-gray-light)" margin="2" /></a> | <a qr-code :href="QGroup_1" target="_blank"><qrcode :value="QGroup_1" level="L" render-as="svg" background="#FFFA" foreground="var(--ct-gray-light)" margin="2" /></a> |
-> | <a :href="QGroup_3" target="_blank">621039593</a> | <a :href="QGroup_2" target="_blank">528994030</a> | <a :href="QGroup_1" target="_blank">663797655</a> | -->
 ]]></content>
     <author>
       <name>Miao Yuyang</name>
