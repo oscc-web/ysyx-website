@@ -38,7 +38,7 @@ flowchart LR
 ::: info 交流渠道
 > | QQ 3群 | QQ 2群 <el-badge value="已满"></el-badge> | QQ 1群 <el-badge value="已满"></el-badge> |
 > |:---:|:---:|:---:|
-> | <a qrcode-container :href="qrcodeGroup3" target="_blank"><qrcode-vue :value="qrcodeGroup3" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> | <a qrcode-container href="" target="_blank"><qrcode-vue :value="qrcodeGroup2" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> | <a qrcode-container href="" target="_blank"><qrcode-vue :value="qrcodeGroup1" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> |
+> | <a qrcode-container :href="qrcodeGroup3" target="_blank"><qrcode-vue :value="qrcodeGroup3" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> | <a qrcode-container :href="qrcodeGroup2" target="_blank"><qrcode-vue :value="qrcodeGroup2" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> | <a qrcode-container :href="qrcodeGroup1" target="_blank"><qrcode-vue :value="qrcodeGroup1" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> |
 > | <a :href="qrcodeGroup3" target="_blank">621039593</a> | <a :href="qrcodeGroup2" target="_blank">528994030</a> | <a :href="qrcodeGroup1" target="_blank">663797655</a> |
 :::
 
