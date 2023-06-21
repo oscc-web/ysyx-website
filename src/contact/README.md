@@ -2,8 +2,6 @@
 title: "联系我们"
 icon: "address-card"
 isOriginal: true
-category: ["联系我们"]
-tag: ["一生一芯"]
 copyright: false
 ---
 
