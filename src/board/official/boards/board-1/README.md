@@ -22,6 +22,8 @@ toc: false
 
 主要介绍，先放一张图，然后依照图序分别展开介绍每个功能外设。
 
+- 尺寸
+
 板卡正面.png
 
 板卡反面.png
@@ -29,9 +31,49 @@ toc: false
 
 
 ### 上电测试
-板卡在发放前已经提前烧录好了测试程序，可以用来检测硬件是否能够正常工作，以下文档均采用 **Win11专业版** 作为测试平台，Win10 和 Win11 均可以。
 
-* 安装串口驱动
+::: warning 调试注意事项
+请同学们在实际操作板卡前仔细阅读并确认下面各个注意事项内容，尤其是之前没有嵌入式调试经历的同学，请务必遵守下面的各注意事项：
+:::
+
+- 硬件操作
+
+首先，同学们需要从**网格防静电袋**中拿出板卡，并从**硬质防静电袋**中取出一个25MHz的晶振，然后将晶振按照正确方向插入到三期板卡的晶振插座中。晶振管脚要比插座的插槽深度要长一些，当发现用手插入晶振时稍用力已无法再进一步插入后即可，插入的方向见下图：
+
+晶振正确插入时方向.png
+
+晶振正确插入时深度.png
+
+::: warning
+- 不要将晶振的方向插反了，**这个上电前同学们需要再确认下**。
+- 可以用手直接取出和插拔晶振，但是要注意手尽量不要触碰到晶振的管脚。
+- 推荐通过抓住晶振的金属外壳来取出和插拔晶振。
+:::
+
+晶振正确插入后，硬件上还需要使用拨码开关设置
+- 使能PLL输出，选择PLL输出核时钟的频率。
+- 选通特定学号的处理器核。
+
+在三期SoC集成时，我们给每个同学的核都分配了一个序号。请同学们先打开 [三期处理器核序号和学号对应表](https://oscc-ysyx-web-project.github.io/ysyx-website/board/official/)，然后按照自己的学号来查找自己核序号是多少，比如学号为ysyx_210000的核序号为1。
+
+现在解释下拨码开关的每个位的定义和功能，对于下图中SoC三期板卡上的拨码开关来说，从右边开始依次是：PLL输出时钟频率选择位(3位)，处理器核选择位(5位)，还有PLL时钟使能位(1位)。注意PLL时钟使能位和处理器核选择位之间空了一位拨码，该拨码没有定义功能。
+
+拨码开关位功能定义.png
+
+拨码开关设置分成两部分，第一部分是设置PLL时钟使能位和PLL输出核的时钟频率，我们建议先将PLL输出核时钟频率设置成25MHz，并先从低频率开始测试。当同学们的核能够在25MHz核时钟下跑通我们提供的所有测试程序后，可以再去尝试逐步提高处理器核时钟频率。三期的RCG(全局时钟复位模块)如下图所示：
+
+
+::: tip
+板卡上的机械开关选用的是 1.27mm 间距的微动拨码开关。这种开关每一位拨码比较小，直接用手不好拨动，可以使用带尖头的拨动。
+:::
+
+::: danger 机械开关切换
+简单说的话，就是上电后，除了三期SoC板卡和黑金FPGA核心板上的复位按钮可以按动之外，板卡的机械开关和接插件都不要带电按动和插接。带电操作可能会导致板卡的电源网络出现较大的浪涌电流，影响板卡的工作稳定性，甚至会烧坏板卡，而非正确的热插拔操作可能会使得芯片出现闩锁效应，可能会损坏芯片。
+:::
+
+板卡在发放给同学们前已经提前烧录好了测试程序，可以用来检测板卡和SoC芯片是否能够正常工作，文档以下均采用 **Win11专业版** 作为软件测试平台。
+
+- 安装串口驱动
 
 我们三期板卡上用的串口芯片是CP2102，所以需要提前在电脑上安装CP2102串口的驱动，否则电脑无法识别出CP2102的串口。如果大家电脑上已经安装过该驱动，则不需要再次安装。具体检查方法如下：
 
@@ -91,40 +133,50 @@ CP2102驱动的具体安装方法如下：同学们需要先进入 `ysyx3_pcb_so
 
 ![MobaXterm软件](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/mobaxterm-intro-1.png)
 
-MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL等多种协议的强大终端工具。可以访问 [MobaXterm的官网](https://mobaxterm.mobatek.net/) 获得更加详细的信息。同学们需要从官网上下载并自行安装该软件。
+MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL等多种协议的强大终端工具。可以访问 [MobaXterm的官网](https://mobaxterm.mobatek.net/) 获得更加详细的信息。
 
 ::: info 串口调试软件选择
 推荐同学们使用MobaXterm软件，但是同学们也可以自行选择其他串口调试软件使用。
 :::
 
-当安装完MobaXterm后，打开该软件，会显示类似下图的界面：
+首先，同学们需要访问MobaXterm的[官网](https://putty.org/) 并下载符合自己电脑版本的安装包，并按照指引成功安装完MobaXterm。当安装完MobaXterm后，打开该软件，会显示类似下图的界面：
 
 ![MobaXterm软件](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/mobaxterm-intro-2.png)
 
-然后使用
+然后需要按照下图创建一个串口会话(Serial Session)，具体步骤如下：
+
+![新建串口会话](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/mobaxterm-intro-3.png)
+
+1. 点击MobaXterm工具栏第一个的 ***Session***。
+2. 然后在弹出的窗口中选择 ***Serial***。
+3. 在 ***Basic Serial settings*** 中的 ***Serial port*** 下拉框中选择前面识别出的带有 ***Silicon Labs CP210x USB to UART xxx*** 字样的串口。
+4. 在 ***Speed(bps)*** 下拉框中设置波特率为 ***115200***。
+5. 在下面 ***Advanced Serial settings*** 的确认参数为：
+    1. ***Data bits:*** 8
+    2. ***Stop bits:*** 1
+    3. ***Parity:*** None
+    4. ***Flow control:*** None
+
+为了能够正确在窗口中显示换行，需要对会话进行设置，具体步骤如下图所示：
+
+![修改串口换行显示1](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/mobaxterm-intro-4.png)
+
+![修改串口换行显示2](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/mobaxterm-intro-5.png)
+
+1. 在打开的窗口中任意地方鼠标右击，在弹出的选项中点击 ***Change terminal settings...*** 。
+2. 然后在弹出的窗口中勾选 ***Implicit CR in every LF*** 复选框。
 
 ::: tip Implicit CR in every LF 选项含义
 由于我们板卡上的测试程序是使用 **`"\n"(LF)`** 进行换行的，但是Win下换行格式是 **`"\r\n"(CR LF)`** ，所以需要设置PuTTY在每次接收到 **`"\n"(LF)`** 时在其前面隐式添加 **`"\r"(CR)`** ，这样才能在 Win 下正确地显示换行。这个选项与 Win，Linux 和 Mac 系统下对换行的处理方式不同有关，感兴趣的同学们可以自行上网了解相关内容。
 :::
 
+- 板卡复位
 
 至此，板卡的硬件测试完成，下面将更加详细地介绍板卡。
 
 ::: info 板卡或者耗材损坏/缺失/丢失怎么办？
 * 每个板卡在发放给学生前都会进行硬件和软件测试，若自快递签收后一周内，板卡，FPGA损坏，或者耗材有缺失，可以联系项目组更换。
 * 项目组会在板卡中额外提供若干耗材 (晶振和Flash)，若消耗完毕或丢失，项目组可提供参考网购链接，由同学们自行购买。
-:::
-
-::: tip
-板卡上的机械开关选用的是 1.27mm 间距的微动拨码开关。这种开关每一位拨码比较小，直接用手不好拨动，可以使用带尖头的拨动。
-:::
-
-::: danger 调试注意事项
-请同学们在实际操作板卡前仔细阅读并确认下面各个注意事项内容，尤其是之前没有嵌入式调试经历的同学，请务必遵守下面的各注意事项：
-:::
-
-::: danger 机械开关切换
-简单说的话，就是上电后，除了三期SoC板卡和黑金FPGA核心板上的复位按钮可以按动之外，板卡的机械开关和接插件都不要带电按动和插接。带电操作可能会导致板卡的电源网络出现较大的浪涌电流，影响板卡的工作稳定性，甚至会烧坏板卡，而非正确的热插拔操作可能会使得芯片出现闩锁效应，可能会损坏芯片。
 :::
 
 
