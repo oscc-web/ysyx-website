@@ -1,4 +1,6 @@
 ---
+title: "官方板卡"
+icon: "bolt"
 copyright: false
 breadcrumb: false
 pageInfo: false
@@ -10,7 +12,7 @@ toc: false
 
 ## 概念设计
 星空开发板以
-## 
+##
 
 
 ## 版本约定
@@ -21,11 +23,11 @@ toc: false
 下面展示了所有板卡的 **开发文档** 页面，可以点击下面卡片中的 ***详细信息*** 跳转到特定板卡的页面。
 <TheBoards />
 
-<style lang="scss" scope>
+<!-- <style lang="scss" scope>
     .page-title {
         display: none;
     }
-</style>
+</style> -->
 
 ## 用户许可
 本文档用户许可在撰写时参考了互联网上众多内容文档的许可条款， **希望能够在保证文档内容版权完整的前提下，为用户提供尽可能开放的阅读和引用体验**。请用户仔细阅读并透彻理解本声明，一旦用户在阅读和其他平台以任何形式发布本文档内容时，均视为已经阅读**以下全部条款**并确认全部无条件接受。
