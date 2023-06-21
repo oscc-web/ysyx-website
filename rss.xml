@@ -6,8 +6,8 @@
     <link>https://oscc-ysyx-web-project.github.io/ysyx-website/</link>
     <description>一生一芯的官方网站</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 21 Jun 2023 08:00:34 GMT</pubDate>
-    <lastBuildDate>Wed, 21 Jun 2023 08:00:34 GMT</lastBuildDate>
+    <pubDate>Wed, 21 Jun 2023 08:21:50 GMT</pubDate>
+    <lastBuildDate>Wed, 21 Jun 2023 08:21:50 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>Copyright by Miao Yuyang</copyright>
@@ -334,10 +334,10 @@
       <pubDate>Sat, 17 Jun 2023 07:57:37 GMT</pubDate>
     </item>
     <item>
-      <title></title>
+      <title>官方板卡</title>
       <link>https://oscc-ysyx-web-project.github.io/ysyx-website/board/official/</link>
       <guid>https://oscc-ysyx-web-project.github.io/ysyx-website/board/official/</guid>
-      <source url="https://oscc-ysyx-web-project.github.io/ysyx-website/rss.xml"></source>
+      <source url="https://oscc-ysyx-web-project.github.io/ysyx-website/rss.xml">官方板卡</source>
       <description>板卡简介 本页面为星空单板计算机的 开发文档 首页。星空(StarrySky)系列 单板计算机(Single Board Computer, SBC) (https://en.文档pedia.org/文档/Single-board_computer) 是2023年3月份 一生一芯项目组 (https://ysyx.oscc.cc/) 在吸收前期多款测试...</description>
       <author>myyerrol@126.com (Miao Yuyang)</author>
       <pubDate>Sat, 17 Jun 2023 06:15:09 GMT</pubDate>
