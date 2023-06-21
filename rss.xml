@@ -6,8 +6,8 @@
     <link>https://oscc-ysyx-web-project.github.io/ysyx-website/</link>
     <description>一生一芯的官方网站</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 20 Jun 2023 11:40:32 GMT</pubDate>
-    <lastBuildDate>Tue, 20 Jun 2023 11:40:32 GMT</lastBuildDate>
+    <pubDate>Wed, 21 Jun 2023 08:00:34 GMT</pubDate>
+    <lastBuildDate>Wed, 21 Jun 2023 08:00:34 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>Copyright by Miao Yuyang</copyright>
@@ -16,6 +16,7 @@
       <url>https://oscc-ysyx-web-project.github.io/ysyx-website/logo.png</url>
       <link>https://oscc-ysyx-web-project.github.io/ysyx-website/</link>
     </image>
+    <category>联系我们</category>
     <category>项目介绍</category>
     <category>报名参与</category>
     <item>
@@ -519,8 +520,35 @@
       <link>https://oscc-ysyx-web-project.github.io/ysyx-website/contact/</link>
       <guid>https://oscc-ysyx-web-project.github.io/ysyx-website/contact/</guid>
       <source url="https://oscc-ysyx-web-project.github.io/ysyx-website/rss.xml">联系我们</source>
+      <description>线下地址：北京开源芯片研究院; 交流合作：opensource-talents@bosc.ac.cn; 问题反馈：miaoyuyang@ict.ac.cn; 交流渠道 微信公众号 B站视频号 | :---::---:| | [qrcode-container] { display: block; border-radius: 5px; overflow...</description>
       <author>myyerrol@126.com (Miao Yuyang)</author>
+      <category>联系我们</category>
       <pubDate>Fri, 16 Jun 2023 11:41:37 GMT</pubDate>
+      <content:encoded><![CDATA[<ul>
+<li>线下地址：北京开源芯片研究院</li>
+<li>交流合作：opensource-talents@bosc.ac.cn</li>
+<li>问题反馈：miaoyuyang@ict.ac.cn</li>
+</ul>
+<div class="hint-container info">
+<p class="hint-container-title">交流渠道</p>
+<blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">微信公众号</th>
+<th style="text-align:center">B站视频号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><a qrcode-container="" :href="qrcodeWeChat" target="_blank"></a></td>
+<td style="text-align:center"><a qrcode-container="" :href="qrcodeBiliBili" target="_blank"></a></td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</div>
+]]></content:encoded>
     </item>
     <item>
       <title>企业招聘</title>

@@ -11,10 +11,11 @@
   <icon>https://oscc-ysyx-web-project.github.io/ysyx-website/logo.png</icon>
   <logo>https://oscc-ysyx-web-project.github.io/ysyx-website/logo.png</logo>
   <rights>Copyright by Miao Yuyang</rights>
-  <updated>2023-06-20T11:40:32.055Z</updated>
+  <updated>2023-06-21T08:00:34.998Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://oscc-ysyx-web-project.github.io/ysyx-website/atom.xml"/>
   <link rel="alternate" href="https://oscc-ysyx-web-project.github.io/ysyx-website/"/>
+  <category term="联系我们"/>
   <category term="项目介绍"/>
   <category term="报名参与"/>
   <contributor>
@@ -673,12 +674,62 @@
     <title type="text">联系我们</title>
     <id>https://oscc-ysyx-web-project.github.io/ysyx-website/contact/</id>
     <link href="https://oscc-ysyx-web-project.github.io/ysyx-website/contact/"/>
-    <updated>2023-06-16T11:41:37.000Z</updated>
+    <updated>2023-06-21T07:57:41.000Z</updated>
+    <summary type="html"><![CDATA[<ul>
+<li>线下地址：北京开源芯片研究院</li>
+<li>交流合作：opensource-talents@bosc.ac.cn</li>
+<li>问题反馈：miaoyuyang@ict.ac.cn</li>
+</ul>
+<div class="hint-container info">
+<p class="hint-container-title">交流渠道</p>
+<blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">微信公众号</th>
+<th style="text-align:center">B站视频号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><a qrcode-container="" :href="qrcodeWeChat" target="_blank"></a></td>
+<td style="text-align:center"><a qrcode-container="" :href="qrcodeBiliBili" target="_blank"></a></td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</div>]]></summary>
+    <content type="html"><![CDATA[<ul>
+<li>线下地址：北京开源芯片研究院</li>
+<li>交流合作：opensource-talents@bosc.ac.cn</li>
+<li>问题反馈：miaoyuyang@ict.ac.cn</li>
+</ul>
+<div class="hint-container info">
+<p class="hint-container-title">交流渠道</p>
+<blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">微信公众号</th>
+<th style="text-align:center">B站视频号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><a qrcode-container="" :href="qrcodeWeChat" target="_blank"></a></td>
+<td style="text-align:center"><a qrcode-container="" :href="qrcodeBiliBili" target="_blank"></a></td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</div>
+]]></content>
     <author>
       <name>Miao Yuyang</name>
       <email>myyerrol@126.com</email>
       <uri>https://myyerrol.github.io</uri>
     </author>
+    <category term="联系我们"/>
     <contributor>
       <name>Miao Yuyang</name>
       <email>myyerrol@126.com</email>
@@ -1112,7 +1163,7 @@
     <title type="text">报名需知</title>
     <id>https://oscc-ysyx-web-project.github.io/ysyx-website/signup/signup-notice.html</id>
     <link href="https://oscc-ysyx-web-project.github.io/ysyx-website/signup/signup-notice.html"/>
-    <updated>2023-06-20T11:39:05.000Z</updated>
+    <updated>2023-06-21T07:57:41.000Z</updated>
     <summary type="html"><![CDATA[<h2> 报名流程</h2>
 <p>报名参与“一生一芯”计划其实非常简单，只需依次完成上图中的4个步骤即可。</p>
 <h3> 1、了解计划</h3>
