@@ -11,11 +11,10 @@
   <icon>https://oscc-ysyx-web-project.github.io/ysyx-website/logo.png</icon>
   <logo>https://oscc-ysyx-web-project.github.io/ysyx-website/logo.png</logo>
   <rights>Copyright by Miao Yuyang</rights>
-  <updated>2023-06-21T08:21:50.931Z</updated>
+  <updated>2023-06-21T08:33:01.925Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://oscc-ysyx-web-project.github.io/ysyx-website/atom.xml"/>
   <link rel="alternate" href="https://oscc-ysyx-web-project.github.io/ysyx-website/"/>
-  <category term="联系我们"/>
   <category term="项目介绍"/>
   <category term="报名参与"/>
   <contributor>
@@ -424,14 +423,38 @@
     <title type="text">官方板卡</title>
     <id>https://oscc-ysyx-web-project.github.io/ysyx-website/board/official/</id>
     <link href="https://oscc-ysyx-web-project.github.io/ysyx-website/board/official/"/>
-    <updated>2023-06-21T08:19:50.000Z</updated>
+    <updated>2023-06-21T08:31:19.000Z</updated>
     <summary type="html"><![CDATA[<h2> 板卡简介</h2>
 <p>本页面为星空单板计算机的 <strong>开发文档</strong> 首页。星空(StarrySky)系列 <a href="https://en.xn--pedia-xx0kj9n.org/%E6%96%87%E6%A1%A3/Single-board_computer" target="_blank" rel="noopener noreferrer">单板计算机(Single Board Computer, SBC)</a> 是2023年3月份 <a href="https://ysyx.oscc.cc/" target="_blank" rel="noopener noreferrer">一生一芯项目组</a> 在吸收前期多款测试板卡的设计经验后，专门规划设计的一款基于 <strong>一生一芯流片SoC</strong> 的官方板卡，用于评估和展示一生一芯SoC的丰富外设应用。项目组独立完成了星空系列单板计算机的硬件设计，生产管理，教程编写和包装视觉设计。短期目标希望能够依托每年2~3次一生一芯SoC的流片持续打磨星空板卡的软硬件系统，为开源社区提供一款稳定，，长期目标是围绕星空系列化板卡建立轻量级的开源设计，用于。</p>]]></summary>
     <content type="html"><![CDATA[<h2> 板卡简介</h2>
 <p>本页面为星空单板计算机的 <strong>开发文档</strong> 首页。星空(StarrySky)系列 <a href="https://en.xn--pedia-xx0kj9n.org/%E6%96%87%E6%A1%A3/Single-board_computer" target="_blank" rel="noopener noreferrer">单板计算机(Single Board Computer, SBC)</a> 是2023年3月份 <a href="https://ysyx.oscc.cc/" target="_blank" rel="noopener noreferrer">一生一芯项目组</a> 在吸收前期多款测试板卡的设计经验后，专门规划设计的一款基于 <strong>一生一芯流片SoC</strong> 的官方板卡，用于评估和展示一生一芯SoC的丰富外设应用。项目组独立完成了星空系列单板计算机的硬件设计，生产管理，教程编写和包装视觉设计。短期目标希望能够依托每年2~3次一生一芯SoC的流片持续打磨星空板卡的软硬件系统，为开源社区提供一款稳定，，长期目标是围绕星空系列化板卡建立轻量级的开源设计，用于。</p>
-<h2> 概念设计</h2>
-<p>星空开发板以</p>
-<h2> </h2>
+<p>一张图片，可以是规划图</p>
+<h2> 视觉概念</h2>
+<h3> 板卡名字</h3>
+<p>星空开发板以。为了能够更好地，从几个方面去选取板卡的名字：</p>
+<ul>
+<li>需要并具有一定的意义，并不和现有的板卡名字重复。</li>
+<li>，方便对外宣传。</li>
+<li></li>
+</ul>
+<p>依照上述要求进行头脑风暴得到的名字候选表如下图所示：</p>
+<figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/name-1.png" alt="板卡名字头脑风暴" tabindex="0" loading="lazy"><figcaption>板卡名字头脑风暴</figcaption></figure>
+<p>通过头脑风暴后和简单选择后，<strong>星空(StarrySky)</strong> 和 <strong>算器(Abacus)</strong> 进入第二轮，项目组最终确定选用 <strong>星空</strong> 作为板卡的正式名字。</p>
+<h3> 包装设计</h3>
+<p>为了能够设计风格：白色底以清晰展示底部众多logo，参考苹果和大疆的白底色简约风格，顶面设计有logo和众多支持单位的logo，为主功能面。底面为板卡的DXF线稿图，体现简约geek风</p>
+<figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/package-intro.png" alt="星空开发板盒型刀版设计" tabindex="0" loading="lazy"><figcaption>星空开发板盒型刀版设计</figcaption></figure>
+<p>设计需求：使用几何结构展示星空背景
+设计元素：1. 星座 2. 卫星 3. 星轨，流星雨</p>
+<p>几何图案：使用点表征过孔(狭义)和星星(广义)，使用线类比芯片或PCB中的过孔(狭义)和行星轨迹(广义)，展示一种“点-&gt;线”的连接(动静变化)。星座(群体，静态)。宛若流星(个体，动态)，而众多流星汇聚一起构成流星雨(群体，动态)，而流星雨恰好是夜晚星空中最浪漫而美丽的景象</p>
+<figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/package-3d.png" alt="星空开发板盒型3D渲染" tabindex="0" loading="lazy"><figcaption>星空开发板盒型3D渲染</figcaption></figure>
+<p>包装具体制造参数如下：</p>
+<ul>
+<li>盒型：后开带锁扣扣底</li>
+<li>内尺寸：135X37X105 mm</li>
+<li>外尺寸：136X38X107 mm</li>
+<li>制造尺寸：135.6X37.6X106.1 mm</li>
+<li>材质：350g白卡纸，厚度0.5mm，亚膜工艺</li>
+</ul>
 <h2> 版本约定</h2>
 <!-- 开发进度图 -->
 <h2> 板卡型号</h2>
@@ -451,10 +474,10 @@
     <rights>Copyright by Miao Yuyang</rights>
   </entry>
   <entry>
-    <title type="text">wiki</title>
+    <title type="text">文档</title>
     <id>https://oscc-ysyx-web-project.github.io/ysyx-website/board/official/boards/board-1/</id>
     <link href="https://oscc-ysyx-web-project.github.io/ysyx-website/board/official/boards/board-1/"/>
-    <updated>2023-06-18T14:21:28.000Z</updated>
+    <updated>2023-06-21T01:50:53.000Z</updated>
     <summary type="html"><![CDATA[<h2> 开发入门</h2>
 <h3> 开箱检查</h3>
 <p>同学们收到板卡后，请先按照下面的列表检查板卡和配件是否齐全：</p>
@@ -489,10 +512,48 @@
 <p>包装所有内容可以见下图：</p>
 <h3> 板卡介绍</h3>
 <p>主要介绍，先放一张图，然后依照图序分别展开介绍每个功能外设。</p>
+<ul>
+<li>尺寸</li>
+</ul>
 <p>板卡正面.png</p>
 <p>板卡反面.png</p>
 <h3> 上电测试</h3>
-<p>板卡在发放前已经提前烧录好了测试程序，可以用来检测硬件是否能够正常工作，以下wiki均采用 <strong>Win11专业版</strong> 作为测试平台，Win10 和 Win11 均可以。</p>
+<div class="hint-container warning">
+<p class="hint-container-title">调试注意事项</p>
+<p>请同学们在实际操作板卡前仔细阅读并确认下面各个注意事项内容，尤其是之前没有嵌入式调试经历的同学，请务必遵守下面的各注意事项：</p>
+</div>
+<ul>
+<li>硬件操作</li>
+</ul>
+<p>首先，同学们需要从<strong>网格防静电袋</strong>中拿出板卡，并从<strong>硬质防静电袋</strong>中取出一个25MHz的晶振，然后将晶振按照正确方向插入到三期板卡的晶振插座中。晶振管脚要比插座的插槽深度要长一些，当发现用手插入晶振时稍用力已无法再进一步插入后即可，插入的方向见下图：</p>
+<p>晶振正确插入时方向.png</p>
+<p>晶振正确插入时深度.png</p>
+<div class="hint-container warning">
+<p class="hint-container-title">注意</p>
+<ul>
+<li>不要将晶振的方向插反了，<strong>这个上电前同学们需要再确认下</strong>。</li>
+<li>可以用手直接取出和插拔晶振，但是要注意手尽量不要触碰到晶振的管脚。</li>
+<li>推荐通过抓住晶振的金属外壳来取出和插拔晶振。</li>
+</ul>
+</div>
+<p>晶振正确插入后，硬件上还需要使用拨码开关设置</p>
+<ul>
+<li>使能PLL输出，选择PLL输出核时钟的频率。</li>
+<li>选通特定学号的处理器核。</li>
+</ul>
+<p>在三期SoC集成时，我们给每个同学的核都分配了一个序号。请同学们先打开 <a href="https://oscc-ysyx-web-project.github.io/ysyx-website/board/official/" target="_blank" rel="noopener noreferrer">三期处理器核序号和学号对应表</a>，然后按照自己的学号来查找自己核序号是多少，比如学号为ysyx_210000的核序号为1。</p>
+<p>现在解释下拨码开关的每个位的定义和功能，对于下图中SoC三期板卡上的拨码开关来说，从右边开始依次是：PLL输出时钟频率选择位(3位)，处理器核选择位(5位)，还有PLL时钟使能位(1位)。注意PLL时钟使能位和处理器核选择位之间空了一位拨码，该拨码没有定义功能。</p>
+<p>拨码开关位功能定义.png</p>
+<p>拨码开关设置分成两部分，第一部分是设置PLL时钟使能位和PLL输出核的时钟频率，我们建议先将PLL输出核时钟频率设置成25MHz，并先从低频率开始测试。当同学们的核能够在25MHz核时钟下跑通我们提供的所有测试程序后，可以再去尝试逐步提高处理器核时钟频率。三期的RCG(全局时钟复位模块)如下图所示：</p>
+<div class="hint-container tip">
+<p class="hint-container-title">提示</p>
+<p>板卡上的机械开关选用的是 1.27mm 间距的微动拨码开关。这种开关每一位拨码比较小，直接用手不好拨动，可以使用带尖头的拨动。</p>
+</div>
+<div class="hint-container danger">
+<p class="hint-container-title">机械开关切换</p>
+<p>简单说的话，就是上电后，除了三期SoC板卡和黑金FPGA核心板上的复位按钮可以按动之外，板卡的机械开关和接插件都不要带电按动和插接。带电操作可能会导致板卡的电源网络出现较大的浪涌电流，影响板卡的工作稳定性，甚至会烧坏板卡，而非正确的热插拔操作可能会使得芯片出现闩锁效应，可能会损坏芯片。</p>
+</div>
+<p>板卡在发放给同学们前已经提前烧录好了测试程序，可以用来检测板卡和SoC芯片是否能够正常工作，文档以下均采用 <strong>Win11专业版</strong> 作为软件测试平台。</p>
 <ul>
 <li>安装串口驱动</li>
 </ul>
@@ -537,13 +598,45 @@
 <ul>
 <li>安装串口调试软件</li>
 </ul>
-<p>当电脑能够成功识别出 CP2102 端口号后，需要使用串口调试软件来和板卡进行通信。目前市场上常用的串口调试软件有很多，比如Minicom、MobaXterm、Xshell、SecureCRT、Cutecom和WindTerm 等等，<strong>本wiki选择的串口调试软件是MobaXterm</strong>。</p>
+<p>当电脑能够成功识别出 CP2102 端口号后，需要使用串口调试软件来和板卡进行通信。目前市场上常用的串口调试软件有很多，比如Minicom、MobaXterm、Xshell、SecureCRT、Cutecom和WindTerm 等等，<strong>本文档选择的串口调试软件是MobaXterm</strong>。</p>
 <figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/mobaxterm-intro-1.png" alt="MobaXterm软件" tabindex="0" loading="lazy"><figcaption>MobaXterm软件</figcaption></figure>
-<p>MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL等多种协议的强大终端工具。可以访问 <a href="https://mobaxterm.mobatek.net/" target="_blank" rel="noopener noreferrer">MobaXterm的官网</a> 获得更加详细的信息。同学们需要从官网上下载。</p>
+<p>MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL等多种协议的强大终端工具。可以访问 <a href="https://mobaxterm.mobatek.net/" target="_blank" rel="noopener noreferrer">MobaXterm的官网</a> 获得更加详细的信息。</p>
+<div class="hint-container info">
+<p class="hint-container-title">串口调试软件选择</p>
+<p>推荐同学们使用MobaXterm软件，但是同学们也可以自行选择其他串口调试软件使用。</p>
+</div>
+<p>首先，同学们需要访问MobaXterm的<a href="https://putty.org/" target="_blank" rel="noopener noreferrer">官网</a> 并下载符合自己电脑版本的安装包，并按照指引成功安装完MobaXterm。当安装完MobaXterm后，打开该软件，会显示类似下图的界面：</p>
+<figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/mobaxterm-intro-2.png" alt="MobaXterm软件" tabindex="0" loading="lazy"><figcaption>MobaXterm软件</figcaption></figure>
+<p>然后需要按照下图创建一个串口会话(Serial Session)，具体步骤如下：</p>
+<figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/mobaxterm-intro-3.png" alt="新建串口会话" tabindex="0" loading="lazy"><figcaption>新建串口会话</figcaption></figure>
+<ol>
+<li>点击MobaXterm工具栏第一个的 <em><strong>Session</strong></em>。</li>
+<li>然后在弹出的窗口中选择 <em><strong>Serial</strong></em>。</li>
+<li>在 <em><strong>Basic Serial settings</strong></em> 中的 <em><strong>Serial port</strong></em> 下拉框中选择前面识别出的带有 <em><strong>Silicon Labs CP210x USB to UART xxx</strong></em> 字样的串口。</li>
+<li>在 <em><strong>Speed(bps)</strong></em> 下拉框中设置波特率为 <em><strong>115200</strong></em>。</li>
+<li>在下面 <em><strong>Advanced Serial settings</strong></em> 的确认参数为：
+<ol>
+<li><em><strong>Data bits:</strong></em> 8</li>
+<li><em><strong>Stop bits:</strong></em> 1</li>
+<li><em><strong>Parity:</strong></em> None</li>
+<li><em><strong>Flow control:</strong></em> None</li>
+</ol>
+</li>
+</ol>
+<p>为了能够正确在窗口中显示换行，需要对会话进行设置，具体步骤如下图所示：</p>
+<figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/mobaxterm-intro-4.png" alt="修改串口换行显示1" tabindex="0" loading="lazy"><figcaption>修改串口换行显示1</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/mobaxterm-intro-5.png" alt="修改串口换行显示2" tabindex="0" loading="lazy"><figcaption>修改串口换行显示2</figcaption></figure>
+<ol>
+<li>在打开的窗口中任意地方鼠标右击，在弹出的选项中点击 <em><strong>Change terminal settings...</strong></em> 。</li>
+<li>然后在弹出的窗口中勾选 <em><strong>Implicit CR in every LF</strong></em> 复选框。</li>
+</ol>
 <div class="hint-container tip">
 <p class="hint-container-title">Implicit CR in every LF 选项含义</p>
 <p>由于我们板卡上的测试程序是使用 <strong><code>"\n"(LF)</code></strong> 进行换行的，但是Win下换行格式是 <strong><code>"\r\n"(CR LF)</code></strong> ，所以需要设置PuTTY在每次接收到 <strong><code>"\n"(LF)</code></strong> 时在其前面隐式添加 <strong><code>"\r"(CR)</code></strong> ，这样才能在 Win 下正确地显示换行。这个选项与 Win，Linux 和 Mac 系统下对换行的处理方式不同有关，感兴趣的同学们可以自行上网了解相关内容。</p>
 </div>
+<ul>
+<li>板卡复位</li>
+</ul>
 <p>至此，板卡的硬件测试完成，下面将更加详细地介绍板卡。</p>
 <div class="hint-container info">
 <p class="hint-container-title">板卡或者耗材损坏/缺失/丢失怎么办？</p>
@@ -551,18 +644,6 @@
 <li>每个板卡在发放给学生前都会进行硬件和软件测试，若自快递签收后一周内，板卡，FPGA损坏，或者耗材有缺失，可以联系项目组更换。</li>
 <li>项目组会在板卡中额外提供若干耗材 (晶振和Flash)，若消耗完毕或丢失，项目组可提供参考网购链接，由同学们自行购买。</li>
 </ul>
-</div>
-<div class="hint-container tip">
-<p class="hint-container-title">提示</p>
-<p>板卡上的机械开关选用的是 1.27mm 间距的微动拨码开关。这种开关每一位拨码比较小，直接用手不好拨动，可以使用带尖头的拨动。</p>
-</div>
-<div class="hint-container danger">
-<p class="hint-container-title">调试注意事项</p>
-<p>请同学们在实际操作板卡前仔细阅读并确认下面各个注意事项内容，尤其是之前没有嵌入式调试经历的同学，请务必遵守下面的各注意事项：</p>
-</div>
-<div class="hint-container danger">
-<p class="hint-container-title">机械开关切换</p>
-<p>简单说的话，就是上电后，除了三期SoC板卡和黑金FPGA核心板上的复位按钮可以按动之外，板卡的机械开关和接插件都不要带电按动和插接。带电操作可能会导致板卡的电源网络出现较大的浪涌电流，影响板卡的工作稳定性，甚至会烧坏板卡，而非正确的热插拔操作可能会使得芯片出现闩锁效应，可能会损坏芯片。</p>
 </div>
 <div class="hint-container warning">
 <p class="hint-container-title">复位功能注意事项</p>
@@ -588,7 +669,7 @@
 <p>对接PPT内容，你可以从这里获得。</p>
 <h3> 硅后测试</h3>
 <h2> 文档勘误与致谢</h2>
-<p>项目组鼓励和欢迎同学们对本文档提出宝贵的意见和反馈，目前项目组使用 <a href="https://github.com/oscc-ysyx-web-project/ysyx-website/issues" target="_blank" rel="noopener noreferrer">Github issue</a> 来追踪这些反馈，本wiki致力于遵守开源软件开发中公认的最佳实践，所以当你觉得有提出的必要时，请大胆地发起issue吧！😄</p>
+<p>项目组鼓励和欢迎同学们对本文档提出宝贵的意见和反馈，目前项目组使用 <a href="https://github.com/oscc-ysyx-web-project/ysyx-website/issues" target="_blank" rel="noopener noreferrer">Github issue</a> 来追踪这些反馈，本文档致力于遵守开源软件开发中公认的最佳实践，所以当你觉得有提出的必要时，请大胆地发起issue吧！😄</p>
 <h3> 致谢列表</h3>
 <ul>
 <li>感谢粟金伦同学在测试板卡时发现的板卡插接深度不够可能导致板卡信号断路问题，现在已经补充到相关注意事项中。</li>
@@ -674,7 +755,7 @@
     <title type="text">联系我们</title>
     <id>https://oscc-ysyx-web-project.github.io/ysyx-website/contact/</id>
     <link href="https://oscc-ysyx-web-project.github.io/ysyx-website/contact/"/>
-    <updated>2023-06-21T07:57:41.000Z</updated>
+    <updated>2023-06-21T08:31:19.000Z</updated>
     <summary type="html"><![CDATA[<ul>
 <li>线下地址：北京开源芯片研究院</li>
 <li>交流合作：opensource-talents@bosc.ac.cn</li>
@@ -729,7 +810,6 @@
       <email>myyerrol@126.com</email>
       <uri>https://myyerrol.github.io</uri>
     </author>
-    <category term="联系我们"/>
     <contributor>
       <name>Miao Yuyang</name>
       <email>myyerrol@126.com</email>
