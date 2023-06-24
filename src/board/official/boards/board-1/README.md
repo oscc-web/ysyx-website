@@ -20,7 +20,7 @@ toc: false
 
 ### 板卡介绍
 
-主要介绍，先放一张图，然后依照图序分别展开介绍每个功能外设。
+主要介绍，先放一张图，然后依照图序分别展开介绍每个功能外设。可以参考正点原子的文档。
 
 - 尺寸
 
@@ -153,7 +153,15 @@ toc: false
 
 我们三期板卡上用的串口芯片是CP2102，所以需要提前在电脑上安装CP2102串口的驱动，否则电脑无法识别出CP2102的串口。如果大家电脑上已经安装过该驱动，则不需要再次安装。具体检查方法如下：
 
-同学们先将配件中的 Type-C USB 线缆的一头插入到三期PCB板卡的 USB 口中，另一头插入到电脑的 USB 口中，然后按下 ***WIN+X*** 组合键，在弹出的选项中点击 ***设备管理器*** 选项，如果 ***设备管理器--->端口(COM和LPT)*** 中显示类似下图中带有 `CP210x` 字样的端口图标，则说明串口驱动已经安装成功，不需要再安装 CP2102 驱动：
+同学们先将配件中的 Type-C USB 线缆的一头插入到SoC板卡的 **`VBUS1`** 口中，另一头插入到电脑的 USB 口中，确认滑动开关 **`SW1`** 和 **`SW2`** 拨动到了上侧，而 **`HFP-MODE`** 拨动到了右侧：
+
+![滑动开关设置](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/uart-1.png)
+
+然后按下 **`PWR`** 自锁开关给板卡供电，当正确供电时，板卡上 **`SW2`** 上侧的红色 **`LED`**  会被点亮：
+
+![给板卡供电](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/uart-2.png)
+
+接着 ***WIN+X*** 组合键，在弹出的选项中点击 ***设备管理器*** 选项，如果 ***设备管理器--->端口(COM和LPT)*** 中显示类似下图中带有 `CP210x` 字样的端口图标，则说明串口驱动已经安装成功，不需要再安装 CP2102 驱动：
 
 ![设备管理器显示CP2102端口](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/cp2102-1.png)
 
@@ -250,7 +258,24 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
 由于我们板卡上的测试程序是使用 **`"\n"(LF)`** 进行换行的，但是Win下换行格式是 **`"\r\n"(CR LF)`** ，所以需要设置PuTTY在每次接收到 **`"\n"(LF)`** 时在其前面隐式添加 **`"\r"(CR)`** ，这样才能在 Win 下正确地显示换行。这个选项与 Win，Linux 和 Mac 系统下对换行的处理方式不同有关，感兴趣的同学们可以自行上网了解相关内容。
 :::
 
+当能够正确使用MobaXterm打开串口Session后，请先按动电源开关 **`PWR`** 以关闭电源，然后确认FPGA核心板的启动模式选择拨码开关 **`FPGA-BOOT`** 拨到了 **`FLASH`** 档位，表示此时FPGA核心板从自己板载的Flash中加载硬件系统，因为FPGA板卡在发给同学们之前已经将访存必须的FPGA侧的硬件系统固化在了核心板板载的Flash上，所以需要将档位设置到 **`FLASH`**。具体档位含义在拨码开关右侧的白色丝印上：
+
+![FPGA核心板启动模式设置](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/uart-3.png)
+
 - 板卡复位
+确认完FPGA启动模式后，按照上面介绍的步骤启动板卡电源，并正确打开串口Session窗口。然后按动开关 **`CORE-RESET`** 对SoC板卡执行一次复位：
+
+![按动复位开关执行SoC复位](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/uart-4.png)
+
+::: warning 复位功能注意事项
+- 由于SoC板卡上没有**上电自动复位电路**，所以需要同学们在板卡上电后按动复位开关执行**一次手动复位**。
+- 复位信号是通过机械开关产生的，**没有设计去抖电路**，而且FPGA核心板侧复位**异步于**SoC板卡侧复位，如果SoC板卡的复位在FPGA核心板复位之前完成，则会由于访存请求得不到响应而卡死，现象是串口只输出 `Loading program size ...` 。**此时只需再次按动板卡上的复位开关即可**。
+- 复位开关的按动时间可以长一些，以产生稳定的低电平复位信号。
+:::
+
+当复位开关被按下后，如果一切设置都正确，串口会打印出Rt-Thread测试程序的加载和执行过程。串口打印出 **`msh />`** 之后会停止，并开始接受用户的输入。同学们可以直接使用键盘在窗口中键入命令。比如输入 **`help`** 会打印Rt-Thread支持的命令，输入 **`list_timer`** 则会打印Rt-Thread正在运行中的所有定时器。和其他shell一样，**`msh`** 在键入命令时也是支持 **`tab`** 补全的：
+
+![运行RT-Thread测试程序](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/rtthread.png)
 
 至此，板卡的硬件测试完成，下面将更加详细地介绍板卡。
 
@@ -259,11 +284,7 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
 * 项目组会在板卡中额外提供若干耗材 (晶振和Flash)，若消耗完毕或丢失，项目组可提供参考网购链接，由同学们自行购买。
 :::
 
-
-::: warning 复位功能注意事项
-- 由于测试板卡上没有**上电自动复位电路**，所以需要同学们在板卡上电后按动复位开关执行**一次手动复位**。
-- 由于复位开关是机械开关，且板卡**没有设计去抖电路**，另外FPGA板卡侧复位和SoC测试板卡侧复位是**异步的**，如果三期SoC板卡的复位在FPGA板卡复位之前完成，则会由于发送的访存请求得不到响应而卡死，进而导致串口只输出 `Loading program size ...` 。此时只需再次按动三期SoC板卡上的复位开关即可。但是强烈建议每次执行程序前先按一下FPGA核心板上的复位按钮，然后再按一下三期板卡上的复位开关，这样能够尽可能确保复位的正确性。另外复位开关的按动时间需要长一些。
-
+::: info 拆卸FPGA核心板
 :::
 
 ::: danger Custom Title
