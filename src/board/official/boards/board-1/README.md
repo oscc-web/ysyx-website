@@ -18,6 +18,9 @@ toc: false
 
 包装所有内容可以见下图：
 
+::: info
+包装中配发的Type-C USB线缆可能对于某些同学来说不够长，可以选用更长线材长度的Type-C线，但是需要自行确认Type-C线材的质量符合板卡的通信和供电能力。
+:::
 ### 板卡介绍
 
 主要介绍，先放一张图，然后依照图序分别展开介绍每个功能外设。可以参考正点原子的文档。
@@ -284,7 +287,12 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
 * 项目组会在板卡中额外提供若干耗材 (晶振和Flash)，若消耗完毕或丢失，项目组可提供参考网购链接，由同学们自行购买。
 :::
 
-::: info 拆卸FPGA核心板
+::: info 安装/拆卸FPGA核心板
+本SoC配套的FPGA核心板是一种 [SoM(System on Module)](https://en.wikipedia.org/wiki/System_on_module)，采用的是SODIMM 204P接口(DDR3兼容标准接口)。这种接口常用于笔记本电脑内存模组，默认FPGA核心板已经插入到插槽中，一般不需要拆卸，如果确有需要，需要同学们自己操作，具体方法如下：
+
+![安装FPGA核心板](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/sodimm-1.png)
+
+安装FPGA核心板时把FPGA核心板以30度倾角插入到插槽中，**并确保所有金手指插入的深度都一致**，然后两手同时抓住两边往下按，直到两边被压到插槽的**固定簧片**之下，听到“卡塔”一声就可以了。拆卸核心板过程则相反，轻轻向两侧拨动固定簧片，FPGA核心板会自动弹起，然后向外取出即可。
 :::
 
 ::: danger Custom Title
