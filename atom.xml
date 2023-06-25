@@ -11,7 +11,7 @@
   <icon>https://oscc-ysyx-web-project.github.io/ysyx-website/logo.png</icon>
   <logo>https://oscc-ysyx-web-project.github.io/ysyx-website/logo.png</logo>
   <rights>Copyright by Miao Yuyang</rights>
-  <updated>2023-06-25T09:14:00.709Z</updated>
+  <updated>2023-06-25T09:17:37.478Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://oscc-ysyx-web-project.github.io/ysyx-website/atom.xml"/>
   <link rel="alternate" href="https://oscc-ysyx-web-project.github.io/ysyx-website/"/>
@@ -806,7 +806,7 @@
     <title type="text">官方板卡</title>
     <id>https://oscc-ysyx-web-project.github.io/ysyx-website/board/official/</id>
     <link href="https://oscc-ysyx-web-project.github.io/ysyx-website/board/official/"/>
-    <updated>2023-06-21T08:31:19.000Z</updated>
+    <updated>2023-06-25T09:14:25.000Z</updated>
     <summary type="html"><![CDATA[<h2> 板卡简介</h2>
 <p>本页面为星空单板计算机的 <strong>开发文档</strong> 首页。星空(StarrySky)系列 <a href="https://en.xn--pedia-xx0kj9n.org/%E6%96%87%E6%A1%A3/Single-board_computer" target="_blank" rel="noopener noreferrer">单板计算机(Single Board Computer, SBC)</a> 是2023年3月份 <a href="https://ysyx.oscc.cc/" target="_blank" rel="noopener noreferrer">一生一芯项目组</a> 在吸收前期多款测试板卡的设计经验后，专门规划设计的一款基于 <strong>一生一芯流片SoC</strong> 的官方板卡，用于评估和展示一生一芯SoC的丰富外设应用。项目组独立完成了星空系列单板计算机的硬件设计，生产管理，教程编写和包装视觉设计。短期目标希望能够依托每年2~3次一生一芯SoC的流片持续打磨星空板卡的软硬件系统，为开源社区提供一款稳定，，长期目标是围绕星空系列化板卡建立轻量级的开源设计，用于。</p>]]></summary>
     <content type="html"><![CDATA[<h2> 板卡简介</h2>
@@ -820,8 +820,50 @@
 <li>，方便对外宣传。</li>
 <li></li>
 </ul>
-<p>依照上述要求进行头脑风暴得到的名字候选表如下图所示：</p>
-<figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/name-1.png" alt="板卡名字头脑风暴" tabindex="0" loading="lazy"><figcaption>板卡名字头脑风暴</figcaption></figure>
+<p>依照上述要求进行头脑风暴得到的名字候选表如下表所示：</p>
+<div class="name_table_center">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">中文</th>
+<th style="text-align:center">英文</th>
+<th style="text-align:left">寓意</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">流星/彗星/天穹/星辰/星宿/星河/星云/星空</td>
+<td style="text-align:center">FlashStar/Galaxy/Nebula/StarrySky</td>
+<td style="text-align:left">流星的寓意代表着命运的转变。流星的出现往往伴随着大气层内的摩擦和摩擦产生的电离效应，所以人们常常将流星看做是一种崭新的开始。对于那些遭受挫折、陷入低谷的人来说，流星意味着一种新的机会，一个全新的开始，带来新的生命、新的希望和机遇。因此，流星被视为一个令人激动的象征，为许多追求成功的人打开了新的大门。其次，流星的寓意也带有一定的警示。因为流星在短暂燃烧的过程中释放出的能量非常强大，类似于一场短暂的爆炸，这也说明了人在自己人生的某个时间点上，可能会经历重重困难和不幸的打击。因此，流星的象征意义也提醒着我们，一定要珍惜眼前的一切，以积极的心态来面对环境的变化和一些突发的难题。尤其是在事业上，要将此种能量转换为自己前进的动力，提高自己的竞争力和抵御力</td>
+</tr>
+<tr>
+<td style="text-align:center">算器/珠算</td>
+<td style="text-align:center">Abacus</td>
+<td style="text-align:left">算盘大不盈尺却凝结着中华先人高超的数学智慧，是我国古代商业活动中最重要的计算工具，它制作简单、操作方便，可以解决各种复杂的运算，甚至可以开多平方。国内外都有类似的工具</td>
+</tr>
+<tr>
+<td style="text-align:center">仙人掌</td>
+<td style="text-align:center">Cactus</td>
+<td style="text-align:left">相信在很多人心中，仙人掌象征的是坚强。在荒无人烟中的沙漠随处可见，是沙漠中难得一见的绿色。它像我们展现了生命的顽强，不仅可以生长在沙漠中，开出来的花朵还能在风吹日晒中绽放，所以，仙人掌代表了坚强的涵义</td>
+</tr>
+<tr>
+<td style="text-align:center">向日葵</td>
+<td style="text-align:center">SunFlower/Helianthus</td>
+<td style="text-align:left">向日葵的花序总是随着太阳转动，一生向着光明生长，给人一种十分励志的感觉，可以象征着信念、光辉、高傲、沉默的爱等含义</td>
+</tr>
+<tr>
+<td style="text-align:center">矩阵</td>
+<td style="text-align:center">Matrix</td>
+<td style="text-align:left">Matrix是一套复杂的模拟系统程序，它是由具有人工智能的机器建立的，模拟了人类以前的世界，用以控制人类。在Matrix中出现的人物，可以看作是具有人类意识特征的程序</td>
+</tr>
+<tr>
+<td style="text-align:center">奇异果</td>
+<td style="text-align:center">Kivi Pi</td>
+<td style="text-align:left">猕猴桃简介因猕猴喜食，故名猕猴桃，也有说法是因为果皮覆毛，貌似猕猴而得名，是一种品质鲜嫩，营养丰富，风味鲜美的水果。类似树莓派的那种命名</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>通过头脑风暴后和简单选择后，<strong>星空(StarrySky)</strong> 和 <strong>算器(Abacus)</strong> 进入第二轮，项目组最终确定选用 <strong>星空</strong> 作为板卡的正式名字。</p>
 <h3> 包装设计</h3>
 <p>为了能够设计风格：白色底以清晰展示底部众多logo，参考苹果和大疆的白底色简约风格，顶面设计有logo和众多支持单位的logo，为主功能面。底面为板卡的DXF线稿图，体现简约geek风</p>
@@ -860,7 +902,7 @@
     <title type="text">文档</title>
     <id>https://oscc-ysyx-web-project.github.io/ysyx-website/board/official/boards/board-1/</id>
     <link href="https://oscc-ysyx-web-project.github.io/ysyx-website/board/official/boards/board-1/"/>
-    <updated>2023-06-21T01:50:53.000Z</updated>
+    <updated>2023-06-25T02:36:29.000Z</updated>
     <summary type="html"><![CDATA[<h2> 开发入门</h2>
 <h3> 开箱检查</h3>
 <p>同学们收到板卡后，请先按照下面的列表检查板卡和配件是否齐全：</p>
@@ -893,8 +935,12 @@
 <li>FPGA JTAG烧写器和线缆 x1</li>
 </ul>
 <p>包装所有内容可以见下图：</p>
+<div class="hint-container info">
+<p class="hint-container-title">相关信息</p>
+<p>包装中配发的Type-C USB线缆可能对于某些同学来说不够长，可以选用更长线材长度的Type-C线，但是需要自行确认Type-C线材的质量符合板卡的通信和供电能力。</p>
+</div>
 <h3> 板卡介绍</h3>
-<p>主要介绍，先放一张图，然后依照图序分别展开介绍每个功能外设。</p>
+<p>主要介绍，先放一张图，然后依照图序分别展开介绍每个功能外设。可以参考正点原子的文档。</p>
 <ul>
 <li>尺寸</li>
 </ul>
@@ -904,6 +950,20 @@
 <div class="hint-container warning">
 <p class="hint-container-title">调试注意事项</p>
 <p>请同学们在实际操作板卡前仔细阅读并确认下面各个注意事项内容，尤其是之前没有嵌入式调试经历的同学，请务必遵守下面的各注意事项：</p>
+<ul>
+<li>接触板卡和其他物料前请确认双手已经保持干燥。</li>
+<li>接触板卡之前，先找一个金属物体摸一下，以释放人体上可能带有的静电。</li>
+<li>拿取板卡时，请拿电路板的板边，而不要捏着芯片，以防止人体多余的静电传导到芯片上。</li>
+<li>使用Type-C线缆供电时，请优先使用PC的USB3.0接口，以尽可能保证供电稳定。</li>
+<li>板卡上有电源选择开关和滑动开关，上电前请确认它们都被正确拨动到某一侧，而非中间位置。</li>
+<li>SoC板卡和FPGA核心板不要在带电情况下插接，以防止这种非正确的热插拔操作导致的栓锁效应，损坏芯片。</li>
+<li>微动拨码开关不要在带电情况下拨动。</li>
+<li>电源一经接通，若观察到有如冒烟、异常气味、放电的声光、元器件发烫等异常现象时，尤其当听到“滋滋滋”的<strong>噪声啸叫</strong>时，请立即<strong>切断电源</strong>。</li>
+</ul>
+</div>
+<div class="hint-container info">
+<p class="hint-container-title">噪声啸叫</p>
+<p>噪声啸叫英文为Acoustic Noise，常分为电感啸叫和电容啸叫。其中电感啸叫最常见，电感啸叫多是由于未正确选择器件参数，负载不稳定或轻载过载等导致的，而<strong>负载不稳定</strong>往往是主因，这意味着板卡上某个地方可能存在短路。</p>
 </div>
 <ul>
 <li>硬件操作</li>
@@ -919,29 +979,112 @@
 <li>推荐通过抓住晶振的金属外壳来取出和插拔晶振。</li>
 </ul>
 </div>
-<p>晶振正确插入后，硬件上还需要使用拨码开关设置</p>
+<p>晶振正确插入后，硬件上还需要使用微动拨码开关正确设置SoC芯片的工作状态，具体来说需要两步：</p>
 <ul>
 <li>使能PLL输出，选择PLL输出核时钟的频率。</li>
 <li>选通特定学号的处理器核。</li>
 </ul>
-<p>在三期SoC集成时，我们给每个同学的核都分配了一个序号。请同学们先打开 <a href="https://oscc-ysyx-web-project.github.io/ysyx-website/board/official/" target="_blank" rel="noopener noreferrer">三期处理器核序号和学号对应表</a>，然后按照自己的学号来查找自己核序号是多少，比如学号为ysyx_210000的核序号为1。</p>
-<p>现在解释下拨码开关的每个位的定义和功能，对于下图中SoC三期板卡上的拨码开关来说，从右边开始依次是：PLL输出时钟频率选择位(3位)，处理器核选择位(5位)，还有PLL时钟使能位(1位)。注意PLL时钟使能位和处理器核选择位之间空了一位拨码，该拨码没有定义功能。</p>
-<p>拨码开关位功能定义.png</p>
-<p>拨码开关设置分成两部分，第一部分是设置PLL时钟使能位和PLL输出核的时钟频率，我们建议先将PLL输出核时钟频率设置成25MHz，并先从低频率开始测试。当同学们的核能够在25MHz核时钟下跑通我们提供的所有测试程序后，可以再去尝试逐步提高处理器核时钟频率。三期的RCG(全局时钟复位模块)如下图所示：</p>
+<p>在做三期SoC的后端集成时，我们给每个同学的核都分配了一个序号，可以通过这个序号选通到同学们自己的核。首选请同学们先打开 <a href="https://oscc-ysyx-web-project.github.io/ysyx-website/board/official/" target="_blank" rel="noopener noreferrer">三期处理器核序号和学号对应表</a>，然后按照自己的学号来查找核序号是多少，比如学号为<code>ysyx_210000</code>的核序号为<code>1</code>。</p>
+<p>现在解释下拨码开关的每个位的定义和功能，板卡上共有两个拨码开关，左边的拨码开关有4位拨码，是用来<strong>设置时钟输出状态的</strong>。右边的拨码开关有6位拨码，是用来<strong>设置核选通状态的</strong>。</p>
+<figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/dip-switch-1.png" alt="拨码开关位功能定义" tabindex="0" loading="lazy"><figcaption>拨码开关位功能定义</figcaption></figure>
+<p>4位拨码开关功能定义(从左到右)：</p>
+<ul>
+<li>PLL时钟使能位(1位)</li>
+<li>PLL输出时钟频率选择位(3位)</li>
+</ul>
+<p>6位拨码开关功能定义(从左到右)：</p>
+<ul>
+<li>未定义(1位)</li>
+<li>处理器核选择位(5位)</li>
+</ul>
+<div class="hint-container warning">
+<p class="hint-container-title">注意</p>
+<p>6位拨码开关的最高位 <strong>(左边数第一个)</strong> 没有定义功能。</p>
+</div>
+<p>拨码开关设置分成两部分，第一部分是设置PLL时钟使能位和PLL输出核的时钟频率，我们建议<strong>先将PLL输出核时钟频率设置成25MHz，并先从低频率开始测试</strong>。当同学们的核能够在25MHz核时钟下跑通我们提供的所有测试程序后，可以再去尝试逐步提高处理器核时钟频率。现在介绍下拨码开关位和SoC上信号的对应关系，其中三期SoC的RCG(全局时钟复位模块)如下图所示：</p>
+<figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/rcg-intro.png" alt="三期SoC的RCG模块" tabindex="0" loading="lazy"><figcaption>三期SoC的RCG模块</figcaption></figure>
+<p>其中拨码开关的PLL时钟使能位对应于上图左上角红框中的<code>clk_sel</code>，当使能该位后，处理器核时钟<code>clk_core</code>使用PLL的输出时钟，此时需要将拨码开关上的PLL时钟使能位设置为<code>ON</code>。失能该位时，<code>clk_core</code>直接使用外部晶振时钟，此时需要将拨码开关上的PLL时钟使能位设置为<code>OFF</code>。PLL输出时钟频率选择位对应于上图左上角红框中的<code>pll_cfg[2:0]</code>，用于设置PLL输出时钟的频率，也就是处理器核时钟频率。<strong>拨码开关位和PLL输出核时钟频率对应</strong>关系如下表格所示：</p>
+<div class="freq_table_center">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">PLL输出时钟频率选择位(0表示OFF档位, 1表示ON档位)</th>
+<th style="text-align:center">处理器核时钟频率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">3'b000</td>
+<td style="text-align:center">25MHz</td>
+</tr>
+<tr>
+<td style="text-align:center">3'b001</td>
+<td style="text-align:center">50MHz</td>
+</tr>
+<tr>
+<td style="text-align:center">3'b010</td>
+<td style="text-align:center">100MHz</td>
+</tr>
+<tr>
+<td style="text-align:center">3'b011</td>
+<td style="text-align:center">150MHz</td>
+</tr>
+<tr>
+<td style="text-align:center">3'b100</td>
+<td style="text-align:center">200MHz</td>
+</tr>
+<tr>
+<td style="text-align:center">3'b101</td>
+<td style="text-align:center">250MHz</td>
+</tr>
+<tr>
+<td style="text-align:center">3'b110</td>
+<td style="text-align:center">300MHz</td>
+</tr>
+<tr>
+<td style="text-align:center">3'b111</td>
+<td style="text-align:center">350MHz</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>比如当PLL输出位拨码调整到<code>OFF-OFF-OFF</code>时，表示此时PLL输出核时钟频率为25MHz，事实上 <em><strong>拨码开关位功能定义</strong></em> 一图中的时钟设置就恰好是25MHz。</p>
 <div class="hint-container tip">
 <p class="hint-container-title">提示</p>
-<p>板卡上的机械开关选用的是 1.27mm 间距的微动拨码开关。这种开关每一位拨码比较小，直接用手不好拨动，可以使用带尖头的拨动。</p>
+<p>上面 <em><strong>拨码开关位和核时钟频率对应表</strong></em> 中拨PLL输出时钟频率选择位<strong>设置的最低位对应于板子上拨码开关的4号位</strong>。所以如果要将PLL输出时钟频率倍频到200MHz，则需要将PLL输出时钟选择位拨码调整到ON-OFF-OFF(对应拨码开关的2位-3位-4位)，如下图所示：</p>
+<figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/dip-switch-2.png" alt="使能PLL并将PLL倍频到200MHz的拨码开关设置" tabindex="0" loading="lazy"><figcaption>使能PLL并将PLL倍频到200MHz的拨码开关设置</figcaption></figure>
 </div>
+<div class="hint-container tip">
+<p class="hint-container-title">提示</p>
+<ul>
+<li>拨码开关上面<strong>如果</strong>带有<strong>黄色防尘薄膜</strong>，需要先撕下来。</li>
+<li>板卡上的机械开关选用的是 1.27mm 间距的微动拨码开关。这种开关每一位拨码比较小，直接用手不好拨动，可以使用镊子，曲别针等带尖头的物品拨动，<strong>当使用尖头物品请注意使用安全</strong>。</li>
+</ul>
+</div>
+<p>拨码开关设置的第二部分是选通自己的处理器核，一生一芯三期将多个同学们的核集成到一个SoC中，并使用外部信号线的高低电平来选通不同的核，该外部信号线由拨码开关上的<strong>处理器核选择位</strong>实现，<strong>处理器核选择位</strong>对应于下面三期SoC架构图中左边红框中的<code>core_dip[4:0]</code>：</p>
+<figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/soc-intro.png" alt="三期SoC架构图" tabindex="0" loading="lazy"><figcaption>三期SoC架构图</figcaption></figure>
+<p>处理器核选择位的拨码仍然采用的是<strong>正逻辑</strong>。结合下图例子更方便理解，比如同学们要选择序号为3的核，此时拨码开关应该设置成下图中的样子：</p>
+<figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/dip-switch-3.png" alt="拨码开关与序号对应关系" tabindex="0" loading="lazy"><figcaption>拨码开关与序号对应关系</figcaption></figure>
+<p>选通核的五位拨码开关从左到右<strong>位权</strong>依次为<code>16, 8, 4, 2, 1</code>。这样选择序号为<code>1</code>的核，则其对应的编码为<code>5'b00001</code>。由于是<strong>正逻辑</strong>，所以对应拨码位设置从左到右依次为<code>OFF-OFF-OFF-OFF-ON</code>。如果要选择序号为<code>6</code>的核，则其对应的编码为<code>5'b00110</code>，对应拨码位设置从左到右依次为<code>OFF-OFF-ON-ON-OFF</code>。</p>
+<p>再举个完整拨码开关设置的例子，比如要选择核序号为<code>7</code>的核进行测试，并希望处理器核时钟工作在25MHz，则拨码开关的设置应如下图所示：</p>
+<figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/dip-switch-4.png" alt="使能PLL，PLL输出核时钟为25MHz，选择核序号为7的拨码开关设置" tabindex="0" loading="lazy"><figcaption>使能PLL，PLL输出核时钟为25MHz，选择核序号为7的拨码开关设置</figcaption></figure>
 <div class="hint-container danger">
-<p class="hint-container-title">机械开关切换</p>
-<p>简单说的话，就是上电后，除了三期SoC板卡和黑金FPGA核心板上的复位按钮可以按动之外，板卡的机械开关和接插件都不要带电按动和插接。带电操作可能会导致板卡的电源网络出现较大的浪涌电流，影响板卡的工作稳定性，甚至会烧坏板卡，而非正确的热插拔操作可能会使得芯片出现闩锁效应，可能会损坏芯片。</p>
+<p class="hint-container-title">拨码开关切换</p>
+<ul>
+<li>拨码开关也需要和滑动开关一样上电前被正确拨动到某一侧，而非中间位置（机械死区），以防止拨码状态电平的不稳定。</li>
+<li>不要带电拨动拨码开关，带电操作可能会导致板卡电源网络出现较大的浪涌电流，影响板卡的工作稳定性，甚至会烧坏板卡。</li>
+</ul>
 </div>
-<p>板卡在发放给同学们前已经提前烧录好了测试程序，可以用来检测板卡和SoC芯片是否能够正常工作，文档以下均采用 <strong>Win11专业版</strong> 作为软件测试平台。</p>
+<p>至此已经介绍完所有的硬件操作内容，下面蒋介绍软件工具的使用。板卡在发放给同学们前已经提前烧录好了测试程序，可以用来检测板卡和SoC芯片是否能够正常工作，文档以下均采用 <strong>Win11专业版</strong> 作为软件测试平台。</p>
 <ul>
 <li>安装串口驱动</li>
 </ul>
 <p>我们三期板卡上用的串口芯片是CP2102，所以需要提前在电脑上安装CP2102串口的驱动，否则电脑无法识别出CP2102的串口。如果大家电脑上已经安装过该驱动，则不需要再次安装。具体检查方法如下：</p>
-<p>同学们先将配件中的 Type-C USB 线缆的一头插入到三期PCB板卡的 USB 口中，另一头插入到电脑的 USB 口中，然后按下 <em><strong>WIN+X</strong></em> 组合键，在弹出的选项中点击 <em><strong>设备管理器</strong></em> 选项，如果 <em><strong>设备管理器---&gt;端口(COM和LPT)</strong></em> 中显示类似下图中带有 <code>CP210x</code> 字样的端口图标，则说明串口驱动已经安装成功，不需要再安装 CP2102 驱动：</p>
+<p>同学们先将配件中的 Type-C USB 线缆的一头插入到SoC板卡的 <strong><code>VBUS1</code></strong> 口中，另一头插入到电脑的 USB 口中，确认滑动开关 <strong><code>SW1</code></strong> 和 <strong><code>SW2</code></strong> 拨动到了上侧，而 <strong><code>HFP-MODE</code></strong> 拨动到了右侧：</p>
+<figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/uart-1.png" alt="滑动开关设置" tabindex="0" loading="lazy"><figcaption>滑动开关设置</figcaption></figure>
+<p>然后按下 <strong><code>PWR</code></strong> 自锁开关给板卡供电，当正确供电时，板卡上 <strong><code>SW2</code></strong> 上侧的红色 <strong><code>LED</code></strong>  会被点亮：</p>
+<figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/uart-2.png" alt="给板卡供电" tabindex="0" loading="lazy"><figcaption>给板卡供电</figcaption></figure>
+<p>接着 <em><strong>WIN+X</strong></em> 组合键，在弹出的选项中点击 <em><strong>设备管理器</strong></em> 选项，如果 <em><strong>设备管理器---&gt;端口(COM和LPT)</strong></em> 中显示类似下图中带有 <code>CP210x</code> 字样的端口图标，则说明串口驱动已经安装成功，不需要再安装 CP2102 驱动：</p>
 <figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/cp2102-1.png" alt="设备管理器显示CP2102端口" tabindex="0" loading="lazy"><figcaption>设备管理器显示CP2102端口</figcaption></figure>
 <div class="hint-container tip">
 <p class="hint-container-title">提示</p>
@@ -1006,7 +1149,9 @@
 </ol>
 </li>
 </ol>
-<p>为了能够正确在窗口中显示换行，需要对会话进行设置，具体步骤如下图所示：</p>
+<p>将板卡用Type-C线缆和电脑相连，然后使用上面介绍的方法打开已经配置过的串口Session，如果没问题，则会打开黑色背景的窗口：</p>
+<figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/mobaxterm-intro-3-1.png" alt="正确打开串口Session" tabindex="0" loading="lazy"><figcaption>正确打开串口Session</figcaption></figure>
+<p>至此串口Session配置完成，但为了能够<strong>在窗口中正确地显示换行</strong>，还需要对会话进行设置，具体步骤如下图所示：</p>
 <figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/mobaxterm-intro-4.png" alt="修改串口换行显示1" tabindex="0" loading="lazy"><figcaption>修改串口换行显示1</figcaption></figure>
 <figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/mobaxterm-intro-5.png" alt="修改串口换行显示2" tabindex="0" loading="lazy"><figcaption>修改串口换行显示2</figcaption></figure>
 <ol>
@@ -1017,9 +1162,23 @@
 <p class="hint-container-title">Implicit CR in every LF 选项含义</p>
 <p>由于我们板卡上的测试程序是使用 <strong><code>"\n"(LF)</code></strong> 进行换行的，但是Win下换行格式是 <strong><code>"\r\n"(CR LF)</code></strong> ，所以需要设置PuTTY在每次接收到 <strong><code>"\n"(LF)</code></strong> 时在其前面隐式添加 <strong><code>"\r"(CR)</code></strong> ，这样才能在 Win 下正确地显示换行。这个选项与 Win，Linux 和 Mac 系统下对换行的处理方式不同有关，感兴趣的同学们可以自行上网了解相关内容。</p>
 </div>
+<p>当能够正确使用MobaXterm打开串口Session后，请先按动电源开关 <strong><code>PWR</code></strong> 以关闭电源，然后确认FPGA核心板的启动模式选择拨码开关 <strong><code>FPGA-BOOT</code></strong> 拨到了 <strong><code>FLASH</code></strong> 档位，表示此时FPGA核心板从自己板载的Flash中加载硬件系统，因为FPGA板卡在发给同学们之前已经将访存必须的FPGA侧的硬件系统固化在了核心板板载的Flash上，所以需要将档位设置到 <strong><code>FLASH</code></strong>。具体档位含义在拨码开关右侧的白色丝印上：</p>
+<figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/uart-3.png" alt="FPGA核心板启动模式设置" tabindex="0" loading="lazy"><figcaption>FPGA核心板启动模式设置</figcaption></figure>
 <ul>
-<li>板卡复位</li>
+<li>板卡复位
+确认完FPGA启动模式后，按照上面介绍的步骤启动板卡电源，并正确打开串口Session窗口。然后按动开关 <strong><code>CORE-RESET</code></strong> 对SoC板卡执行一次复位：</li>
 </ul>
+<figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/uart-4.png" alt="按动复位开关执行SoC复位" tabindex="0" loading="lazy"><figcaption>按动复位开关执行SoC复位</figcaption></figure>
+<div class="hint-container warning">
+<p class="hint-container-title">复位功能注意事项</p>
+<ul>
+<li>由于SoC板卡上没有<strong>上电自动复位电路</strong>，所以需要同学们在板卡上电后按动复位开关执行<strong>一次手动复位</strong>。</li>
+<li>复位信号是通过机械开关产生的，<strong>没有设计去抖电路</strong>，而且FPGA核心板侧复位<strong>异步于</strong>SoC板卡侧复位，如果SoC板卡的复位在FPGA核心板复位之前完成，则会由于访存请求得不到响应而卡死，现象是串口只输出 <code>Loading program size ...</code> 。<strong>此时只需再次按动板卡上的复位开关即可</strong>。</li>
+<li>复位开关的按动时间可以长一些，以产生稳定的低电平复位信号。</li>
+</ul>
+</div>
+<p>当复位开关被按下后，如果一切设置都正确，串口会打印出Rt-Thread测试程序的加载和执行过程。串口打印出 <strong><code>msh /&gt;</code></strong> 之后会停止，并开始接受用户的输入。同学们可以直接使用键盘在窗口中键入命令。比如输入 <strong><code>help</code></strong> 会打印Rt-Thread支持的命令，输入 <strong><code>list_timer</code></strong> 则会打印Rt-Thread正在运行中的所有定时器。和其他shell一样，<strong><code>msh</code></strong> 在键入命令时也是支持 <strong><code>tab</code></strong> 补全的：</p>
+<figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/rtthread.png" alt="运行RT-Thread测试程序" tabindex="0" loading="lazy"><figcaption>运行RT-Thread测试程序</figcaption></figure>
 <p>至此，板卡的硬件测试完成，下面将更加详细地介绍板卡。</p>
 <div class="hint-container info">
 <p class="hint-container-title">板卡或者耗材损坏/缺失/丢失怎么办？</p>
@@ -1028,12 +1187,11 @@
 <li>项目组会在板卡中额外提供若干耗材 (晶振和Flash)，若消耗完毕或丢失，项目组可提供参考网购链接，由同学们自行购买。</li>
 </ul>
 </div>
-<div class="hint-container warning">
-<p class="hint-container-title">复位功能注意事项</p>
-<ul>
-<li>由于测试板卡上没有<strong>上电自动复位电路</strong>，所以需要同学们在板卡上电后按动复位开关执行<strong>一次手动复位</strong>。</li>
-<li>由于复位开关是机械开关，且板卡<strong>没有设计去抖电路</strong>，另外FPGA板卡侧复位和SoC测试板卡侧复位是<strong>异步的</strong>，如果三期SoC板卡的复位在FPGA板卡复位之前完成，则会由于发送的访存请求得不到响应而卡死，进而导致串口只输出 <code>Loading program size ...</code> 。此时只需再次按动三期SoC板卡上的复位开关即可。但是强烈建议每次执行程序前先按一下FPGA核心板上的复位按钮，然后再按一下三期板卡上的复位开关，这样能够尽可能确保复位的正确性。另外复位开关的按动时间需要长一些。</li>
-</ul>
+<div class="hint-container info">
+<p class="hint-container-title">安装/拆卸FPGA核心板</p>
+<p>本SoC配套的FPGA核心板是一种 <a href="https://en.wikipedia.org/wiki/System_on_module" target="_blank" rel="noopener noreferrer">SoM(System on Module)</a>，采用的是SODIMM 204P接口(DDR3兼容标准接口)。这种接口常用于笔记本电脑内存模组，默认FPGA核心板已经插入到插槽中，一般不需要拆卸，如果确有需要，需要同学们自己操作，具体方法如下：</p>
+<figure><img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/sodimm-1.png" alt="安装FPGA核心板" tabindex="0" loading="lazy"><figcaption>安装FPGA核心板</figcaption></figure>
+<p>安装FPGA核心板时把FPGA核心板以30度倾角插入到插槽中，<strong>并确保所有金手指插入的深度都一致</strong>，然后两手同时抓住两边往下按，直到两边被压到插槽的<strong>固定簧片</strong>之下，听到“卡塔”一声就可以了。拆卸核心板过程则相反，轻轻向两侧拨动固定簧片，FPGA核心板会自动弹起，然后向外取出即可。</p>
 </div>
 <div class="hint-container danger">
 <p class="hint-container-title">Custom Title</p>
