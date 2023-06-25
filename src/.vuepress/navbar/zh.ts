@@ -36,9 +36,8 @@ export const zhNavbar = navbar([
         text: "推荐&招聘",
         icon: "book",
         prefix: "/job/",
-        children: ["job-university",
-                   "job-company",
-                   "job-team/"]
+        children: ["job-team.md",
+                   "job-company"]
     }, {
         text: "联系我们",
         icon: "address-card",

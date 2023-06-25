@@ -24,14 +24,15 @@ export const zhSidebar = sidebar({
     "/job/": [{
         text: "推荐&招聘",
         icon: "book",
-        children: ["job-university",
-                   "job-company",
-                   {
-                       text: "团队招聘",
-                       icon: "user",
-                       prefix: "job-team/",
-                       children: ["job-submit",
-                                  "job-objects"]
-                   }]
+        children: ["job-team.md",
+                   "job-company"
+        ]
+                //    {
+                //        text: "团队招聘",
+                //        icon: "user",
+                //        prefix: "job-team/",
+                //        children: ["job-submit",
+                //                   "job-objects"]
+                //    }]
     }]
 });
