@@ -2,7 +2,7 @@
     <el-row :gutter="20">
         <el-col v-for="(boardItem, i) in boardItemList"
                 :key="i"
-                :span="6">
+                :span="8">
             <el-card :body-style="{ padding: '0px', cursor: 'pointer' }">
             <img class="board-image"
                  :src="boardItem.image" />
