@@ -1,9 +1,7 @@
 ---
 title: "项目概述"
-icon: "bullseye"
+# icon: "bullseye"
 isOriginal: true
-category: ["项目介绍"]
-tag: ["一生一芯", "开源芯片"]
 copyright: false
 ---
 

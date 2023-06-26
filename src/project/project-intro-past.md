@@ -1,9 +1,7 @@
 ---
 title: "往期回顾"
-icon: "route"
+# icon: "route"
 isOriginal: true
-category: ["项目介绍"]
-tag: ["一生一芯", "开源芯片"]
 copyright: false
 ---
 

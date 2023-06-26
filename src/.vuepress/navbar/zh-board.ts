@@ -1,6 +1,6 @@
 export const zhBoard = {
     text: "板卡资料",
-    icon: "book",
+    // icon: "book",
     prefix: "/board/",
     children: [{
         text: "官方板卡",

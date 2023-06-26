@@ -23,7 +23,7 @@ export default hopeTheme({
     logo: "/logo.png",
     logoDark: "/logo.png",
     repo: "oscc-ysyx-web-project/ysyx-website",
-    repoDisplay: true,
+    repoDisplay: false,
     repoLabel: "GitHub",
     navbarAutoHide: "mobile",
     hideSiteNameOnMobile: true,
@@ -38,7 +38,8 @@ export default hopeTheme({
     nextLink: true,
     // 标题
     titleIcon: true,
-    pageInfo: ["Author", "Original", "Date", "Category", "Tag", "ReadingTime"],
+    // pageInfo: ["Author", "Original", "Date", "Category", "Tag", "ReadingTime"],
+    pageInfo: false,
     // 基础
     lastUpdated: true,
     contributors: true,

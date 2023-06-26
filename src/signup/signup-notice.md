@@ -1,9 +1,7 @@
 ---
 title: "报名需知"
-icon: "flag"
+# icon: "flag"
 isOriginal: true
-category: ["报名参与"]
-tag: ["一生一芯"]
 copyright: false
 ---
 
@@ -33,7 +31,7 @@ flowchart LR
 
 <!-- - [概述视频](https://www.bilibili.com/video/BV12e4y1Y76i/) -->
 - [介绍课件](https://ysyx.oscc.cc/slides/2205/01.html#/)
-- [常见问题](./signup-faq.html)
+- [常见问题](/ysyx-website/project/project-faq.html)
 
 ::: info 交流渠道
 > | QQ 3群 | QQ 2群 <el-badge value="已满"></el-badge> | QQ 1群 <el-badge value="已满"></el-badge> |

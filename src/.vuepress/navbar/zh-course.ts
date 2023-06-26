@@ -1,5 +1,5 @@
 export const zhCourse = {
-    text: "课程主页",
-    icon: "school",
+    text: "课程资料",
+    // icon: "school",
     link: "https://ysyx.oscc.cc/docs/"
 }

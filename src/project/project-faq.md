@@ -1,9 +1,7 @@
 ---
 title: "常见问题"
-icon: "circle-question"
+# icon: "circle-question"
 isOriginal: true
-category: ["报名参与"]
-tag: ["一生一芯"]
 copyright: false
 ---
 
