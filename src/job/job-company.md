@@ -1,7 +1,5 @@
 ---
 title: "企业委托"
-# icon: "building"
-isOriginal: true
 copyright: false
 ---
 

@@ -1,7 +1,5 @@
 ---
 title: "往期回顾"
-# icon: "route"
-isOriginal: true
 copyright: false
 ---
 

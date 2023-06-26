@@ -1,7 +1,5 @@
 ---
 title: "联系我们"
-# icon: "address-card"
-isOriginal: true
 copyright: false
 ---
 

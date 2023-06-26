@@ -1,4 +1,4 @@
 ---
-title: "项目介绍"
-# icon: "shield"
+title: "关于项目"
+copyright: false
 ---

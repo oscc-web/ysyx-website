@@ -1,7 +1,5 @@
 ---
 title: "团队招聘"
-# icon: "user"
-isOriginal: true
 copyright: false
 ---
 

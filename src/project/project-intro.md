@@ -1,7 +1,5 @@
 ---
 title: "项目概述"
-# icon: "bullseye"
-isOriginal: true
 copyright: false
 ---
 
