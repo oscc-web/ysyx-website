@@ -32,7 +32,7 @@ export default hopeTheme({
     sidebarSorter: ["readme", "order", "title", "filename"],
     headerDepth: 2,
     // 路径
-    breadcrumb: true,
+    breadcrumb: false,
     breadcrumbIcon: true,
     prevLink: true,
     nextLink: true,
@@ -52,7 +52,7 @@ export default hopeTheme({
     // copyright: false,
     displayFooter: true,
     // 杂项
-    toc: true,
+    toc: false,
 
     // 主题外观配置
     iconAssets: "fontawesome",

@@ -1,9 +1,6 @@
 ---
 title: "文档"
 copyright: false
-breadcrumb: false
-pageInfo: false
-toc: false
 ---
 ## 开发入门
 ### 开箱检查
