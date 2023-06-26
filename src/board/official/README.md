@@ -1,10 +1,6 @@
 ---
 title: "官方板卡"
-# icon: "bolt"
 copyright: false
-breadcrumb: false
-pageInfo: false
-toc: false
 ---
 
 ## 板卡简介

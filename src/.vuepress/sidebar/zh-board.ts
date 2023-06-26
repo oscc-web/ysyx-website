@@ -1,4 +1,4 @@
 export const zhBoard =  [{
-    text: "详细信息",
+    text: "",
     children: ["board-1/"]
 }];

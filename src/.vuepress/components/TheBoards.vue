@@ -47,7 +47,7 @@
         width: 100%;
         height: 200px;
         display: block;
-        pointer-events: none;
+        // pointer-events: none;
     }
     .board-content {
         padding:15px 15px 20px 15px;
