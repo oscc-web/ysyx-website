@@ -1,5 +1,5 @@
 ---
-home: true
+home: false
 heroText: "一生一芯"
 heroImage: "/logo.png"
 heroImageDark: "/logo.png"
@@ -10,7 +10,7 @@ actions:
       link: "/project/project-intro.md"
       type: "primary"
     - text: "报名参与"
-      link: "/signup/signup-notice.md"
+      link: "/signup/README.md"
       type: "default"
 features:
     - title: "报名与学习全部免费"
@@ -46,7 +46,17 @@ features:
       details: "与企业和高校展开密切合作，优秀的学生可被推荐到企业工作或高校深造。"
       link: "https://github.com/myyerrol/ysyx-website"
 copyright: false
+containerClass: "home-page"
+lastUpdated: false
+contributors: false
 ---
+
+<TheHome />
+
+<!-- <div >
+    <TheSlogan />
+    <TheActions />
+</div>
 
 ::: center
 ## 评价寄语
@@ -59,3 +69,9 @@ copyright: false
 ## 赞助机构
 <TheSponsors />
 :::
+
+<style lang="scss" scope>
+    .theme-hope-content:not(.custom) {
+        max-width: 1160px;
+    }
+</style> -->

@@ -7,3 +7,9 @@
     position: relative;
     top: -2px;
 }
+.navbar .site-name {
+    display: none;
+}
+.home-page .theme-hope-content {
+    max-width: var(--home-page-width);
+}
