@@ -1,13 +1,6 @@
 ---
 title: "文档"
 copyright: false
-<<<<<<< HEAD
-=======
-breadcrumb: false
-pageInfo: false
-toc: false
-# headerDepth: 3
->>>>>>> dev
 ---
 ## 开发入门
 ### 开箱检查
