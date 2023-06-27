@@ -1,0 +1,1 @@
+import{aS as o,W as n,X as t,ah as c,J as a}from"./framework-3550b87c.js";const r={};function s(_,l){const e=a("TheHome");return n(),t("div",null,[c(e)])}const d=o(r,[["render",s],["__file","index.html.vue"]]);export{d as default};
