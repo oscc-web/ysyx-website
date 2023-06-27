@@ -95,12 +95,12 @@ flowchart LR
     <el-button size="large"
                type="primary"
                style="height:45px; font-size:16px;"
-               @click="jumpToCourseHome">课程主页传送门
+               @click="jumpToCourseHome">课程资料传送门
     </el-button>
 </el-row>
 
 <script setup>
     const jumpToCourseHome = () => {
-        window.open("https://ysyx.oscc.cc/docs/schedule.html", "_blank");
+        window.open("https://ysyx.oscc.cc/docs/", "_blank");
     }
 </script>
