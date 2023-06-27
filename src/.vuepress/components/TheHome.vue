@@ -2,7 +2,8 @@
     <div>
         <TheSlogan />
         <TheActions />
-        <TheEvaluation />
+        <div style="margin-top:100px;"></div>
+        <!-- <TheEvaluation /> -->
         <TheSponsors />
     </div>
 </template>

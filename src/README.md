@@ -45,33 +45,11 @@ features:
       icon: "globe"
       details: "与企业和高校展开密切合作，优秀的学生可被推荐到企业工作或高校深造。"
       link: "https://github.com/myyerrol/ysyx-website"
-copyright: false
-containerClass: "home-page"
 lastUpdated: false
 contributors: false
+copyright: false
+containerClass: "home-page"
+feed: false
 ---
 
 <TheHome />
-
-<!-- <div >
-    <TheSlogan />
-    <TheActions />
-</div>
-
-::: center
-## 评价寄语
-<TheEvaluation />
-:::
-
-<div style="margin-top:30px;"></div>
-
-::: center
-## 赞助机构
-<TheSponsors />
-:::
-
-<style lang="scss" scope>
-    .theme-hope-content:not(.custom) {
-        max-width: 1160px;
-    }
-</style> -->

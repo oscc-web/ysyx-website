@@ -20,12 +20,13 @@ export const zhNavbar = navbar([
     {
         text: "学习记录",
         link: "https://docs.qq.com/sheet/DT29weHpIRWNnYlFl?tab=BB08J2"
-    }, {
-        text: "成果展示",
-        prefix: "/achieve/",
-        children: ["achieve-teacher",
-                   "achieve-student"]
     },
+    // {
+    //     text: "成果展示",
+    //     prefix: "/achieve/",
+    //     children: ["achieve-teacher",
+    //                "achieve-student"]
+    // },
     zhBoard,
     {
         text: "兴趣小组",
