@@ -22,9 +22,13 @@ toc: false
 
 包装和配件内容.png(package-cont.png)
 
+板卡配套的软硬件资源**均开源**，并托管在Github上，有需要的同学们可以提前下载下来，方便后面使用，其中：
+- [StarrySky](https://github.com/maksyuki/StarrySky)：星空系列开发板所有的硬件资源，包括原理图，PCB设计，制造文件等。
+- [StarrySky-res](https://github.com/maksyuki/StarrySky-res)：星空系列开发板所有的软件资源，包括必须的串口驱动，测试程序，FPGA外设硬件工程等。
 
-::: info
-包装中配发的Type-C USB线缆可能对于某些同学来说不够长，可以选用更长线材长度的Type-C线，但是需要自行确认Type-C线材的质量符合板卡的通信和供电能力。
+
+::: info Type-C数据线长
+包装中配发的Type-C USB线缆可能对于某些同学使用来说不太够长，同学们可以自行选用更长的Type-C数据线，但是需要自行确认Type-C线材的质量符合板卡的数据和供电能力。
 :::
 ### 板卡介绍
 
@@ -63,6 +67,7 @@ toc: false
   - 1个用户自定义按键
   - 1个用户自定义蓝色LED
   - 4个WS2812C LED炫彩灯珠
+- 1个外设功能切换开关
 - 1个SO-DIMM 204P接口，用于连接ZYNQ7010/7020 FPGA核心板
 
 FPGA核心板如下图所示：
@@ -134,7 +139,7 @@ FPGA核心板的PS侧的BANK有BANK502，BANK500，BNAK501，其中BANK502电平
 - 使能PLL输出，选择PLL输出核时钟的频率。
 - 选通特定学号的处理器核。
 
-在做三期SoC的后端集成时，我们给每个同学的核都分配了一个序号，可以通过这个序号选通到同学们自己的核。首选请同学们先打开 [三期处理器核序号和学号对应表](https://oscc-ysyx-web-project.github.io/ysyx-website/board/official/)，然后按照自己的学号来查找核序号是多少，比如学号为`ysyx_210000`的核序号为`1`。
+在做三期SoC的后端集成时，我们给每个同学的核都分配了一个序号，可以通过这个序号选通到同学们自己的核。首选请同学们先打开 [三期处理器核序号和学号对应表(student-id.md)](https://github.com/maksyuki/StarrySky-res/blob/main/software/V1.2/student-id.md)，然后按照自己的学号来查找核序号是多少，比如学号为`ysyx_210000`的核序号为`1`。
 
 现在解释下拨码开关的每个位的定义和功能，板卡上共有两个拨码开关，左边的拨码开关有4位拨码，是用来**设置时钟输出状态的**。右边的拨码开关有6位拨码，是用来**设置核选通状态的**。
 
@@ -237,11 +242,11 @@ FPGA核心板的PS侧的BANK有BANK502，BANK500，BNAK501，其中BANK502电平
 上图端口图标后圆括号中的 **`COMx`** 后接着的数字不一定是图中的 **`15`**，这个是电脑自动分配的，对测试没有影响。
 :::
 
-如果在 ***其他设备*** 选项中出现类似下图中的黄色叹号图标，则说明电脑没有安装过CP2102的驱动，需要使用我们提供的软件包安装相应的CP2102驱动：
+如果在 ***其他设备*** 选项中出现类似下图中的黄色叹号图标，则说明电脑没有安装过CP2102的驱动，需要使用我们提供的软件包安装相应的CP2102驱动，软件包也在 [StarrySky-res](https://github.com/maksyuki/StarrySky-res/) 仓库中，具体地址为 [CP2102.zip](https://github.com/maksyuki/StarrySky-res/tree/main/driver/CP2102.zip)：
 
 ![在其他设备中出现黄色叹号](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/cp2102-2.png)
 
-CP2102驱动的具体安装方法如下：同学们需要先进入 `ysyx3_pcb_software/cp2102 driver` 目录中，然后双击 `CP2102xVCPInstaller_x64.exe` 来安装64位驱动。同学们的电脑如果只支持32位的话，则双击 `CP2102xVCPInstaller_x86.exe` 来安装32位驱动：
+CP2102驱动的具体安装方法如下：同学们需要先从Github下载`StarrySky-res`仓库并解压`CP2102.zip`，然后进入 `cp2102 driver` 目录，双击 `CP2102xVCPInstaller_x64.exe` 来安装64位驱动。同学们的电脑如果只支持32位的话，则双击 `CP2102xVCPInstaller_x86.exe` 来安装32位驱动：
 
 ![安装CP2102驱动程序](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/cp2102-3.png)
 
@@ -326,7 +331,7 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
 由于我们板卡上的测试程序是使用 **`"\n"(LF)`** 进行换行的，但是Win下换行格式是 **`"\r\n"(CR LF)`** ，所以需要设置PuTTY在每次接收到 **`"\n"(LF)`** 时在其前面隐式添加 **`"\r"(CR)`** ，这样才能在 Win 下正确地显示换行。这个选项与 Win，Linux 和 Mac 系统下对换行的处理方式不同有关，感兴趣的同学们可以自行上网了解相关内容。
 :::
 
-当能够正确使用MobaXterm打开串口Session后，请先按动电源开关 **`PWR`** 以关闭电源，然后确认FPGA核心板的启动模式选择拨码开关 **`FPGA-BOOT`** 拨到了 **`FLASH`** 档位，表示此时FPGA核心板从自己板载的Flash中加载硬件系统，因为FPGA板卡在发给同学们之前已经将访存必须的FPGA侧的硬件系统固化在了核心板板载的Flash上，所以需要将档位设置到 **`FLASH`**。具体档位含义在拨码开关右侧的白色丝印上：
+当能够正确使用MobaXterm打开串口Session后，请先按动电源按键 **`PWR`** 以关闭电源，然后确认FPGA核心板的启动模式选择拨码开关 **`FPGA-BOOT`** 拨到了 **`FLASH`** 档位，表示此时FPGA核心板从自己板载的Flash中加载硬件系统，因为FPGA板卡在发给同学们之前已经将访存必须的FPGA侧的硬件系统固化在了核心板板载的Flash上，所以需要将档位设置到 **`FLASH`**。具体档位含义在拨码开关右侧的白色丝印上：
 
 ![FPGA核心板启动模式设置](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/uart-3.png)
 
@@ -344,6 +349,55 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
 当复位按键被按下后，如果一切设置都正确，串口会打印出Rt-Thread测试程序的加载和执行过程。串口打印出 **`msh />`** 之后会停止，并开始接受用户的输入。同学们可以直接使用键盘在窗口中键入命令。比如输入 **`help`** 会打印Rt-Thread支持的命令，输入 **`list_timer`** 则会打印Rt-Thread正在运行中的所有定时器。和其他shell一样，**`msh`** 在键入命令时也是支持 **`tab`** 补全的：
 
 ![运行RT-Thread测试程序](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/rtthread.png)
+
+::: info 丰富应用实例
+星空V1.2板卡上面有不少同学的核能够启动Linux，比如唐浩晋同学的核。他当时参加一生一芯时是中国科学院大学电子信息工程的一名大三学生。他在自己的核上成功启动了Linux并运行了应用程序([视频](https://www.bilibili.com/video/BV1CL411X7wV/))：
+
+![启动Linux并运行程序](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/app-1.png)
+:::
+### 程序烧写
+这一章节主要介绍如何将程序下载到板载的QSPI Flash中。星空开发板集成有板载Flash烧写器，可以像DAPLink一样实现拖拽式烧录，具体的软硬件原理见 [板载烧写器(HFPLink)](#板载烧写器-hfplink) 一节。
+
+::: info 板载烧写器适用操作系统
+目前板载烧写器能够在 **Win10** 和 **Win11** 平台上正常工作，同学们需要确认下自己电脑的操作系统版本。
+:::
+
+现在开始介绍烧写程序的具体步骤，首先按下板卡的电源按键，关闭板卡电源，然后在保持之前其他开关设置不变的情况下，将开发板上 `HFP-MODE` 的滑动开关拨码到左侧，表示使能板载烧写器功能：
+
+![使能板载烧写器](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/hfp-1.png)
+
+然后再次按下板卡的电源按键，接通板卡电源，此时电脑会识别出一个叫做 `YSYX-HFPLnk` 的移动U盘，容量为 `15.8MB` 左右。
+
+![识别出U盘](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/hfp-2.png)
+
+接着将想要烧写的bin格式应用程序拷贝到 `YSYX-HFPLnk` 这个U盘中，然后等待拷贝完成即可。在拷贝的同时板载烧写器旁的蓝色LED会一直闪烁，当拷贝完成时，蓝色LED会常亮。项目组已经在 [StarrySky-res](https://github.com/maksyuki/StarrySky-res) 中 `software` 目录下提前准备了一些已经编译好的测试程序，可以拷贝到 `YSYX-HFPLnk` 中进行测试。当拷贝完成后，程序烧写也就完成了，此时关闭板卡电源，并将 `HFP-MODE` 的滑动开关拨码到右侧，重新上电就可以运行新的程序了。
+
+::: info 更新板载烧写器固件
+默认板载烧写器已经提前烧录了系统固件，一般使用是没有问题的，但有时候需要对固件进行更新以修复bug或者添加新的功能，这样就需要了解更新固件的方法。目前板载烧写器上采用的主控是CH32V103，这个MCU是支持ISP程序更新的，但是需要配合 **WCHISPTool** 一起使用，所以首先需要安装 **WCHISPTool** 工具。同学们可以访问这个 [网址](https://www.wch.cn/download/WCHISPTool_Setup_exe.html) 来下载 **WCHISPTool** 并安装。
+
+当按照指示安装完 **WCHISPTool** 后，双击打开该软件，可以看到如下界面：
+
+![WCHISPTool界面](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/hfp-3.png)
+
+然后将开发板切换到 [程序烧写模式](#程序烧写)，此时上电后，电脑会识别出一个名为 `YSYX-HFPLnk` U盘，这个上面已经介绍过。在这个模式下，需要2个步骤才能让CH32V103进入到ISP下载模式：
+- 先按住板载烧写器的系统复位按键 `NRST` ，然后再按住板载烧写器的BOOT模式按键 `BOOT`
+- 接着释放板载烧写器的系统复位按键 `NRST` ，最后释放板载烧写器的BOOT模式按键 `BOOT`
+
+操作完之后，WSHISPTool会自动识别出 `CH32V103` 这个芯片型号：
+
+![识别出CH32V103](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/hfp-4.png)
+
+当识别出 `CH32V103` 后，同学们点击 ***用户程序文件*** 后的文件图标选择需要更新的固件(hex格式)，项目组已经在 [StarrySky-res](https://github.com/maksyuki/StarrySky-res) 中 `firmware` 目录下准备好了固件，然后点击 ***下载*** 按钮并等待更新完成：
+
+![下载固件](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/hfp-5.png)
+
+最后再按一下板载烧写器的系统复位按键 `NRST` 就可以恢复到正常工作模式了。
+:::
+
+::: warning 固件更新
+- 更新固件不是必须的，**因为板卡在发给同学们之前已经烧录过固件了**，上面介绍更新固件的方法，是为了方便将板卡发给同学们之后，还能够便捷地对烧写器功能进行升级用的。
+- 有时候点击 ***下载*** 之后，**WCHISPTool**提示存在 **写保护** 。此时可以先点击上面的 **解除保护** 之后再重复上面更新固件操作即可。
+:::
 
 至此，板卡的硬件测试完成，下面将更加详细地介绍板卡。
 
@@ -385,7 +439,6 @@ SoC板卡上的电源网络拓扑结构如下图所示：
 
 网络拓扑图.png
 整个板卡使用
-
 
 #### PS复位按键
 SoC板卡上搭建了
@@ -445,18 +498,11 @@ SoC底板上，原理图如下所示：
 
 :::
 
-
-### 程序烧写和测试
-主要介绍如何下载程序到板载Flash。
-::: info 更新板载烧写器固件
-:::
-### FPGA板卡外设
-
 ## 其他资源
 对接PPT内容，你可以从这里获得。
 
 ### 硅后测试
-## 文档勘误与致谢
+## 勘误与致谢
 项目组鼓励和欢迎同学们对本文档提出宝贵的意见和反馈，目前项目组使用 [Github issue](https://github.com/oscc-ysyx-web-project/ysyx-website/issues) 来追踪这些反馈，本文档致力于遵守开源软件开发中公认的最佳实践，所以当你觉得有提出的必要时，请大胆地发起issue吧！:smile:
 
 ### 致谢列表
