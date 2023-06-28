@@ -20,17 +20,23 @@ toc: false
 
 包装所有内容可以见下图：
 
+包装和配件内容.png(package-cont.png)
+
+
 ::: info
 包装中配发的Type-C USB线缆可能对于某些同学来说不够长，可以选用更长线材长度的Type-C线，但是需要自行确认Type-C线材的质量符合板卡的通信和供电能力。
 :::
 ### 板卡介绍
 
-星空开发板采用的是SoC底板+FPGA核心板的设计，具体板载资源如下图所示：
+星空开发板采用的是SoC底板+FPGA核心板的设计，其中SoC底板板载资源如下图所示：
 
 
-板卡正面.png
+板卡正面.png(board-top.png)
 
-板卡反面.png
+板卡反面.png(board-bot.png)
+
+
+
 - 系统
   - 1个红色电源指示LED
   - 1个PS功能复位按键，1个PS调试复位按键
@@ -43,6 +49,7 @@ toc: false
   - 1个SDIO WIFI，使用AP6212模组，支持独立电源控制
   - 1个CAN接口，CAN使用TJA1050芯片
   - 1个USB Host，使用USB3320C芯片
+  - 1个6位的PMOD扩展口
   - 2个用户自定义按键
   - 2个用户自定义蓝色LED
   - 4个WS2812C LED炫彩灯珠
@@ -58,15 +65,34 @@ toc: false
   - 4个WS2812C LED炫彩灯珠
 - 1个SO-DIMM 204P接口，用于连接ZYNQ7010/7020 FPGA核心板
 
+FPGA核心板如下图所示：
+
+![FPGA核心板正面](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/som-1.png)
+
+
+![FPGA核心板背面](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/som-2.png)
+
+FPGA核心板板载资源如下所示：
+- 主芯片：XC7Z010CLG400
+- DDR3：MT41K128M16JT-125*2片 **(512MB)**
+- eMMC：KLM8G1GETF-B041 **(8GB)**
+- Flash：W25Q128JVSQ **(16MB)**
 
 星空开发板设计上的主要特点如下：
 - 星空开发板的外形尺寸为**110X84mm**，面积约为标准信用卡大小的**2倍**。
 - 重新设计电源网络，将供电能力从1.2A电流提高到2A，支持外置5V**电源适配器**供电，支持多路电源管理。
 - FPGA采用SO-DIMM 204P接口的核心板设计，硬件规格为：**XC7Z010-1CLG400C + 512MB DDR3 + 8GB eMMC**。
 - 板载NOR Flash烧写器 **(HFPLink)**，实现了拖拽式烧录功能，烧写器支持固件升级 **(USB接口)**。
-- 使用多路**模拟开关**实现FPGA侧PL端口IO的复用，以挂载尽可能多的外设。
+- 使用多路**模拟开关**实现FPGA侧PL端口IO的复用，以挂载尽可能多的外设，并引出FPGA核心板上所有的IO。
 - 设计上将处理器核切换和频率选择开关分开，并使用**正选通逻辑**，方便拨码。
 - 充分考虑几何约束关系，按键开关选择低压力克数器件 **(160gf)**，提升硬件操作体验。
+- 板卡上为拨码开关和重要接口都设置有丝印和标注，方便同学们使用。
+
+星空V1.2开发板的硬件资源框图如下所示：
+
+![硬件资源](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/board-res.png)
+
+FPGA核心板的PS侧的BANK有BANK502，BANK500，BNAK501，其中BANK502电平标准为1.5V，用于连接两片DDR3颗粒，BANK500电平标准为3.3V，用于连接符合3.3V电气标准的外设，比如UART，LED和按键等。而BANK501电平标准为1.8V，用于连接符合1.8V电气标准的外设，比如USB HOST，I2S等。
 
 ::: danger 供电负载说明
 目前星空开发板正常运行程序的电流负载约为**400~450mA**，使用笔记本或台式机的标准USB口取电基本都能满足供电要求，不需要额外供电通路支持。当然为了满足某些特定的需求，星空开发板也支持使用Type-C接口的外置5V/2A电源适配器供电，但是在配件中并没有提供该适配器，需要同学们自行准备。一般电源适配器是直接和市电相连的，供电电压和电流都比较高，存在一定危险性，**如果同学们确实需要使用电源适配器，请选取符合安全标准的适配器并注意用电安全**。
@@ -336,7 +362,6 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
 
 
 ### 硬件设计
-
 现在介绍星空V1.2版本的硬件设计，其主要特点如下：
 - 使用Cadence Orcad/Allegro设计 **(三周)**，采用**六层**层叠设计 **(TOP-GND02-ART03-PWR04-GND05-BOT)** 和沉金表面工艺，并完成四线低阻测试。
 - 板卡等长设置：ChipLink走线分别参照**tx_clk**和**rx_clk**做**0/50mil**组内等长，2个SDIO参照clk做**0/30mil**组内等长，USB2.0参照clk做**0/50mil**组内等长，5对USB差分信号按照**0/25mil**做对内等长。
@@ -344,6 +369,77 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
 - VGA和所有晶振时钟输出端做了**包地处理**，远离高频和模拟信号，并均参考了完整地。
 - 模拟地做了**单点隔离**，各芯片均做了完备的电源滤波，电源网络使用覆铜连接，保证电源供电稳定，并打了足量的**回流地过孔**。
 
+![开发板硬件设计](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/pcb-1.png)
+
+
+::: info 板卡设计资源文件
+- 项目组在Github上**开源了星空板卡各个版本的原理图，PCB设计，BOM和制造文件等内容**，同学们可以访问Github仓库 [StarrySky](https://github.com/maksyuki/StarrySky) 来获取所有资源。
+- 星空V1.2的PDF版本原理图：[STARRYSKY_SCH.pdf](https://github.com/maksyuki/StarrySky/blob/main/CAD/V1.2/STARRYSKY_SCH.pdf)
+- 星空V1.2的PDF版本PCB布线图：[STARRYSKY_PCB.pdf](https://github.com/maksyuki/StarrySky/blob/main/CAD/V1.2/STARRYSKY_PCB.pdf)
+:::
+
+下面将结合原理图详细介绍板卡的硬件设计。并按照 **电源网络** ，**PS侧外设** 和 **PL侧外设** 的顺序依次介绍。
+
+#### 电源网络
+SoC板卡上的电源网络拓扑结构如下图所示：
+
+网络拓扑图.png
+整个板卡使用
+
+
+#### PS复位按键
+SoC板卡上搭建了
+
+#### 启动模式
+ZYNQ芯片支持4种启动模式，分别是SD，Flash，JTAG和NAND。考虑到PS MIO管脚的复用，目前星空开发板上面支持的是前3种方式，原理图如下所示：
+
+当
+
+#### FPGA JTAG调试接口
+SoC底板上搭载了一个5X2P的牛角插座，用于接入配件中的FPGA烧写器，实现FPGA硬件系统的下载，固化或者调试。原理图如下所示：
+
+#### 板载烧写器(HFPLink)
+SoC底板上搭载了一个板载的Flash烧写器，用于实现对SoC上应用程序的烧录，原理图如下所示：
+
+#### PS UART
+SoC底板上搭载了一个UART转USB的芯片，型号为CP2102，用于实现PS侧的串口通信，该接口位于BANK500,的MIOxx~xx，电平标准为3.3V，原理图如下所示：
+
+#### PS SDIO
+SoC底板上搭载了一个SDIO接口，位于BANK501的MIOxx~xx，电平标准为1.8V，需要通过一个电平转换芯片转换到3.3V以满足Micro SD插槽的使用，这个SDIO接口用于固化FPGA核心板的应用程序，或者存储应用需要的数据，原理图如下所示：
+
+#### PS SDIO WIFI
+SoC底板上搭载了一个支持SDIO数据协议的WIFI模组，型号为AP6212，用于实现无线网络通信功能。原理图如下所示：
+
+#### PS CAN
+CAN接口是控制局域网(Controller Area Network)的简称，是一种能够实现分布式实时控制的串行通信网络，其由德国的Bosh公司开发。原理图如下所示：
+
+#### PS USB Host
+SoC底板上搭载有一个兼容USB2.0的驱动芯片USB3320C，用于实现Host模式下的数据通信，数据接口上使用的是标准的USB接口 **(Type-A)**，原理图如下所示：
+
+#### PS PMOD
+SoC底板上额外引出了6位的PS侧的MIO口，位于BANK501的MIOxx~xx，电平标准为，可以用于扩展其他外设，原理图如下所示：
+
+#### PS LED/KEY
+SoC底板上搭载了，原理图如下所示：
+
+#### PL VGA
+SoC底板上搭载了一个标准VGA接口，用于图片或者视频的显示，原理图如下所示：
+
+#### PL PS/2
+SoC底板上搭载了一个PS/2键盘母座，用于连接键盘实现键盘按键输入，原理图如下所示：
+
+#### PL RTC
+SoC底板上，原理图如下所示：
+#### PL EEPROM
+SoC底板上，原理图如下所示：
+#### PL SPI Flash
+SoC底板上，原理图如下所示：
+#### PL I2S
+SoC底板上，原理图如下所示：
+#### PL LED/KEY
+SoC底板上，原理图如下所示：
+#### SO-DIMM 204P接口
+SoC底板上，原理图如下所示：
 
 ::: info 设计插曲
 
