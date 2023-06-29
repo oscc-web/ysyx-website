@@ -16,17 +16,27 @@ copyright: false
 
 包装所有内容可以见下图：
 
-::: info
-包装中配发的Type-C USB线缆可能对于某些同学来说不够长，可以选用更长线材长度的Type-C线，但是需要自行确认Type-C线材的质量符合板卡的通信和供电能力。
+包装和配件内容.png(package-cont.png)
+
+板卡配套的软硬件资源**均开源**，并托管在Github上，有需要的同学们可以提前下载下来，方便后面使用，其中：
+- [StarrySky](https://github.com/maksyuki/StarrySky)：星空系列开发板所有的硬件资源，包括原理图，PCB设计，制造文件等。
+- [StarrySky-res](https://github.com/maksyuki/StarrySky-res)：星空系列开发板所有的软件资源，包括必须的串口驱动，测试程序，FPGA外设硬件工程等。
+
+
+::: info Type-C数据线长
+包装中配发的Type-C USB线缆可能对于某些同学使用来说不太够长，同学们可以自行选用更长的Type-C数据线，但是需要自行确认Type-C线材的质量符合板卡的数据和供电能力。
 :::
 ### 板卡介绍
 
-星空开发板采用的是SoC底板+FPGA核心板的设计，具体板载资源如下图所示：
+星空开发板采用的是SoC底板+FPGA核心板的设计，其中SoC底板板载资源如下图所示：
 
 
-板卡正面.png
+板卡正面.png(board-top.png)
 
-板卡反面.png
+板卡反面.png(board-bot.png)
+
+
+
 - 系统
   - 1个红色电源指示LED
   - 1个PS功能复位按键，1个PS调试复位按键
@@ -39,6 +49,7 @@ copyright: false
   - 1个SDIO WIFI，使用AP6212模组，支持独立电源控制
   - 1个CAN接口，CAN使用TJA1050芯片
   - 1个USB Host，使用USB3320C芯片
+  - 1个6位的PMOD扩展口
   - 2个用户自定义按键
   - 2个用户自定义蓝色LED
   - 4个WS2812C LED炫彩灯珠
@@ -52,17 +63,37 @@ copyright: false
   - 1个用户自定义按键
   - 1个用户自定义蓝色LED
   - 4个WS2812C LED炫彩灯珠
+- 1个外设功能切换开关
 - 1个SO-DIMM 204P接口，用于连接ZYNQ7010/7020 FPGA核心板
 
+FPGA核心板如下图所示：
+
+![FPGA核心板正面](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/som-1.png)
+
+
+![FPGA核心板背面](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/som-2.png)
+
+FPGA核心板板载资源如下所示：
+- 主芯片：XC7Z010CLG400
+- DDR3：MT41K128M16JT-125*2片 **(512MB)**
+- eMMC：KLM8G1GETF-B041 **(8GB)**
+- Flash：W25Q128JVSQ **(16MB)**
 
 星空开发板设计上的主要特点如下：
 - 星空开发板的外形尺寸为**110X84mm**，面积约为标准信用卡大小的**2倍**。
 - 重新设计电源网络，将供电能力从1.2A电流提高到2A，支持外置5V**电源适配器**供电，支持多路电源管理。
 - FPGA采用SO-DIMM 204P接口的核心板设计，硬件规格为：**XC7Z010-1CLG400C + 512MB DDR3 + 8GB eMMC**。
 - 板载NOR Flash烧写器 **(HFPLink)**，实现了拖拽式烧录功能，烧写器支持固件升级 **(USB接口)**。
-- 使用多路**模拟开关**实现FPGA侧PL端口IO的复用，以挂载尽可能多的外设。
+- 使用多路**模拟开关**实现FPGA侧PL端口IO的复用，以挂载尽可能多的外设，并引出FPGA核心板上所有的IO。
 - 设计上将处理器核切换和频率选择开关分开，并使用**正选通逻辑**，方便拨码。
 - 充分考虑几何约束关系，按键开关选择低压力克数器件 **(160gf)**，提升硬件操作体验。
+- 板卡上为拨码开关和重要接口都设置有丝印和标注，方便同学们使用。
+
+星空V1.2开发板的硬件资源框图如下所示：
+
+![硬件资源](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/board-res.png)
+
+FPGA核心板的PS侧的BANK有BANK502，BANK500，BNAK501，其中BANK502电平标准为1.5V，用于连接两片DDR3颗粒，BANK500电平标准为3.3V，用于连接符合3.3V电气标准的外设，比如UART，LED和按键等。而BANK501电平标准为1.8V，用于连接符合1.8V电气标准的外设，比如USB HOST，I2S等。
 
 ::: danger 供电负载说明
 目前星空开发板正常运行程序的电流负载约为**400~450mA**，使用笔记本或台式机的标准USB口取电基本都能满足供电要求，不需要额外供电通路支持。当然为了满足某些特定的需求，星空开发板也支持使用Type-C接口的外置5V/2A电源适配器供电，但是在配件中并没有提供该适配器，需要同学们自行准备。一般电源适配器是直接和市电相连的，供电电压和电流都比较高，存在一定危险性，**如果同学们确实需要使用电源适配器，请选取符合安全标准的适配器并注意用电安全**。
@@ -104,7 +135,7 @@ copyright: false
 - 使能PLL输出，选择PLL输出核时钟的频率。
 - 选通特定学号的处理器核。
 
-在做三期SoC的后端集成时，我们给每个同学的核都分配了一个序号，可以通过这个序号选通到同学们自己的核。首选请同学们先打开 [三期处理器核序号和学号对应表](https://oscc-ysyx-web-project.github.io/ysyx-website/board/official/)，然后按照自己的学号来查找核序号是多少，比如学号为`ysyx_210000`的核序号为`1`。
+在做三期SoC的后端集成时，我们给每个同学的核都分配了一个序号，可以通过这个序号选通到同学们自己的核。首选请同学们先打开 [三期处理器核序号和学号对应表(student-id.md)](https://github.com/maksyuki/StarrySky-res/blob/main/software/V1.2/student-id.md)，然后按照自己的学号来查找核序号是多少，比如学号为`ysyx_210000`的核序号为`1`。
 
 现在解释下拨码开关的每个位的定义和功能，板卡上共有两个拨码开关，左边的拨码开关有4位拨码，是用来**设置时钟输出状态的**。右边的拨码开关有6位拨码，是用来**设置核选通状态的**。
 
@@ -207,11 +238,11 @@ copyright: false
 上图端口图标后圆括号中的 **`COMx`** 后接着的数字不一定是图中的 **`15`**，这个是电脑自动分配的，对测试没有影响。
 :::
 
-如果在 ***其他设备*** 选项中出现类似下图中的黄色叹号图标，则说明电脑没有安装过CP2102的驱动，需要使用我们提供的软件包安装相应的CP2102驱动：
+如果在 ***其他设备*** 选项中出现类似下图中的黄色叹号图标，则说明电脑没有安装过CP2102的驱动，需要使用我们提供的软件包安装相应的CP2102驱动，软件包也在 [StarrySky-res](https://github.com/maksyuki/StarrySky-res/) 仓库中，具体地址为 [CP2102.zip](https://github.com/maksyuki/StarrySky-res/tree/main/driver/CP2102.zip)：
 
 ![在其他设备中出现黄色叹号](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/cp2102-2.png)
 
-CP2102驱动的具体安装方法如下：同学们需要先进入 `ysyx3_pcb_software/cp2102 driver` 目录中，然后双击 `CP2102xVCPInstaller_x64.exe` 来安装64位驱动。同学们的电脑如果只支持32位的话，则双击 `CP2102xVCPInstaller_x86.exe` 来安装32位驱动：
+CP2102驱动的具体安装方法如下：同学们需要先从Github下载`StarrySky-res`仓库并解压`CP2102.zip`，然后进入 `cp2102 driver` 目录，双击 `CP2102xVCPInstaller_x64.exe` 来安装64位驱动。同学们的电脑如果只支持32位的话，则双击 `CP2102xVCPInstaller_x86.exe` 来安装32位驱动：
 
 ![安装CP2102驱动程序](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/cp2102-3.png)
 
@@ -296,7 +327,7 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
 由于我们板卡上的测试程序是使用 **`"\n"(LF)`** 进行换行的，但是Win下换行格式是 **`"\r\n"(CR LF)`** ，所以需要设置PuTTY在每次接收到 **`"\n"(LF)`** 时在其前面隐式添加 **`"\r"(CR)`** ，这样才能在 Win 下正确地显示换行。这个选项与 Win，Linux 和 Mac 系统下对换行的处理方式不同有关，感兴趣的同学们可以自行上网了解相关内容。
 :::
 
-当能够正确使用MobaXterm打开串口Session后，请先按动电源开关 **`PWR`** 以关闭电源，然后确认FPGA核心板的启动模式选择拨码开关 **`FPGA-BOOT`** 拨到了 **`FLASH`** 档位，表示此时FPGA核心板从自己板载的Flash中加载硬件系统，因为FPGA板卡在发给同学们之前已经将访存必须的FPGA侧的硬件系统固化在了核心板板载的Flash上，所以需要将档位设置到 **`FLASH`**。具体档位含义在拨码开关右侧的白色丝印上：
+当能够正确使用MobaXterm打开串口Session后，请先按动电源按键 **`PWR`** 以关闭电源，然后确认FPGA核心板的启动模式选择拨码开关 **`FPGA-BOOT`** 拨到了 **`FLASH`** 档位，表示此时FPGA核心板从自己板载的Flash中加载硬件系统，因为FPGA板卡在发给同学们之前已经将访存必须的FPGA侧的硬件系统固化在了核心板板载的Flash上，所以需要将档位设置到 **`FLASH`**。具体档位含义在拨码开关右侧的白色丝印上：
 
 ![FPGA核心板启动模式设置](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/uart-3.png)
 
@@ -315,6 +346,55 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
 
 ![运行RT-Thread测试程序](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/rtthread.png)
 
+::: info 丰富应用实例
+星空V1.2板卡上面有不少同学的核能够启动Linux，比如唐浩晋同学的核。他当时参加一生一芯时是中国科学院大学电子信息工程的一名大三学生。他在自己的核上成功启动了Linux并运行了应用程序([视频](https://www.bilibili.com/video/BV1CL411X7wV/))：
+
+![启动Linux并运行程序](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/app-1.png)
+:::
+### 程序烧写
+这一章节主要介绍如何将程序下载到板载的QSPI Flash中。星空开发板集成有板载Flash烧写器，可以像DAPLink一样实现拖拽式烧录，具体的软硬件原理见 [板载烧写器(HFPLink)](#板载烧写器-hfplink) 一节。
+
+::: info 板载烧写器适用操作系统
+目前板载烧写器能够在 **Win10** 和 **Win11** 平台上正常工作，同学们需要确认下自己电脑的操作系统版本。
+:::
+
+现在开始介绍烧写程序的具体步骤，首先按下板卡的电源按键，关闭板卡电源，然后在保持之前其他开关设置不变的情况下，将开发板上 `HFP-MODE` 的滑动开关拨码到左侧，表示使能板载烧写器功能：
+
+![使能板载烧写器](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/hfp-1.png)
+
+然后再次按下板卡的电源按键，接通板卡电源，此时电脑会识别出一个叫做 `YSYX-HFPLnk` 的移动U盘，容量为 `15.8MB` 左右。
+
+![识别出U盘](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/hfp-2.png)
+
+接着将想要烧写的bin格式应用程序拷贝到 `YSYX-HFPLnk` 这个U盘中，然后等待拷贝完成即可。在拷贝的同时板载烧写器旁的蓝色LED会一直闪烁，当拷贝完成时，蓝色LED会常亮。项目组已经在 [StarrySky-res](https://github.com/maksyuki/StarrySky-res) 中 `software` 目录下提前准备了一些已经编译好的测试程序，可以拷贝到 `YSYX-HFPLnk` 中进行测试。当拷贝完成后，程序烧写也就完成了，此时关闭板卡电源，并将 `HFP-MODE` 的滑动开关拨码到右侧，重新上电就可以运行新的程序了。
+
+::: info 更新板载烧写器固件
+默认板载烧写器已经提前烧录了系统固件，一般使用是没有问题的，但有时候需要对固件进行更新以修复bug或者添加新的功能，这样就需要了解更新固件的方法。目前板载烧写器上采用的主控是CH32V103，这个MCU是支持ISP程序更新的，但是需要配合 **WCHISPTool** 一起使用，所以首先需要安装 **WCHISPTool** 工具。同学们可以访问这个 [网址](https://www.wch.cn/download/WCHISPTool_Setup_exe.html) 来下载 **WCHISPTool** 并安装。
+
+当按照指示安装完 **WCHISPTool** 后，双击打开该软件，可以看到如下界面：
+
+![WCHISPTool界面](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/hfp-3.png)
+
+然后将开发板切换到 [程序烧写模式](#程序烧写)，此时上电后，电脑会识别出一个名为 `YSYX-HFPLnk` U盘，这个上面已经介绍过。在这个模式下，需要2个步骤才能让CH32V103进入到ISP下载模式：
+- 先按住板载烧写器的系统复位按键 `NRST` ，然后再按住板载烧写器的BOOT模式按键 `BOOT`
+- 接着释放板载烧写器的系统复位按键 `NRST` ，最后释放板载烧写器的BOOT模式按键 `BOOT`
+
+操作完之后，WSHISPTool会自动识别出 `CH32V103` 这个芯片型号：
+
+![识别出CH32V103](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/hfp-4.png)
+
+当识别出 `CH32V103` 后，同学们点击 ***用户程序文件*** 后的文件图标选择需要更新的固件(hex格式)，项目组已经在 [StarrySky-res](https://github.com/maksyuki/StarrySky-res) 中 `firmware` 目录下准备好了固件，然后点击 ***下载*** 按钮并等待更新完成：
+
+![下载固件](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/hfp-5.png)
+
+最后再按一下板载烧写器的系统复位按键 `NRST` 就可以恢复到正常工作模式了。
+:::
+
+::: warning 固件更新
+- 更新固件不是必须的，**因为板卡在发给同学们之前已经烧录过固件了**，上面介绍更新固件的方法，是为了方便将板卡发给同学们之后，还能够便捷地对烧写器功能进行升级用的。
+- 有时候点击 ***下载*** 之后，**WCHISPTool**提示存在 **写保护** 。此时可以先点击上面的 **解除保护** 之后再重复上面更新固件操作即可。
+:::
+
 至此，板卡的硬件测试完成，下面将更加详细地介绍板卡。
 
 ::: info 板卡或者耗材损坏/缺失/丢失怎么办？
@@ -332,7 +412,6 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
 
 
 ### 硬件设计
-
 现在介绍星空V1.2版本的硬件设计，其主要特点如下：
 - 使用Cadence Orcad/Allegro设计 **(三周)**，采用**六层**层叠设计 **(TOP-GND02-ART03-PWR04-GND05-BOT)** 和沉金表面工艺，并完成四线低阻测试。
 - 板卡等长设置：ChipLink走线分别参照**tx_clk**和**rx_clk**做**0/50mil**组内等长，2个SDIO参照clk做**0/30mil**组内等长，USB2.0参照clk做**0/50mil**组内等长，5对USB差分信号按照**0/25mil**做对内等长。
@@ -340,23 +419,86 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
 - VGA和所有晶振时钟输出端做了**包地处理**，远离高频和模拟信号，并均参考了完整地。
 - 模拟地做了**单点隔离**，各芯片均做了完备的电源滤波，电源网络使用覆铜连接，保证电源供电稳定，并打了足量的**回流地过孔**。
 
+![开发板硬件设计](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/pcb-1.png)
+
+
+::: info 板卡设计资源文件
+- 项目组在Github上**开源了星空板卡各个版本的原理图，PCB设计，BOM和制造文件等内容**，同学们可以访问Github仓库 [StarrySky](https://github.com/maksyuki/StarrySky) 来获取所有资源。
+- 星空V1.2的PDF版本原理图：[STARRYSKY_SCH.pdf](https://github.com/maksyuki/StarrySky/blob/main/CAD/V1.2/STARRYSKY_SCH.pdf)
+- 星空V1.2的PDF版本PCB布线图：[STARRYSKY_PCB.pdf](https://github.com/maksyuki/StarrySky/blob/main/CAD/V1.2/STARRYSKY_PCB.pdf)
+:::
+
+下面将结合原理图详细介绍板卡的硬件设计。并按照 **电源网络** ，**PS侧外设** 和 **PL侧外设** 的顺序依次介绍。
+
+#### 电源网络
+SoC板卡上的电源网络拓扑结构如下图所示：
+
+网络拓扑图.png
+整个板卡使用
+
+#### PS复位按键
+SoC板卡上搭建了
+
+#### 启动模式
+ZYNQ芯片支持4种启动模式，分别是SD，Flash，JTAG和NAND。考虑到PS MIO管脚的复用，目前星空开发板上面支持的是前3种方式，原理图如下所示：
+
+当
+
+#### FPGA JTAG调试接口
+SoC底板上搭载了一个5X2P的牛角插座，用于接入配件中的FPGA烧写器，实现FPGA硬件系统的下载，固化或者调试。原理图如下所示：
+
+#### 板载烧写器(HFPLink)
+SoC底板上搭载了一个板载的Flash烧写器，用于实现对SoC上应用程序的烧录，原理图如下所示：
+
+#### PS UART
+SoC底板上搭载了一个UART转USB的芯片，型号为CP2102，用于实现PS侧的串口通信，该接口位于BANK500,的MIOxx~xx，电平标准为3.3V，原理图如下所示：
+
+#### PS SDIO
+SoC底板上搭载了一个SDIO接口，位于BANK501的MIOxx~xx，电平标准为1.8V，需要通过一个电平转换芯片转换到3.3V以满足Micro SD插槽的使用，这个SDIO接口用于固化FPGA核心板的应用程序，或者存储应用需要的数据，原理图如下所示：
+
+#### PS SDIO WIFI
+SoC底板上搭载了一个支持SDIO数据协议的WIFI模组，型号为AP6212，用于实现无线网络通信功能。原理图如下所示：
+
+#### PS CAN
+CAN接口是控制局域网(Controller Area Network)的简称，是一种能够实现分布式实时控制的串行通信网络，其由德国的Bosh公司开发。原理图如下所示：
+
+#### PS USB Host
+SoC底板上搭载有一个兼容USB2.0的驱动芯片USB3320C，用于实现Host模式下的数据通信，数据接口上使用的是标准的USB接口 **(Type-A)**，原理图如下所示：
+
+#### PS PMOD
+SoC底板上额外引出了6位的PS侧的MIO口，位于BANK501的MIOxx~xx，电平标准为，可以用于扩展其他外设，原理图如下所示：
+
+#### PS LED/KEY
+SoC底板上搭载了，原理图如下所示：
+
+#### PL VGA
+SoC底板上搭载了一个标准VGA接口，用于图片或者视频的显示，原理图如下所示：
+
+#### PL PS/2
+SoC底板上搭载了一个PS/2键盘母座，用于连接键盘实现键盘按键输入，原理图如下所示：
+
+#### PL RTC
+SoC底板上，原理图如下所示：
+#### PL EEPROM
+SoC底板上，原理图如下所示：
+#### PL SPI Flash
+SoC底板上，原理图如下所示：
+#### PL I2S
+SoC底板上，原理图如下所示：
+#### PL LED/KEY
+SoC底板上，原理图如下所示：
+#### SO-DIMM 204P接口
+SoC底板上，原理图如下所示：
 
 ::: info 设计插曲
 
 :::
 
-
-### 程序烧写和测试
-主要介绍如何下载程序到板载Flash。
-::: info 更新板载烧写器固件
-:::
-### FPGA板卡外设
-
 ## 其他资源
 对接PPT内容，你可以从这里获得。
 
 ### 硅后测试
-## 文档勘误与致谢
+## 勘误与致谢
 项目组鼓励和欢迎同学们对本文档提出宝贵的意见和反馈，目前项目组使用 [Github issue](https://github.com/oscc-ysyx-web-project/ysyx-website/issues) 来追踪这些反馈，本文档致力于遵守开源软件开发中公认的最佳实践，所以当你觉得有提出的必要时，请大胆地发起issue吧！:smile:
 
 ### 致谢列表
