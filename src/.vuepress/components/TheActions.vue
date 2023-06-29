@@ -16,10 +16,10 @@
 
 <script setup>
     const jumpToProjectInfo = () => {
-        window.location.href = "/ysyx-website/project/project-intro.html";
+        window.location.href = "/project/project-intro.html";
     }
     const jumpToSignup = () => {
-        window.location.href = "/ysyx-website/signup/index.html";
+        window.location.href = "/signup/index.html";
     }
 </script>
 

@@ -12,7 +12,8 @@ import { searchProPlugin } from "vuepress-plugin-search-pro";
 import theme from "./theme.js";
 
 export default defineUserConfig({
-    base: "/ysyx-website/",
+    // base: "/ysyx-website/",
+    base: "/",
     locales: {
         "/": {
             lang: "zh-CN",
