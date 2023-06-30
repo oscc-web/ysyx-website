@@ -6,9 +6,9 @@
   "type": "module",
   "scripts": {
     "build": "mkdir -p var; vuepress build src; cp -rv src/.vuepress/dist/ var/",
-    "clean-dev": "vuepress dev src --clean-cache",
     "dev": "vuepress dev src",
-    "deploy": "node ./deploy/index.mjs"
+    "deploy": "node ./deploy/index.mjs",
+    "clean": "vuepress dev src --clean-cache"
   },
   "devDependencies": {
     "@vuepress/client": "2.0.0-beta.60",
