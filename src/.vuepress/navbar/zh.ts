@@ -12,7 +12,7 @@ export const zhNavbar = navbar([
         children: ["project-intro",
                    "project-intro-past",
                    "project-faq",
-                   "project-teacher"]
+                   "project-assistant"]
     }, {
         text: "报名参与",
         link: "/signup/"
@@ -21,13 +21,13 @@ export const zhNavbar = navbar([
     {
         text: "学习记录",
         link: "https://docs.qq.com/sheet/DT29weHpIRWNnYlFl?tab=BB08J2"
+    }, {
+        text: "流片进度",
+        link: "/tapout/"
+    }, {
+        text: "讨论区",
+        link: "/forum/"
     },
-    // {
-    //     text: "成果展示",
-    //     prefix: "/achieve/",
-    //     children: ["achieve-teacher",
-    //                "achieve-student"]
-    // },
     zhBoard,
     {
         text: "兴趣小组",

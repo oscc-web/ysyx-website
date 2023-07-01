@@ -12,15 +12,21 @@
                     <div>{{ boardItem.funcs }}</div>
                 </div>
                 <div class="board-bottom">
-                    <el-link class=""
-                             type="primary"
+                    <el-button type="primary"
+                               @click="jumpToBoardDetailsPage(boardItem)">
+                        详细信息
+                        <el-icon class="el-icon--right">
+                            <ArrowRight />
+                        </el-icon>
+                    </el-button>
+                    <!-- <el-link type="primary"
                              :underline="false"
                              :href="`${boardURL}${boardItem.link}`">
                             详细信息
                             <el-icon class="el-icon--right">
                                 <ArrowRight />
                             </el-icon>
-                    </el-link>
+                    </el-link> -->
                 </div>
             </div>
             </el-card>
@@ -40,6 +46,9 @@
         funcs: "简介：主要面向一生一芯三期的板卡",
         link:  "board-1/"
     }];
+    const jumpToBoardDetailsPage = (boardItemTemp) => {
+        window.location.href = boardURL.value + boardItemTemp.link;
+    }
 </script>
 
 <style lang="scss" scoped>
@@ -47,7 +56,6 @@
         width: 100%;
         height: 200px;
         display: block;
-        // pointer-events: none;
     }
     .board-content {
         padding:15px 15px 20px 15px;
