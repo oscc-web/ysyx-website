@@ -51,7 +51,7 @@ copyright: false
 
 在设计包装整体视觉效果时，项目组充分考虑到了功能性和美术性。首先确定设计风格是现代简约geek风，使用白色打底以清晰展示底部众多支持单位的logo，正面设计有主标题+副标题，图案和众多支持单位的logo，为主功能面。底面则为板卡的DXF线稿图，在设计过程中参考了苹果和大疆白底色产品包装的风格：
 
-![星空开发板盒型刀版设计](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/package-intro.png)
+![星空开发板盒型刀版设计](/res/images/board/package-intro.png)
 
 包装正面上使用 **星空+分割线+StarrySky+阿拉伯数字** 来展示主标题，使用 **“搭载学生自制CPU的RV64单板计算机”** 作为副标题。包装正面左上角为一生一芯项目的logo和标语，右上角为一生一芯项目官网地址二维码。底部水平放置所有支持单位的logo。包装主标题右侧设计有以星空背景为主体的几何图案，几何图案选取星空中常见天文现象作为设计元素：
 - 星宿
@@ -62,7 +62,7 @@ copyright: false
 - 使用点表征过孔(狭义)和星星(广义)，使用线类比芯片和PCB中的过孔(狭义)和行星轨迹(广义)，展示一种“点->线”的连接(动静变化)。
 - 图案中设计有北斗七星(星宿，群体，静态)和恒星+卫星双星系统(卫星，群体，静态)。并通过线联系在一起，宛若流星(个体，动态)。而众多流星汇聚一起构成流星雨(群体，动态)，而流星雨恰好是夜晚星空中最浪漫而美丽的景象。
 
-![星空开发板盒型3D渲染](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/package-3d.png)
+![星空开发板盒型3D渲染](/res/images/board/package-3d.png)
 
 另外在包装设计上还解决了印刷过程中的丢色，模糊等问题，并确定了制造工艺，其具体制造参数如下：
 - 盒型：后开带锁扣扣底

@@ -68,10 +68,10 @@ copyright: false
 
 FPGA核心板如下图所示：
 
-![FPGA核心板正面](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/som-1.png)
+![FPGA核心板正面](/res/images/board/som-1.png)
 
 
-![FPGA核心板背面](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/som-2.png)
+![FPGA核心板背面](/res/images/board/som-2.png)
 
 FPGA核心板板载资源如下所示：
 - 主芯片：XC7Z010CLG400
@@ -91,7 +91,7 @@ FPGA核心板板载资源如下所示：
 
 星空V1.2开发板的硬件资源框图如下所示：
 
-![硬件资源](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/board-res.png)
+![硬件资源](/res/images/board/board-res.png)
 
 FPGA核心板的PS侧的BANK有BANK502，BANK500，BNAK501，其中BANK502电平标准为1.5V，用于连接两片DDR3颗粒，BANK500电平标准为3.3V，用于连接符合3.3V电气标准的外设，比如UART，LED和按键等。而BANK501电平标准为1.8V，用于连接符合1.8V电气标准的外设，比如USB HOST，I2S等。
 
@@ -121,9 +121,9 @@ FPGA核心板的PS侧的BANK有BANK502，BANK500，BNAK501，其中BANK502电平
 
 首先，同学们需要从**网格防静电袋**中拿出板卡，并从**硬质防静电袋**中取出一个25MHz的晶振，然后将晶振按照正确方向插入到三期板卡的晶振插座中。晶振管脚要比插座的插槽深度要长一些，当发现用手插入晶振时稍用力已无法再进一步插入后即可，插入的方向和深度见下图：
 
-![晶振正确插入时方向](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/osc-1.png)
+![晶振正确插入时方向](/res/images/board/osc-1.png)
 
-![晶振正确插入时深度](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/osc-2.png)
+![晶振正确插入时深度](/res/images/board/osc-2.png)
 
 ::: warning
 - 不要将晶振的方向插反了，**这个上电前同学们需要再确认下**。
@@ -139,7 +139,7 @@ FPGA核心板的PS侧的BANK有BANK502，BANK500，BNAK501，其中BANK502电平
 
 现在解释下拨码开关的每个位的定义和功能，板卡上共有两个拨码开关，左边的拨码开关有4位拨码，是用来**设置时钟输出状态的**。右边的拨码开关有6位拨码，是用来**设置核选通状态的**。
 
-![拨码开关位功能定义](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/dip-switch-1.png)
+![拨码开关位功能定义](/res/images/board/dip-switch-1.png)
 
 4位拨码开关功能定义(从左到右)：
 - PLL时钟使能位(1位)
@@ -155,7 +155,7 @@ FPGA核心板的PS侧的BANK有BANK502，BANK500，BNAK501，其中BANK502电平
 
 拨码开关设置分成两部分，第一部分是设置PLL时钟使能位和PLL输出核的时钟频率，我们建议**先将PLL输出核时钟频率设置成25MHz，并先从低频率开始测试**。当同学们的核能够在25MHz核时钟下跑通我们提供的所有测试程序后，可以再去尝试逐步提高处理器核时钟频率。现在介绍下拨码开关位和SoC上信号的对应关系，其中三期SoC的RCG(全局时钟复位模块)如下图所示：
 
-![三期SoC的RCG模块](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/rcg-intro.png)
+![三期SoC的RCG模块](/res/images/board/rcg-intro.png)
 
 其中拨码开关的PLL时钟使能位对应于上图左上角红框中的`clk_sel`，当使能该位后，处理器核时钟`clk_core`使用PLL的输出时钟，此时需要将拨码开关上的PLL时钟使能位设置为`ON`。失能该位时，`clk_core`直接使用外部晶振时钟，此时需要将拨码开关上的PLL时钟使能位设置为`OFF`。PLL输出时钟频率选择位对应于上图左上角红框中的`pll_cfg[2:0]`，用于设置PLL输出时钟的频率，也就是处理器核时钟频率。**拨码开关位和PLL输出核时钟频率对应**关系如下表格所示：
 
@@ -189,7 +189,7 @@ FPGA核心板的PS侧的BANK有BANK502，BANK500，BNAK501，其中BANK502电平
 ::: tip
 上面 ***拨码开关位和核时钟频率对应表*** 中拨PLL输出时钟频率选择位**设置的最低位对应于板子上拨码开关的4号位**。所以如果要将PLL输出时钟频率倍频到200MHz，则需要将PLL输出时钟选择位拨码调整到ON-OFF-OFF(对应拨码开关的2位-3位-4位)，如下图所示：
 
-![使能PLL并将PLL倍频到200MHz的拨码开关设置](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/dip-switch-2.png)
+![使能PLL并将PLL倍频到200MHz的拨码开关设置](/res/images/board/dip-switch-2.png)
 :::
 
 ::: tip
@@ -199,17 +199,17 @@ FPGA核心板的PS侧的BANK有BANK502，BANK500，BNAK501，其中BANK502电平
 
 拨码开关设置的第二部分是选通自己的处理器核，一生一芯三期将多个同学们的核集成到一个SoC中，并使用外部信号线的高低电平来选通不同的核，该外部信号线由拨码开关上的**处理器核选择位**实现，**处理器核选择位**对应于下面三期SoC架构图中左边红框中的`core_dip[4:0]`：
 
-![三期SoC架构图](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/soc-intro.png)
+![三期SoC架构图](/res/images/board/soc-intro.png)
 
 处理器核选择位的拨码仍然采用的是**正逻辑**。结合下图例子更方便理解，比如同学们要选择序号为3的核，此时拨码开关应该设置成下图中的样子：
 
-![拨码开关与序号对应关系](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/dip-switch-3.png)
+![拨码开关与序号对应关系](/res/images/board/dip-switch-3.png)
 
 选通核的五位拨码开关从左到右**位权**依次为`16, 8, 4, 2, 1`。这样选择序号为`1`的核，则其对应的编码为`5'b00001`。由于是**正逻辑**，所以对应拨码位设置从左到右依次为`OFF-OFF-OFF-OFF-ON`。如果要选择序号为`6`的核，则其对应的编码为`5'b00110`，对应拨码位设置从左到右依次为`OFF-OFF-ON-ON-OFF`。
 
 再举个完整拨码开关设置的例子，比如要选择核序号为`7`的核进行测试，并希望处理器核时钟工作在25MHz，则拨码开关的设置应如下图所示：
 
-![使能PLL，PLL输出核时钟为25MHz，选择核序号为7的拨码开关设置](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/dip-switch-4.png)
+![使能PLL，PLL输出核时钟为25MHz，选择核序号为7的拨码开关设置](/res/images/board/dip-switch-4.png)
 
 ::: danger 拨码开关切换
 - 拨码开关也需要和滑动开关一样上电前被正确拨动到某一侧，而非中间位置（机械死区），以防止拨码状态电平的不稳定。
@@ -224,15 +224,15 @@ FPGA核心板的PS侧的BANK有BANK502，BANK500，BNAK501，其中BANK502电平
 
 同学们先将配件中的 Type-C USB 线缆的一头插入到SoC板卡的 **`VBUS1`** 口中，另一头插入到电脑的 USB 口中，确认滑动开关 **`SW1`** 和 **`SW2`** 拨动到了上侧，而 **`HFP-MODE`** 拨动到了右侧：
 
-![滑动开关设置](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/uart-1.png)
+![滑动开关设置](/res/images/board/uart-1.png)
 
 然后按下 **`PWR`** 自锁开关给板卡供电，当正确供电时，板卡上 **`SW2`** 上侧的红色 **`LED`**  会被点亮：
 
-![给板卡供电](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/uart-2.png)
+![给板卡供电](/res/images/board/uart-2.png)
 
 接着 ***WIN+X*** 组合键，在弹出的选项中点击 ***设备管理器*** 选项，如果 ***设备管理器--->端口(COM和LPT)*** 中显示类似下图中带有 `CP210x` 字样的端口图标，则说明串口驱动已经安装成功，不需要再安装 CP2102 驱动：
 
-![设备管理器显示CP2102端口](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/cp2102-1.png)
+![设备管理器显示CP2102端口](/res/images/board/cp2102-1.png)
 
 ::: tip
 上图端口图标后圆括号中的 **`COMx`** 后接着的数字不一定是图中的 **`15`**，这个是电脑自动分配的，对测试没有影响。
@@ -240,41 +240,41 @@ FPGA核心板的PS侧的BANK有BANK502，BANK500，BNAK501，其中BANK502电平
 
 如果在 ***其他设备*** 选项中出现类似下图中的黄色叹号图标，则说明电脑没有安装过CP2102的驱动，需要使用我们提供的软件包安装相应的CP2102驱动，软件包也在 [StarrySky-res](https://github.com/maksyuki/StarrySky-res/) 仓库中，具体地址为 [CP2102.zip](https://github.com/maksyuki/StarrySky-res/tree/main/driver/CP2102.zip)：
 
-![在其他设备中出现黄色叹号](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/cp2102-2.png)
+![在其他设备中出现黄色叹号](/res/images/board/cp2102-2.png)
 
 CP2102驱动的具体安装方法如下：同学们需要先从Github下载`StarrySky-res`仓库并解压`CP2102.zip`，然后进入 `cp2102 driver` 目录，双击 `CP2102xVCPInstaller_x64.exe` 来安装64位驱动。同学们的电脑如果只支持32位的话，则双击 `CP2102xVCPInstaller_x86.exe` 来安装32位驱动：
 
-![安装CP2102驱动程序](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/cp2102-3.png)
+![安装CP2102驱动程序](/res/images/board/cp2102-3.png)
 
 之后按照安装程序引导界面来安装驱动。当驱动安装完成后，再次使用前面介绍的方法打开设备管理器，如果在 ***端口(COM和LPT)*** 中显示出CP2102的端口号，则说明驱动安装成功。
 
 ::: details CP2102 设备识别问题
 如果在 ***其他设备*** 选项中显示 **Verifone USB to Printer** 或者 **Verifone USB to Modem** ，则说明电脑已经安装过CP2102的驱动，但是没有被成功识别出来：
 
-![CP2102设备识别问题](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/cp2102-prb-1.png)
+![CP2102设备识别问题](/res/images/board/cp2102-prb-1.png)
 
 此时需要更新下驱动，具体方法如下：
 
 - 右键 **Verifone USB to Printer** 或者 **Verifone USB to Modem** 并点击更新驱动选项：
 
-![右键点击更新驱动](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/cp2102-prb-2.png)
+![右键点击更新驱动](/res/images/board/cp2102-prb-2.png)
 
 - 然后在弹出的窗口中点击 ***让我从计算机上的可用驱动程序程序列表中选取*** ：
 
-![从电脑上选取驱动程序](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/cp2102-prb-3.png)
+![从电脑上选取驱动程序](/res/images/board/cp2102-prb-3.png)
 
 - 在弹出的窗口中，选择显示 ***所有设备*** ，并点击 ***下一页*** ：
 
-![选择设备类型](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/cp2102-prb-4.png)
+![选择设备类型](/res/images/board/cp2102-prb-4.png)
 
 
 - 在弹出的窗口的左边设备列表中选择 ***Silicon Labs*** ，然后在右边详细列表中选择第一个，然后点击 ***下一页*** ：
 
-![选择驱动程序](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/cp2102-prb-5.png)
+![选择驱动程序](/res/images/board/cp2102-prb-5.png)
 
 - 在弹出的警告框中，点击 ***是*** ：
 
-![更新驱动](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/cp2102-prb-6.png)
+![更新驱动](/res/images/board/cp2102-prb-6.png)
 
 这样重新插入 USB 线缆后，就可以在设备管理器中显示出端口号了。
 
@@ -284,7 +284,7 @@ CP2102驱动的具体安装方法如下：同学们需要先从Github下载`Star
 
 当电脑能够成功识别出 CP2102 端口号后，需要使用串口调试软件来和板卡进行通信。目前市场上常用的串口调试软件有很多，比如Minicom、MobaXterm、Xshell、SecureCRT、Cutecom和WindTerm 等等，**本文档选择的串口调试软件是MobaXterm**。
 
-![MobaXterm软件](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/mobaxterm-intro-1.png)
+![MobaXterm软件](/res/images/board/mobaxterm-intro-1.png)
 
 MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL等多种协议的强大终端工具。可以访问 [MobaXterm的官网](https://mobaxterm.mobatek.net/) 获得更加详细的信息。
 
@@ -294,11 +294,11 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
 
 首先，同学们需要访问MobaXterm的[官网](https://putty.org/) 并下载符合自己电脑版本的安装包，并按照指引成功安装完MobaXterm。当安装完MobaXterm后，打开该软件，会显示类似下图的界面：
 
-![MobaXterm软件](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/mobaxterm-intro-2.png)
+![MobaXterm软件](/res/images/board/mobaxterm-intro-2.png)
 
 然后需要按照下图创建一个串口会话(Serial Session)，具体步骤如下：
 
-![新建串口会话](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/mobaxterm-intro-3.png)
+![新建串口会话](/res/images/board/mobaxterm-intro-3.png)
 
 1. 点击MobaXterm工具栏第一个的 ***Session***。
 2. 然后在弹出的窗口中选择 ***Serial***。
@@ -312,13 +312,13 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
 
 将板卡用Type-C线缆和电脑相连，然后使用上面介绍的方法打开已经配置过的串口Session，如果没问题，则会打开黑色背景的窗口：
 
-![正确打开串口Session](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/mobaxterm-intro-3-1.png)
+![正确打开串口Session](/res/images/board/mobaxterm-intro-3-1.png)
 
 至此串口Session配置完成，但为了能够**在窗口中正确地显示换行**，还需要对会话进行设置，具体步骤如下图所示：
 
-![修改串口换行显示1](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/mobaxterm-intro-4.png)
+![修改串口换行显示1](/res/images/board/mobaxterm-intro-4.png)
 
-![修改串口换行显示2](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/mobaxterm-intro-5.png)
+![修改串口换行显示2](/res/images/board/mobaxterm-intro-5.png)
 
 1. 在打开的窗口中任意地方鼠标右击，在弹出的选项中点击 ***Change terminal settings...*** 。
 2. 然后在弹出的窗口中勾选 ***Implicit CR in every LF*** 复选框。
@@ -329,12 +329,12 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
 
 当能够正确使用MobaXterm打开串口Session后，请先按动电源按键 **`PWR`** 以关闭电源，然后确认FPGA核心板的启动模式选择拨码开关 **`FPGA-BOOT`** 拨到了 **`FLASH`** 档位，表示此时FPGA核心板从自己板载的Flash中加载硬件系统，因为FPGA板卡在发给同学们之前已经将访存必须的FPGA侧的硬件系统固化在了核心板板载的Flash上，所以需要将档位设置到 **`FLASH`**。具体档位含义在拨码开关右侧的白色丝印上：
 
-![FPGA核心板启动模式设置](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/uart-3.png)
+![FPGA核心板启动模式设置](/res/images/board/uart-3.png)
 
 - 板卡复位
 确认完FPGA启动模式后，按照上面介绍的步骤启动板卡电源，并正确打开串口Session窗口。然后按动开关 **`CORE-RESET`** 对SoC板卡执行一次复位：
 
-![按动复位按键执行SoC复位](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/uart-4.png)
+![按动复位按键执行SoC复位](/res/images/board/uart-4.png)
 
 ::: warning 复位功能注意事项
 - 由于SoC板卡上没有**上电自动复位电路**，所以需要同学们在板卡上电后按动复位按键执行**一次手动复位**。
@@ -344,12 +344,12 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
 
 当复位按键被按下后，如果一切设置都正确，串口会打印出Rt-Thread测试程序的加载和执行过程。串口打印出 **`msh />`** 之后会停止，并开始接受用户的输入。同学们可以直接使用键盘在窗口中键入命令。比如输入 **`help`** 会打印Rt-Thread支持的命令，输入 **`list_timer`** 则会打印Rt-Thread正在运行中的所有定时器。和其他shell一样，**`msh`** 在键入命令时也是支持 **`tab`** 补全的：
 
-![运行RT-Thread测试程序](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/rtthread.png)
+![运行RT-Thread测试程序](/res/images/board/rtthread.png)
 
 ::: info 丰富应用实例
 星空V1.2板卡上面有不少同学的核能够启动Linux，比如唐浩晋同学的核。他当时参加一生一芯时是中国科学院大学电子信息工程的一名大三学生。他在自己的核上成功启动了Linux并运行了应用程序([视频](https://www.bilibili.com/video/BV1CL411X7wV/))：
 
-![启动Linux并运行程序](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/app-1.png)
+![启动Linux并运行程序](/res/images/board/app-1.png)
 :::
 ### 程序烧写
 这一章节主要介绍如何将程序下载到板载的QSPI Flash中。星空开发板集成有板载Flash烧写器，可以像DAPLink一样实现拖拽式烧录，具体的软硬件原理见 [板载烧写器(HFPLink)](#板载烧写器-hfplink) 一节。
@@ -360,11 +360,11 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
 
 现在开始介绍烧写程序的具体步骤，首先按下板卡的电源按键，关闭板卡电源，然后在保持之前其他开关设置不变的情况下，将开发板上 `HFP-MODE` 的滑动开关拨码到左侧，表示使能板载烧写器功能：
 
-![使能板载烧写器](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/hfp-1.png)
+![使能板载烧写器](/res/images/board/hfp-1.png)
 
 然后再次按下板卡的电源按键，接通板卡电源，此时电脑会识别出一个叫做 `YSYX-HFPLnk` 的移动U盘，容量为 `15.8MB` 左右。
 
-![识别出U盘](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/hfp-2.png)
+![识别出U盘](/res/images/board/hfp-2.png)
 
 接着将想要烧写的bin格式应用程序拷贝到 `YSYX-HFPLnk` 这个U盘中，然后等待拷贝完成即可。在拷贝的同时板载烧写器旁的蓝色LED会一直闪烁，当拷贝完成时，蓝色LED会常亮。项目组已经在 [StarrySky-res](https://github.com/maksyuki/StarrySky-res) 中 `software` 目录下提前准备了一些已经编译好的测试程序，可以拷贝到 `YSYX-HFPLnk` 中进行测试。当拷贝完成后，程序烧写也就完成了，此时关闭板卡电源，并将 `HFP-MODE` 的滑动开关拨码到右侧，重新上电就可以运行新的程序了。
 
@@ -373,7 +373,7 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
 
 当按照指示安装完 **WCHISPTool** 后，双击打开该软件，可以看到如下界面：
 
-![WCHISPTool界面](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/hfp-3.png)
+![WCHISPTool界面](/res/images/board/hfp-3.png)
 
 然后将开发板切换到 [程序烧写模式](#程序烧写)，此时上电后，电脑会识别出一个名为 `YSYX-HFPLnk` U盘，这个上面已经介绍过。在这个模式下，需要2个步骤才能让CH32V103进入到ISP下载模式：
 - 先按住板载烧写器的系统复位按键 `NRST` ，然后再按住板载烧写器的BOOT模式按键 `BOOT`
@@ -381,11 +381,11 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
 
 操作完之后，WSHISPTool会自动识别出 `CH32V103` 这个芯片型号：
 
-![识别出CH32V103](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/hfp-4.png)
+![识别出CH32V103](/res/images/board/hfp-4.png)
 
 当识别出 `CH32V103` 后，同学们点击 ***用户程序文件*** 后的文件图标选择需要更新的固件(hex格式)，项目组已经在 [StarrySky-res](https://github.com/maksyuki/StarrySky-res) 中 `firmware` 目录下准备好了固件，然后点击 ***下载*** 按钮并等待更新完成：
 
-![下载固件](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/hfp-5.png)
+![下载固件](/res/images/board/hfp-5.png)
 
 最后再按一下板载烧写器的系统复位按键 `NRST` 就可以恢复到正常工作模式了。
 :::
@@ -405,7 +405,7 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
 ::: info 安装/拆卸FPGA核心板
 本SoC配套的FPGA核心板是一种 [SoM(System on Module)](https://en.wikipedia.org/wiki/System_on_module)，采用的是SODIMM 204P接口(DDR3兼容标准接口)。这种接口常用于笔记本电脑内存模组，默认FPGA核心板已经插入到插槽中，一般不需要拆卸，如果确有需要，需要同学们自己操作，具体方法如下：
 
-![安装FPGA核心板](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/sodimm-1.png)
+![安装FPGA核心板](/res/images/board/sodimm-1.png)
 
 安装FPGA核心板时把FPGA核心板以30度倾角插入到插槽中，**并确保所有金手指插入的深度都一致**，然后两手同时抓住两边往下按，直到两边被压到插槽的**固定簧片**之下，听到“卡塔”一声就可以了。拆卸核心板过程则相反，轻轻向两侧拨动固定簧片，FPGA核心板会自动弹起，然后向外取出即可。
 :::
@@ -419,7 +419,7 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
 - VGA和所有晶振时钟输出端做了**包地处理**，远离高频和模拟信号，并均参考了完整地。
 - 模拟地做了**单点隔离**，各芯片均做了完备的电源滤波，电源网络使用覆铜连接，保证电源供电稳定，并打了足量的**回流地过孔**。
 
-![开发板硬件设计](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/pcb-1.png)
+![开发板硬件设计](/res/images/board/pcb-1.png)
 
 
 ::: info 板卡设计资源文件

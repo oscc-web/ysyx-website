@@ -57,18 +57,18 @@ feed: false
 - **会议时间**：7月2日（周日）下午 14:30-16:30
 - **腾讯会议**：134-206-904
 - **视频链接**：http://live.bilibili.com/24416626
-- **线下参会**：下方扫码报名（北京/上海），有纪念品
+- **线下参会**：下方扫码报名（北京/上海），有纪念品。<span style="color:red;">线下参会报名截止：7月1日23:59</span>
 
 <el-row align="middle"
         :gutter="20">
     <el-col :span="8">
-        <img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/poster-1.png" />
+        <img src="/res/images/poster-1.png" />
     </el-col>
     <el-col :span="8">
-        <img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/poster-2.png" />
+        <img src="/res/images/poster-2.png" />
     </el-col>
     <el-col :span="8">
-        <img src="https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/poster-3.png" />
+        <img src="/res/images/poster-3.png" />
     </el-col>
 </el-row>
 :::

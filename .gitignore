@@ -4,3 +4,4 @@ src/.vuepress/.temp/
 src/.vuepress/dist/
 resources/
 var/
+res/
