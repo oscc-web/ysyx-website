@@ -11,7 +11,8 @@ export const zhNavbar = navbar([
         prefix: "/project/",
         children: ["project-intro",
                    "project-intro-past",
-                   "project-faq"]
+                   "project-faq",
+                   "project-teacher"]
     }, {
         text: "报名参与",
         link: "/signup/"
