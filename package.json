@@ -5,7 +5,7 @@
   "license": "GPL-3.0",
   "type": "module",
   "scripts": {
-    "build": "mkdir -p var; vuepress build src; cp -rv src/.vuepress/dist/ var/",
+    "build": "mkdir -p var; rm -rf var/dist; vuepress build src; cp -rv src/.vuepress/dist/ var/",
     "dev": "vuepress dev src",
     "deploy": "node ./deploy/index.mjs",
     "clean": "vuepress dev src --clean-cache"

@@ -52,7 +52,7 @@ containerClass: "home-page"
 feed: false
 ---
 
-::: warning 活动公告
+<!-- ::: warning 活动公告
 第六期“一生一芯”计划即将于2023年7月2日启动，待第六期宣讲会结束后会重新开启报名通道。
 - **会议时间**：7月2日（周日）下午 14:30-16:30
 - **腾讯会议**：134-206-904
@@ -71,6 +71,6 @@ feed: false
         <img src="/res/images/poster-3.png" />
     </el-col>
 </el-row>
-:::
+::: -->
 
 <TheHome />
