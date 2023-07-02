@@ -9,8 +9,8 @@
                     target="_blank">
                     <div v-if="i !== 3" >
                         <component :is="sponsorItem.elem"
-                                :title="sponsorItem.name"
-                                :style="{'max-width':  sponsorObjVal.width,
+                                   :title="sponsorItem.name"
+                                   :style="{'max-width':  sponsorObjVal.width,
                                             'max-height': sponsorObjVal.height,
                                             'transform':  'scale(var(--scale))',
                                             'width':      '100%',
@@ -18,11 +18,12 @@
                                             'margin-left': sponsorItem.margin}" />
                     </div>
                     <div v-else-if="i === 3">
-                        <img src="/res/images/logo-bosc.png" :style="{
-                                                     'max-width':  sponsorObjVal.width,
-                                                     'max-height': sponsorObjVal.height,
-                                                     'transform':  'scale(var(--scale))',
-                                         }" />
+                        <img src="/res/images/logo-bosc.png"
+                            :style="{
+                            'max-width':  sponsorObjVal.width,
+                            'max-height': sponsorObjVal.height,
+                            'transform':  'scale(var(--scale))',
+                            'pointer-events': 'none'}" />
                     </div>
                 </a>
             </div>
