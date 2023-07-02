@@ -7,13 +7,23 @@
             <div :style="{ '--scale': sponsorItem.scale }">
                 <a :href="sponsorItem.link"
                     target="_blank">
-                    <component :is="sponsorItem.elem"
-                               :title="sponsorItem.name"
-                               :style="{'max-width':  sponsorObjVal.width,
-                                        'max-height': sponsorObjVal.height,
-                                        'transform':  'scale(var(--scale))',
-                                        'width':      '100%',
-                                        'height':     '100px'}" />
+                    <div v-if="i !== 3" >
+                        <component :is="sponsorItem.elem"
+                                :title="sponsorItem.name"
+                                :style="{'max-width':  sponsorObjVal.width,
+                                            'max-height': sponsorObjVal.height,
+                                            'transform':  'scale(var(--scale))',
+                                            'width':      '100%',
+                                            'height':     '100px',
+                                            'margin-left': sponsorItem.margin}" />
+                    </div>
+                    <div v-else-if="i === 3">
+                        <img src="/res/images/logo-bosc.png" :style="{
+                                                     'max-width':  sponsorObjVal.width,
+                                                     'max-height': sponsorObjVal.height,
+                                                     'transform':  'scale(var(--scale))',
+                                         }" />
+                    </div>
                 </a>
             </div>
         </el-col>
@@ -23,7 +33,7 @@
 <script setup>
     import UCAS from "./sponsors/UCAS.vue";
     import ICT from "./sponsors/ICT.vue";
-    import PCL from "./sponsors/PCL-OLD.vue";
+    import PCL from "./sponsors/PCL.vue";
     import BOSC from "./sponsors/BOSC.vue";
     import SHIC from "./sponsors/SHIC.vue";
     import ByteDance from "./sponsors/ByteDance.vue";
@@ -46,8 +56,9 @@
     }, {
         name: "鹏城实验室",
         elem: PCL,
-        scale: 0.8,
-        link: "https://www.pcl.ac.cn"
+        scale: 1.0,
+        link: "https://www.pcl.ac.cn",
+        margin: "40px"
     }, {
         name: "北京开源芯片研究院",
         elem: BOSC,

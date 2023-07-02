@@ -4,6 +4,7 @@ set -e
 
 PATH_ROOT=${PWD}
 PATH_RESS=${PATH_ROOT}/src/.vuepress/public/res/
+PATH_NODE=${PATH_ROOT}/node_modules/
 
 # Set resources
 if [ ! -d ${PATH_RESS} ]; then
@@ -14,5 +15,7 @@ else
     cd ${PATH_ROOT}
 fi
 
-# Install packages
-npm install
+if [ ! -d ${PATH_NODE} ]; then
+    # Install packages
+    npm install
+fi
