@@ -10,7 +10,8 @@ PATH_NODE=${PATH_ROOT}/node_modules/
 git pull origin main
 
 # Set resources
-if [ ! -d ${PATH_RESS} ]; then
+if [ ! -d ${PATH_RESS}/.git ]; then
+    rm -rf ${PATH_RESS}
     git clone git@github.com:oscc-ysyx-web-project/ysyx-website-resources.git ${PATH_RESS}
 else
     cd ${PATH_RESS}
