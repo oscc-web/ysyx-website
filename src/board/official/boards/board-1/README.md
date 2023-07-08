@@ -9,7 +9,7 @@ toc: false
 ## 开发入门
 ### 开箱检查
 
-同学们收到板卡后，请先按照下面的列表检查板卡和配件是否齐全：
+同学们收到板卡后，请先按照下面的列表检查板卡和配件**是否齐全并且无破损情况**：
 - 板卡包装盒 x1
 - 开发板+FPGA核心板 **(使用网格防静电袋包装)**
 - 耗材 **(使用硬质防静电袋包装)**
@@ -20,37 +20,51 @@ toc: false
 
 包装所有内容可以见下图：
 
-包装和配件内容.png(package-cont.png)
+![包装和配件内容](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/package-cont.png)
 
-板卡配套的软硬件资源**均开源**，并托管在Github上，有需要的同学们可以提前下载下来，方便后面使用，其中：
-- [StarrySky](https://github.com/maksyuki/StarrySky)：星空系列开发板所有的硬件资源，包括原理图，PCB设计，制造文件等。
-- [StarrySky-res](https://github.com/maksyuki/StarrySky-res)：星空系列开发板所有的软件资源，包括必须的串口驱动，测试程序，FPGA外设硬件工程等。
+::: info 板卡或者耗材损坏/缺失/丢失怎么办？
+* 每个板卡在发放给学生前都会进行硬件和软件测试，若自快递签收后一周内，板卡，FPGA损坏，或者耗材有缺失，可以联系项目组更换。
+* 项目组会在板卡中额外提供若干耗材 **(晶振和Flash)**，若消耗完毕或丢失，项目组可提供参考网购链接，由同学们自行购买 **(额外的耗材一般用不完，而且另行采购的成本很低，大概在十几块这样)**。
+:::
 
+星空系列板卡配套的软硬件资源**均开源**在Github上，可以在下面介绍的两个repo中找到星空系列板卡所有版本的资料。同学们可以提前下载下来，方便后面使用，其中：
+- [StarrySky](https://github.com/maksyuki/StarrySky)：星空系列开发板所有的**硬件资源**，包括原理图，PCB设计，制造文件等。
+- [StarrySky-res](https://github.com/maksyuki/StarrySky-res)：星空系列开发板所有的**软件资源**，包括必须的串口驱动，测试程序，FPGA外设硬件工程等。
 
-::: info Type-C数据线长
-包装中配发的Type-C USB线缆可能对于某些同学使用来说不太够长，同学们可以自行选用更长的Type-C数据线，但是需要自行确认Type-C线材的质量符合板卡的数据和供电能力。
+::: info 资料更新
+目前上面介绍的板卡软硬件资料仍在持续更新中，推荐使用`git`管理仓库并使用`git pull`来获取最新的内容。
+:::
+
+::: info Type-C线缆长度
+包装中配发的Type-C USB线缆可能对于某些同学使用来说不太够长，同学们可以自行选用更长的Type-C数据线，但是需要自行确认Type-C线材的质量符合板卡的数据和供电能力 **(市面上售卖的Type-C线一般都没问题)**。
 :::
 ### 板卡介绍
 
-星空开发板采用的是SoC底板+FPGA核心板的设计，其中SoC底板板载资源如下图所示：
+星空开发板采用的是SoC底板+FPGA核心板的设计，FPGA核心板采用的是ZYNQ7010芯片，其中SoC底板板载资源如下图所示：
 
+![SoC底板板载资源](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/board-func-color.png)
 
-板卡正面.png(board-top.png)
-
-板卡反面.png(board-bot.png)
-
-
-
+从上图可以看到，SoC部分的外设和接口基本上都分布在板卡的中下侧 **(紫色)**，而FPGA部分的PL和PS外设则主要分布在板子的上侧和两边 **(绿色和蓝色)**。外设和接口的详细介绍如下表所示：
+- SoC
+  - 1个有源晶振插座
+  - 1个SPI模式的TF卡插座
+  - 1个板载烧写器(HFPLink)
+  - 1个Flash插座，内置NOR Flash芯片，SoC复位后会从该Flash芯片中取指
+  - 1个UART接口，使用CP2102芯片
+  - 1个外置5V直流电源接口，使用Type-C接口
+  - 2个电源模式切换开关
+  - 1个自锁式电源开关
+  - 2个拨码开关，用于设置PLL时钟输出和核选通
 - 系统
   - 1个红色电源指示LED
   - 1个PS功能复位按键，1个PS调试复位按键
   - 1个FPGA启动模式切换开关
   - 1个FPGA JTAG调试接口
-  - 1个板载烧写器(HFPLink)
+  - 1个FPGA外设功能切换开关
 - PS侧外设
   - 1个UART接口，使用CP2102芯片
   - 1个SDIO接口，SD能启动PetaLinux，eMMC可以固化程序
-  - 1个SDIO WIFI，使用AP6212模组，支持独立电源控制
+  - 1个SDIO WiFi，使用AP6212模组，支持独立电源开关控制
   - 1个CAN接口，CAN使用TJA1050芯片
   - 1个USB Host，使用USB3320C芯片
   - 1个6位的PMOD扩展口
@@ -59,23 +73,23 @@ toc: false
   - 4个WS2812C LED炫彩灯珠
 - PL侧外设
   - 1个VGA接口，使用电阻网络实现DAC
-  - 1个PS/2接口
+  - 1个PS/2接口，用于连接PS/2兼容键盘
   - 1个RTC时钟，使用PCF8563芯片
   - 1个EEPROM，使用AT24C64芯片
   - 1个SPI Flash，使用W25Q128JVSIQ芯片
   - 1个I2S接口，使用WM8960芯片，支持音频输入/输出，支持使用MIC录音
   - 1个用户自定义按键
   - 1个用户自定义蓝色LED
+  - 1个通用IO，常用于输出时钟调频使用
   - 4个WS2812C LED炫彩灯珠
 - 1个外设功能切换开关
 - 1个SO-DIMM 204P接口，用于连接ZYNQ7010/7020 FPGA核心板
 
-FPGA核心板如下图所示：
+SoC底板搭配使用的FPGA核心板如下图所示：
 
-![FPGA核心板正面](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/som-1.png)
+![FPGA核心板正面](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/som-black-1.png)
 
-
-![FPGA核心板背面](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/som-2.png)
+![FPGA核心板背面](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/som-black-2.png)
 
 FPGA核心板板载资源如下所示：
 - 主芯片：XC7Z010CLG400
@@ -85,13 +99,13 @@ FPGA核心板板载资源如下所示：
 
 星空开发板设计上的主要特点如下：
 - 星空开发板的外形尺寸为**110X84mm**，面积约为标准信用卡大小的**2倍**。
-- 重新设计电源网络，将供电能力从1.2A电流提高到2A，支持外置5V**电源适配器**供电，支持多路电源管理。
-- FPGA采用SO-DIMM 204P接口的核心板设计，硬件规格为：**XC7Z010-1CLG400C + 512MB DDR3 + 8GB eMMC**。
+- 重新设计了电源网络，将供电能力从1.2A电流提高到2A，支持外置5V**电源适配器**供电，支持多路电源管理。
+- FPGA采用SO-DIMM 204P接口的核心板设计，硬件规格为：**XC7Z010-1CLG400C+512MB DDR3+8GB eMMC**。
 - 板载NOR Flash烧写器 **(HFPLink)**，实现了拖拽式烧录功能，烧写器支持固件升级 **(USB接口)**。
-- 使用多路**模拟开关**实现FPGA侧PL端口IO的复用，以挂载尽可能多的外设，并引出FPGA核心板上所有的IO。
+- 使用多路**模拟开关**实现FPGA侧PL端口**IO的复用**，以挂载尽可能多的外设，并引出了FPGA核心板上所有的IO。
 - 设计上将处理器核切换和频率选择开关分开，并使用**正选通逻辑**，方便拨码。
 - 充分考虑几何约束关系，按键开关选择低压力克数器件 **(160gf)**，提升硬件操作体验。
-- 板卡上为拨码开关和重要接口都设置有丝印和标注，方便同学们使用。
+- **板卡上为拨码开关和重要接口都设置有丝印和标注**，方便同学们使用。
 
 星空V1.2开发板的硬件资源框图如下所示：
 
@@ -99,36 +113,54 @@ FPGA核心板板载资源如下所示：
 
 FPGA核心板的PS侧的BANK有BANK502，BANK500，BNAK501，其中BANK502电平标准为1.5V，用于连接两片DDR3颗粒，BANK500电平标准为3.3V，用于连接符合3.3V电气标准的外设，比如UART，LED和按键等。而BANK501电平标准为1.8V，用于连接符合1.8V电气标准的外设，比如USB HOST，I2S等。
 
-::: danger 供电负载说明
-目前星空开发板正常运行程序的电流负载约为**400~450mA**，使用笔记本或台式机的标准USB口取电基本都能满足供电要求，不需要额外供电通路支持。当然为了满足某些特定的需求，星空开发板也支持使用Type-C接口的外置5V/2A电源适配器供电，但是在配件中并没有提供该适配器，需要同学们自行准备。一般电源适配器是直接和市电相连的，供电电压和电流都比较高，存在一定危险性，**如果同学们确实需要使用电源适配器，请选取符合安全标准的适配器并注意用电安全**。
+::: danger 供电负载和通路说明
+- 目前星空开发板正常运行程序的电流负载约为**400~450mA**，使用笔记本或台式机的标准USB口取电基本都能满足供电要求，**不需要额外供电通路支持**。当然为了满足某些特定的需求，星空开发板也支持使用Type-C接口的外置5V/2A电源适配器供电，但是项目组在配件中并没有提供该适配器，需要同学们自行准备。
+- 一般电源适配器是直接和市电相连的，供电电压和电流都比较高，存在一定危险性，**如果同学们确实需要使用电源适配器，请选取符合安全标准的适配器并注意用电安全**。
 :::
 
 ### 上电测试
+同学们手上拿到的板卡上的Flash插座中**已经内置了一个NOR Flash芯片**，项目组已经提前在该内置的Flash芯片中烧录好了RT-Thread程序，而且板卡在发给同学之前对SoC上所有的核都跑过了RT-Thread测试。同学们只需要按照下面介绍的内容一步一步操作板卡就可以运行RT-Thread，其中主要分为**硬件操作**和**软件设置**两部分，具体步骤如下：
 
 ::: warning 调试注意事项
-请同学们在实际操作板卡前仔细阅读并确认下面各个注意事项内容，尤其是之前没有嵌入式调试经历的同学，请务必遵守下面的各注意事项：
+请同学们在实际操作板卡前仔细阅读并确认下面各个注意事项内容，尤其是之前没有嵌入式调试经验的同学，请务必遵守下面的各注意事项：
 - 接触板卡和其他物料前请确认双手已经保持干燥。
 - 接触板卡之前，先找一个金属物体摸一下，以释放人体上可能带有的静电。
-- 拿取板卡时，请拿电路板的板边，而不要捏着芯片，以防止人体多余的静电传导到芯片上。
+- 拿取板卡时，请使用抓取电路板板边这种方式，以尽可能确保不用手接触芯片，以防止人体多余的静电传导到芯片引脚上。
 - 使用Type-C线缆供电时，请优先使用PC的USB3.0接口，以尽可能保证供电稳定。
-- 板卡上有电源选择开关和滑动开关，上电前请确认它们都被正确拨动到某一侧，而非中间位置。
+- 板卡上有电源选择开关和滑动开关，上电前请确认它们都被正确拨动到某一侧，而非中间位置 **(死区)**。
 - SoC板卡和FPGA核心板不要在带电情况下插接，以防止这种非正确的热插拔操作导致的栓锁效应，损坏芯片。
-- 微动拨码开关不要在带电情况下拨动。
+- 微动拨码开关尽量不要在带电情况下拨动。
 - 电源一经接通，若观察到有如冒烟、异常气味、放电的声光、元器件发烫等异常现象时，尤其当听到“滋滋滋”的**噪声啸叫**时，请立即**切断电源**。
 :::
 
 ::: info 噪声啸叫
-噪声啸叫英文为Acoustic Noise，常分为电感啸叫和电容啸叫。其中电感啸叫最常见，电感啸叫多是由于未正确选择器件参数，负载不稳定或轻载过载等导致的，而**负载不稳定**往往是主因，这意味着板卡上某个地方可能存在短路。
+噪声啸叫英文为Acoustic Noise，常分为电感啸叫和电容啸叫。其中电感啸叫最常见，电感啸叫多是由于未正确选择器件参数，负载不稳定或轻载过载等情况导致的，而**负载不稳定**往往是主因，这意味着板卡上某个地方可能存在短路。
 :::
 
 #### 硬件操作
 
-首先，同学们需要从**网格防静电袋**中拿出板卡，并从**硬质防静电袋**中取出一个25MHz的晶振，然后将晶振按照正确方向插入到三期板卡的晶振插座中。晶振管脚要比插座的插槽深度要长一些，当发现用手插入晶振时稍用力已无法再进一步插入后即可，插入的方向和深度见下图：
+首先，同学们需要从**网格防静电袋**中拿出板卡，目前一生一芯SoC上是**通过ChipLink接口访问FPGA端的DDR来实现访存通路的**，所以需要配合一个FPGA核心板才能正确启动RT-Thread：
+
+![数据通路](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/datapath.png)
+
+
+实际上板卡背面已经提前插入好了FPGA核心板，**不需要同学们自己安装了**。另外SoC板卡上还需要插入晶振才能正确工作，这个晶振也已经提前安装到了板卡上，同学们只需要再次确认即可。
+
+::: info 安装/拆卸FPGA核心板和晶振
+
+本SoC配套的FPGA核心板是一种 [SoM(System on Module)](https://en.wikipedia.org/wiki/System_on_module)，采用的是SODIMM 204P接口(DDR3兼容标准接口)。这种接口常用于笔记本电脑内存模组，默认FPGA核心板已经插入到插槽中，一般不需要拆卸，如果确有需要，需要同学们自己操作，具体方法如下：
+
+![安装FPGA核心板](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/sodimm-1.png)
+
+安装FPGA核心板时把FPGA核心板以30度倾角插入到插槽中，**并确保所有金手指插入的深度都一致**，然后两手同时抓住两边往下按，直到两边被压到插槽的**固定簧片**之下，听到“卡塔”一声就可以了。拆卸核心板过程则相反，轻轻向两侧拨动固定簧片，FPGA核心板会自动弹起，然后向外取出即可。
+
+从**硬质防静电袋**中取出一个25MHz的晶振，然后将晶振按照正确方向插入到三期板卡的晶振插座中。晶振管脚要比插座的插槽深度要长一些，当发现用手插入晶振时稍用力已无法再进一步插入后即可，插入的方向和深度见下图：
 
 ![晶振正确插入时方向](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/osc-1.png)
 
 ![晶振正确插入时深度](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/osc-2.png)
 
+:::
 ::: warning
 - 不要将晶振的方向插反了，**这个上电前同学们需要再确认下**。
 - 可以用手直接取出和插拔晶振，但是要注意手尽量不要触碰到晶振的管脚。
@@ -344,6 +376,7 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
 - 由于SoC板卡上没有**上电自动复位电路**，所以需要同学们在板卡上电后按动复位按键执行**一次手动复位**。
 - 复位信号是通过机械开关产生的，**没有设计去抖电路**，而且FPGA核心板侧复位**异步于**SoC板卡侧复位，如果SoC板卡的复位在FPGA核心板复位之前完成，则会由于访存请求得不到响应而卡死，现象是串口只输出 `Loading program size ...` 。**此时只需再次按动板卡上的复位按键即可**。
 - 复位按键的按动时间可以长一些，以产生稳定的低电平复位信号。
+- 有的时候需要按动FPGA复位，然后再复位。
 :::
 
 当复位按键被按下后，如果一切设置都正确，串口会打印出Rt-Thread测试程序的加载和执行过程。串口打印出 **`msh />`** 之后会停止，并开始接受用户的输入。同学们可以直接使用键盘在窗口中键入命令。比如输入 **`help`** 会打印Rt-Thread支持的命令，输入 **`list_timer`** 则会打印Rt-Thread正在运行中的所有定时器。和其他shell一样，**`msh`** 在键入命令时也是支持 **`tab`** 补全的：
@@ -396,35 +429,26 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
 
 ::: warning 固件更新
 - 更新固件不是必须的，**因为板卡在发给同学们之前已经烧录过固件了**，上面介绍更新固件的方法，是为了方便将板卡发给同学们之后，还能够便捷地对烧写器功能进行升级用的。
+- 目前板载烧写器的固件**不支持连续拷贝烧写功能**，也就是说每次烧写完成之后**都需要复位并重新进入ISP模式才能开始新的一次固件烧写**。
 - 有时候点击 ***下载*** 之后，**WCHISPTool**提示存在 **写保护** 。此时可以先点击上面的 **解除保护** 之后再重复上面更新固件操作即可。
 :::
 
 至此，板卡的硬件测试完成，下面将更加详细地介绍板卡。
 
-::: info 板卡或者耗材损坏/缺失/丢失怎么办？
-* 每个板卡在发放给学生前都会进行硬件和软件测试，若自快递签收后一周内，板卡，FPGA损坏，或者耗材有缺失，可以联系项目组更换。
-* 项目组会在板卡中额外提供若干耗材 (晶振和Flash)，若消耗完毕或丢失，项目组可提供参考网购链接，由同学们自行购买。
-:::
-
-::: info 安装/拆卸FPGA核心板
-本SoC配套的FPGA核心板是一种 [SoM(System on Module)](https://en.wikipedia.org/wiki/System_on_module)，采用的是SODIMM 204P接口(DDR3兼容标准接口)。这种接口常用于笔记本电脑内存模组，默认FPGA核心板已经插入到插槽中，一般不需要拆卸，如果确有需要，需要同学们自己操作，具体方法如下：
-
-![安装FPGA核心板](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/sodimm-1.png)
-
-安装FPGA核心板时把FPGA核心板以30度倾角插入到插槽中，**并确保所有金手指插入的深度都一致**，然后两手同时抓住两边往下按，直到两边被压到插槽的**固定簧片**之下，听到“卡塔”一声就可以了。拆卸核心板过程则相反，轻轻向两侧拨动固定簧片，FPGA核心板会自动弹起，然后向外取出即可。
-:::
-
-
 ### 硬件设计
 现在介绍星空V1.2版本的硬件设计，其主要特点如下：
 - 使用Cadence Orcad/Allegro设计 **(三周)**，采用**六层**层叠设计 **(TOP-GND02-ART03-PWR04-GND05-BOT)** 和沉金表面工艺，并完成四线低阻测试。
 - 板卡等长设置：ChipLink走线分别参照**tx_clk**和**rx_clk**做**0/50mil**组内等长，2个SDIO参照clk做**0/30mil**组内等长，USB2.0参照clk做**0/50mil**组内等长，5对USB差分信号按照**0/25mil**做对内等长。
-- SDIO WIFI的IPEX天线两侧按**30mil**间距打地过孔，功率电感PAD间做了**挖空处理**。
+- SDIO WiFi的IPEX天线两侧按**30mil**间距打地过孔，功率电感PAD间做了**挖空处理**。
 - VGA和所有晶振时钟输出端做了**包地处理**，远离高频和模拟信号，并均参考了完整地。
 - 模拟地做了**单点隔离**，各芯片均做了完备的电源滤波，电源网络使用覆铜连接，保证电源供电稳定，并打了足量的**回流地过孔**。
 
-![开发板硬件设计](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/pcb-1.png)
+![板卡硬件设计](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/pcb-1.png)
 
+
+![板卡顶层贴片](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/board-smt-top.png)
+
+![板卡底面贴片](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/board-smt-bot.png)
 
 ::: info 板卡设计资源文件
 - 项目组在Github上**开源了星空板卡各个版本的原理图，PCB设计，BOM和制造文件等内容**，同学们可以访问Github仓库 [StarrySky](https://github.com/maksyuki/StarrySky) 来获取所有资源。
@@ -436,6 +460,7 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
 
 #### 电源网络
 SoC板卡上的电源网络拓扑结构如下图所示：
+
 
 网络拓扑图.png
 整个板卡使用
@@ -460,8 +485,8 @@ SoC底板上搭载了一个UART转USB的芯片，型号为CP2102，用于实现P
 #### PS SDIO
 SoC底板上搭载了一个SDIO接口，位于BANK501的MIOxx~xx，电平标准为1.8V，需要通过一个电平转换芯片转换到3.3V以满足Micro SD插槽的使用，这个SDIO接口用于固化FPGA核心板的应用程序，或者存储应用需要的数据，原理图如下所示：
 
-#### PS SDIO WIFI
-SoC底板上搭载了一个支持SDIO数据协议的WIFI模组，型号为AP6212，用于实现无线网络通信功能。原理图如下所示：
+#### PS SDIO WiFi
+SoC底板上搭载了一个支持SDIO数据协议的WiFi模组，型号为AP6212，用于实现无线网络通信功能。原理图如下所示：
 
 #### PS CAN
 CAN接口是控制局域网(Controller Area Network)的简称，是一种能够实现分布式实时控制的串行通信网络，其由德国的Bosh公司开发。原理图如下所示：
@@ -498,6 +523,14 @@ SoC底板上，原理图如下所示：
 
 :::
 
+### FPGA开发
+
+http://47.111.11.73/docs/boards/fpga/zdyz_linhanz(V2).html
+
+::: warning
+- JTAG调试器要先接好，再打开板卡的电源。
+
+:::
 ## 其他资源
 对接PPT内容，你可以从这里获得。
 
@@ -508,3 +541,4 @@ SoC底板上，原理图如下所示：
 ### 致谢列表
 - 感谢粟金伦同学在测试板卡时发现的板卡插接深度不够可能导致板卡信号断路问题，现在已经补充到相关注意事项中。
 - 感谢粟金伦同学建议使用 PuTTY/MobaXterm 软件来做板卡测试流程演示用的串口上位机软件，本文档已经使用 MobaXterm 重写了有关章节。
+- 
