@@ -33,7 +33,7 @@
 
 ```sh
 $> cd your-workspaces
-$> git clone git@github.com:oscc-ysyx-web-project/ysyx-oj-submit.git
+$> git clone git@github.com:oscc-ysyx-web-project/ysyx-website.git
 ```
 
 ### 配置工程
