@@ -3,10 +3,11 @@ import { defineUserConfig } from "vuepress";
 import { registerComponentsPlugin } from "@vuepress/plugin-register-components";
 
 import AutoImport from "unplugin-auto-import/vite";
-import Icons from "unplugin-icons/vite"
-import IconsResolver from "unplugin-icons/resolver"
 import Components from "unplugin-vue-components/vite";
 import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
+import Icons from "unplugin-icons/vite"
+import IconsResolver from "unplugin-icons/resolver"
+
 import { searchProPlugin } from "vuepress-plugin-search-pro";
 
 import theme from "./theme.js";
@@ -25,18 +26,18 @@ export default defineUserConfig({
         AutoImport({
             imports: ["vue"],
             resolvers: [
+                ElementPlusResolver(),
                 IconsResolver({
                     prefix: "Icon"
-                }),
-                ElementPlusResolver()
+                })
             ]
         }),
         Components({
             resolvers: [
+                ElementPlusResolver(),
                 IconsResolver({
                     enabledCollections: ["ep"]
-                }),
-                ElementPlusResolver()
+                })
             ]
         }),
         Icons({

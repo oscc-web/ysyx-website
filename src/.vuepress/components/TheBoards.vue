@@ -19,14 +19,6 @@
                             <ArrowRight />
                         </el-icon>
                     </el-button>
-                    <!-- <el-link type="primary"
-                             :underline="false"
-                             :href="`${boardURL}${boardItem.link}`">
-                            详细信息
-                            <el-icon class="el-icon--right">
-                                <ArrowRight />
-                            </el-icon>
-                    </el-link> -->
                 </div>
             </div>
             </el-card>

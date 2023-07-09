@@ -5,7 +5,10 @@
   "license": "GPL-3.0",
   "type": "module",
   "scripts": {
-    "build": "mkdir -p var; rm -rf var/dist; vuepress build src; cp -rv src/.vuepress/dist/ var/",
+    "build-local": "vuepress build src",
+    "build-deploy-pre": "mkdir -p var; rm -rf var/dist;",
+    "build-deploy-aft": "cp -rv src/.vuepress/dist/ var/; rm -rf var/dist/res/.git ",
+    "build-deploy": "npm run build-deploy-pre; npm run build-local; npm run build-deploy-aft",
     "dev": "vuepress dev src",
     "deploy": "node ./deploy/index.mjs",
     "clean": "vuepress dev src --clean-cache"
