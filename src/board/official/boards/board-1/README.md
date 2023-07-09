@@ -22,6 +22,14 @@ toc: false
 
 ![包装和配件内容](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/package-cont.png)
 
+然后请同学们先打开 [三期处理器核序号和学号对应表(student-id.md)](https://github.com/maksyuki/StarrySky-res/blob/main/software/V1.2/student-id.md)并确认自己的核所在的 **`CHIP`** 序号。这是因为星空V1.2版本的板卡上面搭载有**三期第一批的4个SoC**，需要确保同学们手中拿到的板卡上的SoC和自己核所在的SoC是同一个。具体步骤如下：
+
+比如学号为 **`ysyx_219999`** 的核，查 ***三期处理器核序号和学号对应表*** 发现该核位于 **`CHIP2`** 上，然后需要确认板卡上SoC的序号是否也是 **`2`**，方法是看SoC表面丝印底部编号的最后一个数是否是 **`2`**：
+
+![SoC上的丝印编号](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/soc-silk.png)
+
+SoC上丝印编号的格式为：**`202112-3-yx`** ，其中 **`x`** 取值 **`1, 2, 3, 4`** ，表示的是CHIP序号。 而 **`202112`** 表示流片的时间。
+
 ::: info 板卡或者耗材损坏/缺失/丢失怎么办？
 * 每个板卡在发放给学生前都会进行硬件和软件测试，若自快递签收后一周内，板卡，FPGA损坏，或者耗材有缺失，可以联系项目组更换。
 * 项目组会在板卡中额外提供若干耗材 **(晶振和Flash)**，若消耗完毕或丢失，项目组可提供参考网购链接，由同学们自行购买 **(额外的耗材一般用不完，而且另行采购的成本很低，大概在十几块这样)**。
@@ -354,11 +362,11 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
   - ***Parity:*** None
   - ***Flow control:*** None
 
-当创建完一个串口会话后，将板卡用Type-C线缆和电脑相连，然后使用上面介绍的方法打开已经配置过的串口Session，如果没问题，则会打开一个黑色背景的窗口：
+当创建完一个串口会话后，将板卡用Type-C线缆和电脑相连，然后使用上面介绍的方法打开已经配置过的串口会话，如果没问题，则会打开一个黑色背景的窗口：
 
-![正确打开串口Session](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/mobaxterm-intro-3-1.png)
+![正确打开串口会话](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/mobaxterm-intro-3-1.png)
 
-至此串口Session配置完成，但为了能够**在窗口中正确地显示换行**，还需要对会话进行设置，具体步骤如下图所示：
+至此串口会话配置完成，但为了能够**在窗口中正确地显示换行**，还需要对会话进行设置，具体步骤如下图所示：
 
 ![修改串口换行显示1](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/mobaxterm-intro-4.png)
 
@@ -486,8 +494,9 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
 #### 电源网络
 SoC板卡上的电源网络拓扑结构如下图所示：
 
+power-top.png
 
-网络拓扑图.png
+
 整个板卡使用
 
 #### PS复位按键
