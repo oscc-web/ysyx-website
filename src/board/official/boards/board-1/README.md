@@ -489,73 +489,175 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
 - 星空V1.2的PDF版本PCB布线图：[STARRYSKY_PCB.pdf](https://github.com/maksyuki/StarrySky/blob/main/CAD/V1.2/STARRYSKY_PCB.pdf)
 :::
 
-下面将结合原理图详细介绍板卡的硬件设计。并按照 **电源网络** ，**PS侧外设** 和 **PL侧外设** 的顺序依次介绍。
+下面将结合原理图详细介绍板卡的硬件设计。并按照 **电源网络**，**SoC电路**， **FPGA PS侧外设** 和 **FPGA PL侧外设** 的顺序依次介绍。
 
 #### 电源网络
-SoC板卡上的电源网络拓扑结构如下图所示：
+SoC板卡的电源网络拓扑结构如下图所示：
 
-power-top.png
+![板卡电源网络拓扑](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/power-tp.png)
 
 
-整个板卡使用
+从上图可以看到，整个板卡统一使用5V的电源供电，为了灵活地控制外设的供电，板卡上设计有三路电源输入：
+- SoC的USB串口的5V电源
+- FPGA的PS侧的USB串口的5V电源
+- 外置USB接口的5V DC电源适配器电源
 
-#### PS复位按键
-SoC板卡上搭建了
+板卡通过 **电源选择开关** 来选择上面三路中一路供给板卡。而5V电源在经过 **自锁电源开关** 后，会通过三个LDO芯片分别降压成3.3V，1.8V和1.2V供SoC和FPGA各个外设使用。原理图如下：
 
-#### 启动模式
-ZYNQ芯片支持4种启动模式，分别是SD，Flash，JTAG和NAND。考虑到PS MIO管脚的复用，目前星空开发板上面支持的是前3种方式，原理图如下所示：
+![电源输入接口](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/sch-pwr-sck.png)
 
-当
+其中 USB_PWR， PS_PWR，DC_PWR为三个标准Type-C母座，且USB_PWR上引出电源网络 **`5V_VBUS1`** 和SoC串口需要的差分输入信号 **`MAIN_DP/DN`**，PS_PWR上引出电源网络 **`5V_VBUS2`** 和FPGA的PS侧串口需要的差分输入信号 **`PS_UART_DP/DN`**。DC_PWR由于只用于供电，所以在接口上只引出电源网络 **`5V_DC`**。
+
+::: info Type-C母座上CC引脚接5.1K下拉电阻的作用
+Type-C上的CC引脚全称为 [Configuration Channel](https://en.wikipedia.org/wiki/USB-C) ，用于对线缆的插入进行检测，识别线缆方向，配置工作模式 **(电流，PD模式)**，协商建立DFP **(下行端口，主机端)** 和UFP **(上行端口，设备端)** 身份等。相对于PC上位机来说，板卡的Type-C接口是做作为设备端接口的，也就是具有UFP身份。而协议规定UFP的 **`CC1`** 和 **`CC2`** 引脚都需要一个下拉电阻 **`Rd=5.1KΩ`**。
+:::
+
+上面介绍的三路电源会经过PWR-SEL1和PWR-SEL2这两个[单刀双掷(SPDT)滑动开关](https://en.wikipedia.org/wiki/Switch#Contact_terminology)，通过这两个开关的滑动组合，可以选择出一路供给 **自锁电源开关PWR-LOCK**。PWR-LOCK是一个[双刀双掷(DPDT)滑动开关](https://en.wikipedia.org/wiki/Switch#Contact_terminology)，这里只用到该开关的单侧切换位。自锁开关未向下锁定时，其会将 **`2`** 和 **`1`** 引脚进行导通，电源网络此时未连通。而当向下按动自锁电源开关并锁定后，PWR-LOCK会导通其 **`2`** 和 **`3`** 引脚，使得一路电源经过自锁开关进入到后面的电路中。此时电源会经过双向TVS二极管SMAJ5.0CA和2A保险丝这两个保护器件，并通过多个电容进行滤波，得到稳定的5V数字电源 **`5V_IN`**：
+
+![电源选择开关](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/sch-pwr-sel.png)
+
+
+之后电源 **`5V_IN`** 会进入三个LDO芯片RT2515H中被降压成三种电源3.3V，1.8V和1.2V。其中RT2515H是一款高性能的电压调节器，支持最低200mV的输入输出压降和最大2A的电流输出。通过配置其 **`ADJ`** 引脚上的电阻值可以产生不同电压的电源输出。另外3.3V电源网络 **`VCC_3V3`** 还连接有红色LED，用于指示电源电路是否正常工作：
+
+![电源转换电路](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/sch-pwr-ldo.png)
+
+#### SoC 核心电路
+一生一芯三期第一批的4个SoC采用QFP176规格的封装，为了保证整个芯片供电的稳定性，IC后端在做Floorplan时每隔一些功能引脚就会放置一组数字电源引脚 **`VDDIO`**，**`VDD`** 和 **`GND`**。其中 **`VDDIO`** 为数字IO电源引脚，电压为3.3V。而 **`VDD`** 为内核电源引脚，电压为1.2V。**`GND`** 为数字地引脚。另外SoC中的PLL模块还需要独立的模拟3.3V电源 **`PLL_AVDD33`** ，模拟地 **`PLL_AVSS33`**，数字1.2V电源 **`PLL_DVDD12`** 和数字地 **`PLL_DVSS12`**。最后所有电源引脚都连接有 **`100nF`**，以滤除一些干扰杂波。该部分原理图如下所示：
+
+![SoC核心电路局部](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/sch-soc-core.png)
+
+#### SoC 板载烧写器(HFPLink)
+SoC底板上搭载了一个名为 **HFPLink** 的NOR Flash烧写器。实际上 **HFPLink** 是项目组自行设计的一款Flash烧写器，名字中 **HFP** 全称为 **High-speed QSPI-Flash Programmer**，又因为功能上和 **DAPlink** 一样支持拖拽式烧录，所以仿照其命名方式增加后缀 **Link**，最终组合成 **HFPLink** 这个名字。HFPLink的拖拽式烧录的核心原理是利用主控CH32V103的USB从机通信功能，使用软件模拟出一个USB的可移动设备 **(USB的仅数据传输协议)**，然后将PC上位机对USB可移动设备的bin文件拷贝重定向为写NOR Flash数据扇区的操作。其中有很多的细节需要处理，比如FAT16文件系统的模拟，扇区数据的划分等，其原理图如下所示：
+
+![板载烧写器](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/sch-hfplink.png)
+
+HFPLink部分原理图其实就是CH32V103的最小系统再外扩了一个NOR Flash **(SPI协议)** 和USB接口，核心的功能其实是通过软件实现的。
+
+#### SoC 拨码开关和复位按键
+SoC底板上有两个微动拨码开关，一个是4位拨码的PLL-SEL，另一个是6位拨码的CORE-SEL，其各自的功能前面已经介绍过了，这里就不再赘述。两个拨码上的信号线都通过 **`33Ω`** 的上拉电阻接3.3V，**`5KΩ`** 的下拉电阻接地，这样在拨码拨在 **`OFF`** 一侧时，信号线上为低电平。而当拨码拨在 **`ON`** 一侧时，通过电阻分压，信号线上为高电平：
+
+![SoC拨码开关](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/sch-soc-sw.png)
+
+板卡上SoC部分电路设计有一个复位按键 **`CORE-RST`**，复位按键的输出接入到MAX811SE这个监控芯片的 **`MR`** 引脚。当复位按键按下时，**`MR`** 引脚为低电平，MAX811SE能够识别出该引脚上的低电平，并产生稳定的SoC低电平复位信号 **`SYS_RST`**：
+
+![SoC复位按键](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/sch-soc-rst.png)
+
+#### SoC USB转串口和TF接口
+
+板卡上SoC的串口信号线是通过CP2102芯片转换成一对USB差分信号并进行传输的，该部分原理图如下所示：
+
+![SoC USB转串口](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/sch-soc-uart.png)
+
+上图中的 **`0R`** 电阻是用来进行阻抗匹配用的，而其他部分电路组成了CP2102的最小系统。另外板卡上SoC的SPI接口还通过 **`SPI_CS1`** 这个片选信号扩展了一个TF母座，可以使用SPI协议读写TF卡：
+
+![SoC TF接口](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/sch-soc-tf.png)
+
+#### SoC 功能切换开关
+SoC部分电路的功能切换开关是为了实现SoC的USB转串口和HFPLink能够共享一个Type-C接口，并同步切换NOR Flash的工作状态而设计的。这个功能是通过一个名为HFP-SW的单刀双掷滑动开关进行控制的。当HFP-SW拨动使得其 **`1`** 和 **`2`** 引脚导通时，**`PROG_SW_SEL`** 网络电平为低，此时所有模拟开关WAS3157B的 **`6`** 脚均为低电平，这样会将每个模拟开关 **`1`** 和 **`4`** 引脚上的信号网络导通。而当HFP-SW拨动使得其 **`3`** 和 **`2`** 引脚导通时，**`PROG_SW_SEL`** 网络电平为高，此时所有模拟开关WAS3157B的 **`6`** 脚均为高电平，会将每个模拟开关 **`3`** 和 **`4`** 引脚上的信号网络导通：
+
+![SoC功能切换开关](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/sch-soc-func-sw.png)
+
+之所以能设计这样的电路是因为 **HFPLink和SoC的USB转串口不会同时工作**，所以可以复用一个Type-C接口上的差分信号 **`MAIN_DP/DN`**。而且当HFPLink烧写NOR Flash时，需要断开SoC连接NOR Flash的SPI信号线，反之当SoC需要从NOR Flash中取指执行程序时，也需要断开HFPLink连接NOR Flash的SPI信号线。也就说需要在HFPLink和SoC正常工作这两个状态下**同步**切换2个差分+4个SPI信号共6个信号线的通断状态。
+
+#### PS启动模式和复位按键
+ZYNQ芯片支持4种启动模式，分别是SD，Flash，JTAG和NAND。由于硬件设计上有PS MIO管脚的复用，所以目前星空开发板仅支持前3种启动模式，该部分原理图如下所示：
+
+![SoC启动模式和复位按键](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/sch-ps-boot-rst.png)
+
+通过组合拨码开关FPGA-BOOT的不同拨码，可以实现前面介绍的3种启动模式。具体的拨码位置所对应的启动模式在该拨码开关旁的白色丝印处有标注。另外，板卡上还有PS侧的两个低电平复位按键。这两个按键都能够实现复位功能，但是稍有区别，具体差异可以查看ZYNQ的应用手册。
 
 #### FPGA JTAG调试接口
-SoC底板上搭载了一个5X2P的牛角插座，用于接入配件中的FPGA烧写器，实现FPGA硬件系统的下载，固化或者调试。原理图如下所示：
+SoC底板上搭载了一个5X2P的牛角插座，用于连接配件中的FPGA JTAG调试器。这个接口是用来实现FPGA硬件系统的下载，固化或者调试用的，其原理图如下所示：
 
-#### 板载烧写器(HFPLink)
-SoC底板上搭载了一个板载的Flash烧写器，用于实现对SoC上应用程序的烧录，原理图如下所示：
+![FPGA JTAG调试接口](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/sch-ps-jtag.png)
 
 #### PS UART
-SoC底板上搭载了一个UART转USB的芯片，型号为CP2102，用于实现PS侧的串口通信，该接口位于BANK500,的MIOxx~xx，电平标准为3.3V，原理图如下所示：
+板卡上FPGA PS侧也搭载了一个USB转串口芯片CP2102，用于实现PS侧的串口数据通信。由于PS侧的串口位于BANK500的 **`MIO8~9`**，而该BANK的电平标准为3.3V，所以可以将串口信号线连接到Type-C接口上：
+
+![PS UART](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/sch-ps-uart.png)
 
 #### PS SDIO
-SoC底板上搭载了一个SDIO接口，位于BANK501的MIOxx~xx，电平标准为1.8V，需要通过一个电平转换芯片转换到3.3V以满足Micro SD插槽的使用，这个SDIO接口用于固化FPGA核心板的应用程序，或者存储应用需要的数据，原理图如下所示：
+板卡上FPGA PS侧设计有一个SDIO接口，该接口信号位于BANK501的 **`MIO40~44`**。由于该BANK的电平标准为1.8V，所以需要通过一个电平转换芯片TXS010E将1.8V的信号转换成3.3V电平标准才能满足TF插槽的使用。该SDIO接口可以用于固化FPGA核心板的硬件系统或者存储应用数据，该部分原理图如下所示：
+
+![PS SDIO](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/sch-ps-tf.png)
 
 #### PS SDIO WiFi
-SoC底板上搭载了一个支持SDIO数据协议的WiFi模组，型号为AP6212，用于实现无线网络通信功能。原理图如下所示：
+板卡上FPGA PS侧还搭载了一个支持SDIO数据协议的WiFi模组AP6212，可用于实现无线网络通信功能。该接口信号位于BANK501的 **`MIO46~51`**。和上面介绍的SDIO一样，WiFI模块也需要使用电平转换芯片进行信号电平标准转换，其原理图如下所示：
+
+![PS SDIO WiFi](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/sch-ps-wifi.png)
 
 #### PS CAN
-CAN接口是控制局域网(Controller Area Network)的简称，是一种能够实现分布式实时控制的串行通信网络，其由德国的Bosh公司开发。原理图如下所示：
+CAN是 [控制局域网(Controller Area Network)](https://en.wikipedia.org/wiki/CAN_bus) 的简称，是一种能够实现分布式实时控制的串行通信网络，由德国的Bosh公司最先提出。SoC板上PS侧的CAN接口上挂载有一个高速CAN收发器芯片TJA1050，TJA1050的 **`CANL`** 和 **`CANH`** 引脚上连接有 **`120Ω`** 终端匹配电阻。该CAN接口信号位于BANK501的 **`MIO52~53`**，具体原理图如下所示：
+
+![PS CAN](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/sch-ps-can.png)
+
 
 #### PS USB Host
-SoC底板上搭载有一个兼容USB2.0的驱动芯片USB3320C，用于实现Host模式下的数据通信，数据接口上使用的是标准的USB接口 **(Type-A)**，原理图如下所示：
+板卡上FPGA PS侧搭载有一个兼容USB2.0的驱动芯片USB3320C，用于实现Host模式下的数据通信。该芯片支持高速ULPI标准接口，能通过该接口和FPGA PS侧的MIO之间进行高速数据传输。该接口信号位于BANK500的 **`MIO28~39`**，并使用标准的USB接口 **(Type-A)** 连接外设，其原理图如下所示：
 
-#### PS PMOD
-SoC底板上额外引出了6位的PS侧的MIO口，位于BANK501的MIOxx~xx，电平标准为，可以用于扩展其他外设，原理图如下所示：
+![PS USB Host](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/sch-ps-usb.png)
 
-#### PS LED/KEY
-SoC底板上搭载了，原理图如下所示：
+#### PS WS2812和PMOD
+板卡上FPGA PS侧位于BANK500的 **`MIO_20`** 接口串联有4个WS2812C炫彩灯珠，可以用WS2812C支持的单线协议实现动态炫彩灯效。另外板卡上还使用排针的方式额外引出了FPGA PS侧剩余的MIO信号 **`MIO21~25`**，这些信号可以用于扩展其他外设：
+
+![PS WS2812和PMOD](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/sch-ps-ws-pmod.png)
+
+#### PS LED和KEY
+板卡上FPGA PS侧还搭载了2个蓝色LED和2个按键，这些信号位于BANK500的 **`MIO16~19`**，由于LED接有上拉电阻，所以当 **`PS_MIO16(17)`** 为高电平时，LED是熄灭状态。反之当 **`PS_MIO16(17)`** 为低电平时，LED会点亮。另外两个按键均采用低电平触发，所以只有当 **`PS_MIO18(19)`** 上检测到低电平时，才表示有按键按下：
+
+![PS LED和KEY](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/sch-ps-led-key.png)
+
 
 #### PL VGA
-SoC底板上搭载了一个标准VGA接口，用于图片或者视频的显示，原理图如下所示：
+板卡上FPGA PL侧搭载了一个标准VGA接口，可以用于图片或者视频的显示。驱动该VGA的数据信号采用的颜色模式是RGB444，并且RGB每路数据信号均通过电阻网络来实现DAC。该部分原理图如下所示：
 
-#### PL PS/2
-SoC底板上搭载了一个PS/2键盘母座，用于连接键盘实现键盘按键输入，原理图如下所示：
+![PL VGA](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/sch-pl-vga.png)
 
-#### PL RTC
-SoC底板上，原理图如下所示：
-#### PL EEPROM
-SoC底板上，原理图如下所示：
-#### PL SPI Flash
-SoC底板上，原理图如下所示：
-#### PL I2S
-SoC底板上，原理图如下所示：
-#### PL LED/KEY
-SoC底板上，原理图如下所示：
-#### SO-DIMM 204P接口
-SoC底板上，原理图如下所示：
-
-::: info 设计插曲
+::: info 电阻网络计算
 
 :::
+#### PL PS/2
+板卡上FPGA PL侧搭载了一个PS/2键盘母座，用于连接键盘实现按键输入功能。由于PS/2接口电平标准为5V，所以需要通过一个电平转换芯片TXS0102将PS/2信号转换成3.3V的标准。该部分原理图如下所示：
+
+![PL PS/2](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/sch-pl-ps2.png)
+
+#### PL RTC和EEPROM
+板卡上FPGA PL侧搭载了支持I2C协议的RTC芯片PCF8563B和EEPROM芯片AT24C64，I2C总线通过两个 **`4.7KΩ`** 的电阻上拉到3.3V电源网络。该部分原理图如下所示：
+
+![PL RTC和EEPROM](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/sch-pl-i2c.png)
+
+
+#### PL SPI Flash
+板卡上FPGA PL侧搭载了一个NOR Flash芯片，可以使用SPI标准四线协议对其进行读写，该部分原理图如下所示：
+
+![PL SPI Flash](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/sch-pl-spi.png)
+
+
+#### PL I2S
+板卡上FPGA PL侧设计有一个支持I2S标准的音频外设。该外设使用的是WM8960这款低功耗的立体声编码器芯片。该芯片支持MIC音频输入和标准音频输入两种输入接口，以及耳机和扬声器两种音频输出接口，其原理图如下所示：
+
+![PL I2S](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/sch-pl-i2s.png)
+
+
+#### PL LED和KEY
+板卡上FPGA PL侧搭载了1个蓝色LED和1个按键，这部分电路和PS侧的LED和按键是一样的，这里就不再赘述了。该部分原理图如下所示：
+
+![PL LED和KEY](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/sch-pl-led-key.png)
+
+#### PL WS2812和UCLK
+和PS侧一样，板卡上FPGA PL侧也串联了4个WS2812C炫彩灯珠，另外还通过排针引出了一个名为PL_UCLK的引脚，设置这个引脚是为了能够给SoC提供一个可变时钟输入用的，方便同学们配合SoC上的PLL模块产生更多的核时钟频率。具体来说，可以使用排线将PL_UCLK引脚连接到SoC晶振插座的时钟输出脚，然后使用FPGA上的时钟IP来输出自定义频率的时钟信号。因为PL_UCLK上的时钟输出还会经过SoC上的PLL，所以对该输出时钟频率稳定度不需要特别严格：
+
+![PL WS2812和UCLK](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/sch-pl-ws-uclk.png)
+
+#### PL 外设切换开关
+板卡上FPGA PL侧设计有一个 **外设切换开关**，这个切换开关的工作原理和[SoC 功能切换开关](#soc-功能切换开关) 的一样，其主要是用于复用PL端的IO，**使得FPGA PL侧能够搭载尽可能多的外设**。
+
+![PL 外设切换开关](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/sch-pl-func-sw.png)
+
+#### SO-DIMM 204P接口
+SoC底板上设计有一个标准204P的SODIMM插座，用于连接FPGA核心板，该部分原理图如下所示：
+
+![SO-DIMM 204P接口](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/sch-sodimm.png)
 
 ### FPGA开发
 
@@ -575,4 +677,3 @@ http://47.111.11.73/docs/boards/fpga/zdyz_linhanz(V2).html
 ### 致谢列表
 - 感谢粟金伦同学在测试板卡时发现的板卡插接深度不够可能导致板卡信号断路问题，现在已经补充到相关注意事项中。
 - 感谢粟金伦同学建议使用 PuTTY/MobaXterm 软件来做板卡测试流程演示用的串口上位机软件，本文档已经使用 MobaXterm 重写了有关章节。
-- 
