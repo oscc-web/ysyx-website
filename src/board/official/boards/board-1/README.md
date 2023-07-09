@@ -91,11 +91,9 @@ SoC上丝印编号的格式为：**`202112-3-yx`** ，其中 **`x`** 取值 **`1
 
 FPGA核心板如下图所示：
 
-![FPGA核心板正面](/res/images/board/som-1.png)
+![FPGA核心板正面](/res/images/board/som-black-1.png)
 
-![FPGA核心板正面](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/som-black-1.png)
-
-![FPGA核心板背面](/res/images/board/som-2.png)
+![FPGA核心板背面](/res/images/board/som-black-2.png)
 
 FPGA核心板板载资源如下所示：
 - 主芯片：XC7Z010CLG400
