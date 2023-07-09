@@ -89,21 +89,13 @@ SoC上丝印编号的格式为：**`202112-3-yx`** ，其中 **`x`** 取值 **`1
 - 1个外设功能切换开关
 - 1个SO-DIMM 204P接口，用于连接ZYNQ7010/7020 FPGA核心板
 
-<<<<<<< HEAD
 FPGA核心板如下图所示：
 
 ![FPGA核心板正面](/res/images/board/som-1.png)
-=======
-SoC底板搭配使用的FPGA核心板如下图所示：
->>>>>>> dev
 
 ![FPGA核心板正面](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/som-black-1.png)
 
-<<<<<<< HEAD
 ![FPGA核心板背面](/res/images/board/som-2.png)
-=======
-![FPGA核心板背面](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/som-black-2.png)
->>>>>>> dev
 
 FPGA核心板板载资源如下所示：
 - 主芯片：XC7Z010CLG400
@@ -169,15 +161,7 @@ FPGA核心板的PS侧的BANK有BANK502，BANK500，BNAK501，其中BANK502电平
 
 ![安装FPGA核心板](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/sodimm-black-1.png)
 
-<<<<<<< HEAD
 ![晶振正确插入时方向](/res/images/board/osc-1.png)
-=======
-安装FPGA核心板时把FPGA核心板以**30度左右**倾角插入到插槽中，**并确保所有金手指插入的深度都一致**，然后两手同时抓住两边往下按，直到两边被压到插槽的**固定簧片**之下，听到“卡塔”一声就可以了。拆卸核心板过程则相反，轻轻向外侧拨动固定簧片，FPGA核心板会自动弹起，然后向外取出即可。
-
-安装和拆卸晶振相比FPGA核心板要容易一些，只需从**硬质防静电袋**中取出一个25MHz的晶振，然后将晶振按照正确方向插入到三期板卡的晶振插座中即可。晶振管脚要比插座的插槽深度要长一些，当发现用手插入晶振时稍用力已无法再进一步插入后就可以停止了，正确插入时的方向和深度见下图：
-
-![晶振正确插入时方向](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/osc-1-1.png)
->>>>>>> dev
 
 ![晶振正确插入时深度](/res/images/board/osc-2.png)
 
@@ -374,11 +358,7 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
 
 当创建完一个串口会话后，将板卡用Type-C线缆和电脑相连，然后使用上面介绍的方法打开已经配置过的串口会话，如果没问题，则会打开一个黑色背景的窗口：
 
-<<<<<<< HEAD
 ![正确打开串口Session](/res/images/board/mobaxterm-intro-3-1.png)
-=======
-![正确打开串口会话](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/mobaxterm-intro-3-1.png)
->>>>>>> dev
 
 至此串口会话配置完成，但为了能够**在窗口中正确地显示换行**，还需要对会话进行设置，具体步骤如下图所示：
 
@@ -386,7 +366,7 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
 
 ![修改串口换行显示2](/res/images/board/mobaxterm-intro-5.png)
 
-1. 在打开的窗口中任意地方鼠标右击，在弹出的选项中点击 ***Change terminal settings...*** 
+1. 在打开的窗口中任意地方鼠标右击，在弹出的选项中点击 ***Change terminal settings...***
 2. 然后在弹出的窗口中勾选 ***Implicit CR in every LF*** 复选框
 
 ::: tip Implicit CR in every LF 选项含义
@@ -472,19 +452,12 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
 
 :::
 
-<<<<<<< HEAD
 ::: info 安装/拆卸FPGA核心板
 本SoC配套的FPGA核心板是一种 [SoM(System on Module)](https://en.wikipedia.org/wiki/System_on_module)，采用的是SODIMM 204P接口(DDR3兼容标准接口)。这种接口常用于笔记本电脑内存模组，默认FPGA核心板已经插入到插槽中，一般不需要拆卸，如果确有需要，需要同学们自己操作，具体方法如下：
 
 ![安装FPGA核心板](/res/images/board/sodimm-1.png)
 
 安装FPGA核心板时把FPGA核心板以30度倾角插入到插槽中，**并确保所有金手指插入的深度都一致**，然后两手同时抓住两边往下按，直到两边被压到插槽的**固定簧片**之下，听到“卡塔”一声就可以了。拆卸核心板过程则相反，轻轻向两侧拨动固定簧片，FPGA核心板会自动弹起，然后向外取出即可。
-=======
-::: warning 固件更新
-- 更新固件不是必须的，**因为板卡在发给同学们之前已经烧录过固件了**，上面介绍更新固件的方法，是为了方便将板卡发给同学们之后，还能够便捷地对烧写器功能进行升级用的。
-- 目前板载烧写器的固件**不支持连续拷贝烧写功能**，也就是说每次烧写完成之后**都需要复位并重新进入ISP模式才能开始新的一次应用程序烧写**。
-- 有时候在更新固件点击 ***下载*** 之后，**WCHISPTool**软件提示存在 **写保护** 。此时可以先点击上面的 **解除保护** 之后再重复上面更新固件操作即可。
->>>>>>> dev
 :::
 
 至此，程序烧写内容就全部介绍完毕，下面将开始介绍板卡的硬件设计，为后面介绍FPGA开发做好铺垫。
@@ -497,12 +470,7 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
 - VGA和所有晶振时钟输出端做了**包地处理**，远离高频和模拟信号，并均参考了完整地。
 - 模拟地做了**单点隔离**，各芯片均做了完备的电源滤波，电源网络使用覆铜连接，保证电源供电稳定，并打了足量的**回流地过孔**。
 
-<<<<<<< HEAD
 ![开发板硬件设计](/res/images/board/pcb-1.png)
-=======
-![板卡硬件设计](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/pcb-1.png)
-
->>>>>>> dev
 
 在完成了原理图和PCB布局布线设计后，该版本硬件设计又经过了多轮的DRC检查，CAM350通短路检查和差异对比检查。在物料采购环节完成后，该版本硬件正式导入到小批量生产流程，开始交由厂商进行PCB生产和SMT贴片。其中星空V1.2版本板卡的3D贴片图如下所示：
 
@@ -602,4 +570,4 @@ http://47.111.11.73/docs/boards/fpga/zdyz_linhanz(V2).html
 ### 致谢列表
 - 感谢粟金伦同学在测试板卡时发现的板卡插接深度不够可能导致板卡信号断路问题，现在已经补充到相关注意事项中。
 - 感谢粟金伦同学建议使用 PuTTY/MobaXterm 软件来做板卡测试流程演示用的串口上位机软件，本文档已经使用 MobaXterm 重写了有关章节。
-- 
+-
