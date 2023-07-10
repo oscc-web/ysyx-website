@@ -6,9 +6,6 @@ PATH_ROOT=${PWD}
 PATH_RESS=${PATH_ROOT}/src/.vuepress/public/res/
 PATH_NODE=${PATH_ROOT}/node_modules/
 
-# Update codes
-git pull origin main
-
 # Set resources
 if [ ! -d ${PATH_RESS}/.git ]; then
     rm -rf ${PATH_RESS}
