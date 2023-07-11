@@ -617,9 +617,9 @@ CAN是 [控制局域网(Controller Area Network)](https://en.wikipedia.org/wiki/
 
 ![PL VGA](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/sch-pl-vga.png)
 
-<!-- ::: info 电阻网络阻值计算
-
-::: -->
+::: info 电阻网络阻值计算
+VGA标准规定接口上的`VGA_R`，`VGA_G`和`VGA_B`上传输的是模拟信号，范围为`0~0.714V`。每路模拟信号上电压为`0V`时表示无色，为`0.714V`表示满色。由于采用的是RGB444的模式，所以每路上有2^4=16级颜色层次。，控制VGA_
+:::
 
 #### PL PS/2
 板卡上FPGA PL侧搭载了一个PS/2键盘母座，用于连接键盘实现按键输入功能。由于PS/2接口电平标准为5V，所以需要通过一个电平转换芯片TXS0102将PS/2信号转换成3.3V的标准。该部分原理图如下所示：
@@ -724,6 +724,18 @@ SoC底板上设计有一个标准204P的SODIMM插座，用于连接FPGA核心板
 此时可以看到ILA采样出了波形，并且`rd_data[7:0]`在读数据结束后返回了设备ID`0xEF17`的低8位`0x17`：
 
 ![SPI ILA采样结果](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/pl-spi-ila-2.png)
+
+
+#### PL侧EEPROM测试
+这里主要介绍使用I2C总线对EEPROM芯片AT24C64进行读写测试，并使用ILA采样相关寄存器的值。该部分代码在`fpga/V1.2/pl_eeprom`。另外所有滑动开关的设置和上面 [PL侧外设集合测试1](#pl侧外设集合测试1) 的完全一致。
+
+同学们需要自行创建完工程并生成bitstream文件，并将bistream下载到板卡上。成功下载完后Vivado会弹出ILA波形窗口，此时需要切换到 **hw_ila_1** 这个窗口，该信号窗口中显示有EERPOM控制器相关信号。为了捕获读写EEPROM芯片的波形，需要将`u_e2prom_ctrl/i2c_data_r[7:0]=215`作为触发条件，并点击 **运行采样** 按钮，此时ILA会显示正等待触发：
+
+![EEPROM ILA等待触发](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/pl-eeprom-ila-1.png)
+
+然后同上面测试一样，需要按下板卡上的用户按键 **PL_KEY** 对PL进行复位，这样ILA波形窗口中就采样到了波形：
+
+![EEPROM ILA采样结果](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/pl-eeprom-ila-2.png)
 
 #### PL侧外设集合测试2
 这里主要测试的是VGA，PS/2和WS2812C这3个PL外设的功能。该部分代码在`fpga/V1.2/pl_vga_ps2_ws2812`，具体实现功能：驱动VGA在屏幕上显示彩条，当按下PS/2键盘的 **`A`** 键后，屏幕显示绿色，而当按下键盘上的其他按键后，屏幕会恢复显示彩条。另外板卡上还会驱动WS2812C显示4种不同的颜色。运行该测试需要在板卡上插入VGA数据线和支持PS/2模式的键盘：
