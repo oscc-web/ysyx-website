@@ -104,7 +104,7 @@ export default hopeTheme({
             footnote: true,
             mark: true,
             figure: true,
-            imgLazyload: true,
+            imgLazyload: false,
             imgMark: true,
             imgSize: true,
             tasklist: true,
