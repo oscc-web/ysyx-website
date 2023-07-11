@@ -618,7 +618,16 @@ CAN是 [控制局域网(Controller Area Network)](https://en.wikipedia.org/wiki/
 ![PL VGA](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/sch-pl-vga.png)
 
 ::: info 电阻网络阻值计算
-VGA标准规定接口上的`VGA_R`，`VGA_G`和`VGA_B`上传输的是模拟信号，范围为`0~0.714V`。每路模拟信号上电压为`0V`时表示无色，为`0.714V`表示满色。由于采用的是RGB444的模式，所以每路上有2^4=16级颜色层次。，控制VGA_
+VGA标准规定接口的`VGA_R`，`VGA_G`和`VGA_B`管脚上传输的是模拟信号，范围为`0~0.714V`。每路模拟信号上的电压为`0V`时表示无色，为`0.714V`表示满色。由于采用的是RGB444的模式，所以每路上有2^4=16级颜色层次。比如对于`VGA_R`这一路，设组合后的输入信号 VGA_R3~VGA_R0 的值为 $VGA_R[3:0]$，设 `VGA_R`网络的电压值为 $V_{R}$，如果想要正确显示`VGA_R`这一路的颜色，只需满足：
+- 当 $VGA_R[3:0]=4'b0000$ 时，$V_{R}=0V$
+- 当 $VGA_R[3:0]=4'b1111$ 时，$V_{R}<=0.714V$
+- 当 $VGA_R[3:0]$ 取 $[4'b0000, 4'b1111]$ 中的任意一个值时，对于任意两个 $VGA_R[3:0]_1 <= VGA_R[3:0]_2$，均满足 $V_{R1}<=V_{R2}$
+
+由此可见，VGA_R3~VGA_R0 上的电阻权值是不一样的。这个具体阻值是可以通过电路仿真软件计算得到的，比如可以免费使用的 [MultisimLive](https://www.multisim.com/)：
+
+![MultisimLive仿真VGA电阻网络](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/vga-dac-sim.png)
+
+免费版本的 **MultisimLive** 对搭建电路的规模有限制，但是对这里计算电阻网络阻值任务来说是完全够用的。
 :::
 
 #### PL PS/2
