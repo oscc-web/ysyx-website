@@ -398,6 +398,10 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
 
 ![运行RT-Thread测试程序](/res/images/board/rtthread.png)
 
+::: warning RT-Thread程序运行异常
+有的同学核在打印出 **`msh`** 后，会出现无法在窗口中键入命令，或者多次复位后程序运行不一致，不稳定的异常。这种异常往往是处理器核存在 **时序相关问题**，可以尝试多次复位或者降频。
+:::
+
 ::: info 丰富应用实例
 星空V1.2板卡上面有不少同学的核能够启动Linux，比如唐浩晋同学设计的处理器核。当时他参加一生一芯三期的时候还是中国科学院大学电子信息工程的一名大三学生，他在自己的核上成功启动了Linux并运行了应用程序([视频](https://www.bilibili.com/video/BV1CL411X7wV/))：
 
@@ -421,7 +425,7 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
 
 ![识别出U盘](/res/images/board/hfp-2.png)
 
-接着将想要烧写的bin格式的应用程序拷贝到 `YSYX-HFPLnk` 这个U盘中，然后等待拷贝完成。在拷贝的同时板载烧写器旁的蓝色LED会一直闪烁。当拷贝完成时，蓝色LED会常亮。项目组已经在 [StarrySky-res](https://github.com/maksyuki/StarrySky-res) 中 `V1.2/software` 目录下提前准备了一些已经编译好的测试程序，可以供同学们拷贝到 `YSYX-HFPLnk` 中进行烧写。当拷贝完成后，程序烧写也就完成了，此时关闭板卡电源，并重新将 **`HFP-MODE`** 的滑动开关拨码到右侧，然后上电就可以运行新的程序了。
+接着将想要烧写的bin格式的应用程序拷贝到 `YSYX-HFPLnk` 这个U盘中，然后等待拷贝完成。在拷贝的同时板载烧写器旁的蓝色LED会一直闪烁。当拷贝完成时，蓝色LED会常亮。项目组已经在 [StarrySky-res](https://github.com/maksyuki/StarrySky-res) 中 `software/V1.2` 目录下提前准备了一些已经编译好的测试程序，可以供同学们拷贝到 `YSYX-HFPLnk` 中进行烧写。当拷贝完成后，程序烧写也就完成了，此时关闭板卡电源，并重新将 **`HFP-MODE`** 的滑动开关拨码到右侧，然后上电就可以运行新的程序了。
 
 ::: info 更新板载烧写器固件
 板载烧写器默认已经提前烧录有系统固件，一般使用是没有问题的，但有时候需要对固件进行更新以修复bug或者添加新的功能，这样就需要了解更新固件的方法。目前板载烧写器上使用的主控是CH32V103，这个MCU是支持ISP程序更新的，但是需要配合 **WCHISPTool** 一起使用。所以为了更新固件，首先需要安装 **WCHISPTool** 这个软件。同学们可以访问这个 [网址](https://www.wch.cn/download/WCHISPTool_Setup_exe.html) 来下载 **WCHISPTool** 并完成安装。
@@ -441,7 +445,7 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
 
 ![识别出CH32V103](/res/images/board/hfp-4.png)
 
-当识别出 `CH32V103` 后，同学们点击 ***用户程序文件*** 后的文件图标选择需要更新的固件 **(hex格式)**，项目组已经在 [StarrySky-res](https://github.com/maksyuki/StarrySky-res) 中 `V1.2/firmware` 目录下准备好了该固件。当选择完需要更新的固件后，点击 ***下载*** 按钮并等待更新完成即可：
+当识别出 `CH32V103` 后，同学们点击 ***用户程序文件*** 后的文件图标选择需要更新的固件 **(hex格式)**，项目组已经在 [StarrySky-res](https://github.com/maksyuki/StarrySky-res) 中 `firmware/V1.2` 目录下准备好了该固件。当选择完需要更新的固件后，点击 ***下载*** 按钮并等待更新完成即可：
 
 ![下载固件](/res/images/board/hfp-5.png)
 
@@ -609,9 +613,18 @@ CAN是 [控制局域网(Controller Area Network)](https://en.wikipedia.org/wiki/
 
 ![PL VGA](/res/images/board/sch-pl-vga.png)
 
-<!-- ::: info 电阻网络阻值计算
+::: info 电阻网络阻值计算
+VGA标准规定接口的`VGA_R`，`VGA_G`和`VGA_B`管脚上传输的是模拟信号，范围为`0~0.714V`。每路模拟信号上的电压为`0V`时表示无色，为`0.714V`表示满色。由于采用的是RGB444的模式，所以每路上有2^4=16级颜色层次。比如对于`VGA_R`这一路，设组合后的输入信号 VGA_R3~VGA_R0 的值为 $VGA_R[3:0]$，设 `VGA_R`网络的电压值为 $V_{R}$，如果想要正确显示`VGA_R`这一路的颜色，只需满足：
+- 当 $VGA_R[3:0]=4'b0000$ 时，$V_{R}=0V$
+- 当 $VGA_R[3:0]=4'b1111$ 时，$V_{R}<=0.714V$
+- 当 $VGA_R[3:0]$ 取 $[4'b0000, 4'b1111]$ 中的任意一个值时，对于任意两个 $VGA_R[3:0]_1 <= VGA_R[3:0]_2$，均满足 $V_{R1}<=V_{R2}$
 
-::: -->
+由此可见，VGA_R3~VGA_R0 上的电阻权值是不一样的。这个具体阻值是可以通过电路仿真软件计算得到的，比如可以免费使用的 [MultisimLive](https://www.multisim.com/)：
+
+![MultisimLive仿真VGA电阻网络](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/vga-dac-sim.png)
+
+免费版本的 **MultisimLive** 对搭建电路的规模有限制，但是对这里计算电阻网络阻值任务来说是完全够用的。
+:::
 
 #### PL PS/2
 板卡上FPGA PL侧搭载了一个PS/2键盘母座，用于连接键盘实现按键输入功能。由于PS/2接口电平标准为5V，所以需要通过一个电平转换芯片TXS0102将PS/2信号转换成3.3V的标准。该部分原理图如下所示：
@@ -658,17 +671,175 @@ SoC底板上设计有一个标准204P的SODIMM插座，用于连接FPGA核心板
 
 至此，板卡的所有硬件设计已经介绍完毕，下面将介绍FPGA部分内容。
 
+::: info FPGA选用Xilinx ZYNQ系列的原因
+- 市面上售卖的Xilinx ZYNQ系列开发板相比其他型号FPGA数量要多一些，这样可以参考的软硬件资料也会比较多一些。
+- ZYNQ PS侧的外设控制器可以通过EMIO的方式路由到PL侧的IO上，方便与项目组自行开发的IP功能作对比验证。
+- 该版本板卡所搭载的FPGA核心板不仅为SoC提供了必需的ChipLink访存支持，也是 **为了下一代SoC的FPGA原型验证提供板卡支持**。为了实现这个目标，就要求FPGA器件能够有高效，稳定的软件开发工具和IP组件支持。项目组之前在做FPGA选型时也试用过多款国产FPGA，但是软件开发环境相比Xilinx的 **Vivado+Vitis** 还有很多可以优化的地方，故最终项目组选用了Xilinx ZYNQ系列FPGA器件。
+::::
+
 ### FPGA开发
+这个章节主要将会介绍如何设计并驱动板卡FPGA端的众多外设，该部分代码在 **StarrySky-res** 仓库中的`fpga/V1.2`里面([代码地址](https://github.com/maksyuki/StarrySky-res/tree/main/fpga/V1.2))。项目组使用的FPGA开发工具软件版本是 **`Vivado 2022.2`** 和 **`Vitis IDE 2022.2`**。
 
-http://47.111.11.73/docs/boards/fpga/zdyz_linhanz(V2).html
-
-::: warning
-- JTAG调试器要先接好，再打开板卡的电源。
-
+::: info Vivado+Vitis 软件使用和ZYNQ开发入门
+本章节内容需要同学们熟练掌握 **Vivado+Vitis** 工具的使用和ZYNQ开发流程，网上已经有很多比较好的，公开的ZYNQ入门学习资料了，比如 [ZYNQ领航者V2开发板](http://47.111.11.73/docs/boards/fpga/zdyz_linhanz(V2).html)，有需要的同学可以自己下载下来学习。
 :::
-## 其他资源
-对接PPT内容，你可以从这里获得。
 
+#### PL侧外设集合测试1
+这里主要介绍I2C，SPI，LED，KEY和UCLK这5个PL外设的功能。该部分代码在`fpga/V1.2/pl_i2c_spi_led_uclk`，具体实现功能：使用I2C总线访问并配置RTC芯片PCF8563，然后不停读取其三个时间寄存器的值，最后使用ILA对该寄存器值进行采样查看。使用SPI总线发送 **`0x9F`** 指令给NOR Flash，并使用ILA对读取的设备ID进行检查。LED会每隔1s翻转闪烁，按键则用作系统复位信号`rst_n`输入，另外还会在UCLK引脚上输出 **1Hz的波形**。
+
+同学们基于项目组提供的代码和约束文件自行创建Vivado工程并生成bitstream文件，不过在下载程序之前还需要对板卡进行一些硬件操作：
+- 将JTAG调试器插入到板卡上的牛角插座中，牛角插座有防呆设计，**仅支持单方向输入**，插入时需要让插头的凸出和插座缺口恰好重合。最后将JTAG调试器另一端插入到PC的USB接口上 **(需要在板卡未上电时操作)**。
+- 将FPGA启动模式开关 **FPGA-BOOT** 从 **`FLASH`** 切换到 **`JTAG`**，并确认外设切换开关 **PERIP-MODE** 滑动到下侧，具体开关设置如下所示：
+
+![PL外设开关设置1](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/pl-perip-1.png)
+
+::: warning JTAG调试器和板卡上/下电顺序
+因为JTAG调试器的插头 **不像USB接口那样支持热插拔设计**，所以同学们不要在板卡上电的情况下，插拔JTAG调试器的的插头到牛角插座上，否则有可能损坏FPGA的JTAG接口。一个合理的操作顺序是先插入JTAG调试器插头，**板卡再上电**：
+- 将JTAG插入到牛角插座中
+- 将JTAG另一端插入到PC的USB口上
+- 打开板卡的电源
+
+反之，如果需要拔出JTAG调试器，则要 **先确认板卡已经下电**：
+- 关闭板卡电源
+- 将JTAG另一端从PC的USB口上拔出
+- 将JTAG插头从牛角插座中拔出
+:::
+
+当确认JTAG调试器已经和板卡连接好，并且启动模式和功能切换开关都设置正确后，再给板卡上电。然后使用Vivado软件打开 **Hardware Manager** 并下载bitstream到板卡。下载完成后，板卡上PL侧的LED开始闪烁：
+
+![PL LED闪烁](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/pl-led.png)
+
+并弹出两个ILA窗口 **hw_ila_1** 和 **hw_ila_2**。其中 **hw_ila_1** 信号窗口中有RTC控制器的三个8位时间寄存器`hour[7:0]`，`minute[7:0]`和`second[7:0]`。在该窗口中点击两次 **运行采样** 按钮，可以得到下面两个波形:
+
+![RTC ILA第一次采样](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/pl-rtc-ila-1.png)
+
+![RTC ILA第二次采样](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/pl-rtc-ila-2.png)
+
+对比上面两个波形可以发现，两次采样时`minute[7:0]`和`second[7:0]`寄存器的值不一样，实际上这两个寄存器的两次采样的差值表示了 **这两次采样的时间间隔**。这个和自行统计的采样间隔作对比，是可以说明RTC控制器是正常工作的。
+
+然后切换到 **hw_ila_2** 这个窗口，该信号窗口中显示有SPI控制器相关信号。为了捕获NOR Flash返回的设备ID波形，需要先设置`u_spi_ctrl/rd_flag`的上升沿作为触发信号，并点击 **运行采样** 按钮，此时ILA会显示正等待触发：
+
+![SPI ILA等待采样触发](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/pl-spi-ila-1.png)
+
+然后按下板卡上的用户按键 **PL_KEY** 对PL进行复位：
+
+![PL KEY](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/pl-key.png)
+
+
+此时可以看到ILA采样出了波形，并且`rd_data[7:0]`在读数据结束后返回了设备ID`0xEF17`的低8位`0x17`：
+
+![SPI ILA采样结果](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/pl-spi-ila-2.png)
+
+
+#### PL侧EEPROM测试
+这里主要介绍使用I2C总线对EEPROM芯片AT24C64进行读写测试，并使用ILA采样相关寄存器的值。该部分代码在`fpga/V1.2/pl_eeprom`。另外所有滑动开关的设置和上面 [PL侧外设集合测试1](#pl侧外设集合测试1) 的完全一致。
+
+同学们需要自行创建完工程并生成bitstream文件，并将bistream下载到板卡上。成功下载完后Vivado会弹出ILA波形窗口，此时需要切换到 **hw_ila_1** 这个窗口，该信号窗口中显示有EERPOM控制器相关信号。为了捕获读写EEPROM芯片的波形，需要将`u_e2prom_ctrl/i2c_data_r[7:0]=215`作为触发条件，并点击 **运行采样** 按钮，此时ILA会显示正等待触发：
+
+![EEPROM ILA等待触发](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/pl-eeprom-ila-1.png)
+
+然后同上面测试一样，需要按下板卡上的用户按键 **PL_KEY** 对PL进行复位，这样ILA波形窗口中就采样到了波形：
+
+![EEPROM ILA采样结果](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/pl-eeprom-ila-2.png)
+
+#### PL侧外设集合测试2
+这里主要测试的是VGA，PS/2和WS2812C这3个PL外设的功能。该部分代码在`fpga/V1.2/pl_vga_ps2_ws2812`，具体实现功能：驱动VGA在屏幕上显示彩条，当按下PS/2键盘的 **`A`** 键后，屏幕显示绿色，而当按下键盘上的其他按键后，屏幕会恢复显示彩条。另外板卡上还会驱动WS2812C显示4种不同的颜色。运行该测试需要在板卡上插入VGA数据线和支持PS/2模式的键盘：
+
+![VGA和PS/2线与板卡连接](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/pl-vga-kdb.png)
+
+::: warning VGA和PS/2注意事项
+VGA和PS/2接口 **均不支持热插拔**，同学们需要在板卡上电前将VGA和PS/2线缆插入到板卡上，然后需要等待板卡下电后再从板卡上拔出VGA和PS/2线缆。
+:::
+
+之后同学们需要确认已经将FPGA启动模式开关 **FPGA-BOOT** 从 **`FLASH`** 切换到了 **`JTAG`**，并将外设切换开关 **PERIP-MODE** 滑动到上侧，具体开关设置如下所示：
+
+![PL外设开关设置2](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/pl-perip-2.png)
+
+::: warning 外设切换开关位置
+注意这个测试要把外设切换开关 **PERIP-MODE** 滑动到 **上侧**，而上一个测试 **PERIP-MODE** 要滑动到 **下侧**，**这两个测试中外设切换开关的滑动位置是不一样的**。切换开关每个滑动位置对应连接的外设见 [PL 外设切换开关](#pl-外设切换开关) 部分原理图。
+:::
+
+然后像前一个测试那样，同学们需要自行创建工程并生成bistream文件，最后对板卡上电并打开 **Hardware Manager**，下载bitstream到板卡中。下载成功后屏幕上会显示彩条，此时如果按动键盘 **`A`** 键，屏幕则会切换成绿色：
+
+![显示彩色条纹](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/pl-vga-ps2-1.png)
+
+![切换成绿色](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/pl-vga-ps2-2.png)
+
+同时板卡上的4个WS2812C灯珠分别显示出不同的颜色：
+
+![WS2812C显示4种颜色](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/pl-ws.png)
+
+#### ChipLink硬件系统
+
+::: info ChipLink固化
+FPGA核心板在发给同学们之前已经将该部分介绍的ChipLink硬件系统固化在了FPGA板载的Flash中，同学们直接使用就可以了，不需要自己编译并下载。
+:::
+
+ChipLink是SiFive提出的一种片间低速总线通信协议 **(FPGA与SoC之间)**，主要用于对SoC发送的AXI4请求进行分片传输和重新组合，以可靠地访问FPGA上的硬件逻辑资源。本FPGA核心板上的ChipLink控制器Verilog代码由Chisel生成，并在VCS上仿真通过。具体实现上是将VCS仿真使用的`ChiplinkTop`及其子模块全部导入到一个文件中并重新命名成`ChiplinkTop.v`。因为VCS仿真时例化的`ChiplinkTop`内部有很多信号是悬空或者置常值的，所以项目组在`ChiplinkTop`之上又包装了一层`chiplink_ctrl`，然后在该模块中例化`ChiplinkTop`并置相应端口常值，最后将该模块命名为`chiplink_ctrl.v`。另外由于ZYNQ的DDR地址映射和SoC访存的地址范围不一样，所以需要对访存地址进行一个重映射，其中ZYNQ的memory地址映射如下图所示：
+
+![ZYNQ OCM/DDR的地址映射](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/chiplink-addr-map.png)
+
+其中OCM全称是 **On-Chip-Memory**，内置在ZYNQ芯片中，可以作为PS侧双核CPU之间低访问延迟的共享内存，同时OCM也是双核CPU执行APP的内存，**所以需要确保三期SoC的访存地址被正确映射到DDR空间，否则一旦重映射到OCM空间，可能会导致PS侧运行的程序被覆盖掉**。从上图我们可以看到，ZYNQ支持`0x0010_0000 - 0x3FFF_FFF`共1GB的地址范围，而我们提供给大家的ZYNQ核心板只板载了512MB的DDR3。为了简化实现，我们将三期SoC起始地址为`0x8000_0000`的访存请求 **重映射** 到`0x0010_0000`，这样只要保证PS端的CPU需要访问DDR时其访存地址与SoC的访存地址不重合即可，重映射代码如下：
+
+```verilog
+assign io_axi4_0_awaddr = aw_addr - 32'h8000_0000 + 32'h10_000;
+assign io_axi4_0_araddr = ar_addr - 32'h8000_0000 + 32'h10_000;
+assign chiplink_cpu_int = 1'b0;
+```
+
+这样将`chiplink_ctrl`添加到 **Block Design** 中并连接到ZYNQ系统上就完成了硬件设计，最终搭建好的硬件系统如下图所示：
+
+![ChipLink硬件系统Block Design](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/chiplink-bd.png)
+
+
+其中，**ZYNQ Processing System** 使能了AXI HP从机接口、`FCLK_CLK0`、`FCLK_CLK1`时钟输出和`FCLK_RESET0_N`复位输出。其中`FCLK_CLK0`设置时钟频率为25MHz，用于连接`chiplink_ctrl`的输入时钟。`FCLK_CLK1`设置时钟频率为100MHz，用于 **AXI Innterconnect** 进行AXI主机通信。另外两个时钟分别接入到各自的 **Processor System Reset** 产生复位信号。最后再接入一个ILA核以采样`chiplink_ctrl`的AXI4信号。
+
+之后还需要对`chiplink_ctrl`模块的管脚进行约束，由于`chiplink_ctrl`模块的管脚数比较多，需要仔细检查并确认。另外三期SoC采用的是110nm工艺，管脚的电平标准需要约束为LVCMOS33。最后还需要给`chiplink_ctrl`管脚下时钟约束，具体约束如下图所示：
+
+![ChipLink时序约束](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/chiplink-contr.png)
+
+之后使用Vivado进行综合，布线。布线后Vivado软件报了3个时序上的Critical Warning。查阅Xilinx的 **UG906** 手册并对设计代码进行分析，项目组认为报这三个Warning主要是因为 **PS侧MCM/PLL处产生的时钟源没法在PL侧定义共有路径**，而这个对设计没有影响，可以忽略掉。
+
+![3个时序上的Critical Warning](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/chiplink-log.png)
+
+在确认布线后Warning可以被忽略后，需要生成bitstream文件并导出硬件到Vitis IDE中，并基于该导出的硬件平台创建一个名为`Hello World`的APP工程。`Hello World`工程源码如下图所示：
+
+```c
+#include <stdio.h>
+#include "platform.h"
+#include "xil printf.h"
+int main()
+{
+  init_platform();
+  print("Hello World\n\r");
+  print("Successfully ran Hello World application");
+  printf("main addr: %p\n", main);
+  while(1);
+  cleanup_platform();
+  return 0;
+}
+```
+
+该`Hello World`测试程序主要用于初始化PS侧的系统，给PL侧提供复位/时钟信号并进行串口打印测试，最后循环在`while(1)`处等待接收PL侧发送的DDR访问请求。
+
+接着对板卡上电，在Vitis IDE中使用JTAG调试器下载程序，并在SoC上运行mem加载的memtest程序`memtest-mem.bin`，最后使用ILA抓取上电复位后的波形。由于SoC的复位异步于FPGA核心板，所以ILA需要多次触发尝试才能够采样到正确的波形，具体波形如下图所示：
+
+![AXI4 ILA协议采样](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/chiplink-axi4-ila.png)
+
+同时使用ILA抓取了`chiplink_ctrl`的接口波形，其一次读请求的波形如下图所示：
+
+![ChipLink控制器 ILA采样1](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/chiplink-ctrl-ila-1.png)
+
+![ChipLink控制器 ILA采样2](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/chiplink-ctrl-ila-2.png)
+
+我们将上面ILA采样的波形与VCS仿真中的做对比，以验证我们发送给`chiplink_ctrl`的请求得到了正确处理，其中VCS仿真一次ChipLink读请求的波形如下图所示：
+
+![ChipLink控制器 VCS仿真](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/chiplink-ctrl-vcs.png)
+
+经过对比，我们确认了ILA采样的`chiplink_ctrl`波形与 **VCS上仿真的一致**，`chiplink_ctrl`能够正确处理SoC的访存请求。
+
+## 其他资源
+<!-- 对接PPT内容，你可以从这里获得。 -->
 ### 硅后测试
 ## 勘误与致谢
 项目组鼓励和欢迎同学们对本文档提出宝贵的意见和反馈，目前项目组使用 [Github issue](https://github.com/oscc-ysyx-web-project/ysyx-website/issues) 来追踪这些反馈，本文档致力于遵守开源软件开发中公认的最佳实践，所以当你觉得有提出的必要时，请大胆地发起issue吧！:smile:
@@ -676,3 +847,4 @@ http://47.111.11.73/docs/boards/fpga/zdyz_linhanz(V2).html
 ### 致谢列表
 - 感谢粟金伦同学在测试板卡时发现的板卡插接深度不够可能导致板卡信号断路问题，现在已经补充到相关注意事项中。
 - 感谢粟金伦同学建议使用 PuTTY/MobaXterm 软件来做板卡测试流程演示用的串口上位机软件，本文档已经使用 MobaXterm 重写了有关章节。
+- 在FPGA开发章节介绍时使用了正点原子公开的 **ZYNQ领航者V2开发板** 在线文档资源，对此表示感谢。
