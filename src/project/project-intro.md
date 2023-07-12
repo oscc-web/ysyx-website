@@ -110,7 +110,7 @@ copyright: false
 </el-col>
 </el-row>
 
-![](/res/images/project/project-exchange.png)
+![](/res/images/project/project-info-exchange.png)
 
 ### 能力提升
 
