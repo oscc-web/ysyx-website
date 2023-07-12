@@ -18,7 +18,7 @@
                                             'margin-left': sponsorItem.margin}" />
                     </div>
                     <div v-else-if="i === 3">
-                        <img src="/res/images/logo-bosc.png"
+                        <img src="/res/images/logo/logo-bosc.png"
                             :style="{
                             'max-width':  sponsorObjVal.width,
                             'max-height': sponsorObjVal.height,

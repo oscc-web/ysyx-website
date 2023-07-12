@@ -62,13 +62,13 @@ feed: false
 <el-row align="middle"
         :gutter="20">
     <el-col :span="8">
-        <img src="/res/images/poster-1.png" />
+        <img src="/res/images/temp/poster-1.png" />
     </el-col>
     <el-col :span="8">
-        <img src="/res/images/poster-2.png" />
+        <img src="/res/images/temp/poster-2.png" />
     </el-col>
     <el-col :span="8">
-        <img src="/res/images/poster-3.png" />
+        <img src="/res/images/temp/poster-3.png" />
     </el-col>
 </el-row>
 ::: -->
