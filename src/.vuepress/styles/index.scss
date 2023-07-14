@@ -1,5 +1,8 @@
 // place your custom styles here
 .navbar .nav-links,
+[data-theme="dark"] svg .clx {
+    fill: hsl(0, 0%, 70%) !important;
+}
 .dropdown-wrapper .nav-link {
     font-size: 0.95rem;
 }

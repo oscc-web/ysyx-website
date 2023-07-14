@@ -1,34 +1,38 @@
 <template>
-    <el-row align="middle"
-            :gutter="10">
-        <el-col v-for="(sponsorItem, i) in sponsorItemList"
-                :key="i"
-                :span="sponsorColVal">
-            <div :style="{ '--scale': sponsorItem.scale }">
-                <a :href="sponsorItem.link"
-                    target="_blank">
-                    <div v-if="i !== 3" >
-                        <component :is="sponsorItem.elem"
-                                   :title="sponsorItem.name"
-                                   :style="{'max-width':  sponsorObjVal.width,
-                                            'max-height': sponsorObjVal.height,
-                                            'transform':  'scale(var(--scale))',
-                                            'width':      '100%',
-                                            'height':     '100px',
-                                            'margin-left': sponsorItem.margin}" />
-                    </div>
-                    <div v-else-if="i === 3">
-                        <img src="/res/images/logo/logo-bosc.png"
-                            :style="{
-                            'max-width':  sponsorObjVal.width,
-                            'max-height': sponsorObjVal.height,
-                            'transform':  'scale(var(--scale))',
-                            'pointer-events': 'none'}" />
-                    </div>
-                </a>
-            </div>
-        </el-col>
-    </el-row>
+    <div style="margin-top:100px; text-align:center;">
+        <el-divider />
+        <el-text style="font-size:1.5rem; color:var(--text-color);">合作伙伴</el-text>
+        <el-row :gutter="10"
+                 justify="center"
+                align="middle">
+            <el-col v-for="(sponsorItem, i) in sponsorItemList"
+                   :key="i"
+                   :span="sponsorObj.col"
+                    style="text-align:center">
+                <div :style="{ '--scale': sponsorItem.scale }">
+                    <a :href="sponsorItem.link"
+                        target="_blank">
+                        <div v-if="sponsorItem.name === '鹏城实验室' ||
+                                   sponsorItem.name === '北京开源芯片研究院'">
+                            <img :src="sponsorItem.image"
+                                 :style="{
+                                    'max-width': sponsorObj.width,
+                                    'transform': 'scale(var(--scale))',
+                                    'pointer-events': 'none'}" />
+                        </div>
+                        <div v-else>
+                            <component :is="sponsorItem.elem"
+                                       :title="sponsorItem.name"
+                                       :style="{'max-width': sponsorObj.width,
+                                                'transform': 'scale(var(--scale))',
+                                                'width': '100%',
+                                                'height': '100px'}" />
+                        </div>
+                    </a>
+                </div>
+            </el-col>
+        </el-row>
+    </div>
 </template>
 
 <script setup>
@@ -41,10 +45,9 @@
     import YouDao from "./sponsors/YouDao.vue";
     import CRVA from "./sponsors/CRVA.vue";
 
-    import { onMounted, onUnmounted, ref, shallowRef } from "vue";
+    import { onMounted, onUnmounted, ref } from "vue";
 
-    const sponsorItemList = shallowRef([]);
-    sponsorItemList.value =[{
+    const sponsorItemList = ref([{
         name: "中国科学院大学",
         elem: UCAS,
         scale: 0.8,
@@ -57,14 +60,15 @@
     }, {
         name: "鹏城实验室",
         elem: PCL,
-        scale: 1.0,
+        scale: 0.8,
         link: "https://www.pcl.ac.cn",
-        margin: "40px"
+        image: "/res/images/logo/logo-pcl.png"
     }, {
         name: "北京开源芯片研究院",
         elem: BOSC,
         scale: 0.9,
-        link: "https://www.bosc.ac.cn"
+        link: "https://www.bosc.ac.cn",
+        image: "/res/images/logo/logo-bosc.png"
     }, {
         name: "上海处理器技术创新中心",
         elem: SHIC,
@@ -79,19 +83,18 @@
         name: "有道",
         elem: YouDao,
         scale: 0.6,
-        link: ""
+        link: "https://www.youdao.com"
     }, {
         name: "中国开放指令生态联盟",
         elem: CRVA,
         scale: 1.0,
         link: "http://crva.ict.ac.cn"
-    }];
-
-    const sponsorColVal = ref(8);
-    const sponsorObjVal = ref({
-        width:  "90%",
-        height: "90%"
+    }]);
+    const sponsorObj = ref({
+        col: 8,
+        width: "90%"
     });
+
     onMounted(() => {
         getWindowWidth();
         window.addEventListener("resize", getWindowWidth);
@@ -100,19 +103,9 @@
         window.removeEventListener("resize", null);
     });
     const getWindowWidth = () => {
-        sponsorColVal.value = (window.innerWidth >= 1200) ? 8  :
-                              (window.innerWidth >=  800) ? 12 : 24;
-        sponsorObjVal.value = (window.innerWidth >= 1200) ?
-                              { width:"90%", height: "90%"} :
-                              (window.innerWidth >=  800) ?
-                              { width:"70%", height: "70%"} :
-                              { width:"50%", height: "50%"};
-        console.log(sponsorObjVal.value);
+        sponsorObj.value.col = (window.innerWidth >= 1200) ? 8  :
+                               (window.innerWidth >=  800) ? 12 : 24;
+        sponsorObj.value.width = (window.innerWidth >= 1200) ? "90%" :
+                                 (window.innerWidth >=  800) ? "80%" : "70%";
     }
 </script>
-
-<style lang="scss" scope>
-    [data-theme="dark"] svg .clx {
-        fill: hsl(0, 0%, 70%) !important;
-    }
-</style>
