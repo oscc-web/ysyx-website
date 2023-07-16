@@ -45,9 +45,9 @@
     import YouDao from "./sponsors/YouDao.vue";
     import CRVA from "./sponsors/CRVA.vue";
 
-    import { onMounted, onUnmounted, ref } from "vue";
+    import { onMounted, onUnmounted, ref, shallowRef } from "vue";
 
-    const sponsorItemList = ref([{
+    const sponsorItemList = shallowRef([{
         name: "中国科学院大学",
         elem: UCAS,
         scale: 0.8,
