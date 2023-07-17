@@ -3,6 +3,10 @@ title: "外部委托"
 copyright: false
 ---
 
+## 香港科技大学（广州）
+
+香港科技大学（广州）微电子学域[张弘策老师](https://hongcezh.people.ust.hk/)现招收2024年秋季入学博士研究生从事处理器形式化验证方向的研究工作，研究生奖学金待遇与香港一致。能够熟练使用Chisel者优先。有意向的同学请发送简历至邮箱：hongcezh@ust.hk
+
 ## 北京开源芯片研究院
 
 ### <FontIcon icon="message" /> 企业介绍
