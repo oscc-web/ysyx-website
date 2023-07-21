@@ -11,7 +11,8 @@
     "build-deploy": "npm run build-deploy-pre; npm run build-local; npm run build-deploy-aft",
     "dev": "vuepress dev src",
     "deploy": "node ./deploy/index.mjs",
-    "clean": "vuepress dev src --clean-cache"
+    "clean": "vuepress dev src --clean-cache",
+    "update": "npx vp-update"
   },
   "devDependencies": {
     "@vuepress/client": "2.0.0-beta.60",
