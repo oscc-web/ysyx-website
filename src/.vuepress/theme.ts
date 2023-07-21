@@ -4,13 +4,13 @@ import { enSidebar, zhSidebar } from "./sidebar/index.js";
 
 export default hopeTheme({
     // 主题基本配置
-    hostname: "https://oscc-ysyx-web-project.github.io",
+    hostname: "https://xxx.github.io",
     author: {
         name: "Miao Yuyang",
         url: "https://myyerrol.github.io",
         email: "myyerrol@126.com"
     },
-    favicon: "/logo.png",
+    favicon: "/res/images/logo/logo.png",
 
     // 主题布局配置
     // 导航栏
@@ -20,8 +20,8 @@ export default hopeTheme({
         center: ["Links"],
         end: ["Language", "Repo", "Outlook", "Search"]
     },
-    logo: "/logo.png",
-    logoDark: "/logo.png",
+    logo: "/res/images/logo/logo.png",
+    logoDark: "/res/images/logo/logo.png",
     repo: "oscc-ysyx-web-project/ysyx-website",
     repoDisplay: false,
     repoLabel: "GitHub",
@@ -46,7 +46,7 @@ export default hopeTheme({
     editLink: false,
     docsRepo: "repo",
     docsBranch: "main",
-    docsDir: "src/",
+    docsDir: "src",
     // 页脚
     footer: "GPL协议 | 版权所有 © 2023-现在 一生一芯Web团队",
     // copyright: false,

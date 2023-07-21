@@ -10,7 +10,7 @@
             <stop offset="10%" stop-color="hsl(262, 40%, 50%)" />
             <stop offset="90%" stop-color="hsl(212, 60%, 45%)" />
         </linearGradient>
-        <image class="slogan-logo" href="/logo.png" x="-580" y="0" width="505" height="464"/>
+        <image class="slogan-logo" href="/res/images/logo/logo.png" x="-580" y="0" width="505" height="464"/>
         <g id="Layer_2" data-name="Layer 2">
             <g id="Layer_1-2" data-name="Layer 1">
                 <rect

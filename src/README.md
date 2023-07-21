@@ -1,8 +1,8 @@
 ---
 home: false
 heroText: "一生一芯"
-heroImage: "/logo.png"
-heroImageDark: "/logo.png"
+heroImage: "/res/images/logo/logo.png"
+heroImageDark: "/res/images/logo/logo.png"
 heroAlt: "项目标志"
 tagline: "从零开始创造属于你的开源处理器芯片"
 actions:
