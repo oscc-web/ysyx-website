@@ -17,6 +17,7 @@
   "devDependencies": {
     "@vuepress/client": "2.0.0-beta.60",
     "@vuepress/plugin-register-components": "2.0.0-beta.60",
+    "colors": "^1.4.0",
     "unplugin-auto-import": "^0.16.4",
     "unplugin-icons": "^0.16.3",
     "unplugin-vue-components": "^0.25.1",
@@ -28,7 +29,6 @@
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.1.0",
-    "colors": "^1.4.0",
     "element-plus": "^2.3.6",
     "qrcode.vue": "^3.4.0"
   },
