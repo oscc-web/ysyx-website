@@ -28,14 +28,14 @@
         height: 45px;
         font-weight: bold;
         font-size: 16px;
+        background-color: hsl(0, 80%, 50%);
     }
     .button-solid {
-        background-color:hsl(212, 60%, 40%);
+        background-color:hsl(220, 60%, 40%);
         color:white;
     }
     .actions {
         width: 100%;
-        // max-width: 42em;
         display: flex;
         flex-direction: row;
         justify-content: center;
