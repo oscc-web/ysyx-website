@@ -22,7 +22,7 @@ toc: false
 
 ![包装和配件内容](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/res/v1p2/package-cont.png)
 
-然后请同学们先打开 [三期处理器核序号和学号对应表(student-id.md)](https://github.com/maksyuki/StarrySky-res/blob/main/software/V1.2/student-id.md)并确认自己核所在的 **`CHIP`** 序号。需要这个步骤是因为星空V1.2版本的板卡上面搭载有**三期第一批的4个SoC**，需要确保同学们拿到的板卡上的SoC和自己核所在的SoC是同一个。确认的具体步骤如下：
+然后请同学们先打开 [三期处理器核序号和学号对应表(student-id.md)](https://github.com/maksyuki/StarrySky-res/blob/main/software/v1p2/student-id.md)并确认自己核所在的 **`CHIP`** 序号。需要这个步骤是因为星空V1.2版本的板卡上面搭载有**三期第一批的4个SoC**，需要确保同学们拿到的板卡上的SoC和自己核所在的SoC是同一个。确认的具体步骤如下：
 
 比如学号为 **`ysyx_219999`** 的核，查 ***三期处理器核序号和学号对应表*** 发现该核位于 **`CHIP2`** 上，接着需要确认板卡上SoC的序号是否也是 **`2`**，方法是看SoC表面丝印编号的最后一个数是否是 **`y2`**：
 
@@ -182,7 +182,7 @@ FPGA核心板PS侧的BANK有BANK502，BANK500，BNAK501。其中BANK502电平标
 - 使能PLL输出，选择PLL输出核时钟的频率
 - 选通特定学号的处理器核
 
-在做三期SoC的后端集成时，项目组给每个同学的核都分配了一个序号，可以通过这个序号选通到同学们自己的核。首先请同学们先打开 [三期处理器核序号和学号对应表(student-id.md)](https://github.com/maksyuki/StarrySky-res/blob/main/software/V1.2/student-id.md)，**然后按照自己的学号来查找核序号是多少**，比如学号为`ysyx_210000`的核序号为`1`。
+在做三期SoC的后端集成时，项目组给每个同学的核都分配了一个序号，可以通过这个序号选通到同学们自己的核。首先请同学们先打开 [三期处理器核序号和学号对应表(student-id.md)](https://github.com/maksyuki/StarrySky-res/blob/main/software/v1p2/student-id.md)，**然后按照自己的学号来查找核序号是多少**，比如学号为`ysyx_210000`的核序号为`1`。
 
 现在解释下 **微动拨码开关** 每个拨码位的功能定义，板卡上共有两个微动拨码开关，其中左边的拨码开关有4位拨码，是用来 **设置时钟输出状态的**。右边的拨码开关有6位拨码，是用来 **设置核选通状态的**：
 
@@ -429,7 +429,7 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
 
 ![识别出U盘](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/tool/hfp-2.png)
 
-接着将想要烧写的bin格式的应用程序拷贝到 `YSYX-HFPLnk` 这个U盘中，然后等待拷贝完成。在拷贝的同时板载烧写器旁的蓝色LED会一直闪烁。当拷贝完成时，蓝色LED会常亮。项目组已经在 [StarrySky-res](https://github.com/maksyuki/StarrySky-res) 中 `software/V1.2` 目录下提前准备了一些已经编译好的测试程序，可以供同学们拷贝到 `YSYX-HFPLnk` 中进行烧写。当拷贝完成后，程序烧写也就完成了，此时关闭板卡电源，并重新将 **`HFP-MODE`** 的滑动开关拨码到右侧，然后上电就可以运行新的程序了。
+接着将想要烧写的bin格式的应用程序拷贝到 `YSYX-HFPLnk` 这个U盘中，然后等待拷贝完成。在拷贝的同时板载烧写器旁的蓝色LED会一直闪烁。当拷贝完成时，蓝色LED会常亮。项目组已经在 [StarrySky-res](https://github.com/maksyuki/StarrySky-res) 中 `software/v1p2` 目录下提前准备了一些已经编译好的测试程序，可以供同学们拷贝到 `YSYX-HFPLnk` 中进行烧写。当拷贝完成后，程序烧写也就完成了，此时关闭板卡电源，并重新将 **`HFP-MODE`** 的滑动开关拨码到右侧，然后上电就可以运行新的程序了。
 
 ::: info 更新板载烧写器固件
 板载烧写器默认已经提前烧录有系统固件，一般使用是没有问题的，但有时候需要对固件进行更新以修复bug或者添加新的功能，这样就需要了解更新固件的方法。目前板载烧写器上使用的主控是CH32V103，这个MCU是支持ISP程序更新的，但是需要配合 **WCHISPTool** 一起使用。所以为了更新固件，首先需要安装 **WCHISPTool** 这个软件。同学们可以访问这个 [网址](https://www.wch.cn/download/WCHISPTool_Setup_exe.html) 来下载 **WCHISPTool** 并完成安装。
@@ -449,7 +449,7 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
 
 ![识别出CH32V103](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/tool/hfp-4.png)
 
-当识别出 `CH32V103` 后，同学们点击 ***用户程序文件*** 后的文件图标选择需要更新的固件 **(hex格式)**，项目组已经在 [StarrySky-res](https://github.com/maksyuki/StarrySky-res) 中 `firmware/V1.2` 目录下准备好了该固件。当选择完需要更新的固件后，点击 ***下载*** 按钮并等待更新完成即可：
+当识别出 `CH32V103` 后，同学们点击 ***用户程序文件*** 后的文件图标选择需要更新的固件 **(hex格式)**，项目组已经在 [StarrySky-res](https://github.com/maksyuki/StarrySky-res) 中 `firmware/v1p2` 目录下准备好了该固件。当选择完需要更新的固件后，点击 ***下载*** 按钮并等待更新完成即可：
 
 ![下载固件](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/tool/hfp-5.png)
 
@@ -682,14 +682,14 @@ SoC底板上设计有一个标准204P的SODIMM插座，用于连接FPGA核心板
 ::::
 
 ### FPGA开发
-这个章节主要将会介绍如何设计并驱动板卡FPGA端的众多外设，该部分代码在 **StarrySky-res** 仓库中的`fpga/V1.2`里面([代码地址](https://github.com/maksyuki/StarrySky-res/tree/main/fpga/V1.2))。项目组使用的FPGA开发工具软件版本是 **`Vivado 2022.2`** 和 **`Vitis IDE 2022.2`**。
+这个章节主要将会介绍如何设计并驱动板卡FPGA端的众多外设，该部分代码在 **StarrySky-res** 仓库中的`fpga/v1p2`里面([代码地址](https://github.com/maksyuki/StarrySky-res/tree/main/fpga/v1p2))。项目组使用的FPGA开发工具软件版本是 **`Vivado 2022.2`** 和 **`Vitis IDE 2022.2`**。
 
 ::: info Vivado+Vitis 软件使用和ZYNQ开发入门
 本章节内容需要同学们熟练掌握 **Vivado+Vitis** 工具的使用和ZYNQ开发流程，网上已经有很多比较好的，公开的ZYNQ入门学习资料了，比如 [ZYNQ领航者V2开发板](http://47.111.11.73/docs/boards/fpga/zdyz_linhanz(V2).html)，有需要的同学可以自己下载下来学习。
 :::
 
 #### PL侧外设集合测试1
-这里主要介绍I2C，SPI，LED，KEY和UCLK这5个PL外设的功能。该部分代码在`fpga/V1.2/pl_i2c_spi_led_uclk`，具体实现功能：使用I2C总线访问并配置RTC芯片PCF8563，然后不停读取其三个时间寄存器的值，最后使用ILA对该寄存器值进行采样查看。使用SPI总线发送 **`0x9F`** 指令给NOR Flash，并使用ILA对读取的设备ID进行检查。LED会每隔1s翻转闪烁，按键则用作系统复位信号`rst_n`输入，另外还会在UCLK引脚上输出 **1Hz的波形**。
+这里主要介绍I2C，SPI，LED，KEY和UCLK这5个PL外设的功能。该部分代码在`fpga/V1p2/pl_i2c_spi_led_uclk`，具体实现功能：使用I2C总线访问并配置RTC芯片PCF8563，然后不停读取其三个时间寄存器的值，最后使用ILA对该寄存器值进行采样查看。使用SPI总线发送 **`0x9F`** 指令给NOR Flash，并使用ILA对读取的设备ID进行检查。LED会每隔1s翻转闪烁，按键则用作系统复位信号`rst_n`输入，另外还会在UCLK引脚上输出 **1Hz的波形**。
 
 同学们基于项目组提供的代码和约束文件自行创建Vivado工程并生成bitstream文件，不过在下载程序之前还需要对板卡进行一些硬件操作：
 - 将JTAG调试器插入到板卡上的牛角插座中，牛角插座有防呆设计，**仅支持单方向输入**，插入时需要让插头的凸出和插座缺口恰好重合。最后将JTAG调试器另一端插入到PC的USB接口上 **(需要在板卡未上电时操作)**。
@@ -736,7 +736,7 @@ SoC底板上设计有一个标准204P的SODIMM插座，用于连接FPGA核心板
 
 
 #### PL侧EEPROM测试
-这里主要介绍使用I2C总线对EEPROM芯片AT24C64进行读写测试，并使用ILA采样相关寄存器的值。该部分代码在`fpga/V1.2/pl_eeprom`。另外所有滑动开关的设置和上面 [PL侧外设集合测试1](#pl侧外设集合测试1) 的完全一致。
+这里主要介绍使用I2C总线对EEPROM芯片AT24C64进行读写测试，并使用ILA采样相关寄存器的值。该部分代码在`fpga/v1p2/pl_eeprom`。另外所有滑动开关的设置和上面 [PL侧外设集合测试1](#pl侧外设集合测试1) 的完全一致。
 
 同学们需要自行创建完工程并生成bitstream文件，并将bistream下载到板卡上。成功下载完后Vivado会弹出ILA波形窗口，此时需要切换到 **hw_ila_1** 这个窗口，该信号窗口中显示有EERPOM控制器相关信号。为了捕获读写EEPROM芯片的波形，需要将`u_e2prom_ctrl/i2c_data_r[7:0]=215`作为触发条件，并点击 **运行采样** 按钮，此时ILA会显示正等待触发：
 
@@ -747,7 +747,7 @@ SoC底板上设计有一个标准204P的SODIMM插座，用于连接FPGA核心板
 ![EEPROM ILA采样结果](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/fpga/v1p2/pl-eeprom-ila-2.png)
 
 #### PL侧外设集合测试2
-这里主要测试的是VGA，PS/2和WS2812C这3个PL外设的功能。该部分代码在`fpga/V1.2/pl_vga_ps2_ws2812`，具体实现功能：驱动VGA在屏幕上显示彩条，当按下PS/2键盘的 **`A`** 键后，屏幕显示绿色，而当按下键盘上的其他按键后，屏幕会恢复显示彩条。另外板卡上还会驱动WS2812C显示4种不同的颜色。运行该测试需要在板卡上插入VGA数据线和支持PS/2模式的键盘：
+这里主要测试的是VGA，PS/2和WS2812C这3个PL外设的功能。该部分代码在`fpga/v1p2/pl_vga_ps2_ws2812`，具体实现功能：驱动VGA在屏幕上显示彩条，当按下PS/2键盘的 **`A`** 键后，屏幕显示绿色，而当按下键盘上的其他按键后，屏幕会恢复显示彩条。另外板卡上还会驱动WS2812C显示4种不同的颜色。运行该测试需要在板卡上插入VGA数据线和支持PS/2模式的键盘：
 
 ![VGA和PS/2线与板卡连接](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/fpga/v1p2/pl-vga-kdb.png)
 
