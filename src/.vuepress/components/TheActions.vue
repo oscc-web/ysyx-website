@@ -37,13 +37,13 @@
     .button {
         height: 45px;
         font-weight: bold;
-        font-size: 16px;
+        font-size: 19px;
         background-color: hsl(0, 80%, 50%);
     }
     .button-solid {
-        width: 100%;
-        background-color:hsl(220, 60%, 40%);
-        color:white;
+        width: 100% !important;
+        background-color: hsl(220, 60%, 40%);
+        color: white;
     }
     .actions {
         width: 100%;
@@ -53,11 +53,10 @@
         margin: 1rem 0;
         & > * {
             margin: 0.5rem;
-            font-size: 16px;
             flex-grow: 1;
             max-width: 8em;
             @media (min-width: 720px) {
-                font-size: 1.2em;
+                font-size: 19px;
             }
         }
     }
