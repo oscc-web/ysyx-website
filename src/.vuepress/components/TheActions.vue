@@ -16,11 +16,13 @@
                       font-size:14px;">PDF下载
             </a>
         </div>
-        <el-button class="button"
+        <div>
+            <el-button class="button"
                    size="large"
                    type="info"
                    @click="jumpToSignup">报名参与
-        </el-button>
+            </el-button>
+        </div>
     </div>
 </template>
 
@@ -35,28 +37,27 @@
 
 <style lang="scss" scoped>
     .button {
+        width: 100%;
         height: 45px;
         font-weight: bold;
-        font-size: 19px;
+        font-size: 16px;
         background-color: hsl(0, 80%, 50%);
     }
     .button-solid {
-        width: 100% !important;
         background-color: hsl(220, 60%, 40%);
         color: white;
     }
     .actions {
-        width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: center;
         margin: 1rem 0;
-        & > * {
+        & button {
             margin: 0.5rem;
             flex-grow: 1;
-            max-width: 8em;
+            min-width: 8em;
             @media (min-width: 720px) {
-                font-size: 19px;
+                font-size: 1.2em;
             }
         }
     }
