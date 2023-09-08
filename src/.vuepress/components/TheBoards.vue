@@ -33,7 +33,7 @@
     let boardURL = ref("boards/");
     let boardItemList = ref([]);
     boardItemList.value = [{
-        image: "/res/images/board/board-1.png",
+        image: "/res/images/board/res/v1p2/board.png",
         title: "标题：星空 V1.2",
         funcs: "简介：主要面向一生一芯三期的板卡",
         link:  "board-1/"
