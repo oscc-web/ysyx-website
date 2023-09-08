@@ -1,11 +1,21 @@
 <template>
     <div class="actions">
-        <el-button class="button button-solid"
-                   size="large"
-                   type="default"
-                   style="margin-right:30px;"
-                   @click="jumpToProjectInfo">项目介绍
-        </el-button>
+        <div style="display:flex;
+                    flex-direction:column;
+                    align-items:center;
+                    margin-right:30px;">
+            <el-button class="button button-solid"
+                    size="large"
+                    type="default"
+                    @click="jumpToProjectInfo">项目介绍
+            </el-button>
+            <a href="/res/files/ysyx.pdf"
+               target="_blank"
+               style="margin-top:5px;
+                      font-weight:bold;
+                      font-size:14px;">PDF下载
+            </a>
+        </div>
         <el-button class="button"
                    size="large"
                    type="info"
@@ -31,6 +41,7 @@
         background-color: hsl(0, 80%, 50%);
     }
     .button-solid {
+        width: 100%;
         background-color:hsl(220, 60%, 40%);
         color:white;
     }
