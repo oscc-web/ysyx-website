@@ -47,6 +47,7 @@
         background-color: hsl(220, 60%, 40%);
         color: white;
     }
+
     .actions {
         display: flex;
         flex-direction: row;
