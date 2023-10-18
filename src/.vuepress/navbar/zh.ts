@@ -22,20 +22,18 @@ export const zhNavbar = navbar([
         text: "学习记录",
         link: "https://docs.qq.com/sheet/DT29weHpIRWNnYlFl?tab=BB08J2"
     }, {
-        text: "流片进度",
-        link: "/tapout/"
-    }, {
-        text: "讨论区",
-        link: "/forum/"
+        text: "芯片板卡",
+        prefix: "/chip/",
+        children: ["tapout/",
+                   "board/official/"]
     },
-    zhBoard,
     {
         text: "兴趣小组",
         link: "/sig/"
     }, {
         text: "推荐&招聘",
         prefix: "/job/",
-        children: ["job-team.md",
+        children: ["job-team",
                    "job-company"]
     }, {
         text: "联系我们",
