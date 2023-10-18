@@ -9,5 +9,5 @@ export default defineClientConfig({
         Object.keys(ElementPlusIconsVue).forEach(key => {
             app.component(key, ElementPlusIconsVue[key]);
         });
-    },
+    }
 });
