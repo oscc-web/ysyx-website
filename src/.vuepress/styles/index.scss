@@ -10,15 +10,18 @@
 .navbar .site-name {
     display: none;
 }
-.home-page .theme-hope-content {
-    max-width: var(--home-page-width);
-}
-.home-page .page-title {
-    display: none;
-}
-.home-page .breadcrumb {
-    margin-bottom: 35px;
-}
 [data-theme="dark"] svg .clx {
     fill: hsl(0, 0%, 70%) !important;
+}
+.home {
+    .theme-hope-content {
+        max-width: var(--home-page-width);
+    }
+    .page-title,
+    .hero-info-wrapper {
+        display: none;
+    }
+    .breadcrumb {
+        margin-bottom: 35px;
+    }
 }
