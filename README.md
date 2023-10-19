@@ -10,6 +10,9 @@
     <a title="Project Version">
         <img alt="Project Version" src="https://img.shields.io/badge/version-1.0.0-brightgreen" />
     </a>
+    <a title="Node Version" target="_blank" href="https://nodejs.org">
+        <img alt="Node Version" src="https://img.shields.io/badge/Node-%3E%3D16.19.1-blue" />
+    </a>
     <a title="License" target="_blank" href="https://github.com/oscc-web/ysyx-website/blob/master/LICENSE">
         <img alt="License" src="https://img.shields.io/github/license/oscc-web/ysyx-website.svg" />
     </a>
@@ -36,7 +39,7 @@ $> cd your-workspaces
 $> git clone git@github.com:oscc-web/ysyx-website.git
 ```
 
-### 配置工程
+### 更新依赖
 
 ```sh
 $> ./setup.sh
@@ -46,4 +49,11 @@ $> ./setup.sh
 
 ```sh
 $> npm run dev
+```
+
+### 更新仓库
+
+```sh
+$> cd your-workspaces/ysyx-website
+$> git pull
 ```
