@@ -22,7 +22,7 @@ export const zhNavbar = navbar([
         text: "学习记录",
         link: "https://docs.qq.com/sheet/DT29weHpIRWNnYlFl?tab=BB08J2"
     }, {
-        text: "芯片板卡",
+        text: "流片&板卡",
         prefix: "/chip/",
         children: ["tapout/",
                    "board/official/"]
