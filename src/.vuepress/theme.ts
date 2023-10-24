@@ -4,7 +4,7 @@ import { enSidebar, zhSidebar } from "./sidebar/index.js";
 
 export default hopeTheme({
     // 主题基本配置
-    hostname: "https://xxx.github.io",
+    hostname: "https://ysyx.oscc.cc",
     author: {
         name: "Miao Yuyang",
         url: "https://myyerrol.github.io",
