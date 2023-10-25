@@ -48,12 +48,19 @@ $> ./setup.sh
 ### 运行网站
 
 ```sh
-$> npm run dev
+$> npm run command -- dev
 ```
 
 ### 更新仓库
 
 ```sh
 $> cd your-workspaces/ysyx-website
+
 $> git pull
 ```
+
+## 感谢
+
+- [VuePress](https://vuepress.vuejs.org)
+- [VuePress Theme Hope](https://theme-hope.vuejs.press)
+- [Element Plus](https://element-plus.gitee.io/en-US)
