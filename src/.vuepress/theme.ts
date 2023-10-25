@@ -10,7 +10,7 @@ export default hopeTheme({
         url: "https://myyerrol.github.io",
         email: "myyerrol@126.com"
     },
-    favicon: "/res/images/logo/logo.png",
+    favicon: "/res/images/logo/ysyx.png",
 
     // 主题布局配置
     // 导航栏
@@ -20,8 +20,8 @@ export default hopeTheme({
         center: ["Links"],
         end: ["Language", "Repo", "Outlook", "Search"]
     },
-    logo: "/res/images/logo/logo.png",
-    logoDark: "/res/images/logo/logo.png",
+    logo: "/res/images/logo/ysyx.png",
+    logoDark: "/res/images/logo/ysyx.png",
     repo: "oscc-ysyx-web-project/ysyx-website",
     repoDisplay: false,
     repoLabel: "GitHub",

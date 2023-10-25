@@ -2,45 +2,41 @@ import { sidebar } from "vuepress-theme-hope";
 import { zhBoard } from "./zh-board";
 
 export const zhSidebar = sidebar({
-    "/project/project-intro.html": [{
+    "/project/intro": [{
         text: "",
         children: [""]
     }],
-    "/project/project-intro-past.html": [{
+    "/project/intro-past": [{
         text: "",
         children: [""]
     }],
     "/signup/": [{
         text: "",
-        children: ["README.md"]
+        children: [""]
     }],
-    "/achieve/achieve-teacher.html": [{
+    "/chip/board/official/": [{
         text: "",
         children: [""]
     }],
-    "/achieve/achieve-student.html": [{
+    "/chip/board/official/boards/": zhBoard,
+    "/cert/": [{
         text: "",
         children: [""]
-    }],
-    "/board/official/": [{
-        text: "",
-        children: ["README.md"]
     }],
     "/sig/": [{
         text: "",
-        children: ["README.md"]
+        children: [""]
     }],
     "/job/team.html": [{
         text: "",
         children: [""]
     }],
-    "/job/external/apply.html": [{
+    "/job/external/apply": [{
         text: "",
         children: [""]
     }],
-    "/job/external/contents.html": [{
+    "/job/external/contents": [{
         text: "",
         children: [""]
-    }],
-    "/board/official/boards/": zhBoard
+    }]
 });

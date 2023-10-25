@@ -28,7 +28,7 @@
 
 <script setup>
     const jumpToProjectInfo = () => {
-        window.location.href = "/project/project-intro.html";
+        window.location.href = "/project/intro.html";
     }
     const jumpToSignup = () => {
         window.location.href = "/signup/index.html";

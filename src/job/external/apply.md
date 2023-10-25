@@ -1,7 +1,6 @@
 ---
 title: "合作申请"
 copyright: false
-headerDepth: 1
 ---
 
 ## 合作须知
@@ -14,4 +13,3 @@ headerDepth: 1
 
 - 如果您计划通过“一生一芯”招收人才，请按格式填写附件0，并发送到指定邮箱 opensource-talents@bosc.ac.cn，我们将进一步审核并认真了解您的需求。[附件0：“一生一芯”企业委托招聘需求填写表](/res/files/附件0：“一生一芯”企业委托招聘需求填写表.xlsx)。
 - 如果有其他问题，亦可发邮件到 opensource-talents@bosc.ac.cn 进行详细咨询。
-

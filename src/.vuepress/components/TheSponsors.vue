@@ -62,13 +62,13 @@
         elem: PCL,
         scale: 0.8,
         link: "https://www.pcl.ac.cn",
-        image: "/res/images/logo/logo-pcl.png"
+        image: "/res/images/logo/pcl.png"
     }, {
         name: "北京开源芯片研究院",
         elem: BOSC,
         scale: 0.9,
         link: "https://www.bosc.ac.cn",
-        image: "/res/images/logo/logo-bosc.png"
+        image: "/res/images/logo/bosc.png"
     }, {
         name: "上海处理器技术创新中心",
         elem: SHIC,

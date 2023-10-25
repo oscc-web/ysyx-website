@@ -9,10 +9,10 @@ export const zhNavbar = navbar([
     }, {
         text: "关于项目",
         prefix: "/project/",
-        children: ["project-intro",
-                   "project-intro-past",
-                   "project-faq",
-                   "project-assistant"]
+        children: ["intro",
+                   "intro-past",
+                   "faq",
+                   "assistants"]
     }, {
         text: "报名参与",
         link: "/signup/"
@@ -25,8 +25,10 @@ export const zhNavbar = navbar([
         text: "流片&板卡",
         prefix: "/chip/",
         children: ["tapout/", "board/official/"]
-    },
-    {
+    }, {
+        text: "证书申请",
+        link: "/cert/"
+    }, {
         text: "兴趣小组",
         link: "/sig/"
     }, {
