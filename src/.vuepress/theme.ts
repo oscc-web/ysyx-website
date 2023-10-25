@@ -156,4 +156,4 @@ export default hopeTheme({
         seo: true,
         sitemap: true
     }
-});
+}, true);
