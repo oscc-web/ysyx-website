@@ -9,7 +9,7 @@
                     type="default"
                     @click="jumpToProjectInfo">项目介绍
             </el-button>
-            <a href="/res/files/ysyx.pdf"
+            <a href="/res/files/“一生一芯”计划.pdf"
                target="_blank"
                style="margin-top:5px;
                       font-weight:bold;

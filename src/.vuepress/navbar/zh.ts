@@ -24,8 +24,7 @@ export const zhNavbar = navbar([
     }, {
         text: "流片&板卡",
         prefix: "/chip/",
-        children: ["tapout/",
-                   "board/official/"]
+        children: ["tapout/", "board/official/"]
     },
     {
         text: "兴趣小组",
@@ -33,8 +32,11 @@ export const zhNavbar = navbar([
     }, {
         text: "推荐&招聘",
         prefix: "/job/",
-        children: ["job-team",
-                   "job-company"]
+        children: ["team",{
+            text: "外部委托",
+            prefix: "external/",
+            children: ["apply", "contents"]
+        }]
     }, {
         text: "联系我们",
         link: "/contact/"

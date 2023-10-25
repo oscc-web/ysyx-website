@@ -30,11 +30,15 @@ export const zhSidebar = sidebar({
         text: "",
         children: ["README.md"]
     }],
-    "/job/job-team.html": [{
+    "/job/team.html": [{
         text: "",
         children: [""]
     }],
-    "/job/job-company.html": [{
+    "/job/external/apply.html": [{
+        text: "",
+        children: [""]
+    }],
+    "/job/external/contents.html": [{
         text: "",
         children: [""]
     }],
