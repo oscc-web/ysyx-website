@@ -1,5 +1,5 @@
 <p align="center">
-    <img alt="Logo" src="https://github.com/oscc-web/ysyx-website-resources/blob/main/images/logo/logo.png" width="200">
+    <img alt="Logo" src="https://github.com/oscc-web/ysyx-website-resources/blob/main/images/logo/ysyx.png" width="200">
 </p>
 
 <h1>
