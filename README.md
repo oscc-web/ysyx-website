@@ -55,7 +55,6 @@ $> npm run command -- dev
 
 ```sh
 $> cd your-workspaces/ysyx-website
-
 $> git pull
 ```
 
