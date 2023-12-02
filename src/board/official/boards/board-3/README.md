@@ -44,7 +44,9 @@ toc: false
 
 星空开发板V2.1采用的是SoC底板+FPGA核心板的设计，FPGA核心板采用的是ZYNQ7020芯片，其中SoC底板板载资源如下图所示：
 
-![SoC底板板载资源](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/res/v1p2/board-func-color.png)
+![SoC底板板载资源1](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/res/v2p1/board-func-top-color.png)
+
+![SoC底板板载资源2](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/res/v2p1/board-func-bot-color.png)
 
 从上图可以看到，SoC部分的外设和接口基本上都分布在板卡的中下侧 **(紫色)**，而FPGA部分的PL和PS外设则主要分布在板子的上侧和两边 **(绿色和蓝色)**。外设和接口的详细介绍如下表所示：
 - SoC
@@ -159,32 +161,28 @@ FPGA核心板PS侧的BANK有BANK502，BANK500和BNAK501。其中BANK502电平标
 :::
 
 #### 硬件操作
-
 首先，同学们需要从 **网格防静电袋** 中拿出板卡，目前一生一芯SoC上是 **通过ChipLink接口访问FPGA端的DDR3颗粒来实现访存通路的**，所以需要配合一个FPGA核心板才能正确启动RT-Thread：
 
 ![一生一芯SoC支持的三种数据通路](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/res/v2p1/datapath.png)
 
-
-实际上板卡背面已经提前插入好了FPGA核心板，**不需要同学们自己安装了**。另外SoC板卡上还需要插入晶振才能正确工作，**这个晶振也已经提前插入到了板卡上的晶振插座中**，同学们只需要确认下即可。
+实际上板卡背面已经提前插入好FPGA核心板，只需要确认下即可。
 
 ::: info 安装/拆卸FPGA核心板
 本SoC配套的FPGA核心板是一种 [SoM(System on Module)](https://en.wikipedia.org/wiki/System_on_module)，SoM与SoC底板连接采用的是4个型号为DF40C-100DS的 **高速BTB连接器**。这种连接器常用于需要高频稳定传输的场合。默认FPGA核心板已经插入到连接器中，**一般不需要拆卸**。如果有需要安装和拆卸SoM，只要对准连接器并垂直板卡用力按下或者拔出即可。
 :::
 
-
-确认FPGA核心板正确插入后，硬件上还需要使用 **微动拨码开关** 正确设置SoC芯片的工作状态。具体来说需要三步：
-- 设置PLL输出核时钟的频率
+确认FPGA核心板正确插入后，硬件上还需要设置 **3个微动拨码开关** 才能让四期SoC正常工作。具体来说需要三步：
+- 设置PLL输出时钟的频率
 - 设置时钟树输出频率
 - 选通特定学号的处理器核
 
-
-拨码开关设置分成两部分，第一部分是设置PLL时钟使能位和PLL输出核的时钟频率，我们建议 **先将PLL输出核时钟频率设置成25MHz，并先从低频率开始测试**。当同学们的核能够在25MHz核时钟下跑通我们提供的测试程序后，可以再去尝试逐步提高处理器核时钟频率。现在介绍下拨码开关位和SoC上信号的对应关系，其中四期SoC的RCG **(全局时钟复位模块)** 如下图所示：
+先简单介绍下四期SoC的RCG **(全局时钟复位模块)**，该模块功能框图如下所示：
 
 ![四期SoC的RCG模块](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/res/v2p1/rcg-intro.png)
 
-其中拨码开关的 **PLL时钟使能位** 对应于上图左上角红框中的`clk_sel`。当置`clk_sel=1`时，处理器核时钟`clk_core`使用PLL的输出时钟，此时需要将拨码开关上的 **PLL时钟使能位** 设置为`ON`。当置`clk_sel=0`时，`clk_core`直接使用外部有源晶振时钟`sys_clk`，此时需要将拨码开关上的 **PLL时钟使能位** 设置为`OFF`。
+从上图可以看到，四期SoC共有3个时钟域，分别为 **处理器核时钟域(core_clk)**，**高速外设时钟域(hs_clk)**，**低速外设时钟域(ls_clk)**。其中高速外设时钟域恒定为100MHz，低速时钟域恒定为25MHz， 处理器核时钟会依照`pll_cfg[2:0]` 和 `clk_cfg[6:0]` 值的不同被设定为不同的频率。整个四期SoC时钟源由外置有源晶振提供，四期SoC设计上支持25MHz和100MHz两种频率的外置晶振输入，其中25MHz是正常工作模式下的时钟输入源，100MHz是PLL工作异常下的旁路时钟输入源。另外每个时钟域均通过两级同步器产生稳定的复位释放信号。
 
-另外 **PLL输出时钟频率选择位** 对应于上图左上角红框中的`pll_cfg[2:0]`，用于设置PLL输出时钟的频率，也就是处理器核时钟频率。**拨码开关位和PLL输出核时钟频率对应关系** 如下表所示：
+拨码开关设置的第一步骤设置 **PLL输出时钟频率选择位**，该位对应于上图左上角红框中的`pll_cfg[2:0]`，该位用于设置PLL输出时钟的频率。此时需要将拨码开关上的对应位设置为`ON`。拨码开关设置的第二步是设置 **时钟树输出频率**，该位对应于上图下边中间的`clk_cfg[6:0]`，该位用于设置处理器核的工作时钟频率。具体 `pll_cfg[2:0]` 和 `clk_cfg[6:0]`的设置值与SoC各输出核时钟频率的对应关系见下表：
 
 <style>
 .freq_table_center
@@ -198,7 +196,7 @@ FPGA核心板PS侧的BANK有BANK502，BANK500和BNAK501。其中BANK502电平标
 
 <div class="freq_table_center">
 
-| PLL_CFG | CLK_CFG | 晶振输入频率 | PLL输出频率 | 处理器核时钟频率(core) | 高速时钟域频率(hs_peri) | 低速时钟域频率(ls_peri) |
+| PLL_CFG | CLK_CFG | 晶振输入频率 | PLL输出频率 | 处理器核时钟频率(core_clk) | 高速时钟域频率(hs_clk) | 低速时钟域频率(ls_clk) |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 | 3'b001 | 7'b0100010 | 25MHz  | 100MHz | 25MHz  | 100MHz | 25MHz |
 | 3'b001 | 7'b0100001 | 25MHz  | 100MHz | 50MHz  | 100MHz | 25MHz |
@@ -213,27 +211,21 @@ FPGA核心板PS侧的BANK有BANK502，BANK500和BNAK501。其中BANK502电平标
 
 </div>
 
-比如将PLL输出位拨码调整到`OFF-OFF-OFF`时，表示此时PLL输出核时钟频率为25MHz，事实上 ***拨码开关位功能定义*** 一图中的时钟设置就恰好是25MHz。
+比如当置`PLL_CFG[3:0] = 3'b111 CLK_FG[6:0] = 7'b0110000` 时，SoC使用25MHz外置晶振作为时钟输入源，处理器核时钟为400MHz，高速时钟域为100MHz，低速时钟域为25MHz。现在介绍下拨码开关位和SoC上信号的对应关系，并解释板卡上 **微动拨码开关** 每个拨码位的功能定义。从下图可以看到，板卡上一共有三个微动拨码开关，其中最上面的的拨码开关有4位拨码，用来 **设置时钟输出状态**，该拨码开关的低3位对应于前面介绍的`PLL_CFG[2:0]`。下面右边的拨码开关有8位拨码，用来 **设置时钟树输出频率**，该拨码开关的低7位对应于前面介绍的`CLK_CFG[6:0]`，下面左边的拨码开关有6位拨码，用来 **设置核选通状态**：
 
-
-
-在做四期SoC的后端集成时，项目组给每个同学的核都分配了一个序号，可以通过这个序号选通到同学们自己的核。首先请同学们先打开 [四期处理器核序号和学号对应表(student-id.md)](https://github.com/maksyuki/StarrySky-res/blob/main/software/v2p1/student-id.md)，**然后按照自己的学号来查找核序号是多少**，比如学号为`ysyx_040053`的核序号为`1`。
-
-现在解释下 **微动拨码开关** 每个拨码位的功能定义，板卡上共有三个微动拨码开关，其中最上面的的拨码开关有4位拨码，是用来 **设置时钟输出状态的**。下面左边的拨码开关有6位拨码，是用来 **设置核选通状态的**，下面右边的拨码开关有8位拨码，是用来 **设置时钟树输出频率的**：
-
-![拨码开关位功能定义](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/perip/v1p2/dip-switch-1.png)
+![拨码开关位功能定义](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/perip/v2p1/dip-switch-1.png)
 
 4位拨码开关功能定义 **(从左到右)**：
 - 未定义 **(1位)**
 - PLL输出时钟频率选择位 **(3位)**
 
+8位拨码开关功能定义 **(从左到右)**：
+- 未定义 **(1位)**
+- 时钟树配置位 **(7位)**
+
 6位拨码开关功能定义 **(从左到右)**：
 - 未定义 **(2位)**
 - 处理器核选择位 **(4位)**
-
-8位拨码开关功能定义 **(从左到右)**：
-- 未定义 **(1位)**
-- 处理器核选择位 **(7位)**
 
 ::: warning 核选通拨码注意事项
 - 4位拨码开关的最高位 **(左边数第一个)** 没有定义功能。
@@ -242,21 +234,22 @@ FPGA核心板PS侧的BANK有BANK502，BANK500和BNAK501。其中BANK502电平标
 :::
 
 ::: tip 时钟拨码开关设置
-上面 ***拨码开关位和核时钟频率对应表*** 中的**PLL输出时钟频率选择位** 设置的最低位对应于板卡上拨码开关的4号位。所以如果要设置PLL输出时钟频率为200MHz，则需要将PLL输出时钟选择位拨码调整到`ON-OFF-OFF` **(对应拨码开关的2位-3位-4位)**，如下图所示：
+- 测试时建议 **先将处理器核时钟频率设置成25MHz，并从低频率开始测试**。
+- 上面 ***拨码开关位和核时钟频率对应表*** 中的**PLL输出时钟频率选择位** 设置的最低位对应于板卡上拨码开关的4号位。所以如果要设置PLL输出时钟频率为200MHz，则需要将PLL输出时钟选择位拨码调整到`ON-OFF-OFF` **(对应拨码开关的2位-3位-4位)**，如下图所示：
 
 ![使能PLL并将时钟倍频到200MHz的拨码开关设置](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/perip/v1p2/dip-switch-2.png)
 :::
 
 ::: tip
 - 板卡上的机械拨码开关选用的是 1.27mm 间距的微动拨码开关。这种开关每一位拨码比较小，直接用手不好拨动，可以使用镊子，曲别针等带尖头的物品拨动，**当使用尖头物品请注意使用安全**。
-- 为了方便测量处理器核时钟的频率，板卡上面设计有 **核时钟四分频测试点** 和 **外置25MHz和100MHz晶振时钟测试点**：
+- 为了方便测量处理器核时钟的频率，板卡上面设计有 **核时钟四分频测试点** 和 **外置25MHz，100MHz晶振时钟测试点(100MHz晶振未使用)**：
 
 ![时钟频率测试点](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/perip/v2p1/osc-tp.png)
 
-**外置晶振时钟测试点** 是用来测试外置有源晶振是否能够正确起振用的，而 **核时钟四分频测试点** 则是用来测量核时钟频率的，身边有示波器的同学可以通过这个测试点来测量不同拨码设置下的PLL核时钟频率输出值，**要注意这个测试值是PLL核时钟的四分频值**。
+**外置晶振时钟测试点** 可用来测试外置有源晶振是否能够正确起振，**核时钟四分频测试点** 可用来确认核时钟工作频率，通过测量不同拨码设置下该测试点的频率输出值，可判断处理器核的时钟工作状态。**要注意这个测试值是处理器核时钟的四分频值**。
 :::
 
-拨码开关设置的第二部分是选通自己的处理器核，一生一芯四期将多个同学们的核集成到一个SoC中，并使用外部信号线的高低电平来选通不同的核，该外部信号线由拨码开关上的 **处理器核选择位** 实现，**处理器核选择位** 对应于下面四期SoC架构图中左边的`DIP Switch`：
+拨码开关设置的第三部分是选通处理器核，一生一芯四期将同学们的核集成到一个SoC中，并使用外部信号线的高低电平来选通不同的核，该外部信号线由拨码开关上的 **处理器核选择位** 实现，**处理器核选择位** 对应于下面四期SoC架构图中左边从上数第一个`DIP Switch`：
 
 ![四期SoC架构图](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/res/v2p1/soc-intro.png)
 
@@ -265,15 +258,15 @@ FPGA核心板PS侧的BANK有BANK502，BANK500和BNAK501。其中BANK502电平标
 - 由于项目调整，Ethernet MAC没有集成进本次班车。
 :::
 
-处理器核选择位的拨码仍然采用的是 **正逻辑**，结合下图中的例子更好理解。比如同学们要选择序号为3的核，此时拨码开关的各拨码位应拨到下图中的位置上：
+在做四期SoC的后端集成时，项目组给每个同学的核都分配了一个序号，可以通过这个序号选通到同学们自己的核。首先请同学们先打开 [四期处理器核序号和学号对应表(student-id.md)](https://github.com/maksyuki/StarrySky-res/blob/main/software/v2p1/student-id.md)，**然后按照自己的学号来查找核序号是多少**，比如学号为`ysyx_040053`的核序号为`1`。处理器核选择位的拨码仍然采用的是 **正逻辑**，结合下图中的例子更好理解。比如同学们要选择序号为 **12** 的核，此时拨码开关的各拨码位应拨到下图中的位置上：
 
-![拨码开关与序号对应关系](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/perip/v1p2/dip-switch-3.png)
+![拨码开关与序号对应关系](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/perip/v2p1/dip-switch-3.png)
 
-选通核的五位拨码开关位从左到右 **位权** 依次为`16, 8, 4, 2, 1`。这样选择序号为`1`的核，则其对应的编码为`5'b00001`。由于是 **正逻辑**，所以对应拨码位设置从左到右依次为`OFF-OFF-OFF-OFF-ON`。如果要选择序号为`6`的核，则其对应的编码为`5'b00110`，对应拨码位设置从左到右依次为`OFF-OFF-ON-ON-OFF`。
+选通核的四位拨码开关位从左到右 **位权** 依次为`8, 4, 2, 1`。这样选择序号为`1`的核，则其对应的编码为`4'b0001`。由于是 **正逻辑**，所以对应拨码位设置从左到右依次为`OFF-OFF-OFF-ON`。如果要选择序号为`6`的核，则其对应的编码为`4'b0110`，对应拨码位设置从左到右依次为`OFF-ON-ON-OFF`。
 
-再举个完整拨码开关设置的例子，比如要选择核序号为`7`的核进行测试，并希望处理器核时钟工作在25MHz，则拨码开关的设置应如下图所示：
+再举个完整拨码开关设置的例子，比如要选择核序号为`12`的核进行测试，并希望处理器核时钟工作在25MHz，则拨码开关的设置应如下图所示：
 
-![使能PLL，PLL输出核时钟为25MHz，选择核序号为7的拨码开关设置](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/perip/v1p2/dip-switch-4.png)
+![使能PLL，PLL输出核时钟为25MHz，选择核序号为7的拨码开关设置](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/perip/v2p1/dip-switch-4.png)
 
 ::: danger 拨码开关切换
 - 拨码开关也需要和滑动开关一样上电前被正确拨动到某一侧，而非中间位置 **(机械死区)**，以防止SoC采样到的拨码状态电平值是不稳定的。
@@ -720,7 +713,7 @@ SoC底板背面设计有四个型号为DF40C-100DS的100P BTB母座，用于连�
 ::::
 
 ### FPGA开发
-这个章节主要将会介绍如何设计并驱动板卡FPGA端的众多外设，该部分代码在 **StarrySky-res** 仓库中的`fpga/v1p3`里面([代码地址](https://github.com/maksyuki/StarrySky-res/tree/main/fpga/v1p3))。项目组使用的FPGA开发工具软件版本是 **`Vivado 2022.2`** 和 **`Vitis IDE 2022.2`**。
+这个章节主要将会介绍如何设计并驱动板卡FPGA端的众多外设，该部分代码在 **StarrySky-res** 仓库中的`fpga/v2p1`里面([代码地址](https://github.com/maksyuki/StarrySky-res/tree/main/fpga/v2p1))。项目组使用的FPGA开发工具软件版本是 **`Vivado 2022.2`** 和 **`Vitis IDE 2022.2`**。
 
 ::: info Vivado+Vitis 软件使用和ZYNQ开发入门
 本章节内容需要同学们熟练掌握 **Vivado+Vitis** 工具的使用和ZYNQ开发流程，网上已经有很多比较好的，公开的ZYNQ入门学习资料了，比如 [ZYNQ领航者V2开发板](http://47.111.11.73/docs/boards/fpga/zdyz_linhanz(V2).html)，有需要的同学可以自己下载下来学习。
@@ -876,13 +869,7 @@ int main()
 
 经过对比，我们确认了ILA采样的`chiplink_ctrl`波形与 **VCS上仿真的一致**，`chiplink_ctrl`能够正确处理SoC的访存请求。
 
-## 其他资源
-<!-- 对接PPT内容，你可以从这里获得。 -->
-### 硅后测试
 ## 勘误与致谢
 项目组鼓励和欢迎同学们对本文档提出宝贵的意见和反馈，目前项目组使用 [Github issue](https://github.com/oscc-ysyx-web-project/ysyx-website/issues) 来追踪这些反馈，本文档致力于遵守开源软件开发中公认的最佳实践，所以当你觉得有提出的必要时，请大胆地发起issue吧！:smile:
 
 ### 致谢列表
-- 感谢粟金伦同学在测试板卡时发现的板卡插接深度不够可能导致板卡信号断路问题，现在已经补充到相关注意事项中。
-- 感谢粟金伦同学建议使用 PuTTY/MobaXterm 软件来做板卡测试流程演示用的串口上位机软件，本文档已经使用 MobaXterm 重写了有关章节。
-- 在FPGA开发章节介绍时使用了正点原子公开的 **ZYNQ领航者V2开发板** 在线文档资源，对此表示感谢。
