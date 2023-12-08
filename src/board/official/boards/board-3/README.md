@@ -16,11 +16,12 @@ toc: false
   - Flash芯片W25Q128JWSIQ **x1**
   - 1.14寸TFT-LCD屏幕 **x1**
 - Type-C USB线缆 **x1**
+- 散热片和固定螺栓配件 **x1**
 - FPGA JTAG烧写器和线缆 **x1**
 
 包装所有内容可以见下图：
 
-![包装和配件内容](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/res/v1p2/package-cont.png)
+![包装和配件内容](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/res/v2p1/package-cont.png)
 
 ::: info 板卡或者耗材损坏/缺失/丢失怎么办？
 * 每个板卡在发放给学生前都会进行硬件和软件测试，若自快递签收后一周内，板卡，FPGA损坏，或者耗材有缺失，可以联系项目组更换。
@@ -438,6 +439,14 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
 
 接着将想要烧写的bin格式的应用程序拷贝到 `YSYX-HFPLnk` 这个U盘中，然后等待拷贝完成。在拷贝的同时板载烧写器旁的蓝色LED会一直闪烁。当拷贝完成时，蓝色LED会常亮。项目组已经在 [StarrySky-res](https://github.com/maksyuki/StarrySky-res) 中 `software/v2p1` 目录下提前准备了一些已经编译好的测试程序。这些程序可以供同学们拷贝到 `YSYX-HFPLnk` 中进行烧写。当拷贝完成后，程序烧写也就完成了，此时关闭板卡电源，并重新将 **`HFP-MODE`** 的滑动开关拨码到右侧，然后上电就可以运行新的程序了。
 
+SoC上除了UART外设外，还支持PS/2键盘输入，连接该外设需要先将 **外设模式开关拨到左侧**，让PS/2接口连接到SoC芯片上 (拨到右侧会让PS/2接口连接到FPGA的IO上)：
+
+![将外设模式开关拨到左侧](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/res/v2p1/app-kdb-sw.png)
+
+然后将PS/2键盘插入到PS/2接口中，板卡上电，接着下载 `StarrySky-res/software/v2p1/kdb-mem.bin` 到板卡中并手动复位后，按下键盘按键，运行结果如下：
+
+![运行PS/2键盘测试程序](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/res/v2p1/app-kdb.png)
+
 ::: info 更新板载烧写器固件
 板载烧写器默认已经提前烧录有系统固件，一般使用是没有问题的，但有时候需要对固件进行更新以修复bug或者添加新的功能，这样就需要更新固件。目前板载烧写器上使用的主控是CH32V103，这个MCU是支持ISP程序更新的，但是需要配合 **WCHISPTool** 一起使用。所以为了更新固件，首先需要安装 **WCHISPTool** 这个软件。同学们可以访问这个 [网址](https://www.wch.cn/download/WCHISPTool_Setup_exe.html) 来下载 **WCHISPTool** 并完成安装。
 
@@ -681,6 +690,10 @@ VGA标准规定接口的`VGA_R`，`VGA_G`和`VGA_B`管脚上传输的是模拟�
 
 ![PL I2S](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/sch/v2p1/sch-pl-i2s.png)
 
+#### PL LPSDRAM
+板卡上PL的还设计搭载一块最大支持32MB的LPSDRAM颗粒，该部分原理图如下所示：
+
+![PL LPSDRAM](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/sch/v2p1/sch-pl-sdram.png)
 
 #### PL LED和KEY
 板卡上FPGA PL侧搭载了2个蓝色LED和1个按键，这部分电路和PS侧的LED和按键是一样的，这里就不再赘述了。该部分原理图如下所示：
@@ -696,6 +709,41 @@ VGA标准规定接口的`VGA_R`，`VGA_G`和`VGA_B`管脚上传输的是模拟�
 板卡上FPGA PL侧设计有一个 **外设切换开关**，这个切换开关的工作原理和 [SoC 功能切换开关](#soc-功能切换开关) 的类似，其主要功能是复用VGA和PS/2接口，可以切换VGA和PS/2是和SoC片上的IO相连还是和FPGA的PL侧IO相连，这样 **可以让FPGA PL侧能够搭载尽可能多的外设**。
 
 ![PL 外设切换开关](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/sch/v2p1/sch-pl-func-sw.png)
+
+#### PL EXTN
+板卡上PL引出额外的PL IO到扩展接口上，该部分原理图如下所示：
+
+![PL EXTN](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/sch/v2p1/sch-pl-extn.png)
+
+扩展口一共有12对差分IO，每个差分IO做了对内等长。具体走线长度见下表：
+<style>
+.io_table_center
+{
+  width: auto;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+<div class="io_table_center">
+
+| PL IO引脚 | 板上走线长度 | PL IO引脚 | 板上走线长度 | 
+| :-: | :-: | :-: | :-: |
+| B35_L7_P  | 594.80mil | B35_L10_P | 239.89mil |
+| B35_L7_N  | 648.12mil | B35_L10_N | 184.70mil |
+| B35_L3_P  | 593.48mil | B35_L13_P | 241.86mil |
+| B35_L3_N  | 645.44mil | B35_L13_N | 190.10mil |
+| B35_L8_P  | 572.01mil | B35_L17_P | 249.53mil |
+| B35_L8_N  | 623.77mil | B35_L17_N | 197.76mil |
+| B35_L12_P | 220.18mil | B35_L16_P | 250.67mil |
+| B35_L12_N | 268.69mil | B35_L16_N | 201.48mil |
+| B35_L9_P  | 209.25mil | B35_L15_P | 258.33mil |
+| B35_L9_N  | 261.02mil | B35_L15_N | 206.56mil |
+| B35_L11_P | 201.59mil | B35_L18_P | 266mil |
+| B35_L11_N | 253.36mil | B35_L18_N | 214.23mil |
+</div>
+
 
 #### PL 外置晶振和BANK电压设置
 SoC底板设计有1个1.8V的50MHz有源晶振，用于为FPGA的PL侧提供时钟基准。同时设置Bank13，Bank33，Bank34和Bank35的电源为1.8V，该部分原理图如下所示：
@@ -717,7 +765,7 @@ SoC底板背面设计有四个型号为DF40C-100DS的100P BTB母座，用于连�
 ::::
 
 ### FPGA开发
-这个章节主要将会介绍如何设计并驱动板卡FPGA端的众多外设，该部分代码在 **StarrySky-res** 仓库中的`fpga/v2p1`里面([代码地址](https://github.com/maksyuki/StarrySky-res/tree/main/fpga/v2p1))。项目组使用的FPGA开发工具软件版本是 **`Vivado 2022.2`** 和 **`Vitis IDE 2022.2`**。
+这个章节主要将会介绍如何设计并驱动板卡FPGA端的众多外设，该部分代码在 **StarrySky-res** 仓库中的`fpga/v2p1`里面([代码地址](https://github.com/maksyuki/StarrySky-res/tree/main/fpga/v2p1))。项目组使用的FPGA开发工具软件版本是 **`Vivado 2022.2`** 和 **`Vitis IDE 2022.2`**，其中大部分RTL代码修改自正点原子的FPGA教程，相关代码版权由正点原子所有。
 
 ::: info Vivado+Vitis 软件使用和ZYNQ开发入门
 本章节内容需要同学们熟练掌握 **Vivado+Vitis** 工具的使用和ZYNQ开发流程，网上已经有很多比较好的，公开的ZYNQ入门学习资料了，比如 [ZYNQ领航者V2开发板](http://47.111.11.73/docs/boards/fpga/zdyz_linhanz(V2).html)，有需要的同学可以自己下载下来学习。
@@ -891,6 +939,6 @@ int main()
 经过对比，我们确认了ILA采样的`chiplink_ctrl`波形与 **VCS上仿真的一致**，`chiplink_ctrl`能够正确处理SoC的访存请求。
 
 ## 勘误与致谢
-项目组鼓励和欢迎同学们对本文档提出宝贵的意见和反馈，目前项目组使用 [Github issue](https://github.com/oscc-ysyx-web-project/ysyx-website/issues) 来追踪这些反馈，本文档致力于遵守开源软件开发中公认的最佳实践，所以当你觉得有提出的必要时，请大胆地发起issue吧！:smile:
+目前项目组使用 [Github issue](https://github.com/oscc-ysyx-web-project/ysyx-website/issues) 来追踪这些反馈，本文档致力于遵守开源软件开发中公认的最佳实践，欢迎同学们对本文档提出宝贵的意见和反馈:smile:。
 
 ### 致谢列表
