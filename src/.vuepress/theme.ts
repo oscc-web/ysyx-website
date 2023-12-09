@@ -153,7 +153,7 @@ export default hopeTheme({
         readingTime: {
             wordPerMinute: 300
         },
-        seo: true,
-        sitemap: true
+        seo: false,
+        sitemap: false
     }
-}, true);
+});
