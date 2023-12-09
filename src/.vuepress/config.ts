@@ -69,15 +69,5 @@ export default defineUserConfig({
             sortStrategy: "max"
         })
     ],
-    theme: theme,
-    alias: {
-        "@theme-hope/modules/navbar/components/Navbar": path.resolve(
-            __dirname,
-            "./components/Navbar.vue"
-        ),
-        "@theme-hope/modules/navbar/components/NavbarLinks": path.resolve(
-            __dirname,
-            "./components/NavbarLinks.vue"
-        )
-    }
+    theme: theme
 });
