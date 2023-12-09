@@ -131,7 +131,7 @@ FPGA核心板板载资源如下所示：
 FPGA核心板PS侧的BANK有BANK502，BANK500和BNAK501。其中BANK502电平标准为1.5V，用于连接两片DDR3颗粒。BANK500电平标准为3.3V，用于连接符合3.3V电气标准的外设，比如UART，LED和按键等。而BANK501电平标准为1.8V，用于连接符合1.8V电气标准的外设，比如USB HOST，SDIO等。而PL侧的BANK有BANK13，BANK33，BANK34和BANK35。这四个PL BANK的电平标准均为 **1.8V**，用于连接一些SoC常见的外设，比如UART，I2C，SPI，GPIO等。
 ::: warning FPGA PL侧电平标准为1.8V
 - FPGA核心板的PL侧的 **所有BANK电平标准均为1.8V**，所以若要使用PL侧的扩展口，需要使用 **level shifter** 专用芯片进行电平协议转换。
-- 另外选用level shifter芯片时需额外注意转换方向，最大数据传输率，驱动能力等参数，星空板卡板载的非1.8V电平标准外设已经全部使用level shifter芯片做过转换，可以放心使用。
+- 另外选用level shifter芯片时需注意转换方向，最大数据传输率，驱动能力等参数，星空板卡板载的非1.8V电平标准外设已经全部使用level shifter芯片做过转换。
 :::
 
 ::: danger 供电负载说明
@@ -197,7 +197,7 @@ FPGA核心板PS侧的BANK有BANK502，BANK500和BNAK501。其中BANK502电平标
 
 <div class="freq_table_center">
 
-| PLL_CFG | CLK_CFG | 晶振输入频率 | PLL输出频率 | 处理器核时钟频率(core_clk) | 高速时钟域频率(hs_clk) | 低速时钟域频率(ls_clk) |
+| pll_cfg | clk_cfg | 晶振输入频率 | PLL输出频率 | 处理器核时钟频率(core_clk) | 高速时钟域频率(hs_clk) | 低速时钟域频率(ls_clk) |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 | 3'b001 | 7'b0100010 | 25MHz  | 100MHz | 25MHz  | 100MHz | 25MHz |
 | 3'b001 | 7'b0100001 | 25MHz  | 100MHz | 50MHz  | 100MHz | 25MHz |
@@ -212,13 +212,13 @@ FPGA核心板PS侧的BANK有BANK502，BANK500和BNAK501。其中BANK502电平标
 
 </div>
 
-比如当置`PLL_CFG[3:0] = 3'b111 CLK_FG[6:0] = 7'b0110000` 时，SoC使用25MHz外置晶振作为时钟输入源，处理器核时钟为400MHz，高速时钟域为100MHz，低速时钟域为25MHz。
+比如当置`pll_cfg[3:0] = 3'b111 clk_cfg[6:0] = 7'b0110000` 时，SoC使用25MHz外置晶振作为时钟输入源，处理器核时钟为400MHz，高速时钟域为100MHz，低速时钟域为25MHz。
 
 ::: warning 100MHz外置晶振时钟输入
 注意100MHz外置晶振时钟源是备选时钟源，目前板卡上只表贴了25MHz的有源晶振，所以上表中后三行的频率无法正确设置。
 :::
 
-现在介绍下拨码开关位和SoC上信号的对应关系，并解释板卡上 **微动拨码开关** 每个拨码位的功能定义。从下图可以看到，板卡上一共有三个微动拨码开关，其中最上面的的拨码开关有4位拨码，用来 **设置时钟输出状态**，该拨码开关的低3位对应于前面介绍的`PLL_CFG[2:0]`。下面右边的拨码开关有8位拨码，用来 **设置时钟树输出频率**，该拨码开关的低7位对应于前面介绍的`CLK_CFG[6:0]`，下面左边的拨码开关有6位拨码，用来 **设置核选通状态**：
+现在介绍下拨码开关位和SoC上信号的对应关系，并解释板卡上 **微动拨码开关** 每个拨码位的功能定义。从下图可以看到，板卡上一共有三个微动拨码开关，其中最上面的的拨码开关有4位拨码，用来 **设置时钟输出状态**，该拨码开关的低3位对应于前面介绍的`pll_cfg[2:0]`。下面右边的拨码开关有8位拨码，用来 **设置时钟树输出频率**，该拨码开关的低7位对应于前面介绍的`clk_cfg[6:0]`，下面左边的拨码开关有6位拨码，用来 **设置核选通状态**：
 
 ![拨码开关位功能定义](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/perip/v2p1/dip-switch-1.png)
 
@@ -393,7 +393,7 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
 ![FPGA核心板启动模式设置](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/perip/v2p1/uart-3.png)
 
 #### 板卡复位
-确认完FPGA启动模式设置成 **`FLASH`** 后，按照上面 [安装串口驱动](#安装串口驱动) 一节介绍的步骤再次确认下电源选择和SoC功能切换开关 **`SW1`**，**`SW2`** 和 **`HFP-MODE`** 被正确设置。接着对板卡上电并使用串口调试软件MobaXterm打开串口，最后按动SoC复位按键 **`CORE-RST`** 对SoC芯片执行一次手动复位：
+确认完FPGA启动模式设置成 **`FLASH`** 后，按照上面 [安装串口驱动](#安装串口驱动) 一节介绍的步骤再次确认电源选择和SoC功能切换开关 **`SW1`**，**`SW2`** 和 **`HFP-MODE`** 被正确设置。接着对板卡上电并使用串口调试软件MobaXterm打开串口，最后按动SoC复位按键 **`CORE-RST`** 对SoC芯片执行一次手动复位：
 
 ![按动复位按键执行SoC复位](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/perip/v2p1/uart-4.png)
 
@@ -415,7 +415,7 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
 :::
 
 ::: info 丰富应用实例
-星空板卡上面有不少同学的核能够启动Linux，比如唐浩晋同学设计的处理器核。当时他参加一生一芯四期的时候还是中国科学院大学电子信息工程的一名大三学生，他在自己的核上成功启动了Linux并运行了应用程序([视频](https://www.bilibili.com/video/BV1CL411X7wV/))：
+星空板卡上面有不少同学的核能够启动Linux，比如唐浩晋同学设计的处理器核。当时他参加一生一芯三期的时候还是中国科学院大学电子信息工程的一名大三学生，他在自己的核上成功启动了Linux并运行了应用程序([视频](https://www.bilibili.com/video/BV1CL411X7wV/))：
 
 ![启动Linux并运行程序](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/res/v2p1/app-1.png)
 :::
@@ -589,7 +589,7 @@ HFPLink部分原理图其实就是CH32V103的最小系统再外扩了一个NOR F
 ![SoC TF接口](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/sch/v2p1/sch-soc-tf.png)
 
 #### SoC 功能切换开关
-SoC部分电路的功能切换开关是为了实现SoC的USB转串口和HFPLink能够共享一个Type-C接口，并同步切换NOR Flash的工作状态而设计的。这个功能是通过一个名为HFP-SW的单刀双掷滑动开关进行控制的。当HFP-SW拨动使得其 **`1`** 和 **`2`** 引脚导通时，**`PROG_SW_SEL`** 网络电平为低，此时所有模拟开关WAS3157B的 **`6`** 脚均为低电平，这样会将每个模拟开关 **`1`** 和 **`4`** 引脚上的信号网络导通。而当HFP-SW拨动使得其 **`3`** 和 **`2`** 引脚导通时，**`PROG_SW_SEL`** 网络电平为高，此时所有模拟开关WAS3157B的 **`6`** 脚均为高电平，会将每个模拟开关 **`3`** 和 **`4`** 引脚上的信号网络导通：
+SoC部分电路的功能切换开关是为了实现SoC的USB转串口和HFPLink能够共享一个Type-C接口，并同步切换NOR Flash的工作状态而设计的。这个功能是通过一个名为HFP-SW的单刀双掷滑动开关进行控制的。当HFP-SW拨动使得其 **`1`** 和 **`2`** 引脚导通时，**`PROG_SEL`** 网络电平为低，此时所有模拟开关WAS3157B的 **`6`** 脚均为低电平，这样会将每个模拟开关 **`1`** 和 **`4`** 引脚上的信号网络导通。而当HFP-SW拨动使得其 **`3`** 和 **`2`** 引脚导通时，**`PROG_SEL`** 网络电平为高，此时所有模拟开关WAS3157B的 **`6`** 脚均为高电平，会将每个模拟开关 **`3`** 和 **`4`** 引脚上的信号网络导通：
 
 ![SoC功能切换开关](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/sch/v2p1/sch-soc-func-sw.png)
 
@@ -662,7 +662,7 @@ VGA标准规定接口的`VGA_R`，`VGA_G`和`VGA_B`管脚上传输的是模拟�
 ![PL RTC和EEPROM](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/sch/v2p1/sch-pl-i2c.png)
 
 #### PL SPI Flash
-板卡上FPGA PL侧搭载了一个支持1.8V NOR Flash芯片的插座，可以使用SPI标准四线或者QSPI协议对内置其中的NOR Flash芯片进行读写，该部分原理图如下所示：
+板卡上FPGA PL侧搭载了一个支持1.8V NOR Flash芯片的插座，可以使用SPI标准四线协议对内置其中的NOR Flash芯片进行读写，该部分原理图如下所示：
 
 ![PL SPI Flash](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/sch/v2p1/sch-pl-spi.png)
 
@@ -715,7 +715,7 @@ VGA标准规定接口的`VGA_R`，`VGA_G`和`VGA_B`管脚上传输的是模拟�
 
 ![PL EXTN](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/sch/v2p1/sch-pl-extn.png)
 
-扩展口一共有12对差分IO，每个差分IO做了对内等长。具体走线长度见下表：
+扩展口一共有12对差分IO，每个差分IO做了对内等长。为了方便同学自己设计扩展板，差分IO板上走线长度见下表：
 <style>
 .io_table_center
 {
@@ -746,7 +746,7 @@ VGA标准规定接口的`VGA_R`，`VGA_G`和`VGA_B`管脚上传输的是模拟�
 
 
 #### PL 外置晶振和BANK电压设置
-SoC底板设计有1个1.8V的50MHz有源晶振，用于为FPGA的PL侧提供时钟基准。同时设置Bank13，Bank33，Bank34和Bank35的电源为1.8V，该部分原理图如下所示：
+SoC底板设计有1个1.8V的50MHz有源晶振，为FPGA的PL侧提供时钟基准。同时设置Bank13，Bank33，Bank34和Bank35的电源为1.8V，该部分原理图如下所示：
 
 ![PL 外置晶振和BANK电压设置](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/sch/v2p1/sch-pl-pwr-clk.png)
 
@@ -861,7 +861,11 @@ VGA和PS/2接口 **均不支持热插拔**，同学们需要在板卡上电前�
 ![EEPROM ILA采样结果](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/fpga/v2p1/pl-eeprom-ila-2.png)
 
 #### PL SPI TF测试
-这里主要介绍使用SPI总线对TF卡进行读写测试，并使用ILA采样相关寄存器的值。该部分代码在`fpga/v2p1/pl_tf`。同学们需要自行创建完工程并生成bitstream文件，并将bistream下载到板卡上。成功下载完后Vivado会弹出ILA波形窗口，此时需要切换到 **hw_ila_1** 这个窗口，该信号窗口中显示有EERPOM控制器相关信号。为了捕获读写EEPROM芯片的波形，需要将`u_e2prom_ctrl/i2c_data_r[7:0]=215`作为触发条件，并点击 **运行采样** 按钮，此时ILA会显示正等待触发：
+这里主要介绍使用SPI总线对TF卡进行读写测试，并使用ILA采样相关寄存器的值。该部分代码在`fpga/v2p1/pl_tf`。同学们需要自行创建完工程并生成bitstream文件，将bistream下载到板卡上并插入TF卡。PL TF卡插槽位置见下图：
+
+![PL SPI TF插槽](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/fpga/v2p1/pl-tf-intro.png)
+
+成功下载完后Vivado会弹出ILA波形窗口，此时需要切换到 **hw_ila_1** 这个窗口，该信号窗口中显示有EERPOM控制器相关信号。为了捕获读写EEPROM芯片的波形，需要将`u_e2prom_ctrl/i2c_data_r[7:0]=215`作为触发条件，并点击 **运行采样** 按钮，此时ILA会显示正等待触发：
 
 ![SPI TF ILA等待触发](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/fpga/v2p1/pl-tf-ila-1.png)
 
