@@ -33,15 +33,20 @@
     let boardURL = ref("boards/");
     let boardItemList = ref([]);
     boardItemList.value = [{
-        image: "/res/images/board/res/v1p2/board-func.png",
+        image: "/res/images/board/res/v1p2/board-smt-top.png",
         title: "标题：星空 V1.2",
         funcs: "简介：一生一芯三期第一批板卡",
         link:  "board-1/"
     }, {
-        image: "/res/images/board/res/v1p3/board-func.png",
+        image: "/res/images/board/res/v1p3/board-smt-top.png",
         title: "标题：星空 V1.3",
         funcs: "简介：一生一芯三期第二批板卡",
         link:  "board-2/"
+    }, {
+        image: "/res/images/board/res/v2p1/board-smt-top.png",
+        title: "标题：星空 V2.1",
+        funcs: "简介：一生一芯四期板卡",
+        link:  "board-3/"
     }];
     const jumpToBoardDetailsPage = (boardItemTemp) => {
         window.location.href = boardURL.value + boardItemTemp.link;

@@ -14,10 +14,6 @@ export const zhSidebar = sidebar({
         text: "",
         children: [""]
     }],
-    "/chip/board/official/": [{
-        text: "",
-        children: [""]
-    }],
     "/chip/board/official/boards/": zhBoard,
     "/cert/": [{
         text: "",
