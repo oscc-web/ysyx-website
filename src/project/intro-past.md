@@ -1,6 +1,5 @@
 ---
 title: "往期回顾"
-copyright: false
 headerDepth: 1
 ---
 

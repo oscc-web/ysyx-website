@@ -1,6 +1,4 @@
 import { navbar } from "vuepress-theme-hope";
-import { zhCourse } from "./zh-course";
-import { zhBoard } from "./zh-board";
 
 export const zhNavbar = navbar([
     {
@@ -9,22 +7,28 @@ export const zhNavbar = navbar([
     }, {
         text: "关于项目",
         prefix: "/project/",
-        children: ["intro",
-                   "intro-past",
-                   "faq",
-                   "assistants"]
+        children: [
+            "intro",
+            "intro-past",
+            "faq",
+            "assistants"
+        ]
     }, {
         text: "报名参与",
         link: "/signup/"
-    },
-    zhCourse,
-    {
+    }, {
+        text: "课程资料",
+        link: "https://ysyx.oscc.cc/docs/"
+    }, {
         text: "学习记录",
         link: "https://docs.qq.com/sheet/DT29weHpIRWNnYlFl?tab=BB08J2"
     }, {
         text: "流片&板卡",
         prefix: "/chip/",
-        children: ["tapout/", "board/official/"]
+        children: [
+            "tapout/",
+            "board/official/"
+        ]
     }, {
         text: "证书申请",
         link: "/cert/"
@@ -37,7 +41,10 @@ export const zhNavbar = navbar([
         children: ["team",{
             text: "外部委托",
             prefix: "external/",
-            children: ["apply", "contents"]
+            children: [
+                "apply",
+                "contents"
+            ]
         }]
     }, {
         text: "联系我们",

@@ -1,6 +1,5 @@
 ---
 title: "RISC-V Reader"
-copyright: false
 ---
 
 ## 介绍

@@ -1,6 +1,5 @@
 ---
 title: "文档"
-copyright: false
 breadcrumb: false
 pageInfo: false
 toc: false

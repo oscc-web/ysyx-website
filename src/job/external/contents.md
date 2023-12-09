@@ -1,6 +1,5 @@
 ---
 title: "岗位内容"
-copyright: false
 headerDepth: 1
 ---
 

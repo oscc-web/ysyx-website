@@ -1,6 +1,5 @@
 ---
 title: "报名参与"
-copyright: false
 ---
 
 ## 报名流程

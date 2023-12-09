@@ -1,6 +1,5 @@
 ---
 title: "项目概述"
-copyright: false
 ---
 
 ## 背景现状

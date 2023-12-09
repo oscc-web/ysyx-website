@@ -65,19 +65,19 @@ export default defineUserConfig({
             hotKeys: [{ key: "k", ctrl: true }, { key: "/", ctrl: true }],
             queryHistoryCount: 5,
             resultHistoryCount: 5,
-            delay: 150,
+            searchDelay: 150,
             sortStrategy: "max"
         })
     ],
     theme: theme,
     alias: {
         "@theme-hope/modules/navbar/components/Navbar": path.resolve(
-          __dirname,
-          "./components/Navbar.vue",
+            __dirname,
+            "./components/Navbar.vue"
         ),
         "@theme-hope/modules/navbar/components/NavbarLinks": path.resolve(
-          __dirname,
-          "./components/NavbarLinks.vue",
+            __dirname,
+            "./components/NavbarLinks.vue"
         )
     }
 });

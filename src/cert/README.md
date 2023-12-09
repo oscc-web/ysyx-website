@@ -1,6 +1,5 @@
 ---
 title: "证书申请"
-copyright: false
 ---
 
 ## 实习证明

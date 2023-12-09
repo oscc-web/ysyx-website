@@ -1,6 +1,5 @@
 ---
 title: "文档"
-copyright: false
 breadcrumb: false
 pageInfo: false
 toc: false
@@ -381,7 +380,7 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
 
 ![修改串口换行显示2](https://raw.githubusercontent.com/oscc-ysyx-web-project/ysyx-website-resources/main/images/board/tool/mobaxterm-intro-5.png)
 
-- 在打开的窗口中任意地方鼠标右击，在弹出的选项中点击 ***Change terminal settings...*** 
+- 在打开的窗口中任意地方鼠标右击，在弹出的选项中点击 ***Change terminal settings...***
 - 然后在弹出的窗口中勾选 ***Implicit CR in every LF*** 复选框
 
 ::: tip Implicit CR in every LF 选项含义
@@ -490,7 +489,7 @@ SoC上除了UART外设外，还支持PS/2键盘输入，连接该外设需要先
 ### 硬件设计
 这个章节主要会详细地介绍星空V2.1版本的硬件设计，先简单概括下V2.1版本板卡的硬件设计上的主要特点：
 - 使用Cadence Orcad和Allegro设计，设计时间： **三周**，板卡机械尺寸：**11.18x9.59cm**，板厚 **1.6mm**
-  - 采用 **八层** 叠层设计，叠层结构： **(TOP-GND02-ART03-PWR04-GND05-ART06-GND07-BOT)** 
+  - 采用 **八层** 叠层设计，叠层结构： **(TOP-GND02-ART03-PWR04-GND05-ART06-GND07-BOT)**
   - 使用沉金表面和 **盘中孔+过孔塞树脂** 工艺，进行四线低阻测试
   - 外层铜厚 **1** 盎司，内层铜厚 **0.5** 盎司，沉金厚度 **1u''**
 - 板卡等长设置：
@@ -728,7 +727,7 @@ VGA标准规定接口的`VGA_R`，`VGA_G`和`VGA_B`管脚上传输的是模拟�
 
 <div class="io_table_center">
 
-| PL IO引脚 | 板上走线长度 | PL IO引脚 | 板上走线长度 | 
+| PL IO引脚 | 板上走线长度 | PL IO引脚 | 板上走线长度 |
 | :-: | :-: | :-: | :-: |
 | B35_L7_P  | 594.80mil | B35_L10_P | 239.89mil |
 | B35_L7_N  | 648.12mil | B35_L10_N | 184.70mil |

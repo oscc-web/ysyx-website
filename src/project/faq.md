@@ -1,6 +1,5 @@
 ---
 title: "常见问题"
-copyright: false
 ---
 
 ::: details 报名条件

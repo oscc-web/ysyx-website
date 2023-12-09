@@ -1,6 +1,5 @@
 ---
 title: "助教团队"
-copyright: false
 ---
 
 ### 第五期助教名单

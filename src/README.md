@@ -1,7 +1,6 @@
 ---
 lastUpdated: false
 contributors: false
-copyright: false
 containerClass: "home"
 home: true
 head:

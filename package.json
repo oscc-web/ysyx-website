@@ -8,22 +8,21 @@
         "command": "./common/nodejs.sh"
     },
     "devDependencies": {
-        "@vuepress/client": "2.0.0-beta.60",
-        "@vuepress/plugin-register-components": "2.0.0-beta.60",
+        "@vuepress/client": "2.0.0-beta.66",
+        "@vuepress/plugin-register-components": "2.0.0-beta.66",
         "colors": "^1.4.0",
-        "unplugin-auto-import": "^0.16.4",
-        "unplugin-icons": "^0.16.3",
-        "unplugin-vue-components": "^0.25.1",
-        "vp-update": "^0.2.0",
-        "vue": "3.2.45",
-        "vuepress": "2.0.0-beta.60",
-        "vuepress-plugin-search-pro": "2.0.0-beta.166",
-        "vuepress-theme-hope": "2.0.0-beta.166"
+        "unplugin-auto-import": "^0.16.6",
+        "unplugin-icons": "^0.17.0",
+        "unplugin-vue-components": "^0.25.2",
+        "vue": "^3.2.47",
+        "vuepress": "2.0.0-beta.66",
+        "vuepress-plugin-search-pro": "2.0.0-beta.233",
+        "vuepress-theme-hope": "2.0.0-beta.233"
     },
     "dependencies": {
         "@element-plus/icons-vue": "^2.1.0",
-        "element-plus": "^2.3.6",
-        "qrcode.vue": "^3.4.0"
+        "element-plus": "^2.3.14",
+        "qrcode.vue": "^3.4.1"
     },
     "deploy": "home"
 }

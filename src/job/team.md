@@ -1,6 +1,5 @@
 ---
 title: "团队招聘"
-copyright: false
 ---
 
 ### 团队介绍

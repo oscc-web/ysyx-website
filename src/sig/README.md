@@ -1,6 +1,5 @@
 ---
 title: "兴趣小组"
-copyright: false
 headerDepth: 1
 ---
 

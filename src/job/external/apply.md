@@ -1,6 +1,5 @@
 ---
 title: "合作申请"
-copyright: false
 ---
 
 ## 合作须知

@@ -1,6 +1,5 @@
 ---
 title: "文档"
-copyright: false
 toc: true
 ---
 ## 开发入门

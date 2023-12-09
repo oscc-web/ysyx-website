@@ -1,6 +1,5 @@
 ---
 title: "官方板卡"
-copyright: false
 ---
 
 ## 板卡简介

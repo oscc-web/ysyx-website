@@ -1,6 +1,5 @@
 ---
 title: "联系我们"
-copyright: false
 ---
 
 - 交流合作：ysyx@bosc.ac.cn

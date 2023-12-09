@@ -3,7 +3,7 @@ import { enNavbar, zhNavbar } from "./navbar/index.js";
 import { enSidebar, zhSidebar } from "./sidebar/index.js";
 
 export default hopeTheme({
-    // 主题基本配置
+    // Theme Basic
     hostname: "https://ysyx.oscc.cc",
     author: {
         name: "Miao Yuyang",
@@ -12,8 +12,8 @@ export default hopeTheme({
     },
     favicon: "/res/images/logo/ysyx.png",
 
-    // 主题布局配置
-    // 导航栏
+    // Theme Layout
+    // Navbar
     navbarIcon: true,
     navbarLayout: {
         start: ["Brand"],
@@ -22,39 +22,38 @@ export default hopeTheme({
     },
     logo: "/res/images/logo/ysyx.png",
     logoDark: "/res/images/logo/ysyx.png",
-    repo: "oscc-ysyx-web-project/ysyx-website",
+    repo: "oscc-web/ysyx-website",
     repoDisplay: false,
     repoLabel: "GitHub",
     navbarAutoHide: "mobile",
     hideSiteNameOnMobile: true,
-    // 侧边栏
+    // Sidebar
     sidebarIcon: true,
     sidebarSorter: ["readme", "order", "title", "filename"],
     headerDepth: 2,
-    // 路径
+    // Route Navgation
     breadcrumb: false,
     breadcrumbIcon: true,
     prevLink: true,
     nextLink: true,
-    // 标题
+    // Title
     titleIcon: true,
-    // pageInfo: ["Author", "Original", "Date", "Category", "Tag", "ReadingTime"],
     pageInfo: false,
-    // 基础
+    // Meta
     lastUpdated: true,
     contributors: true,
     editLink: false,
     docsRepo: "repo",
     docsBranch: "main",
     docsDir: "src",
-    // 页脚
-    footer: "GPL协议 | 版权所有 © 2023-现在 一生一芯Web团队",
-    // copyright: false,
+    // Footer
+    footer: "GPL协议 | 版权所有 © 2023-现在 一生一芯团队",
+    copyright: false,
     displayFooter: true,
-    // 杂项
+    // Others
     toc: false,
 
-    // 主题外观配置
+    // Theme Appearance
     iconAssets: "fontawesome",
     darkmode: "toggle",
     themeColor: false,
@@ -63,7 +62,7 @@ export default hopeTheme({
     pure: false,
     print: false,
 
-    // 主题语言配置
+    // Theme i18N
     locales: {
         "/": {
             navbar: zhNavbar,
@@ -74,7 +73,7 @@ export default hopeTheme({
         }
     },
 
-    // 主题插件配置
+    // Theme Plugins
     plugins: {
         blog: false,
         comment: false,
@@ -93,7 +92,9 @@ export default hopeTheme({
         mdEnhance: {
             gfm: true,
             container: true,
-            linkCheck: "dev",
+            checkLinks: {
+                status: "dev"
+            },
             vPre: true,
             tabs: true,
             codetabs: true,
@@ -131,21 +132,21 @@ export default hopeTheme({
             },
             vuePlayground: true,
             demo: true,
-            presentation: {
-                plugins: ["highlight", "math", "search", "notes", "zoom"]
-            },
+            presentation: ["highlight", "math", "search", "notes", "zoom"],
             delay: 800
         },
         pwa: false,
         components: {
-            components: ["AudioPlayer",
-                         "Badge",
-                         "BiliBili",
-                         "CodePen",
-                         "PDF",
-                         "StackBlitz",
-                         "VideoPlayer",
-                         "YouTube"]
+            components: [
+                "AudioPlayer",
+                "Badge",
+                "BiliBili",
+                "CodePen",
+                "PDF",
+                "StackBlitz",
+                "VideoPlayer",
+                "YouTube"
+            ]
         },
         git: true,
         prismjs: true,
@@ -156,4 +157,6 @@ export default hopeTheme({
         seo: false,
         sitemap: false
     }
+}, {
+    custom: true
 });
