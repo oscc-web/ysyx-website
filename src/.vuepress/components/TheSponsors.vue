@@ -12,21 +12,21 @@
                 <div :style="{ '--scale': sponsorItem.scale }">
                     <a :href="sponsorItem.link"
                         target="_blank">
-                        <div v-if="sponsorItem.name === '鹏城实验室' ||
-                                   sponsorItem.name === '北京开源芯片研究院'">
+                        <div v-if="sponsorItem.image === undefined">
+                            <component :is="sponsorItem.elem"
+                                       :title="sponsorItem.name"
+                                       :style="{
+                                            'max-width': sponsorObj.width,
+                                            'transform': 'scale(var(--scale))',
+                                            'width': '100%',
+                                            'height': '100px'}" />
+                        </div>
+                        <div v-if="sponsorItem.image !== undefined">
                             <img :src="sponsorItem.image"
                                  :style="{
                                     'max-width': sponsorObj.width,
                                     'transform': 'scale(var(--scale))',
                                     'pointer-events': 'none'}" />
-                        </div>
-                        <div v-else>
-                            <component :is="sponsorItem.elem"
-                                       :title="sponsorItem.name"
-                                       :style="{'max-width': sponsorObj.width,
-                                                'transform': 'scale(var(--scale))',
-                                                'width': '100%',
-                                                'height': '100px'}" />
                         </div>
                     </a>
                 </div>
