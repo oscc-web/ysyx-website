@@ -17,10 +17,10 @@
 
     const getCountNum = () => {
         axios.get("http://localhost:9090/api/getBooksRISCVReader").then((res) => {
-        console.log(res);
-        if (res.data.msg === "success") {
-            count.value = res.data.data;
-        }
+            console.log(res);
+            if (res.data.msg === "success") {
+                count.value = res.data.data;
+            }
         }).catch((err) => {
             console.log(err);
         });
