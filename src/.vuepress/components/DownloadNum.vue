@@ -3,7 +3,7 @@
         <a
             href="/res/files/RISC-V开放架构设计之道-v1.0.0.pdf"
             target="_blank"
-            @click="setCountNum">电子版
+            @click="setBooksDownloadNum">电子版
         </a>
         <div>下载次数：{{ count }}</div>
     </div>
@@ -15,8 +15,13 @@
 
     let count = ref(0);
 
-    const getCountNum = () => {
-        axios.get("http://localhost:9090/api/getBooksRISCVReader").then((res) => {
+    const getBooksDownloadNum = () => {
+        axios.post(
+            "http://localhost:9090/api/getBooksDownloadNum",
+            JSON.stringify({
+                id: "riscv-reader"
+            }
+        )).then((res) => {
             console.log(res);
             if (res.data.msg === "success") {
                 count.value = res.data.data;
@@ -26,17 +31,24 @@
         });
     }
 
-    const setCountNum = () => {
-        axios.get("http://localhost:9090/api/setBooksRISCVReader").then((res) => {
+    const setBooksDownloadNum = () => {
+        axios.post(
+            "http://localhost:9090/api/setBooksDownloadNum",
+            JSON.stringify({
+                id: "riscv-reader"
+            }
+        )).then((res) => {
             console.log(res);
             if (res.data.msg === "success") {
-                getCountNum();
+                getBooksDownloadNum();
+            }
+            else {
             }
         }).catch((err) => {
             console.log(err);
         });
     }
 
-    getCountNum();
+    getBooksDownloadNum();
 
 </script>
