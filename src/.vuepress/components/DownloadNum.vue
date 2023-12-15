@@ -13,7 +13,7 @@
     import { ref } from "vue";
     import axios from "axios";
 
-    axios.defaults.baseURL = "http://ysyx.oscc.cc/api/";
+    axios.defaults.baseURL = "https://ysyx.oscc.cc/api/";
     let count = ref(0);
 
     const getBooksDownloadNum = () => {
