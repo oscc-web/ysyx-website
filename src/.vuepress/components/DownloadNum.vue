@@ -13,7 +13,7 @@
     import { ref } from "vue";
     import axios from "axios";
 
-    axios.defaults.baseURL = "http://101.43.238.97:9090";
+    axios.defaults.baseURL = "https://101.43.238.97:9090";
     let count = ref(0);
 
     const getBooksDownloadNum = () => {
