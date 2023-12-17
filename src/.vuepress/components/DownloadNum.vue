@@ -23,7 +23,6 @@
                 id: "riscv-reader"
             }
         )).then((res) => {
-            console.log(res);
             if (res.data.msg === "success") {
                 count.value = res.data.data;
             }
@@ -39,7 +38,6 @@
                 id: "riscv-reader"
             }
         )).then((res) => {
-            console.log(res);
             if (res.data.msg === "success") {
                 getBooksDownloadNum();
             }
