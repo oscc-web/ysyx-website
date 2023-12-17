@@ -13,12 +13,12 @@
     import { ref } from "vue";
     import axios from "axios";
 
-    axios.defaults.baseURL = "https://101.43.238.97:9090";
+    axios.defaults.baseURL = "http://ysyx.oscc.cc/api/";
     let count = ref(0);
 
     const getBooksDownloadNum = () => {
         axios.post(
-            "/api/getBooksDownloadNum",
+            "getBooksDownloadNum",
             JSON.stringify({
                 id: "riscv-reader"
             }
@@ -34,7 +34,7 @@
 
     const setBooksDownloadNum = () => {
         axios.post(
-            "/api/setBooksDownloadNum",
+            "setBooksDownloadNum",
             JSON.stringify({
                 id: "riscv-reader"
             }
