@@ -48,5 +48,9 @@ export const zhSidebar = sidebar({
     "/job/external/contents": [{
         text: "",
         children: [""]
+    }],
+    "/books/riscv-reader": [{
+        text: "",
+        children: [""]
     }]
 });
