@@ -1,13 +1,15 @@
 <template>
     <el-row :gutter="20">
         <el-col style="text-align:center;">
-            <el-button type="primary"
-                       @click="setBooksDownloadNum">
-                {{ bookInfoBtn.download.title }}
+            <el-button
+                type="primary"
+                @click="infoSetBooksDownloadNum">
+                下载书籍
             </el-button>
-            <el-button type="danger"
-                       disabled>
-                {{ bookInfoBtn.submit.title }}
+            <el-button
+                type="danger"
+                @click="formOpenWindow">
+                提交勘误
             </el-button>
             <el-popover
                 trigger="hover"
@@ -15,48 +17,176 @@
                 placement="right">
                 <template #reference>
                     <el-button type="success">
-                        {{ bookInfoBtn.buy.title }}
+                        购买链接
                     </el-button>
                 </template>
                 <template #default>
-                    <a :href="bookBuyQrcode.value" target="_blank">
-                        <qrcode-vue :value="bookBuyQrcode.value"
-                                    :size="bookBuyQrcode.size"
-                                    :render-as="bookBuyQrcode.renderAs"
-                                    :margin="bookBuyQrcode.margin"
-                                    :level="bookBuyQrcode.level" />
+                    <a :href="qrcodeBase.value" target="_blank">
+                        <qrcode-vue :value="qrcodeBase.value"
+                                    :size="qrcodeBase.size"
+                                    :render-as="qrcodeRenderAs"
+                                    :margin="qrcodeBase.margin"
+                                    :level="qrcodeLevel" />
                     </a>
                 </template>
             </el-popover>
+            <el-dialog
+                v-model="diagBookError"
+                title="勘误表单">
+                <template #default>
+                    <el-form
+                        ref="formRuleRef"
+                        :model="formObj"
+                        :rules="formRules">
+                        <el-form-item
+                            label="姓名"
+                            :label-width="formLabelWidth"
+                            prop="name">
+                            <el-input
+                                v-model="formObj.name"
+                                placeholder="请输入提交者姓名" />
+                        </el-form-item>
+                        <el-form-item
+                            label="邮箱"
+                            :label-width="formLabelWidth"
+                            prop="email">
+                            <el-input
+                                v-model="formObj.email"
+                                placeholder="请输入提交者邮箱" />
+                        </el-form-item>
+                        <el-form-item
+                            label="页码"
+                            :label-width="formLabelWidth"
+                            prop="page">
+                            <el-input
+                                v-model.number="formObj.page"
+                                placeholder="请输入错误所在的页码" />
+                        </el-form-item>
+                        <el-form-item
+                            label="提交日期"
+                            :label-width="formLabelWidth"
+                            prop="date">
+                            <el-input v-model="formObj.date" disabled />
+                        </el-form-item>
+                        <el-form-item
+                            label="具体内容"
+                            :label-width="formLabelWidth"
+                            prop="contents">
+                            <el-input
+                                type="textarea"
+                                v-model="formObj.contents"
+                                placeholder="请输入错误和修正内容"
+                                :autosize="{ minRows: 5}" />
+                        </el-form-item>
+                    </el-form>
+                </template>
+                <template #footer>
+                    <span>
+                        <el-button type="default" @click="diagBookError = false">取消</el-button>
+                        <el-button type="primary" @click="formSubmitInfo(formRuleRef);" disabled>确认</el-button>
+                    </span>
+                </template>
+            </el-dialog>
         </el-col>
         <el-divider style="margin-top:10px;" />
         <el-col>
-            <li>原著作者：{{ bookInfo.authors }}</li>
-            <li>翻译团队：{{ bookInfo.translators }}</li>
-            <li>审核校对：{{ bookInfo.reviewers }}</li>
-            <li>下载次数：{{ bookInfo.downloadNum }}</li>
-            <li>发布日期：{{ bookInfo.date }}</li>
-            <li>最新版本：{{ bookInfo.version }}</li>
+            <li>原著作者：{{ infoBook.authors }}</li>
+            <li>翻译团队：{{ infoBook.translators }}</li>
+            <li>审核校对：{{ infoBook.reviewers }}</li>
+            <li>下载次数：{{ infoBook.downloadNum }}</li>
+            <li>发布日期：{{ infoBook.date }}</li>
+            <li>最新版本：{{ infoBook.version }}</li>
         </el-col>
     </el-row>
 </template>
 
-<script setup>
-    import { reactive } from "vue"
+<script lang="ts" setup>
+    import { ref } from "vue"
+    import type { FormInstance, FormRules } from "element-plus"
     import axios from "axios";
-    import QrcodeVue from "qrcode.vue";
+    import moment from "moment";
+    import qrcodeVue, { RenderAs, Level } from "qrcode.vue";
 
-    const bookBuyQrcode = reactive({
+    let diagBookError = ref(false)
+
+    const formLabelWidth = "100px"
+    interface FormRule {
+        name: string
+        email: string
+        page: number
+        date: string
+        contents: string
+    }
+    const formRuleRef = ref<FormInstance>()
+    const formObj = ref<FormRule>({
+        name: "",
+        email: "",
+        page: 0,
+        date: "",
+        contents: ""
+    })
+    const formRules = ref<FormRules<FormRule>>({
+        name: [{
+            required: true,
+            message: "请输入提交者姓名",
+            trigger: "blur"
+        }],
+        email: [{
+            required: true,
+            message: "请输入提交者邮箱",
+            trigger: "blur"
+        }],
+        page: [{
+            required: true,
+            message: "请输入错误所在的页码",
+            trigger: "blur"
+        }, {
+            type: "number",
+            message: "页码必须是数字类型",
+        }],
+        date: [{
+            required: true,
+            message: "请输入提交错误的日期",
+            trigger: "blur"
+        }],
+        contents: [{
+            required: true,
+            message: "请输入错误和修正内容",
+            trigger: "blur"
+        }]
+    })
+    const formOpenWindow = () => {
+        diagBookError.value = true;
+        formObj.value.date = moment().format('yyyy-MM-DD HH:mm:ss')
+    }
+    const formSubmitInfo = async(formIns: FormInstance | undefined) => {
+        if (!formIns) return
+        await formIns.validate((valid, fields) => {
+            if (valid) {
+                Object.keys(formObj.value).forEach(key => {
+                    if (key === "page") {
+                        formObj.value[key] = 0
+                    }
+                    else {
+                        formObj.value[key] = ""
+                    }
+                })
+                diagBookError.value = false
+            }
+        })
+    }
+
+    const qrcodeBase = ref({
         value: "https://item.m.jd.com/product/14304044.html",
         size: 120,
-        renderAs: "svg",
         margin: 0,
-        level: "L",
         background: "#ffffff",
-        foreground: "#000000",
-        class: ""
-    })
-    let bookInfo = reactive({
+        foreground: "#000000"
+    });
+    const qrcodeRenderAs = ref<RenderAs>("svg")
+    const qrcodeLevel = ref<Level>("L")
+
+    let infoBook = ref({
         authors: "大卫·帕特森、安德鲁·沃特曼",
         translators: "勾凌睿、陈璐、刘志刚",
         reviewers: "余子濠、包云岗",
@@ -64,22 +194,10 @@
         date: "2023-12-13",
         version: "1.0.0"
     })
-    const bookInfoBtn = reactive({
-        download: {
-            title: "下载书籍",
-            url: "/res/files/RISC-V开放架构设计之道-v1.0.0.pdf"
-        },
-        submit: {
-            title: "提交勘误"
-        },
-        buy: {
-            title: "购买链接"
-        }
-    })
 
     axios.defaults.baseURL = "https://ysyx.oscc.cc/api/";
 
-    const getBooksDownloadNum = () => {
+    const infoGetBooksDownloadNum = () => {
         axios.post(
             "getBooksDownloadNum",
             JSON.stringify({
@@ -87,15 +205,15 @@
             }
         )).then((res) => {
             if (res.data.msg === "success") {
-                bookInfo.downloadNum = res.data.data;
+                infoBook.value.downloadNum = res.data.data;
             }
         }).catch((err) => {
             console.log(err);
         });
     }
 
-    const setBooksDownloadNum = () => {
-        window.open(bookInfoBtn.download.url)
+    const infoSetBooksDownloadNum = () => {
+        window.open("/res/files/RISC-V开放架构设计之道-v1.0.0.pdf")
         axios.post(
             "setBooksDownloadNum",
             JSON.stringify({
@@ -103,7 +221,7 @@
             }
         )).then((res) => {
             if (res.data.msg === "success") {
-                getBooksDownloadNum();
+                infoGetBooksDownloadNum();
             }
             else {
             }

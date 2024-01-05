@@ -23,6 +23,7 @@
         "@element-plus/icons-vue": "^2.1.0",
         "axios": "^1.6.2",
         "element-plus": "^2.3.14",
+        "moment": "^2.30.1",
         "qrcode.vue": "^3.4.1"
     },
     "deploy": "home"
