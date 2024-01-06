@@ -3,12 +3,12 @@
         <el-col style="text-align:center;">
             <el-button
                 type="primary"
-                @click="infoSetBooksDownloadNum">
+                @click="setInfoBooksDownloadNum">
                 下载书籍
             </el-button>
             <el-button
                 type="danger"
-                @click="formOpenWindow">
+                @click="openFormWindow">
                 提交勘误
             </el-button>
             <el-popover
@@ -83,7 +83,7 @@
                 <template #footer>
                     <span>
                         <el-button type="default" @click="diagBookError = false">取消</el-button>
-                        <el-button type="primary" @click="formSubmitInfo(formRuleRef);" disabled>确认</el-button>
+                        <el-button type="primary" @click="handleFormSubmit(formRuleRef);" disabled>确认</el-button>
                     </span>
                 </template>
             </el-dialog>
@@ -155,11 +155,11 @@
             trigger: "blur"
         }]
     })
-    const formOpenWindow = () => {
+    const openFormWindow = () => {
         diagBookError.value = true;
         formObj.value.date = moment().format('yyyy-MM-DD HH:mm:ss')
     }
-    const formSubmitInfo = async(formIns: FormInstance | undefined) => {
+    const handleFormSubmit = async(formIns: FormInstance | undefined) => {
         if (!formIns) return
         await formIns.validate((valid, fields) => {
             if (valid) {
@@ -193,11 +193,11 @@
         downloadNum: 0,
         date: "2023-12-13",
         version: "1.0.0"
-    })
+    });
 
     axios.defaults.baseURL = "https://ysyx.oscc.cc/api/";
 
-    const infoGetBooksDownloadNum = () => {
+    const getInfoBooksDownloadNum = () => {
         axios.post(
             "getBooksDownloadNum",
             JSON.stringify({
@@ -212,7 +212,7 @@
         });
     }
 
-    const infoSetBooksDownloadNum = () => {
+    const setInfoBooksDownloadNum = () => {
         window.open("/res/files/RISC-V开放架构设计之道-v1.0.0.pdf")
         axios.post(
             "setBooksDownloadNum",
@@ -221,7 +221,7 @@
             }
         )).then((res) => {
             if (res.data.msg === "success") {
-                infoGetBooksDownloadNum();
+                getInfoBooksDownloadNum();
             }
             else {
             }
