@@ -32,7 +32,8 @@
             </el-popover>
             <el-dialog
                 v-model="diagBookError"
-                title="勘误表单">
+                title="勘误表单"
+                :append-to-body="true">
                 <template #default>
                     <el-form
                         ref="formRuleRef"
