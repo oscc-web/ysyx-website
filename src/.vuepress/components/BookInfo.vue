@@ -42,9 +42,9 @@
                         <el-form-item
                             label="姓名"
                             :label-width="formLabelWidth"
-                            prop="name">
+                            prop="user">
                             <el-input
-                                v-model="formObj.name"
+                                v-model="formObj.user"
                                 placeholder="请输入提交者姓名" />
                         </el-form-item>
                         <el-form-item
@@ -84,7 +84,7 @@
                 <template #footer>
                     <span>
                         <el-button type="default" @click="diagBookError = false">取消</el-button>
-                        <el-button type="primary" @click="handleFormSubmit(formRuleRef);" disabled>确认</el-button>
+                        <el-button type="primary" @click="handleFormSubmit(formRuleRef);">确认</el-button>
                     </span>
                 </template>
             </el-dialog>
@@ -112,7 +112,7 @@
 
     const formLabelWidth = "100px"
     interface FormRule {
-        name: string
+        user: string
         email: string
         page: number
         date: string
@@ -120,14 +120,14 @@
     }
     const formRuleRef = ref<FormInstance>()
     const formObj = ref<FormRule>({
-        name: "",
+        user: "",
         email: "",
         page: 0,
         date: "",
         contents: ""
     })
     const formRules = ref<FormRules<FormRule>>({
-        name: [{
+        user: [{
             required: true,
             message: "请输入提交者姓名",
             trigger: "blur"
@@ -160,21 +160,37 @@
         diagBookError.value = true;
         formObj.value.date = moment().format('yyyy-MM-DD HH:mm:ss')
     }
-    const handleFormSubmit = async(formIns: FormInstance | undefined) => {
+    const handleFormSubmit = async (formIns: FormInstance | undefined) => {
         if (!formIns) return
         await formIns.validate((valid, fields) => {
             if (valid) {
-                Object.keys(formObj.value).forEach(key => {
-                    if (key === "page") {
-                        formObj.value[key] = 0
+                axios.post(
+                    "setBooksErrorInfo",
+                    JSON.stringify(
+                        Object.assign({
+                            name: "riscv-reader",
+                            type: "error"
+                        }, formObj.value)
+                    )
+                ).then((res) => {
+                    if (res.data.msg === "success") {
+                        Object.keys(formObj.value).forEach(key => {
+                            if (key === "page") {
+                                formObj.value[key] = 0
+                            }
+                            else {
+                                formObj.value[key] = ""
+                            }
+                        });
+                        diagBookError.value = false;
                     }
                     else {
-                        formObj.value[key] = ""
                     }
-                })
-                diagBookError.value = false
+                }).catch((err) => {
+                    console.log(err);
+                });
             }
-        })
+        });
     }
 
     const qrcodeBase = ref({
@@ -196,13 +212,15 @@
         version: "1.0.0"
     });
 
-    axios.defaults.baseURL = "https://ysyx.oscc.cc/api/";
+    axios.defaults.baseURL = "http://localhost:9090/api/";
+    // axios.defaults.baseURL = "https://ysyx.oscc.cc/api/";
 
     const getInfoBooksDownloadNum = () => {
         axios.post(
             "getBooksDownloadNum",
             JSON.stringify({
-                id: "riscv-reader"
+                name: "riscv-reader",
+                type: "statis"
             }
         )).then((res) => {
             if (res.data.msg === "success") {
@@ -218,18 +236,19 @@
         axios.post(
             "setBooksDownloadNum",
             JSON.stringify({
-                id: "riscv-reader"
+                name: "riscv-reader",
+                type: "statis"
             }
         )).then((res) => {
             if (res.data.msg === "success") {
                 getInfoBooksDownloadNum();
             }
-            else {
-            }
         }).catch((err) => {
             console.log(err);
         });
     }
+
+    getInfoBooksDownloadNum();
 </script>
 
 <style scoped lang="scss">
