@@ -107,6 +107,7 @@
     import axios from "axios";
     import moment from "moment";
     import qrcodeVue, { RenderAs, Level } from "qrcode.vue";
+    import { config } from "../config-dynamic.ts";
 
     let diagBookError = ref(false)
 
@@ -212,8 +213,7 @@
         version: "1.0.0"
     });
 
-    axios.defaults.baseURL = "http://localhost:9090/api/";
-    // axios.defaults.baseURL = "https://ysyx.oscc.cc/api/";
+    axios.defaults.baseURL = config.baseURL;
 
     const getInfoBooksDownloadNum = () => {
         axios.post(
