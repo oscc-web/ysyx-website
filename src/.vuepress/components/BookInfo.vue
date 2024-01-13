@@ -94,7 +94,16 @@
             <li>原著作者：{{ infoBook.authors }}</li>
             <li>翻译团队：{{ infoBook.translators }}</li>
             <li>审核校对：{{ infoBook.reviewers }}</li>
-            <li>下载次数：{{ infoBook.downloadNum }}</li>
+            <li>
+                <span>下载次数：</span>
+                <span class="infoDownloadNum"
+                      v-loading="infoLoading"
+                      :element-loading-spinner="infoLoadingSVG"
+                      element-loading-svg-view-box="-10, -10, 50, 50"
+                      element-loading-custom-class="load">
+                      {{ infoBook.downloadNum }}
+                </span>
+            </li>
             <li>发布日期：{{ infoBook.date }}</li>
             <li>最新版本：{{ infoBook.version }}</li>
         </el-col>
@@ -212,10 +221,20 @@
         date: "2023-12-13",
         version: "1.0.0"
     });
+    const infoLoading = ref(true);
+    const infoLoadingSVG = `<path class="path" d="M 30 15
+                                                  L 28 17
+                                                  M 25.61 25.61
+                                                  A 15 15, 0, 0, 1, 15 30
+                                                  A 15 15, 0, 1, 1, 27.99 7.5
+                                                  L 15 15"
+                                   style="stroke-width:4px; fill:rgba(0,0,0,0)"
+                            />`;
 
     axios.defaults.baseURL = config.baseURL;
 
     const getInfoBooksDownloadNum = () => {
+        infoLoading.value = true;
         axios.post(
             "getBooksDownloadNum",
             JSON.stringify({
@@ -223,8 +242,12 @@
                 type: "statis"
             }
         )).then((res) => {
+            infoLoading.value = false;
             if (res.data.msg === "success") {
                 infoBook.value.downloadNum = res.data.data;
+            }
+            else {
+                infoBook.value.downloadNum = 0;
             }
         }).catch((err) => {
             console.log(err);
@@ -251,6 +274,8 @@
     getInfoBooksDownloadNum();
 </script>
 
-<style scoped lang="scss">
-
+<style lang="scss">
+    .infoDownloadNum .el-loading-spinner .circular {
+        width: 30px !important;
+    }
 </style>
