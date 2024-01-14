@@ -33,12 +33,13 @@
             <el-dialog
                 v-model="diagBookError"
                 title="勘误表单"
-                :append-to-body="true">
+                append-to-body>
                 <template #default>
                     <el-form
                         ref="formRuleRef"
                         :model="formObj"
-                        :rules="formRules">
+                        :rules="formRules"
+                        status-icon>
                         <el-form-item
                             label="姓名"
                             :label-width="formLabelWidth"
@@ -146,6 +147,10 @@
             required: true,
             message: "请输入提交者邮箱",
             trigger: "blur"
+        }, {
+            type: "email",
+            message: "请输入正确的邮箱地址",
+            trigger: ["blur", "change"]
         }],
         page: [{
             required: true,
