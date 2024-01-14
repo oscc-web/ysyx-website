@@ -168,7 +168,7 @@
     })
     const openFormWindow = () => {
         diagBookError.value = true;
-        formObj.value.date = moment().format('yyyy-MM-DD HH:mm:ss')
+        formObj.value.date = moment().format("yyyy-MM-DD HH:mm:ss");
     }
     const handleFormSubmit = async (formIns: FormInstance | undefined) => {
         if (!formIns) return
