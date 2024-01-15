@@ -112,8 +112,9 @@
 </template>
 
 <script lang="ts" setup>
-    import { ref } from "vue"
-    import type { FormInstance, FormRules } from "element-plus"
+    import { ref } from "vue";
+    import type { FormInstance, FormRules } from "element-plus";
+    import { ElNotification } from "element-plus";
     import axios from "axios";
     import moment from "moment";
     import qrcodeVue, { RenderAs, Level } from "qrcode.vue";
@@ -189,17 +190,30 @@
                     )
                 ).then((res) => {
                     if (res.data.msg === "success") {
-                        Object.keys(formObj.value).forEach(key => {
-                            if (key === "page") {
-                                formObj.value[key] = 0
-                            }
-                            else {
-                                formObj.value[key] = ""
+                        ElNotification({
+                            title: "消息",
+                            message: "提交成功！",
+                            type: "success",
+                            duration: 2000,
+                            onClose: () => {
+                                Object.keys(formObj.value).forEach(key => {
+                                    if (key === "page") {
+                                        formObj.value[key] = 0
+                                    }
+                                    else {
+                                        formObj.value[key] = ""
+                                    }
+                                });
+                                diagBookError.value = false;
                             }
                         });
-                        diagBookError.value = false;
                     }
                     else {
+                        ElNotification({
+                            title: "消息",
+                            message: "提交失败！工程师正在修复该问题。",
+                            type: "error"
+                        });
                     }
                 }).catch((err) => {
                     console.log(err);
