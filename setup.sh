@@ -8,6 +8,19 @@ PATH_RESS=${PATH_ROOT}/src/.vuepress/public/res/
 PATH_NODE=${PATH_ROOT}/node_modules/
 PRJ_NAME=${PATH_ROOT##*/}
 
+if [ ! -f ${PATH_ROOT}/src/.vuepress/config-dynamic.ts ]; then
+    echo "Generating dynamic config..."
+    echo ""
+    cat > ${PATH_ROOT}/src/.vuepress/config-dynamic.ts << EOF
+const config = {
+    // baseURL: "http://localhost:9090/api/"
+    baseURL: "https://ysyx.oscc.cc/api/"
+};
+
+export { config };
+EOF
+fi
+
 if [ ! -d ${PATH_COMM} ]; then
     echo "Downloading common scripts..."
     rm -rf ${PATH_COMM}
