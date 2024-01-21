@@ -5,24 +5,25 @@
         <el-row :gutter="10"
                  justify="center"
                 align="middle">
-            <el-col v-for="(sponsorItem, i) in sponsorItemList"
-                   :key="i"
-                   :span="sponsorObj.col"
-                    style="text-align:center">
-                <div :style="{ '--scale': sponsorItem.scale }">
-                    <a :href="sponsorItem.link"
+            <el-col
+                v-for="(item, i) in sponsorItemList"
+                :key="i"
+                :span="sponsorObj.col"
+                style="text-align:center">
+                <div :style="{ '--scale': item.scale }">
+                    <a :href="item.link"
                         target="_blank">
-                        <div v-if="sponsorItem.image === undefined">
-                            <component :is="sponsorItem.elem"
-                                       :title="sponsorItem.name"
+                        <div v-if="item.image === undefined">
+                            <component :is="item.elem"
+                                       :title="item.name"
                                        :style="{
                                             'max-width': sponsorObj.width,
                                             'transform': 'scale(var(--scale))',
                                             'width': '100%',
                                             'height': '100px'}" />
                         </div>
-                        <div v-if="sponsorItem.image !== undefined">
-                            <img :src="sponsorItem.image"
+                        <div v-if="item.image !== undefined">
+                            <img :src="item.image"
                                  :style="{
                                     'max-width': sponsorObj.width,
                                     'transform': 'scale(var(--scale))',
