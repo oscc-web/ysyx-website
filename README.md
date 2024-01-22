@@ -39,7 +39,7 @@ $> cd your-workspaces
 $> git clone git@github.com:oscc-web/ysyx-website.git
 ```
 
-### 设置仓库
+### 更新配置
 
 ```sh
 $> npm run command -- setup
