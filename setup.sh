@@ -8,10 +8,10 @@ PATH_RESS=${PATH_ROOT}/src/.vuepress/public/res/
 PATH_NODE=${PATH_ROOT}/node_modules/
 PRJ_NAME=${PATH_ROOT##*/}
 
-if [ ! -f ${PATH_ROOT}/src/.vuepress/config-dynamic.ts ]; then
+if [ ! -f ${PATH_ROOT}/src/.vuepress/config-temp.ts ]; then
     echo "Generating dynamic config..."
     echo ""
-    cat > ${PATH_ROOT}/src/.vuepress/config-dynamic.ts << EOF
+    cat > ${PATH_ROOT}/src/.vuepress/config-temp.ts << EOF
 const config = {
     // baseURL: "http://localhost:9090/api/"
     baseURL: "https://ysyx.oscc.cc/api/"

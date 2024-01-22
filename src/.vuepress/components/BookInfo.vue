@@ -118,7 +118,7 @@
     import axios from "axios";
     import moment from "moment";
     import qrcodeVue, { RenderAs, Level } from "qrcode.vue";
-    import { config } from "../config-dynamic.ts";
+    import { config } from "../config-temp.ts";
 
     let diagBookError = ref(false)
 

@@ -5,4 +5,4 @@ src/.vuepress/dist/
 var/
 res/
 common/
-config-dynamic.ts
+config-temp.ts
