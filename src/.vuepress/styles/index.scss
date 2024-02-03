@@ -21,3 +21,13 @@
 .hint-container.details {
     margin: 0px;
 }
+
+
+.wb-component {
+    margin-top:100px;
+    text-align:center;
+    .wb-component-title {
+        font-size:2rem;
+        color:var(--text-color);
+    }
+}

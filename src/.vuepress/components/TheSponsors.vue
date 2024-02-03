@@ -1,7 +1,7 @@
 <template>
-    <div style="margin-top:100px; text-align:center;">
+    <div class="wb-component">
         <el-divider />
-        <el-text style="font-size:1.5rem; color:var(--text-color);">合作伙伴</el-text>
+        <el-text class="wb-component-title">合作伙伴</el-text>
         <el-row :gutter="10"
                  justify="center"
                 align="middle">
