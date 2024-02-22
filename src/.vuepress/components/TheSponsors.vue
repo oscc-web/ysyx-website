@@ -36,7 +36,7 @@
     </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
     import UCAS from "./sponsors/UCAS.vue";
     import ICT from "./sponsors/ICT.vue";
     import PCL from "./sponsors/PCL.vue";
