@@ -74,7 +74,7 @@ export default hopeTheme({
         "/en/": {
             navbar: enNavbar,
             sidebar: enSidebar,
-            footer: "GPL License | Copyright © 2023-Team OSOC",
+            footer: "GPL License | Copyright © 2023-Team YSYX",
             metaLocales: {
                 editLink: "Edit this page on GitHub",
             }

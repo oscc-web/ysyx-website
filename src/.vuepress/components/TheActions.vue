@@ -7,31 +7,47 @@
             <el-button class="button button-solid"
                     size="large"
                     type="default"
-                    @click="jumpToProjectInfo">项目介绍
+                    @click="jumpToProjectInfo">{{ i18n[prop.lang].projectInfo }}
             </el-button>
-            <a href="/res/files/“一生一芯”计划.pdf"
+            <a href="/res/files/ysyx.pdf"
                target="_blank"
                style="margin-top:5px;
                       font-weight:bold;
-                      font-size:14px;">PDF下载
+                      font-size:14px;">{{ i18n[prop.lang].pdfDownload }}
             </a>
         </div>
         <div>
             <el-button class="button"
                    size="large"
                    type="info"
-                   @click="jumpToSignup">报名参与
+                   @click="jumpToSignup">{{ i18n[prop.lang].signup }}
             </el-button>
         </div>
     </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
+    const prop = defineProps(["lang"])
+    const i18n = {
+        "/": {
+            projectInfo: "项目介绍",
+            signup: "报名参与",
+            pdfDownload: "PDF下载"
+        },
+        "/en": {
+            projectInfo: "Project Info",
+            signup: "Signup",
+            pdfDownload: "PDF Download"
+        }
+    }
+
     const jumpToProjectInfo = () => {
-        window.location.href = "/project/intro.html";
+        window.location.href = ((prop.lang === "/") ? "" : prop.lang) +
+                               "/project/intro.html";
     }
     const jumpToSignup = () => {
-        window.location.href = "/signup/index.html";
+        window.location.href = ((prop.lang === "/") ? "" : prop.lang) +
+                               "/signup/index.html";
     }
 </script>
 

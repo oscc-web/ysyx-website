@@ -104,6 +104,16 @@
     </svg>
 </template>
 
+<script lang="ts" setup>
+    const prop = defineProps(["lang"])
+    const i18n = {
+        "/": {
+        },
+        "/en": {
+        }
+    }
+</script>
+
 <style scoped lang="scss">
     svg {
         max-height: 16rem;

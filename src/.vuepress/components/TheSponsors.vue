@@ -1,7 +1,7 @@
 <template>
     <div class="wb-component">
         <el-divider />
-        <el-text class="wb-component-title">合作伙伴</el-text>
+        <el-text class="wb-component-title">{{ i18n[prop.lang].componentTitle }}</el-text>
         <el-row :gutter="10"
                  justify="center"
                 align="middle">
@@ -47,6 +47,16 @@
     import CRVA from "./sponsors/CRVA.vue";
 
     import { onMounted, onUnmounted, ref, shallowRef } from "vue";
+
+    const prop = defineProps(["lang"])
+    const i18n = {
+        "/": {
+            componentTitle: "合作伙伴",
+        },
+        "/en": {
+            componentTitle: "Sponsors",
+        }
+    }
 
     const sponsorItemList = shallowRef([{
         name: "中国科学院大学",

@@ -1,9 +1,9 @@
 <template>
     <div>
-        <TheSlogan lang="/" />
+        <TheSlogan lang="/en" />
         <!-- <TheAboutProject /> -->
-        <TheActions lang="/" />
+        <TheActions lang="/en" />
         <!-- <TheFlow /> -->
-        <TheSponsors lang="/" />
+        <TheSponsors lang="/en" />
     </div>
 </template>
