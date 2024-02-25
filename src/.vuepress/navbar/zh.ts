@@ -38,7 +38,7 @@ export const zhNavbar = navbar([
     }, {
         text: "推荐&招聘",
         prefix: "/job/",
-        children: ["team",{
+        children: ["team", {
             text: "外部委托",
             prefix: "external/",
             children: [

@@ -90,7 +90,7 @@
     $box-shadow: 0px 0px 1px #bdbdbd;
     $border: 1px solid #bdbdbd;
     $items: 4;
-    $rows: ceil($items/2);
+    $rows: ceil(calc($items/2));
 
     /* Card sizing */
     $card-height: 460px;
@@ -113,7 +113,7 @@
     $container-width: $card-width*2 + $outer-margin*3;
     $head-height: $number-size + 50;
     $body-height: $card-height - $head-height;
-    $marker-dist: $card-width + $outer-margin/2 - $marker-size/2;
+    $marker-dist: $card-width + calc($outer-margin/2) - calc($marker-size/2);
 
     /* Placeholders */
     @include mq-lg {
@@ -210,10 +210,10 @@
                 max-width: $card-width;
                 height: $card-height;
                 margin: $outer-margin;
-                margin-top: $outer-margin/2;
-                margin-bottom: $outer-margin/2;
+                margin-top: calc($outer-margin/2);
+                margin-bottom: calc($outer-margin/2);
                 &:nth-child(odd) {
-                    margin-right: $outer-margin/2;
+                    margin-right: calc($outer-margin/2);
                     .head::after {
                         @extend %arrow;
                         border-left-width: 15px;
@@ -226,7 +226,7 @@
                     }
                 }
                 &:nth-child(even) {
-                    margin-left: $outer-margin/2;
+                    margin-left: calc($outer-margin/2);
                     .head::after {
                         @extend %arrow;
                         border-right-width: 15px;

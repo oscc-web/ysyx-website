@@ -19,6 +19,11 @@ export default defineUserConfig({
             lang: "zh-CN",
             title: "一生一芯",
             description: "一生一芯的官方网站"
+        },
+        "/en/": {
+            lang: "en-US",
+            title: "One Student One Chip",
+            description: "The Offical Website of One Student One Chip"
         }
     },
     shouldPrefetch: false,

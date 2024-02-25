@@ -47,7 +47,6 @@ export default hopeTheme({
     docsBranch: "main",
     docsDir: "src",
     // Footer
-    footer: "GPL协议 | 版权所有 © 2023-现在 一生一芯团队",
     copyright: false,
     displayFooter: true,
     // Others
@@ -67,8 +66,17 @@ export default hopeTheme({
         "/": {
             navbar: zhNavbar,
             sidebar: zhSidebar,
+            footer: "GPL协议 | 版权所有 © 2023-现在 一生一芯团队",
             metaLocales: {
                 editLink: "在 GitHub 上编辑此页",
+            }
+        },
+        "/en/": {
+            navbar: enNavbar,
+            sidebar: enSidebar,
+            footer: "GPL License | Copyright © 2023-Team OSOC",
+            metaLocales: {
+                editLink: "Edit this page on GitHub",
             }
         }
     },
