@@ -3,7 +3,7 @@
         <TheSlogan />
         <TheAboutProject />
         <TheActions />
-        <TheFlow />
+        <!-- <TheFlow /> -->
         <TheSponsors />
     </div>
 </template>
