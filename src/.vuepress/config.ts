@@ -74,5 +74,13 @@ export default defineUserConfig({
             sortStrategy: "max"
         })
     ],
-    theme: theme
+    theme: theme,
+    head: [
+        [
+            "meta", { name: "msvalidate.01", content: "DBA9CE921B74D9D73F0C965146BCFD06" },
+        ],
+        [
+            "script", { type: "text/javascript", href: "/js/baidu-tongji.js" }
+        ]
+    ]
 });
