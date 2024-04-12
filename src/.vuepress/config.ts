@@ -80,7 +80,7 @@ export default defineUserConfig({
             "meta", { name: "msvalidate.01", content: "DBA9CE921B74D9D73F0C965146BCFD06" },
         ],
         [
-            "script", { type: "text/javascript", href: "/js/baidu-tongji.js" }
+            "script", { type: "text/javascript", src: "/js/baidu-tongji.js" }
         ]
     ]
 });
