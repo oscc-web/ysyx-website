@@ -12,10 +12,10 @@ The processor chip design talent crisis that our country is experiencing has dir
 
 ![](/res/images/project/intro-background-2.png)
 
-针对上述情况，中国科学院大学（简称“国科大”）计算机科学与技术学院立足已有的理论课堂与实验教学，联合中国科学院计算技术研究所（简称“计算所”）的科研工程支撑团队，于2019年8月启动了“一生一芯”开源处理器芯片教学流片实践项目计划，**至此形成了计算机系统方向理论课、实验研讨课与实践项目的有机衔接和贯通式实践训练**。
+In response to the above situation, College of Computer Science and Technology, University of Chinese Academy of Sciences (referred to as "UCAS") based on the existing theoretical classroom and experimental teaching, combined with the scientific research engineering support team of the The Institute of Computing Technology, Chinese Academy of Sciences (referred to as "ICT"), in August 2019, the "One Student One Chip" open source processor chip teaching tape-out practice project initiative was launched, **thus forming an organic connection and through-type practical training for theoretical courses, experimental seminars and practical projects in the direction of computer systems**.
 
-:::info 扩展资料
-20世纪80年代，全美上千所大学中只有不到100位教授和学生从事半导体相关的研究。为此，美国国防部高级研究计划署 (DARPA) 在1981年启动MOSIS 项目，资助大学开展处理器芯片研究，并提供流片服务，通过MPW模式大幅降低处理器芯片设计门槛。40余年来，MOSIS为大学和研究机构流了60000多款处理器芯片，培养了数十万名学生。由此可见，降低处理器芯片设计门槛，可大幅促进处理器芯片技术发展，同时提高人才培养效率。
+:::info Extended materials
+In the 1980s, there were less than 100 professors and students engaged in semiconductor-related research at thousands of universities across the United States.为此，美国国防部高级研究计划署 (DARPA) 在1981年启动MOSIS 项目，资助大学开展处理器芯片研究，并提供流片服务，通过MPW模式大幅降低处理器芯片设计门槛。40余年来，MOSIS为大学和研究机构流了60000多款处理器芯片，培养了数十万名学生。由此可见，降低处理器芯片设计门槛，可大幅促进处理器芯片技术发展，同时提高人才培养效率。
 :::
 
 ## 目标理念
@@ -28,7 +28,7 @@ The processor chip design talent crisis that our country is experiencing has dir
 
 ![](/res/images/project/intro-goal.png)
 
-:::info 扩展资料
+:::info Extended materials
 “计算机系统能力3.0”处理器芯片人才培养的理念是用开源技术、做开源处理器芯片、育处理器芯片人才。具体来讲，为培养具有计算机系统能力的“卡脖子”处理器芯片人才，贯通计算机（CS）本科阶段系统方向核心课程与实践内容，包括组成原理、体系结构、操作系统、编译等软硬件课程，并延展至电子信息（EE）专业，包括片上系统SoC与处理器芯片后端设计等课程。基于开源软硬件生态形成处理器芯片人才培养体系，探索“硅上做教学”。即学生自行设计处理器芯片，提交版图文件至处理器芯片代工厂（Foundry）进行流片，并在回片后进行测试调试和运行操作系统。
 :::
 
