@@ -15,10 +15,10 @@ The processor chip design talent crisis that our country is experiencing has dir
 In response to the above situation, College of Computer Science and Technology, University of Chinese Academy of Sciences (referred to as "UCAS") based on the existing theoretical classroom and experimental teaching, combined with the scientific research engineering support team of the The Institute of Computing Technology, Chinese Academy of Sciences (referred to as "ICT"), in August 2019, the "One Student One Chip" open source processor chip teaching tape-out practice project initiative was launched, **thus forming an organic connection and through-type practical training for theoretical courses, experimental seminars and practical projects in the direction of computer systems**.
 
 :::info Extended materials
-In the 1980s, there were less than 100 professors and students engaged in semiconductor-related research at thousands of universities across the United States.为此，美国国防部高级研究计划署 (DARPA) 在1981年启动MOSIS 项目，资助大学开展处理器芯片研究，并提供流片服务，通过MPW模式大幅降低处理器芯片设计门槛。40余年来，MOSIS为大学和研究机构流了60000多款处理器芯片，培养了数十万名学生。由此可见，降低处理器芯片设计门槛，可大幅促进处理器芯片技术发展，同时提高人才培养效率。
+In the 1980s, there were less than 100 professors and students engaged in semiconductor-related research at thousands of universities across the United States.To this end, The U.S. Department of Defense Advanced Research Projects Agency (DARPA) launched the MOSIS project in 1981 to fund universities to conduct processor chip research and provide tape-out services, significantly reducing the threshold for processor chip design through the MPW model.For more than 40 years, MOSIS has supplied more than 60,000 processor chips to universities and research institutions and trained hundreds of thousands of students.It can be seen that lowering the threshold for processor chip design can greatly promote the development of processor chip technology and improve the efficiency of talent training.
 :::
 
-## 目标理念
+## Goal
 
 为解决当前处理器芯片“卡脖子”问题，并面向未来计算机系统领域拔尖人才需求，**“一生一芯”教学团队提出“计算机系统能力3.0”处理器芯片人才培养目标**。即以开源处理器芯片为切入点，以处理器芯片敏捷开发方法为实验手段，将计算机科学（CS）与电子信息工程（EE）专业课程进行贯通式设计，突出科教融合与产学研融合特色，理论与实践并重，通过教学流片计划实现硅上处理器芯片教学，培养计算机系统领域全栈式拔尖人才。
 
