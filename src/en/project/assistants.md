@@ -1,8 +1,8 @@
 ---
-title: 助教团队
+title: TA Team
 ---
 
-### 第五期助教名单
+### List of TAs for the Fifth Session
 
 ![](/res/images/project/assistant-1.png)
 ![](/res/images/project/assistant-2.png)
