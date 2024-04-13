@@ -9,6 +9,15 @@ export default defineClientConfig({
         Object.keys(ElementPlusIconsVue).forEach(key => {
             app.component(key, ElementPlusIconsVue[key]);
         });
+
+        router.beforeEach((to, from, next) => {
+            if (typeof _hmt != "undefined") {
+                if (to.path) {
+                    _hmt.push(["_trackPageview", to.fullPath]);
+                }
+            }
+            next();
+        })
         router.afterEach((to) => {
             if (to.path === "/") {
             }

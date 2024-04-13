@@ -66,8 +66,7 @@ export default hopeTheme({
         "/": {
             navbar: zhNavbar,
             sidebar: zhSidebar,
-            // footer: "GPL协议 | 版权所有 © 2023-现在 一生一芯团队",
-            footer: '',
+            footer: "GPL协议 | 版权所有 © 2023-现在 一生一芯团队",
             // footer: "GPL协议 | 版权所有 © 2023-现在 一生一芯团队<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=tt&d=NStOp2ovvf-01kSmytqAw3uDAcLnPiCun5ot-wTg86k&co=2d78ad&cmo=3acc3a&cmn=ff5353&ct=ffffff'></script>",
             metaLocales: {
                 editLink: "在 GitHub 上编辑此页",

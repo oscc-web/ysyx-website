@@ -1,6 +1,7 @@
 import path from "path";
 import { defineUserConfig } from "vuepress";
 import { registerComponentsPlugin } from "@vuepress/plugin-register-components";
+import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 
 import AutoImport from "unplugin-auto-import/vite";
 import Components from "unplugin-vue-components/vite";
@@ -72,6 +73,9 @@ export default defineUserConfig({
             resultHistoryCount: 5,
             searchDelay: 150,
             sortStrategy: "max"
+        }),
+        googleAnalyticsPlugin({
+            id: "G-JE9FFL5P3Q"
         })
     ],
     theme: theme,
@@ -80,7 +84,7 @@ export default defineUserConfig({
             "meta", { name: "msvalidate.01", content: "DBA9CE921B74D9D73F0C965146BCFD06" },
         ],
         [
-            "script", { type: "text/javascript", src: "/js/baidu-tongji.js" }
+            "script", { type: "text/javascript", src: "/js/baidu.js" }
         ]
     ]
 });
