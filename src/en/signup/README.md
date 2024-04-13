@@ -1,5 +1,5 @@
 ---
-title: "报名参与"
+title: 报名参与
 ---
 
 ## 报名流程
@@ -18,17 +18,21 @@ flowchart LR
 
 ### 1、了解计划
 
-**在正式报名参加“一生一芯”计划之前，请大家先阅读网站中的[《项目概述》](/project/intro.html)部分**，文章从【背景现状】、【目标理念】、【项目亮点】、【学习路线】、【预期收获】等不同角度对“一生一芯”计划进行了全面且详细的阐述，可以让同学们在正式报名前对“一生一芯”计划有一个基本的认识，并消除一些因信息不对称所产生的误解。此外，从第六期开始，“一生一芯”计划的学习流程发生了比较大的变化，建议每位同学都点击[这里](https://docs.qq.com/doc/DY1huTURndXpTdlZW)了解一下，便于大家在报名结束后规划和制订自己专属的学习路线。
+**在正式报名参加“一生一芯”计划之前，请大家先阅读网站中的[《项目概述》](/project/intro.html)部分**，文章从【背景现状】、【目标理念】、【项目亮点】、【学习路线】、【预期收获】等不同角度对“一生一芯”计划进行了全面且详细的阐述，可以让同学们在正式报名前对“一生一芯”计划有一个基本的认识，并消除一些因信息不对称所产生的误解。
+
+<!-- 此外，从第六期开始，“一生一芯”计划的学习流程发生了比较大的变化，建议每位同学都点击[这里](https://docs.qq.com/doc/DY1huTURndXpTdlZW)了解一下，便于大家在报名结束后规划和制订自己专属的学习路线。 -->
 
 - [概述视频](https://www.bilibili.com/video/BV12e4y1Y76i/)
 - [介绍课件](https://ysyx.oscc.cc/slides/2205/01.html#/)
 - [常见问题](/project/faq.html)
 
-::: info 交流渠道
-> | QQ 5群 | QQ 4群<el-badge value="已满"></el-badge> | QQ 3群 <el-badge value="已满"></el-badge> | QQ 2群 <el-badge value="已满"></el-badge> | QQ 1群 <el-badge value="已满"></el-badge> |
-> |:---:|:---:|:---:|:---:|:---:|
+:::info 交流渠道
+
+> |                                                                                     QQ 5群                                                                                     |                                                                     QQ 4群<el-badge value="已满"></el-badge>                                                                     |                                                                     QQ 3群 <el-badge value="已满"></el-badge>                                                                    |                                                                     QQ 2群 <el-badge value="已满"></el-badge>                                                                    |                                                                     QQ 1群 <el-badge value="已满"></el-badge>                                                                    |
+> | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 > | <a qrcode-container :href="qrcodeQQGroup5" target="_blank"><qrcode-vue :value="qrcodeQQGroup5" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> | <a qrcode-container :href="qrcodeQQGroup4" target="_blank"><qrcode-vue :value="qrcodeQQGroup4" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> | <a qrcode-container :href="qrcodeQQGroup3" target="_blank"><qrcode-vue :value="qrcodeQQGroup3" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> | <a qrcode-container :href="qrcodeQQGroup2" target="_blank"><qrcode-vue :value="qrcodeQQGroup2" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> | <a qrcode-container :href="qrcodeQQGroup1" target="_blank"><qrcode-vue :value="qrcodeQQGroup1" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> |
-> | <a :href="qrcodeQQGroup5" target="_blank">513870270</a> | <a :href="qrcodeQQGroup4" target="_blank">884767063</a> | <a :href="qrcodeQQGroup3" target="_blank">621039593</a> | <a :href="qrcodeQQGroup2" target="_blank">528994030</a> | <a :href="qrcodeQQGroup1" target="_blank">663797655</a> |
+> |                                                            <a :href="qrcodeQQGroup5" target="_blank">513870270</a>                                                            |                                                            <a :href="qrcodeQQGroup4" target="_blank">884767063</a>                                                            |                                                            <a :href="qrcodeQQGroup3" target="_blank">621039593</a>                                                            |                                                            <a :href="qrcodeQQGroup2" target="_blank">528994030</a>                                                            |                                                            <a :href="qrcodeQQGroup1" target="_blank">663797655</a>                                                            |
+
 :::
 
 <style lang="scss" scoped>
@@ -66,7 +70,6 @@ flowchart LR
 ### 2、填写问卷
 
 为了确保追踪数据的准确性，请大家务必认真填写[《报名问卷》](https://www.wenjuan.com/s/YRBnamK/)，问卷填写完成即可扫码加入“一生一芯”[预学习交流群](https://docs.qq.com/doc/DSU1teVZLR1hDcG9P)开始正式学习。等大家完成所有预学习阶段的任务后，可以在线向助教提交入学答辩申请，**答辩考核通过会得到专属学号**，这个学号非常重要，涉及后期【学习追踪】、【组会汇报】、【答辩考核】、【流片对接】等诸多环节，因此请务必记住（最好是记到一个本地或在线的文档中）。
-
 
 ### 3、创建记录
 
