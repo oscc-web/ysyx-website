@@ -1,17 +1,19 @@
 ---
-title: "联系我们"
+title: 联系我们
 ---
 
 - 交流合作：ysyx@bosc.ac.cn
 - 问题反馈
-    - 一般：ysyx@bosc.ac.cn
-    - 网站：miaoyuyang@ict.ac.cn
+  - 一般：ysyx@bosc.ac.cn
+  - 网站：miaoyuyang@ict.ac.cn
 
-::: info 交流渠道
-> | 微信公众号 | B站视频号 |
-> |:---:|:---:|
+:::info 交流渠道
+
+> |                                                                                   微信公众号                                                                                   |                                                                                     B站视频号                                                                                     |
+> | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 > | <a qrcode-container :href="qrcodeWeChat" target="_blank"><qrcode-vue :value="qrcodeWeChat" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> | <a qrcode-container :href="qrcodeBiliBili" target="_blank"><qrcode-vue :value="qrcodeBiliBili" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> |
-> | 无 | 无 |
+> |                                                                                     无                                                                                     |                                                                                       无                                                                                       |
+
 :::
 
 <style lang="scss" scoped>
