@@ -1,3 +1,3 @@
 ---
-title: "Tape-out progress"
+title: 流片进度
 ---
