@@ -2,13 +2,13 @@
 title: Project Overview
 ---
 
-## 背景现状
+## Background
 
-我国计算机专业当前所面临的较为突出的人才培养问题，主要体现在计算机应用开发人员数量相对饱和，而底层软硬件研发人才匮乏，**特别是计算机处理器芯片设计人才严重不足**。经统计，2008到2017十年间的ISCA（体系结构顶级会议）论文的第一作者，有20%为中国国籍（美国本土为25%）。但与之相对，**这些作者中有85%选择在美国就业，仅有4%在中国就业**。大量学生到国外学习处理器芯片设计，毕业后留在美国工作。中美两国在高水平处理器芯片人才方面的差距，固然与过去多年中国处理器芯片的产业环境有关，但同时也与国内高校的处理器芯片人才培养方式密切相关。
+The most prominent talent training problems faced by my country's computer majors are mainly reflected in the relatively saturated number of computer application developers and the lack of underlying software and hardware R&D (Research & Development) talents, **especially the serious shortage of computer processor chip design talents**.According to statistics, 20% of the first authors of ISCA (top architecture conference) papers from 2008 to 2017 were Chinese nationals (25% in the United States).But in contrast, **85% of these authors chose to be employed in the United States, and only 4% were employed in China**.A large number of students go abroad to study processor chip design and stay in the United States to work after graduation.The gap in high-level processor chip talents between China and the United States is certainly related to the industrial environment of China's processor chips in the past many years, but it is also closely related to the training methods of processor chip talents in domestic universities.
 
 ![](/res/images/project/intro-background-1.png)
 
-我国正在经历的处理器芯片设计人才危机直接导致国内IT人才结构失衡，使得中国庞大的IT产业建立在国外软硬件系统平台之上，很多关键技术被国外“卡脖子”，国家安全受到威胁。若要解决这个问题，**就必须立足国家当前面临的紧迫问题和未来战略需求，超前布局处理器芯片这一关键领域紧缺人才的培养，创新培养模式**。然而，由于高端处理器芯片设计和生产成本不断增加，相关技术难度不断加大，所以目前只有极少数条件较好的大学和科研机构能够从事这方面的研究并培养少量人才。这远不能满足国家对该领域高端人才的迫切需求。
+The processor chip design talent crisis that our country is experiencing has directly led to an imbalance in the domestic IT talent structure, making China's huge IT industry based on foreign software and hardware system platforms. Many key technologies are "stuck" by foreign countries, and national security is threatened.To solve this problem, \*\* must base its efforts on the current pressing problems and future strategic needs of the country, advance the cultivation of urgently needed talents in the key field of processor chips, and innovate the training model\*\*.However, due to the increasing cost of high-end processor chip design and production and the increasing difficulty of related technologies, currently only a handful of universities and scientific research institutions with better conditions are able to engage in research in this area and cultivate a small number of talents.This is far from meeting the country’s urgent need for high-end talents in this field.
 
 ![](/res/images/project/intro-background-2.png)
 
