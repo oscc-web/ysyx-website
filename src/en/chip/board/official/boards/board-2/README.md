@@ -46,7 +46,7 @@ toc: false
 
 ### 板卡介绍
 
-星空开发板V1.3采用的是SoC底板+FPGA核心板的设计，FPGA核心板采用的是ZYNQ7010芯片，其中SoC底板板载资源如下图所示：
+The stars development board V1.3 uses the design of the SoC Bottom +FPGA core and the FPGA core uses ZYNQ7010 chips, in which the SoC subboard resources are shown as shown in： below
 
 ![SoC底板板载资源](/res/images/board/res/v1p3/board-func-color.png)
 
