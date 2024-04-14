@@ -33,42 +33,15 @@ flowchart LR
 > | <a :href="qrcodeQQGroup5" target="_blank">513870270</a> | <a :href="qrcodeQQGroup4" target="_blank">884767063</a> | <a :href="qrcodeQQGroup3" target="_blank">621039593</a> | <a :href="qrcodeQQGroup2" target="_blank">528994030</a> | <a :href="qrcodeQQGroup1" target="_blank">663797655</a> |
 :::
 
-<style lang="scss" scoped>
-    [qrcode-container] {
-        display: block;
-        border-radius: 5px;
-        overflow: hidden;
-        width: 100px;
-        height: 100px;
-    }
-</style>
-
-<script>
-    import QrcodeVue from "qrcode.vue";
-
-    export default {
-        data() {
-            return {
-                qrcodeRenderAs: "svg",
-                qrcodeMargin: 3,
-                qrcodeLevel: "L",
-                qrcodeQQGroup1: "https://qm.qq.com/q/sNcWv7KEiA",
-                qrcodeQQGroup2: "https://qm.qq.com/q/BVzmGhz0v8",
-                qrcodeQQGroup3: "https://qm.qq.com/q/ZXRVu5DYGe",
-                qrcodeQQGroup4: "https://qm.qq.com/q/rQGNQqLbOg",
-                qrcodeQQGroup5: "https://qm.qq.com/q/FaKCzlkLLi"
-            }
-        },
-        components: {
-            QrcodeVue
-        }
-    }
-</script>
-
 ### 2、填写问卷
 
 为了确保追踪数据的准确性，请大家务必认真填写[《报名问卷》](https://www.wenjuan.com/s/YRBnamK/)，问卷填写完成即可扫码加入“一生一芯”[预学习交流群](https://docs.qq.com/doc/DSU1teVZLR1hDcG9P)开始正式学习。等大家完成所有预学习阶段的任务后，可以在线向助教提交入学答辩申请，**答辩考核通过会得到专属学号**，这个学号非常重要，涉及后期【学习追踪】、【组会汇报】、【答辩考核】、【流片对接】等诸多环节，因此请务必记住（最好是记到一个本地或在线的文档中）。
 
+::: info 二维码信息
+> | 报名问卷 | 预学习交流群 |
+> |:---:|:---:|
+> | <a qrcode-container :href="qrcodeSignup" target="_blank"><qrcode-vue :value="qrcodeSignup" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> | <a qrcode-container :href="qrCodePreliminary" target="_blank"><qrcode-vue :value="qrCodePreliminary" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> |
+:::
 
 ### 3、创建记录
 
@@ -96,3 +69,37 @@ flowchart LR
         window.open("https://ysyx.oscc.cc/docs/", "_blank");
     }
 </script>
+
+<script>
+    import QrcodeVue from "qrcode.vue";
+
+    export default {
+        data() {
+            return {
+                qrcodeRenderAs: "svg",
+                qrcodeMargin: 3,
+                qrcodeLevel: "L",
+                qrcodeQQGroup1: "https://qm.qq.com/q/sNcWv7KEiA",
+                qrcodeQQGroup2: "https://qm.qq.com/q/BVzmGhz0v8",
+                qrcodeQQGroup3: "https://qm.qq.com/q/ZXRVu5DYGe",
+                qrcodeQQGroup4: "https://qm.qq.com/q/rQGNQqLbOg",
+                qrcodeQQGroup5: "https://qm.qq.com/q/FaKCzlkLLi",
+                qrcodeSignup: "https://www.wenjuan.com/s/YRBnamK",
+                qrCodePreliminary: "https://docs.qq.com/doc/DSU1teVZLR1hDcG9P"
+            }
+        },
+        components: {
+            QrcodeVue
+        }
+    }
+</script>
+
+<style lang="scss" scoped>
+    [qrcode-container] {
+        display: block;
+        border-radius: 5px;
+        overflow: hidden;
+        width: 100px;
+        height: 100px;
+    }
+</style>
