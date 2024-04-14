@@ -8,7 +8,7 @@ The most prominent talent training problems faced by my country's computer major
 
 ![](/res/images/project/intro-background-1.png)
 
-The processor chip design talent crisis that our country is experiencing has directly led to an imbalance in the domestic IT talent structure, making China's huge IT industry based on foreign software and hardware system platforms. Many key technologies are "stuck" by foreign countries, and national security is threatened.To solve this problem, \*\* must base its efforts on the current pressing problems and future strategic needs of the country, advance the cultivation of urgently needed talents in the key field of processor chips, and innovate the training model\*\*.However, due to the increasing cost of high-end processor chip design and production and the increasing difficulty of related technologies, currently only a handful of universities and scientific research institutions with better conditions are able to engage in research in this area and cultivate a small number of talents.This is far from meeting the country’s urgent need for high-end talents in this field.
+The processor chip design talent crisis that our country is experiencing has directly led to an imbalance in the domestic IT talent structure, making China's huge IT industry based on foreign software and hardware system platforms. Many key technologies are "strangle" by foreign countries, and national security is threatened.To solve this problem, \*\* must base its efforts on the current pressing problems and future strategic needs of the country, advance the cultivation of urgently needed talents in the key field of processor chips, and innovate the training model\*\*.However, due to the increasing cost of high-end processor chip design and production and the increasing difficulty of related technologies, currently only a handful of universities and scientific research institutions with better conditions are able to engage in research in this area and cultivate a small number of talents.This is far from meeting the country’s urgent need for high-end talents in this field.
 
 ![](/res/images/project/intro-background-2.png)
 
@@ -20,9 +20,9 @@ In the 1980s, there were less than 100 professors and students engaged in semico
 
 ## Goal
 
-为解决当前处理器芯片“卡脖子”问题，并面向未来计算机系统领域拔尖人才需求，**“一生一芯”教学团队提出“计算机系统能力3.0”处理器芯片人才培养目标**。即以开源处理器芯片为切入点，以处理器芯片敏捷开发方法为实验手段，将计算机科学（CS）与电子信息工程（EE）专业课程进行贯通式设计，突出科教融合与产学研融合特色，理论与实践并重，通过教学流片计划实现硅上处理器芯片教学，培养计算机系统领域全栈式拔尖人才。
+In order to solve the current "strangle" problem of processor chips and face the future demand for top talents in the computer system field, the "One Student One Chip" teaching team proposed the "Computer System Capability 3.0" processor chip talent training goal\*\*.That is to say, taking open source processor chips as the entry point, using the processor chip agile development method as the experimental method, the computer science (CS) and electronic information engineering (EE) professional courses are designed through the integration, highlighting the integration of science and education and the integration of industry, academia and research. Paying equal attention to theory and practice, we implement on-silicon processor chip teaching through the teaching tape-out plan, and cultivate top-notch full-stack talents in the field of computer systems.
 
-“一生一芯”的核心理念，**简单来说就是“让一个学生可以带着自己设计的一颗处理器芯片毕业”**，希望能通过理论与实践并重的教学机制来降低处理器芯片设计门槛，让更多的学生能够全流程的参与到处理器芯片设计的每一个环节中。
+The core concept of "One Student One Chip" is **simply "allowing a student to graduate with a processor chip designed by himself"**. It is hoped that the threshold of processor chip design can be lowered through a teaching mechanism that pays equal attention to theory and practice, so that more students can participate in every aspect of processor chip design throughout the process.
 
 “公益性”是“一生一芯"的重要属性。“一生一芯”报名和学习是免费的，在校生和已毕业的都可以来参加“一生一芯”的学习，但是因为经费有限，免费流片只针对在校生。只要对处理器芯片学习有浓厚的兴趣，想在处理器芯片方向发展的同学，零基础都可以加入，**不论年级，专业和学校，都可以来报名**。
 
