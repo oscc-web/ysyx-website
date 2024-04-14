@@ -2,7 +2,7 @@
 title: 报名参与
 ---
 
-## 报名流程
+## Sign up Process
 
 ```mermaid
 ---
