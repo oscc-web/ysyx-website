@@ -8,7 +8,7 @@ The most prominent talent training problems faced by my country's computer major
 
 ![](/res/images/project/intro-background-1.png)
 
-The processor chip design talent crisis that our country is experiencing has directly led to an imbalance in the domestic IT talent structure, making China's huge IT industry based on foreign software and hardware system platforms. Many key technologies are "strangled" by foreign countries, and national security is threatened.To solve this problem, \*\* must base its efforts on the current pressing problems and future strategic needs of the country, advance the cultivation of urgently needed talents in the key field of processor chips, and innovate the training model\*\*.However, due to the increasing cost of high-end processor chip design and production and the increasing difficulty of related technologies, currently only a handful of universities and scientific research institutions with better conditions are able to engage in research in this area and cultivate a small number of talents.This is far from meeting the country’s urgent need for high-end talents in this field.
+The processor chip design talent crisis that our country is experiencing has directly led to an imbalance in the domestic IT talent structure, making China's huge IT industry based on foreign software and hardware system platforms. Many key technologies are "strangled" by foreign countries, and national security is threatened.To solve this problem, must base its efforts on the current pressing problems and future strategic needs of the country, advance the cultivation of urgently needed talents in the key field of processor chips, and innovate the training model. However, due to the increasing cost of high-end processor chip design and production and the increasing difficulty of related technologies, currently only a handful of universities and scientific research institutions with better conditions are able to engage in research in this area and cultivate a small number of talents.This is far from meeting the country’s urgent need for high-end talents in this field.
 
 ![](/res/images/project/intro-background-2.png)
 
@@ -20,7 +20,7 @@ In the 1980s, there were less than 100 professors and students engaged in semico
 
 ## Goal
 
-In order to solve the current "bottleneck" problem of processor chips and face the future demand for top talents in the computer system field, the "One Student One Chip" teaching team proposed the "Computer System Capability 3.0" processor chip talent training goal\*\*.That is to say, taking open source processor chips as the entry point, using the processor chip agile development method as the experimental method, the computer science (CS) and electronic information engineering (EE) professional courses are designed through the integration, highlighting the integration of science and education and the integration of industry, academia and research. Paying equal attention to theory and practice, we implement on-silicon processor chip teaching through the teaching tape-out plan, and cultivate top-notch full-stack talents in the field of computer systems.
+In order to solve the current "bottleneck" problem of processor chips and face the future demand for top talents in the computer system field, the "One Student One Chip" teaching team proposed the "Computer System Capability 3.0" processor chip talent training goal.That is to say, taking open source processor chips as the entry point, using the processor chip agile development method as the experimental method, the computer science (CS) and electronic information engineering (EE) professional courses are designed through the integration, highlighting the integration of science and education and the integration of industry, academia and research. Paying equal attention to theory and practice, we implement on-silicon processor chip teaching through the teaching tape-out plan, and cultivate top-notch full-stack talents in the field of computer systems.
 
 The core concept of "One Student One Chip" is **simply "allowing a student to graduate with a processor chip designed by himself"**. It is hoped that the threshold of processor chip design can be lowered through a teaching mechanism that pays equal attention to theory and practice, so that more students can participate in every aspect of processor chip design throughout the process.
 
@@ -34,7 +34,7 @@ The concept of "Computer System Capability 3.0" processor chip talent training i
 
 ## Highlights
 
-At the strategic level, the "One Student One Chip" plan has three main goals.**First, break down the barriers of imbalance in educational resources**.Allowing all students who are interested in processor chip design, regardless of school, grade, major and foundation, to have the opportunity to participate in the study of processor chips. This has very important and positive significance for improving the popularization of processor chip education in colleges and universities in my country.\*\*Second, break through the boundaries of traditional courses and try to build a full-stack talent training program that integrates EE and CS.\*\*The core of the "One Student One Chip" Initiative is to build a set of processor chip teaching processes that collaborate with software and hardware and open up the entire front-end and back-end chain, so that students not only know how to design processor chips with code, but also understand how the program runs on the processor chip they designed, and also understand how the code of the processor chip is converted into a tape-out layout.**Third, students participating in the initiative are encouraged to enter software and hardware open source communities and enterprises, and strive to overcome various bottleneck areas that currently need to be solved in our country**.At the same time, achievements in these fields are also incorporated into teaching plans to attract more students to participate in the "One Student One Chip" Initiative and achieve a virtuous positive cycle.
+At the strategic level, the "One Student One Chip" plan has three main goals.**First, break down the barriers of imbalance in educational resources**.Allowing all students who are interested in processor chip design, regardless of school, grade, major and foundation, to have the opportunity to participate in the study of processor chips. This has very important and positive significance for improving the popularization of processor chip education in colleges and universities in my country. Second, break through the boundaries of traditional courses and try to build a full-stack talent training program that integrates EE and CS. The core of the "One Student One Chip" Initiative is to build a set of processor chip teaching processes that collaborate with software and hardware and open up the entire front-end and back-end chain, so that students not only know how to design processor chips with code, but also understand how the program runs on the processor chip they designed, and also understand how the code of the processor chip is converted into a tape-out layout.**Third, students participating in the initiative are encouraged to enter software and hardware open source communities and enterprises, and strive to overcome various bottleneck areas that currently need to be solved in our country**.At the same time, achievements in these fields are also incorporated into teaching plans to attract more students to participate in the "One Student One Chip" Initiative and achieve a virtuous positive cycle.
 
 At the teaching level, the "One Student One Chip" Initiative **first has a low slope**.The project team divided the training process into multiple stages according to the difficulty of teaching processor chips. The introduction of the preliminary stage will increase the learning enthusiasm of zero-based students, so that they can transition to formal learning of processor chips relatively smoothly. Moreover, corresponding game operation goals are set at each stage, which not only increases the fun, but also encourages students to continuously explore the design and implementation of more powerful processor chips.**Second is high standards**.Not only are students required to understand how software programs run step by step on hardware circuits, but they are also required to exercise their ability to independently solve unknown problems. TAs only provide guidance on key nodes and encourage active exploration to find solutions to problems.
 
@@ -56,10 +56,9 @@ The sixth session of "One Student One Chip" was officially launched on July 2, 2
 
 ![](/res/images/project/intro-knowledge-map.png)
 
-## Learning Routes
+## Learning Route
 
-As shown in the picture below, the learning route of the "One Student One Chip" Initiative is very clear, and each stage has corresponding tasks that need to be completed (the task completion time in the picture is for reference only).Students who currently sign up to participate in the "One Student One Chip" Initiative need to complete all tasks from "Fill a form
-" to "Debug Exam".Starting from the **sixth session**, we will invite some students to participate in the learning of the new **processor back-end** (That is "SoC Integration", "Physical Design", "PCB Testing", "Run Demos" in the picture) link on the basis of understanding and mastering the existing teaching content. It is hoped that in the future, every graduate of the "One Student One Chip" Initiative will become a composite innovative talent who is proficient in processor front-end design and has mastered processor back-end knowledge and usage.
+As shown in the picture below, the learning route of the "One Student One Chip" Initiative is very clear, and each stage has corresponding tasks that need to be completed (the task completion time in the picture is for reference only).Students who currently sign up to participate in the "One Student One Chip" Initiative need to complete all tasks from "Fill a form" to "Debug Exam".Starting from the **sixth session**, we will invite some students to participate in the learning of the new **processor back-end** (That is "SoC Integration", "Physical Design", "PCB Testing", "Run Demos" in the picture) link on the basis of understanding and mastering the existing teaching content. It is hoped that in the future, every graduate of the "One Student One Chip" Initiative will become a composite innovative talent who is proficient in processor front-end design and has mastered processor back-end knowledge and usage.
 
 ![](/res/images/project/intro-route.png)
 
@@ -78,7 +77,7 @@ As shown in the picture below, the learning route of the "One Student One Chip" 
 - **Points Reward**: Starting from the sixth session, students can earn points by completing tasks (the specific content will be announced later) while learning the "One Student One Chip" Initiative. After accumulating points to a certain level, students can apply to the staff to redeem peripheral products.Peripheral products include customized cultural shirts, canvas bags, backpacks, storage bags, baseball caps, umbrellas, sweatshirts, etc. (more peripheral products will be launched one after another, please stay tuned), which are very commemorative.
 
 <el-row :gutter="20"
-     justify="center">
+        justify="center">
 
 <el-col span="12">
 
@@ -95,7 +94,7 @@ As shown in the picture below, the learning route of the "One Student One Chip" 
 |          9          |         Certification of Completion of Stage A Studies         |
 |          10         |           Mission content is constantly being updated          |
 
-
+</el-col>
 <el-col span=12>
 
 | No. |      Redeemable peripherals (some)     |
@@ -107,8 +106,8 @@ As shown in the picture below, the learning route of the "One Student One Chip" 
 |          5          | **Shuttle tape-out area (customized)** |
 |          6          | More peripherals will be launched soon, please stay tuned |
 
-
-
+</el-col>
+</el-row>
 
 ![](/res/images/project/info-exchange.png)
 
