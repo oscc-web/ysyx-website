@@ -135,74 +135,74 @@ title: FAQ
 
 - The `Schedule` provided by One Student One Chip only provides a reference time period.Everyone can advance step by step based on their basic abilities and available time.We will still arrange guidance.
 
-**答疑可以指导哪些问题？**
+**What questions can Q&A provide guidance on?**
 
-- 会指明方向，告诉大家思路。比如告诉大家需要用`Git`，但是不会教`Git`；
-- 希望大家先主动探索，不到万不得已情况（`Bug`卡了一礼拜没进展），不会指导太细；
-- 很多材料课本上和网上都有，大家只要花一些时间去搜索和实践，是可以自己解决的；
-- 主动探索和动手实践的能力，才是整个“一生一芯”计划培养的核心。
+- TAs will point out the direction and tell everyone the ideas.For example, TA tell you need to use `Git`, but don’t teach you how to use `Git`.
+- We hope everyone will take the initiative to explore first. Unless it is a last resort (the `Bug` is stuck for a week and there is no progress), TAs will not give too detailed guidance.
+- Many materials are available in textbooks and online. As long as you spend some time searching and practicing, you can solve them yourself.
+- The ability to actively explore and practice is the core of the entire "One Student One Chip" Initiative.
 
-**每周大概投入多少时间？**
+**Approximately how much time do you invest per week?**
 
-- 很难一概而论，每个人的基础是不同的。可以先参加预学习尝试一下。
+- It's hard to generalize, everyone's foundation is different.You can try it out by participating in preliminary first.
 
-**如果被误判作弊怎么办？**
+**What should I do if I am wrongly convicted of cheating?**
 
-- 判断是否作弊的依据是大家日常提交的工作记录，以及`Git log`；
-- 如果误判，可向项目组提起申诉，我们会组织二轮专家评审来确定。
+- The basis for judging whether to cheat is the work records submitted daily and `Git log`.
+- If there is a misjudgment, you can file an appeal with the project team and we will organize a second round of expert review to make a determination.
 
-**预学习答辩是什么形式？**
+**What is the form of the preliminary defense?**
 
-- 简单聊一聊，主要是了解大家预学习阶段的完成情况以及对项目的热情度等。
+- Let’s have a brief chat, mainly to understand how everyone has completed the preliminary stage and their enthusiasm for the project.
 
-**预学习时间最长限制是多少？**
+**What is the maximum preliminary time limit?**
 
-- 学习时间没有限制。只是流片有时间节点。
+- There is no limit to study time.It’s just that there are time nodes for tape-out.
 
-**推荐教程是英文还是中文？**
+**Is the recommended tutorial in English or Chinese?**
 
-- 一般是英文。
+- Usually in English.
   :::
 
-:::details 芯片实现
+:::details Chip Implementation
 
-- 不要求一定使用`Chisel`，大家可以自己选定语言；但建议有`Verilog`基础的同学选用`Chisel`；
-- 项目组会主要就`Chisel`和`Verilog`的问题给大家答疑；
-- 我们在参考资料里给大家推荐了`Chisel`的学习资料；
-- `VHDL`暂时还不支持，多语言的话，`SoC`集成的时候也会复杂一些。
+- There is no requirement to use `Chisel`, you can choose the language by yourself. However, it is recommended that students with `Verilog` foundation choose `Chisel`.
+- The project team will mainly answer questions about `Chisel` and `Verilog`.
+- We recommend learning materials for `Chisel` in the reference materials.
+- `VHDL` is not supported yet. If there are multiple languages, `SoC` integration will be more complicated.
 
-**“一生一芯” 一定要基于 RISC-V？**
+\*\* "One Student One Chip" must be based on RISC-V?\*\*
 
-- 是的，`RV64`。
+- Yes, `RV64`.
 
-**是否可以加 Cache？**
+**Is it possible to add Cache?**
 
-- 可以，并且流片指标中需要。但有规格限制，讲义中会跟大家讲。
+- Yes, and it is required in the tape-out indicator.However, there are specification restrictions, which will be explained in the handouts.
 
-**SoC后端是统一的交给某个同学做还是每个人都能做？**
+**Is the SoC back-end uniformly handed over to a certain student or can everyone do it?**
 
-- 后端物理设计相关的工作是线下开展，感兴趣的同学可以联系助教。
+- Work related to back-end physical design is carried out offline, and interested students can contact the TA.
 
-**一人设计一个芯片是从前端到后端吗？**
+**Does one person design a chip from front-end to back-end?**
 
-- 主要是前端，后端涉及到 license，目前无法对每个同学都开放。
+- Mainly the front-end, the back-end involves license, which currently cannot be open to every student.
   :::
 
-:::details 其他杂项
+:::details Others
 
-- 有的。B站上有[官方视频号](https://space.bilibili.com/2107852263)。
+- We have.There is [official video account](https://space.bilibili.com/2107852263) on BiliBili.
 
-**Chisel之父要如何加？**
+**How to add contact information for the father of Chisel?**
 
-- 这是[GitHub主页](https://github.com/sequencer)。
+- This is [GitHub homepage](https://github.com/sequencer).
 
-**请问“敬畏芯片”具体是指什么？**
+**What exactly does “revere chip” refer to?**
 
-- 希望大家抱着认真严谨负责的态度来对待项目。
+- We hope everyone will treat the project with a serious, rigorous and responsible attitude.
 
-**往届代码在哪里看？**
+**Where can I see past codes?**
 
-- 不建议同学们看往届代码。
+- It is not recommended that students read past codes.
   :::
 
 <style lang="scss" scope>
