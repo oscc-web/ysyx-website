@@ -82,30 +82,30 @@ As shown in the picture below, the learning route of the "One Student One Chip" 
 
 <el-col span="12">
 
-| No. | Points tasks (part) |
-| :-----------------: | :------------------------------------: |
-|          1          |  **Propose new cultural peripherals**  |
-|          2          |              参与“一生一芯”调研问卷              |
-|          3          |              “一生一芯”官方录用文章              |
-|          4          |             “一生一芯”官方录用分享视频             |
-|          5          |             “一生一芯”官方录用报告视频             |
-|          6          |               “一生一芯”分享报告               |
-|          7          |              组织“一生一芯”巡回演讲              |
-|          8          |               完成B阶段学习的认证               |
-|          9          |               完成A阶段学习的认证               |
-|          10         |                任务内容持续更新中               |
+| No. |             Points tasks (part)             |
+| :-----------------: | :------------------------------------------------------------: |
+|          1          |              **Propose new cultural peripherals**              |
+|          2          | Participate in the "One Student One Chip" Survey Questionnaire |
+|          3          |       "One Student One Chip" Official Acceptance Article       |
+|          4          |  "One Student One Chip" Official Acceptance and Sharing Video  |
+|          5          |    "One Student One Chip" Official Recruitment Report Video    |
+|          6          |              "One Student One Chip" Sharing Report             |
+|          7          |        Organize the "One Student One Chip" Lecture Tour        |
+|          8          |         Certification of Completion of Stage B Studies         |
+|          9          |         Certification of Completion of Stage A Studies         |
+|          10         |           Mission content is constantly being updated          |
 
 
 <el-col span=12>
 
-|  ID |    可兑换周边（部分）    |
-| :-: | :-------------: |
-|  1  |    “一生一芯”文化衫    |
-|  2  |    RISC-V文化衫    |
-|  3  |    “一生一芯”帆布包    |
-|  4  |    “一生一芯”双肩包    |
-|  5  | **班车流片面积（自定义）** |
-|  6  |  更多周边陆续上线，尽请期待  |
+| No. |      Redeemable peripherals (some)     |
+| :-----------------: | :-------------------------------------------------------: |
+|          1          |           "One Student One Chip" Cultural Shirt           |
+|          2          |                   RISC-V Cultural Shirt                   |
+|          3          |             "One Student One Chip" Canvas Bag             |
+|          4          |              "One Student One Chip" Backpack              |
+|          5          | **Shuttle tape-out area (customized)** |
+|          6          | More peripherals will be launched soon, please stay tuned |
 
 
 
@@ -116,4 +116,4 @@ As shown in the picture below, the learning route of the "One Student One Chip" 
 
 - **Technical level**: The ability to combine software and hardware.
 - **Scientific Research Ability**: The ability to solve problems independently, explore research directions, and explore unknown areas.
-- **心理素质**：大家在学习的过程中会遇到各种各样的问题，伴随而来的可能还会有相当程度的挫败感和焦虑感，这些是每一期学员或多或少都会经历的。因此“一生一芯”计划在培养学生们的技术水平和科研能力之外，更重要的是教会大家如何用一种平常心去对待这些问题：**当我们去做难度大且有意义的事情时，不好解决的问题必然是客观存在的，当然解决问题的方法也是一定存在的**。既然问题和解决方法都始终存在，我们何必殚精竭虑地自怨自艾呢？取而代之的是，我们应该放平心态且对自己充满自信，努力从一次次失败中总结经验。通过几次正向反馈，大家不仅能收获满满的成就感，心理素质也会得到很好的锤炼。
+- **Psychological quality**: Everyone will encounter various problems in the process of learning, which may be accompanied by a considerable degree of frustration and anxiety. These are things that every session of  students will experience more or less.Therefore, in addition to cultivating students' technical level and scientific research ability, the "One Student One Chip" Initiative is more important to teach everyone how to deal with these problems with a normal mind: **When we do difficult and meaningful things at this time, problems that are difficult to solve must exist objectively, and of course there must be ways to solve them**.Since problems and solutions are always there, why should we spend so much time feeling sorry for ourselves?Instead, we should calm down and be confident in ourselves, and strive to learn from failures again and again.Through several positive feedbacks, everyone will not only gain a full sense of accomplishment, but their psychological quality will also be well tempered.
