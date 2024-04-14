@@ -4,136 +4,136 @@ title: FAQ
 
 :::details Sign Up Conditions
 
-- 零基础即可加入，不论年级、专业和学校；在校生和已毕业都可以报名学习；
-- 如果具备计算机或电路方面的基础知识，那当然更好，但并不强制，因为“一生一芯”的预学习和B阶段也会安排相关的学习内容；
-- 在关键节点上指引大家，但并不会手把手教学。比如，讲义告诉大家掌握Verilog，会推荐教程，但是并不会安排课堂教学，因为这方面教材和在线课程已经很多。
+- You can join with zero-based knowledge, regardless of grade, major and school, current students and graduates can sign up to study.
+- It is of course better if you have basic knowledge of computers or circuits, but it is not mandatory, because relevant learning content will also be arranged in the preliminary and B stage of "One Student One Chip".
+- TAs guides everyone at key points, but does not teach step by step.For example, the handouts tell everyone to master Verilog and recommend tutorials, but TAs do not arrange classroom teaching because there are already many textbooks and online courses in this area.
 
-**非在校生是否可以参加？**
+**Can non-school students participate?**
 
-- 可以参加学习流程，但无法免费流片（现有经费仅可用于支持国内在校生流片）；
-- 刚毕业或已毕业但即将入学的同学，视为在校生（比如`9月`开学，或毕业的`8.31`前）。
+- You can participate in the learning process, but it is not free of charge (existing funds can only be used to support domestic students).
+- Students who have just graduated or have graduated but are about to enroll are considered current students (for example, when school starts in September, or before graduation on August 31).
 
-**参加需要收费吗？**
+**Is there a fee to participate?**
 
-- “一生一芯”是一个公益性质的学习项目，报名和学习是免费的，但目前仅支持在校学生免费流片，具体可参考相关条目。
+- "One Student One Chip" is a non-profit learning project. Registration and learning are free, but currently only supports free tape-out for school students. For details, please refer to the relevant entries.
 
-**参加“一生一芯”，是否还可以参加其他比赛？**
+**After participating in "One Student One Chip", can I also participate in other competitions?**
 
-- “一生一芯”注重的是人才培养，不与任何比赛冲突，大家参与“一生一芯”写的代码，可以拿去参加比赛。如果获奖，非常希望大家能在致谢中，`cite`一下“一生一芯”，扩大“一生一芯”的影响力，吸引更多的赞助，从而支持更多的同学进行流片。
+- "One Student One Chip" focuses on talent cultivation and does not conflict with any competition. The code written by everyone participating in "One Student One Chip" can be used to participate in competitions.If you win the award, we very much hope that you can cite "One Student One Chip" in your acknowledgment to expand the influence of "One Student One Chip" and attract more sponsorships, thereby supporting more students to tape-out.
 
-**是否可以组队参加？**
+**Is it possible to form a team to participate?**
 
-- 不可以，“一生一芯”是培养性项目，我们希望大家都能获得最大程度的训练；
-- 大家完成培养，进入社区，或者`Sig小组`以及`开源IP`项目，自然就可以跟其他同学组队了。
+- No, "One Student One Chip" is a training program. We hope that everyone can get the maximum training.
+- After everyone completes the training and enters the community, or the `Sig group` and the `Open Source IP` project, you can naturally form a team with other students.
 
-**报名就可以参加吗？还是要面试筛选？**
+**Can I participate just by signing up?Or do I need to interview and screen?**
 
-- 可以随时参加但是有一个预学习阶段，该阶段让大家想清楚自己是否真的想要参加一生一芯。
+- You can participate at any time but there is a preliminary stage that allows everyone to figure out whether they really want to participate in One Student One Chip.
 
-**国外高校的在校生最终可以进行流片吗？**
+**Can students currently studying in foreign universities finally be able to tap-out?**
 
-- 不支持国外的同学免费流片。经费赞助有限制要求。
+- Free tap-out for foreign students is not supported.Funding requirements are subject to restrictions.
 
-**可以付费流片吗？**
+**Can I pay for tape-out?**
 
-- 付费流片的细节还未定，最后会公布。
+- The details of paid tape-out have not yet been determined and will be announced eventually.
 
-**这一期没学完下一期还可以参加吗？**
+**If I haven’t finished this session, can I still participate in the next session?**
 
-- 可以。
+- Yes.
 
-**参与过往期还可以参加新的一期吗？**
+**Can I participate in the new session if I participated in the previous?**
 
-- 可以的。
+- Yes.
 
-**高中生可以参加吗？**
+**Can high school students participate?**
 
-- 可以尝试。但建议还是以学习为主。
+- Can try.But the suggestion is still to focus on learning.
   :::
 
-:::details 报名流程
+:::details Sign up Process
 
-- 请根据[官网](/)中的指示进行报名。
+- Please sign up according to the notes in [official website](/).
 
-**报名是否有截止日期？**
+**Is there a deadline for sign up?**
 
-- 没有，随时可以。
+- No, anytime.
 
-**指导老师如何填写？**
+**How to fill in the form for the instructor?**
 
-- 可以空白。
+- Can be blank.
 
-**简历大概写什么？**
+**What should I write on my resume?**
 
-- 课程，项目等信息都可以写，类似工作简历即可。
+- You can write information about courses, projects, etc, just like a job resume.
 
-**提交的简历会被公开吗？**
+**Will the submitted resume be made public?**
 
-- 简历不会被公开，但是学习记录以及提交的代码是会被公开的，但可以隐藏不想公开的信息，比如名字。
+- Your resume will not be made public, but your learning records and submitted code will be, but you can hide information you don’t want to make public, such as your name.
 
-**报名了怎么看是否被录取？**
+**How can I check if I have been admitted after sign up?**
 
-- 填完问卷之后就可以开始预学习，预学习之后再填一个预学习答辩申请表，之后就有助教联系答辩事宜，具体请参考官网上的学习流程。
+- After filling out the questionnaire, you can start preliminary. After preliminary, fill out a preliminary defense application form. After that, a TA will contact you about the defense. For details, please refer to the learning process on the official website.
   :::
 
-:::details 流片指标
+:::details Tape-out indicators
 
-- 达到指标，通过答辩，即可进入流片，会尽量安排最近一批次班车（涉及拼片）；
-- 原创性和提升性，代码是自己写的，且参与“一生一芯”有较大提升（或社区服务）；
-- 流片只支持在校生（应届毕业`8.31`前提交）；已毕业可付费流片（视乎面积，具体政策待定）；
-- 回馈社区：通过答辩获得流片，建议参加社区服务（助教和“一生一芯”的开源项目等）。
+- If you reach the target and pass the defense, you can enter the tape-out, and we will try our best to arrange the latest batch of shuttle (involving MPW).
+- Originality and improvement, the code is written by yourself, and participation in "One Student One Chip" has greatly improved (or community service)
+- The tape-out only supports current students (submit before 8.31 for fresh graduates). Those who have graduated can pay for the tape-out (depending on the area, specific policies are to be determined).
+- Give back to the community: Obtain tape-out through defense, and it is recommended to participate in community services (TA and "One Student One Chip" open source projects, etc).
 
-**是否达到流片标准就一定可以流片？**
+**Is it possible to tape-out if it meets the tape-out standards?**
 
-- 不一定。达到流片标准是最基础要求，还需评审通过后方可流片；
-- 极端情况下，如果达到流片标准的数量大幅高于预期，拟评审后择优流片；
-- 关于流片名额和班车等，项目组承诺`Best effort`，但并不做确定性保证（目前看来问题不大）。
+- Uncertain.Meeting the tape-out standards is the most basic requirement, and it needs to be reviewed and approved before tape-out is possible.
+- In extreme cases, if the number of core that meet the tape-out standards is significantly higher than expected, it is planned to select the best core for tape-out after review.
+- Regarding tape-out quotas, shuttle, etc, the project team promises "Best effort", but does not make a deterministic guarantee (it does not seem to be a big problem at the moment).
 
-**是否可以提高指标？**
+**Is it possible to improve the indicator?**
 
-- 可以，我们鼓励同学们冲刺更高指标。
+- Yes, we encourage students to sprint for higher targets.
 
-**是否可以降低指标？**
+**Is it possible to lower the indicator?**
 
-- 流片指标不会降低，没有达成流片指标者不能进入流片。
+- The tape-out indicator will not be reduced, and those who have not reached the tape-out indicator will not be able to enter the tape-out.
 
-**是否可以基于现有开源芯片项目修改后提交？**
+**Can it be submitted based on modifications to existing open source chip projects?**
 
-- 不可以，“一生一芯”是一个学习项目，每一行代码必须都是自己写的才行。
+- No, "One Student One Chip" is a learning project, and every line of code must be written by yourself.
 
-**参加“一生一芯”的名额，以及流片的名额？**
+**What are the quotas for participating in "One Student One Chip" and the quotas for tape-out?**
 
-- 参加“一生一芯”的名额，目前没有限制，且随到随学。极端情况下，受限于支撑团队的规模，我们会结合报名人数和助教团队的状况，综合考虑后确定。
+- There is currently no limit to the number of people who can participate in the "One Student One Chip" and students can learn as they go.In extreme cases, due to the size of the support team, we will make a decision based on comprehensive consideration based on the number of applicants and the status of the TA team.
 
-**前端六个月做完就可以流片了吗？**
+**Is it ready for tape-out after the front-end is completed in six months?**
 
-- 看是否完成A阶段的内容。不是看时间长短。
+- See if the content of A stage is completed.It’s not about the length of time.
   :::
 
-:::details 学习过程
+:::details Learning Process
 
-- 以远程参加为主，部分同学会被邀请到现场来做助教（可报名）；
-- 每周一次会议，查看进展并答疑；
-- 同学们需要每`1~3`天记录一次学习过程，便于我们指导和跟踪大家工作过程；
-- 大家需要保持`Git commit`，`Git log`也是我们跟踪大家学习过程的重要依据。
+- Mainly remote participation, some students will be invited to be on-site TA (can sign up).
+- Weekly meetings to review progress and answer questions.
+- Students need to record their learning process every `1 to 3` days so that we can guide and track their work process.
+- Everyone needs to keep `Git commit`, and `Git log` is also an important basis for us to track everyone's learning process.
 
-**参与“一生一芯”期间，是否可以中间暂停一段时间后再继续？**
+**While participating in "One Student One Chip", can I pause for a while and then continue?**
 
-- 可以，大家可以根据自己的知识基础和时间，适当调整计划；但需要事先声明和请假。
+- Yes, you can adjust your plan appropriately based on your own knowledge base and time, but you need to declare and ask for leave in advance.
 
-**是否一定要每周汇报，并按每 1~3 天更新一次工作记录？**
+**Is it necessary to report weekly and update work records every 1 to 3 days?**
 
-- 对于能力较好，可冲刺更高指标的同学，可以自己安排；
-- 对于能力较弱，需要提升的同学，还是请按照如上节奏推进；
-- 此外，`Git log`，无论对于哪些同学，都是需要的。
+- For students who have better abilities and can achieve higher targets, they can make arrangements by themselves;
+- For students who are weak and need to improve, please proceed according to the above rhythm
+- In addition, `Git log` is needed no matter which students.
 
-**每周的会议是什么形式？需要花时间准备 PPT 吗？**
+**What is the format of the weekly meetings?Need to spend time preparing PPT?**
 
-- 简要准备即可，主要准备进度记录。
+- Just prepare briefly, mainly prepare progress records.
 
-**学习跟不上怎么办？**
+**What should I do if I can’t keep up with my studies?**
 
-- 一生一芯提供的`Schedule`，只是提供了一个参考的时间区段。大家可以根据自己的基础能力和可分配的时间，逐步推进就好。我们依旧会安排指导。
+- The `Schedule` provided by One Student One Chip only provides a reference time period.Everyone can advance step by step based on their basic abilities and available time.We will still arrange guidance.
 
 **答疑可以指导哪些问题？**
 
