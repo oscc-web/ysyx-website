@@ -85,6 +85,9 @@ export default defineUserConfig({
         ],
         [
             "script", { type: "text/javascript", src: "/js/baidu.js" }
+        ],
+        [
+            "script", { type: "text/javascript", src: "/js/cnzz.js" }
         ]
     ]
 });

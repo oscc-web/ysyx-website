@@ -16,6 +16,11 @@ export default defineClientConfig({
                     _hmt.push(["_trackPageview", to.fullPath]);
                 }
             }
+            if (typeof _czc != "undefined") {
+                if (to.path) {
+                    _czc.push(["_trackPageview", to.fullPath, from.fullPath]);
+                }
+            }
             next();
         })
         router.afterEach((to) => {
