@@ -1,17 +1,19 @@
 ---
-title: "联系我们"
+title: Contact us
 ---
 
-- 交流合作：ysyx@bosc.ac.cn
-- 问题反馈
-    - 一般：ysyx@bosc.ac.cn
-    - 网站：miaoyuyang@ict.ac.cn
+- Exchange cooperation：ysyx@bosc.ac.cn
+- Question feedback
+  - General：ysyx@bosc.ac.cn
+  - Website：miaoyuyang@ict.ac.cn
 
-::: info 交流渠道
-> | 微信公众号 | B站视频号 |
-> |:---:|:---:|
+:::info Exchange ways
+
+> |                                                                          WeChat Official Account                                                                          |                                                                             BiliBili Video Account                                                                            |
+> | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 > | <a qrcode-container :href="qrcodeWeChat" target="_blank"><qrcode-vue :value="qrcodeWeChat" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> | <a qrcode-container :href="qrcodeBiliBili" target="_blank"><qrcode-vue :value="qrcodeBiliBili" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> |
-> | 无 | 无 |
+> |                                                                                    None                                                                                   |                                                                                      None                                                                                     |
+
 :::
 
 <style lang="scss" scoped>

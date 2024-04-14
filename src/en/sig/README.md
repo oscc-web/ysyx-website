@@ -1,19 +1,21 @@
 ---
-title: "兴趣小组"
+title: 兴趣小组
 headerDepth: 1
 ---
 
-## 高性能体系结构模拟器
+## High Performance Architecture Simulator
 
 ### 小组简介
+
 - **英文**：High Performance Architecture Simulator
 - **简称**：SIG-Arch Simulator
 - **组长**：段震伟
 - **介绍**：作为处理器设计中至关重要的工具之一，模拟器可用于模拟和验证处理器的工作原理和功能。在实际的设计过程中，模拟器扮演着多重角色，包括微架构探索、性能评估、功能验证和驱动软件开发等方面。根据具体用途的不同，模拟器可细分为Functional模拟器、Performance模拟器和Cycle-Accuracy模拟器等不同类型。本项目旨在构建一个Cycle-Accuracy模拟器，为处理器设计提供精确的模型，以进行模拟和验证硬件设计。该模拟器能够准确地模拟处理器的指令执行细节，提供测试处理器硬件设计、分析性能瓶颈和优化微架构设计的支持，从而提高处理器硬件设计的可靠性和性能。
 
-## 开源IP组件库
+## Open source IP Component Library
 
 ### 小组简介
+
 - **英文**：Open Source IP Component Libraries
 - **简称**：SIG-IP
 - **组长**：缪宇飏
@@ -22,22 +24,25 @@ headerDepth: 1
 ## 开源处理器核
 
 ### 小组简介
+
 - **英文**：Open Source CPU Core
 - **简称**：SIG-Core
 - **组长**：暂无
 - **介绍**：开源处理器核小组主要负责独立设计、开发和验证面向不同专业领域（数值计算、人工智能等）的处理器核，在通过自定义RISC-V指令的方式扩展处理器核功能的同时，采取相关技术手段不断优化其性能与功耗，最终使其能够满足不同应用场景的需要。
 
-## 开源芯片数据集
+## Open source chip data set
 
 ### 小组简介
+
 - **英文**：Open Source CPU DataSet
 - **简称**：SIG-DataSet
 - **组长**：李子龙
 - **介绍**：本SIG小组主要负责给iEDA提供更多的数据来测试现在的iEDA软件的性能和功能，让不同指令集、不同微架构的CPU都成为iEDA的测试数据，为iEDA探索未知的BUG和未察觉的性能瓶颈，最后推动iEDA的发展。主要任务是把现有已经成熟的开源核接入到YSYX-SoC中，即修改开源处理器核来适配YSYX-SoC，主要修改总线部分，把各种开源核的总线协议统一改成AXI4-Full总线，来接入YSYX-SoC，最终以跑通RT-Thread操作系统为验收目标。到2023年6月27日已经完成4个开源核的接入，分别是蜂鸟E203、darkriscv、E203+itcm+dtcm、ibex这四个开源处理器。
 
-## 开源RTL仿真器
+## Open source RTL Emulator
 
 ### 小组简介
+
 - **英文**：Open Source RTL Simulator
 - **简称**：SIG-RTL Simulator
 - **组长**：陈璐
@@ -46,6 +51,7 @@ headerDepth: 1
 ## 国际交流和翻译
 
 ### 小组简介
+
 - **英文**：International Exchange And Translation
 - **简称**：SIG-International
 - **口号**：**努力成为RISC-V生态本土化发展的核心贡献者之一**
@@ -55,15 +61,17 @@ headerDepth: 1
 
 ### 当前任务
 
-::: info RISC-V国际基金会认证课程翻译
+:::info RISC-V国际基金会认证课程翻译
+
 - 时间：2023-06-08至2023-08-08
 - 成员：苗金标、栗金伦、段震伟、倪仁涛、曹勋、杨海帆、曹世洋、刘汉章、魏人、吴佳宾、陈璐、烟雨松、赵树钰、王翩、唐德宇、缪宇飏
 - 内容：得益于“一生一芯”计划的群体基础以及助教们的专业技术水平，RISC-V国际基金会主动邀请“一生一芯”团队担任本次认证课程的翻译工作。目前划分给各个子团队的任务都在按照时间节点有条不紊地向前推进中。
-:::
+  :::
 
 ## 学员成长追踪
 
 ### 小组简介
+
 - **英文**：Student Growth Tracking
 - **简称**：SIG-Student
 - **组长**：温雅瑄

@@ -1,25 +1,25 @@
 ---
-title: "Review of past issues"
+title: Review of past sessions
 headerDepth: 1
 ---
 
-## 第一期
+## The 1st session
 
-2019年8月27日，中国科学院大学的5位2016级本科生与教学团队在包云岗老师的办公室里开了一次气氛轻松但意义重大的动员大会，会上讨论制订了处理器芯片总体设计方案，确定了技术路线、基础平台、开发环境、流片工艺等内容，至此**第一期“一生一芯”计划正式启动**。随后在4个月高强度的开发过程中，5位同学在教学团队的带领下负责实现处理器芯片各个核心功能模块，尽管很多专业知识是课堂上没有介绍过的，但是学生们通过查阅资料独立解决了开发中所遇到的各种问题。最终经过学生们和教学团队的共同努力，第一期“一生一芯”处理器芯片顺利被点亮，**能够成功运行GNU/Linux操作系统并在终端中打印国科大的Logo**。
+On August 27, 2019, five 2016 undergraduate students from the University of Chinese Academy of Sciences and the teaching team held a relaxed but significant mobilization meeting in the office of Professor Bao Yungang. At the meeting, they discussed and formulated the overall design plan for the processor chip, determined the technical route, basic platform, development environment, tape-out process, etc. At this point, the first session of the "One Student One Chip" Initiative was officially launched\*\*.Subsequently, during the 4 months intensive development process, five students, under the leadership of the teaching team, were responsible for implementing each core functional module of the processor chip. Although a lot of professional knowledge was not introduced in class, the students independently reviewed the information and solved various problems encountered during development.Finally, through the joint efforts of the students and the teaching team, the first session of the "One Student One Chip" processor chip was successfully lit, and **was able to successfully run the GNU/Linux operating system and print the logo of UCAS on the terminal**.
 
 ![](/res/images/project/intro-process-1.1.png)
 
 ![](/res/images/project/intro-process-1.2.png)
 
-## 第二期
+## The 2nd session
 
-第二期“一生一芯”计划于2020年秋季正式启动，**学生组成不再仅限于中国科学院大学的在校本科生**，而是成功吸引了来自浙江大学、南京大学、西北工业大学、哈尔滨工业大学（深圳）等高校的共11名优秀同学的报名加入。除参与计划人数增加以外，第二期“一生一芯”教学团队的人员配置也得到了进一步升级，计算所和浙大2位老师加入教学团队，6位2016级国科大本科生担任助教（包括第一期“一生一芯”计划的5位同学以及1位负责FPGA仿真平台的同学），为本期同学在关键开发节点提供技术指导。最终经过几个月的独立开发与调试验证，**11名同学全部完成了处理器核设计并进行了流片**。
+The second session of the "One Student One Chip" Initiative was officially launched in the fall of 2020. The **student composition is no longer limited to undergraduates from the University of Chinese Academy of Sciences**, but has successfully attracted a total of 11 outstanding students from Zhejiang University, Nanjing University, Northwestern Polytechnical University, Harbin Institute of Technology (Shenzhen) and other universities to sign up.In addition to the increase in the number of participants in the initiative, the staffing of the second session of the "One Student One Chip" teaching team has also been further upgraded. Two teachers from the ICT and Zhejiang University have joined the teaching team, and six 2016 UCAS undergraduate students have served as TAs (including the first 5 students from the first session of the "One Student One Chip" Initiative and one student in charge of the FPGA simulation platform provide technical guidance to students in this session at key development nodes.Finally, after several months of independent development and debugging verification, **11 students all completed the processor core design and tape-out**.
 
-## 第三期
+## The 3rd session
 
-第三期“一生一芯”计划于2021年7月7日正式启动，力求把处理器芯片设计人才培养与开源处理器芯片生态构建结合起来，**培养既掌握处理器芯片架构设计领域知识，又具备处理器芯片设计制造全流程经验的专业人才**。第三期报名人数总计为760人，参加学生覆盖168所国内外高校（含国外30所）。从学生的角度统计，在报名人数中，在校生共625人，占比82%；同时较多已毕业的学生也对处理器芯片设计感兴趣。在校生中，本硕博各年级均有分布，其中本科生占比44%，硕士生占比50%，硕博士占比6%。从年级细分来看，报名最多的五个年级分别是：研一（27%），大三（23%），研二（14%），大二（11%），大四（7%）。从报名数据上看，**第三期“一生一芯”计划已正式进入到跨区域大规模人才培训阶段**。
+The third session of the "One Student One Chip" Initiative was officially launched on July 7, 2021. It strives to combine the training of processor chip design talents with the construction of an open source processor chip ecosystem, and cultivate both masters of knowledge in the field of processor chip architecture design. Professional talents who have experience in the entire process of processor chip design and manufacturing\*\*.The total number of applicants for the third session is 760, and participating students cover 168 domestic and foreign universities (including 30 foreign universities).According to statistics from the student's perspective, among the number of applicants, there are 625 current students, accounting for 82%. At the same time, many graduated students are also interested in processor chip design.Among the students on campus, undergraduates, masters and doctoral students are distributed in all grades, of which 44% are undergraduates, 50% are master students, and 6% are masters and doctoral students.In terms of grade breakdown, the five grades with the most applicants are: first-year graduate students (27%), junior students (23%), second-year graduate students (14%), sophomore students (11%), and senior students (7%).Judging from the registration data, the third session of the "One Student One Chip" Initiative has officially entered the cross-regional large-scale talent training stage\*\*.
 
-为了应对大规模人才培养所带来的人力成本上的巨大挑战，项目组**首次尝试建立了一套“让学生指导学生”的教学流程**。讲座答疑、进度检查、SoC集成验证和后端物理设计等内容全部由学生们独立完成，工程师仅在最后阶段参与芯片后端的检视工作并提出改进的建议，这不仅从根本上解决了师资力量供需不平衡的问题，同时也培养了一批技术水平出色且心理素质过硬的助教团队，为后续推动“一生一芯“计划向前发展奠定了坚实的基础。前端助教共计27人，主要负责准备讲义和其他辅助材料，组织报告和答疑，并跟进学生的学习情况；SoC团队共计4人，主要负责收集学生提交的处理器代码并进行SoC集成和集成后的验证工作；IC后端团队共5人，主要负责芯片的物理设计，生成可流片的GDSII版图。在上述流程的支撑下，本期流片学生人数达到了50余人。
+In order to cope with the huge challenges in labor costs brought about by large-scale talent training, the project team **tried for the first time to establish a set of teaching processes that "let students guide students"**.Lecture Q&A, progress inspection, SoC integration verification and back-end physical design are all completed independently by the students. Engineers only participate in the inspection of the chip back-end in the final stage and make suggestions for improvement. This not only fundamentally solves the problem of imbalance between supply and demand of teachers, but also cultivates a group of TA teams with excellent technical skills and excellent psychological quality, laying a solid foundation for the subsequent development of the "One Student One Chip" Initiative.There are 27 front-end TAs in total, who are mainly responsible for preparing lecture notes and other auxiliary materials, organizing reports and answering questions, and following up on students' learning progress. The SoC team has 4 people, mainly responsible for collecting processor codes submitted by students and performing SoC integration and post-integration verification work. The IC back-end team has a total of 5 people, mainly responsible for the physical design of the chip and generating a GDSII layout that can be taped out.With the support of the above process, the number of tape-out students in this session has reached more than 50.
 
 ![](/res/images/project/intro-process-3.1.png)
 
@@ -27,37 +27,38 @@ headerDepth: 1
 
 ![](/res/images/project/intro-process-3.3.png)
 
-## 第四期
+## The 4th session
 
-在汲取参与第三期计划各同学所总结的宝贵经验之后，项目团队对第四期“一生一芯”计划的目标进行了梳理，明确了“一生一芯”计划的三步走战略，第一步是打破教育资源不平衡的壁垒，让那些对处理器芯片设计非常感兴趣的双非高校学生也能有机会参与到处理器芯片全流程学习中来，这对提升我国高校处理器芯片教育的普及有着非常重要且积极的意义；第二步是突破传统课程的边界，融合EE和CS的全栈人才培养。**第四期“一生一芯”计划的核心是要构建一套软硬件协同设计理念并将其贯穿到整个处理器芯片教学流程中**，让学生们不仅明白如何用代码设计处理器芯片，还要了解处理器芯片是如何被制作出来的，即处理器芯片从设计到制造全流程；第三步是鼓励参加过计划的同学进入软硬件开源社区，努力攻克我国目前亟需解决的各个卡脖子领域，最终通过关键领域的重大突破来吸引更多学生参与到“一生一芯”计划的学习中，从而实现一个良性的正向循环。
+After learning from the valuable experiences summarized by students who participated in the third session of the initiative, the project team sorted out the goals of the fourth session of the "One Student One Chip" Initiative and clarified the three-step strategy of the "One Student One Chip" Initiative. The first step is to break the barriers of imbalanced educational resources, so that those college students from both sides of the country who are very interested in processor chip design can also have the opportunity to participate in the full-process learning of processor chips. This has very important and positive significance for improving the popularization of processor chip education in colleges and universities in my country. The second step is to break through the boundaries of traditional courses and integrate EE and CS for full-stack talent training.**The core of the fourth session of the"One Student One Chip" Initiative is to build a set of software and hardware co-design concepts and integrate them into the entire processor chip teaching process** so that students not only understand how to design processor chips with code , but also to understand how processor chips are made, that is, the entire process of processor chips from design to manufacturing. The third step is to encourage students who have participated in the program to enter the software and hardware open source community and strive to overcome various bottleneck problems that our country currently needs to solve. In stuck areas, major breakthroughs in key areas will ultimately attract more students to participate in the "One Student One Chip" Initiative, thus achieving a virtuous positive cycle.
 
-第四期“一生一芯”报名人数为1753人，覆盖国内外共328所高校，报名人数相较上期增长130.0%，高校覆盖增长率为95.2%，说明随着第三期“一生一芯”计划的开展，有更多的学生认可教学团队提出的大规模人才培养方案，教学规模开始逐步扩大。第四期“一生一芯”计划分为四个培养阶段，其中学习到B阶段的总计98人，学习到A阶段的总计101人，通过答辩完成流片的总计16人，持续学习人数总计215人，在提升学习难度的情况下，本期持续学习人数与上期基本保持持平，而且随着学习阶段的深入，本科生和研究生的人数并没有出现明显的一边倒情况，这说明**无论是刚接触专业知识的零基础学生，还是已经从事相关领域研究工作的学者，都能很好地适应“一生一芯”所提供的培养方案**。
+The number of applicants for the fourth session of "One Student One Chip" was 1,753, covering a total of 328 colleges and universities at home and abroad. The number of applicants increased by 130.0% compared with the previous session, and the growth rate of college coverage was 95.2%. This shows that with the progress of third session of "One Student One Chip" Initiative, more students recognized the large-scale talent training plan proposed by the teaching team, and the scale of teaching began to gradually expand.The fourth session of the "One Student One Chip" Initiative is divided into four training stages, of which a total of 98 people have studied to stage B, a total of 101 people have studied to stage A, a total of 16 people have completed the tape-out through defense, and a total of 215 people have continued to study. People, despite increasing the difficulty of learning, the number of students continuing to study this period has basically remained the same as that of the previous session. And as the learning stage deepens, there is no obvious one-sided situation in the number of undergraduates and graduate students. This shows that whether you are just starting students with zero-based in professional knowledge or scholars who have already engaged in research in related fields can adapt well to the training program provided by "One Student One Chip"\*\*.
 
 ![](/res/images/project/intro-process-4.1.png)
 
-## 第五期
+## The 5th session
 
-截止到目前第五期“一生一芯”报名人数为1744人，在高校覆盖范围、学科专业占比、通过流片人数等方面均与上期保持基本一致。与前几期相比，第五期“一生一芯”计划最大的亮点有两个：其一是**教学团队在第四期学习讲义的基础上又新增了教学课件和视频**，进一步减缓了学习坡度，让学生们能够循序渐进地完成处理器芯片设计的各个阶段。其二是**报名学员中首次出现了高中及以下年级的学生且人数达到了22人**，这标志着经过不断优化的“一生一芯”计划培养方案将更具有普适性：事实证明无论学员的年龄大小，只要热爱处理器芯片设计并对计算机软硬件有最基本的认识，就可以参与“一生一芯”计划的学习并且取得相当不错的成果。与此同时可以看到，“一生一芯”计划的吸引力和影响力正在与日俱增，相信随着时间的不断推移，“一生一芯”可以让每一位学员都学有所成并有机会实现带着自己设计的处理器芯片毕业这个终极目标。
+As of now, the number of applicants for the fifth session of "One Student One Chip" is 1,744, and the coverage of universities, the proportion of disciplines and majors, and the number of people who have passed the tape-out are basically consistent with the previous session.Compared with the previous sessions, there are two biggest highlights of the fifth session of the "One Student One Chip" Initiative: First, the teaching team has added new teaching courseware and videos based on the study handouts of the fourth session. The learning slope is further slowed down, allowing students to complete various stages of processor chip design step by step.Secondly, for the first time, there are students in high school and below among the **registered students, and the number has reached 22**, which indicates that the continuously optimized"One Student One Chip" Initiative training program will be more universal: Facts have proved regardless of the age of the students, as long as they love processor chip design and have the most basic understanding of computer software and hardware, they can participate in the "One Student One Chip" Initiative and achieve quite good results.At the same time, it can be seen that the attraction and influence of the "One Student One Chip" Initiative is increasing day by day. We believe that as time goes by, "One Student One Chip"" will enable every student to learn something and have the opportunity to achieve it. The ultimate goal is to graduate with a processor chip designed by themselves.
 
 <el-row justify="center">
 
-### **第五期“一生一芯”第一批流片名单**
-|序号|学号|学校|专业|年级|
-|:---:|:---:|:---:|:---:|:---:|
-|1|ysyx_22050228|东北大学|电子科学与技术|大三|
-|2|ysyx_22050133|北京大学|机械|研二|
-|3|ysyx_22050920|杭州电子科技大学|电子科学与技术|大四|
-|4|ysyx_22040501|哈尔滨工业大学|信息与通信工程|研一|
-|5|ysyx_22040502|北京理工大学|电子信息|大三|
-|6|ysyx_22041461|四川大学|微电子科学与工程|大三|
-|7|ysyx_22050550|南京大学|微电子与固体电子学|研一|
-|8|ysyx_22040750|南京大学|电子科学与技术|博一|
-|9|ysyx_22040318|同济大学|计算机|研二|
-|10|ysyx_22051098|中国科学院大学|计算机科学与技术|大三|
-|11|ysyx_22051110|中国科学院大学|计算机科学与技术|大三|
-|12|ysyx_22051094|中国科学院大学|计算机科学与技术|大三|
-|13|ysyx_22050369|湖北大学|电子信息|研二|
-|14|ysyx_22051106|中国科学院大学|计算机科学与技术|大三|
-|15|ysyx_22051085|中国科学院大学|计算机科学与技术|大三|
+### **The first batch of tape-out list for the fifth session of "One Student One Chip"**
+
+| No. |             Student ID             |                   School                  |                     Major                    |           Grade          |
+| :-----------------: | :--------------------------------: | :---------------------------------------: | :------------------------------------------: | :----------------------: |
+|          1          | ysyx_22050228 |          Northeastern University          |       Electronic Science and Technology      |          Junior          |
+|          2          | ysyx_22050133 |             Peking University             |                  Mechanical                  | The 2nd year of graduate |
+|          3          | ysyx_22050920 |         Hangzhou Dianzi University        |       Electronic Science and Technology      |          Senior          |
+|          4          | ysyx_22040501 |       Harbin Institute of Technology      |   Information and Communication Engineering  | The 1st year of graduate |
+|          5          | ysyx_22040502 |      Beijing Institute of Technology      |            Electronic Information            |          Junior          |
+|          6          | ysyx_22041461 |             Sichuan University            |   Microelectronics Science and Engineering   |          Junior          |
+|          7          | ysyx_22050550 |             Nanjing University            | Microelectronics and Solid State Electronics | The 1st year of graduate |
+|          8          | ysyx_22040750 |             Nanjing University            |       Electronic Science and Technology      |    The 1st year of PhD   |
+|          9          | ysyx_22040318 |             TongJi University             |                   Computer                   | The 2nd year of graduate |
+|          10         | ysyx_22051098 |   Chinese Academy of Sciences University  |        Computer Science and Technology       |          Junior          |
+|          11         | ysyx_22051110 |   Chinese Academy of Sciences University  |        Computer Science and Technology       |          Junior          |
+|          12         | ysyx_22051094 |   Chinese Academy of Sciences University  |        Computer Science and Technology       |          Junior          |
+|          13         | ysyx_22050369 |              Hubei University             |            Electronic Information            | The 2nd year of graduate |
+|          14         | ysyx_22051106 |   Chinese Academy of Sciences University  |        Computer Science and Technology       |          Junior          |
+|          15         | ysyx_22051085 | University of Chinese Academy of Sciences |        Computer Science and Technology       |          Junior          |
 
 </el-row>

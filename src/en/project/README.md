@@ -1,3 +1,3 @@
 ---
-title: "About Project"
+title: About Project
 ---

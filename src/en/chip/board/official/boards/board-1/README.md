@@ -1,11 +1,14 @@
 ---
-title: "文档"
+title: 文档
 toc: true
 ---
+
 ## 开发入门
+
 ### 开箱检查
 
 同学们收到板卡后，请先按照下面的列表检查板卡和配件 **是否齐全并且无破损情况**：
+
 - 板卡包装盒 **x1**
 - 开发板+FPGA核心板 **(使用网格防静电袋包装)**
 - 耗材 **(使用硬质防静电袋包装)**
@@ -20,30 +23,33 @@ toc: true
 
 然后请同学们先打开 [三期处理器核序号和学号对应表(student-id.md)](https://github.com/maksyuki/StarrySky-res/blob/main/software/v1p2/student-id.md)并确认自己核所在的 **`CHIP`** 序号。需要这个步骤是因为星空V1.2版本的板卡上面搭载有**三期第一批的4个SoC**，需要确保同学们拿到的板卡上的SoC和自己核所在的SoC是同一个。确认的具体步骤如下：
 
-比如学号为 **`ysyx_219999`** 的核，查 ***三期处理器核序号和学号对应表*** 发现该核位于 **`CHIP2`** 上，接着需要确认板卡上SoC的序号是否也是 **`2`**，方法是看SoC表面丝印编号的最后一个数是否是 **`y2`**：
+比如学号为 **`ysyx_219999`** 的核，查 _**三期处理器核序号和学号对应表**_ 发现该核位于 **`CHIP2`** 上，接着需要确认板卡上SoC的序号是否也是 **`2`**，方法是看SoC表面丝印编号的最后一个数是否是 **`y2`**：
 
 ![SoC上的丝印编号](/res/images/board/res/v1p2/soc-silk.png)
 
 SoC上丝印编号的格式为：**`202112-3-yx`** ，其中 **`x`** 取值 **`1, 2, 3, 4`** ，表示的是CHIP序号。 而 **`202112`** 表示流片的时间。
 
-::: info 板卡或者耗材损坏/缺失/丢失怎么办？
-* 每个板卡在发放给学生前都会进行硬件和软件测试，若自快递签收后一周内，板卡，FPGA损坏，或者耗材有缺失，可以联系项目组更换。
-* 项目组会在板卡中额外提供若干耗材 **(晶振和Flash)**，若消耗完毕或丢失，项目组可提供参考网购链接，由同学们自行购买 **(额外的耗材一般用不到，而且另行采购的成本很低，大概在十几块这样)**。
-:::
+:::info 板卡或者耗材损坏/缺失/丢失怎么办？
+
+- 每个板卡在发放给学生前都会进行硬件和软件测试，若自快递签收后一周内，板卡，FPGA损坏，或者耗材有缺失，可以联系项目组更换。
+- 项目组会在板卡中额外提供若干耗材 **(晶振和Flash)**，若消耗完毕或丢失，项目组可提供参考网购链接，由同学们自行购买 **(额外的耗材一般用不到，而且另行采购的成本很低，大概在十几块这样)**。
+  :::
 
 星空系列板卡配套的软硬件资源 **均开源** 在Github上，可以在下面列出的两个仓库中找到星空系列板卡所有版本的资料，其中：
+
 - [StarrySky](https://github.com/maksyuki/StarrySky)：星空系列开发板所有的**硬件资源**，包括原理图，PCB设计，制造文件等。
 - [StarrySky-res](https://github.com/maksyuki/StarrySky-res)：星空系列开发板所有的**软件资源**，包括必须的串口驱动，测试程序，FPGA外设硬件工程等。
 
 同学们可以提前将 **StarrySky-res** 下载下来，这个仓库中的软件资源后面会经常用到。
 
-::: info 资料更新
+:::info 资料更新
 目前上面介绍的板卡软硬件资料仍在持续更新中，推荐使用`git`管理仓库并使用`git pull`来获取最新的内容。
 :::
 
-::: info Type-C线缆长度
+:::info Type-C线缆长度
 包装中配发的Type-C USB线缆可能对于某些同学使用来说不太够长，同学们可以自行选用更长的Type-C数据线，但是需要自行确认Type-C线材的质量符合板卡的数据和供电能力 **(市面上售卖的Type-C线一般都没问题)**。
 :::
+
 ### 板卡介绍
 
 星空开发板V1.2采用的是SoC底板+FPGA核心板的设计，FPGA核心板采用的是ZYNQ7010芯片，其中SoC底板板载资源如下图所示：
@@ -51,6 +57,7 @@ SoC上丝印编号的格式为：**`202112-3-yx`** ，其中 **`x`** 取值 **`1
 ![SoC底板板载资源](/res/images/board/res/v1p2/board-func-color.png)
 
 从上图可以看到，SoC部分的外设和接口基本上都分布在板卡的中下侧 **(紫色)**，而FPGA部分的PL和PS外设则主要分布在板子的上侧和两边 **(绿色和蓝色)**。外设和接口的详细介绍如下表所示：
+
 - SoC
   - 1个有源晶振插座
   - 1个SPI模式的TF卡插座
@@ -97,12 +104,14 @@ FPGA核心板如下图所示：
 ![FPGA核心板背面](/res/images/board/fpga/v1p2/som-black-2.png)
 
 FPGA核心板板载资源如下所示：
+
 - 主芯片：XC7Z010CLG400
-- DDR3：MT41K128M16JT-125*2片 **(512MB)**
+- DDR3：MT41K128M16JT-125\*2片 **(512MB)**
 - eMMC：KLM8G1GETF-B041 **(8GB)**
 - Flash：W25Q128JVSQ **(16MB)**
 
 星空V1.2版本板卡设计上的主要特点如下：
+
 - 星空开发板的外形尺寸为 **110X84mm**，面积约为标准信用卡大小的 **2倍**。
 - 重新设计了电源网络，将供电能力从1.2A电流提高到2A，支持外置 **5V电源适配器** 供电，支持多路电源管理。
 - FPGA采用SO-DIMM 204P接口的核心板设计，硬件规格为：**XC7Z010-1CLG400C+512MB DDR3+8GB eMMC**。
@@ -118,20 +127,22 @@ FPGA核心板板载资源如下所示：
 
 FPGA核心板PS侧的BANK有BANK502，BANK500，BNAK501。其中BANK502电平标准为1.5V，用于连接两片DDR3颗粒。BANK500电平标准为3.3V，用于连接符合3.3V电气标准的外设，比如UART，LED和按键等。而BANK501电平标准为1.8V，用于连接符合1.8V电气标准的外设，比如USB HOST，I2S等。
 
-::: danger 供电负载说明
+:::danger 供电负载说明
+
 - 目前星空开发板正常运行程序的电流负载约为 **400~450mA**，从笔记本或台式机的标准USB口取电基本都能满足供电要求，**不需要额外电源供电**。当然为了满足某些特定的需求，星空开发板也支持使用Type-C接口的外置5V/2A电源适配器供电，但是项目组在配件中没有提供该适配器，有需求的同学需要自行准备。
 - 电源适配器一般是直接和市电相连的，电压和电流都比较高，存在一定危险性。**如果同学们确实需要使用电源适配器给板卡供电，请选取符合安全标准的适配器并注意用电安全**。
-:::
+  :::
 
 ### 上电测试
+
 这个章节主要介绍如何对板卡进行基本的软硬件测试。为了方便同学们测试，板卡上的Flash插座中 **已经内置了一个烧录好RT-Thread程序的NOR Flash芯片**。并且板卡在寄出之前，项目组对SoC上的核都跑过了该测试，同学们只需要按照下面介绍的内容顺序操作就可以运行RT-Thread程序了。上电测试的具体步骤如下图所示，其主要分为 **硬件操作** 和 **软件设置** 两部分：
 
 ![上电测试步骤](/res/images/board/res/v1p2/test-flow.png)
 
 其中黄色框为纯硬件操作部分，而蓝色框内涉及有软件操作。
 
-::: warning 调试注意事项
-请同学们在实际操作板卡前仔细阅读并确认下面各个注意事项内容，尤其是之前没有嵌入式调试经验的同学，请务必遵守下面的各注意事项：
+:::warning 调试注意事项
+
 - 接触板卡和其他物料前请确认双手已经保持干燥。
 - 接触板卡之前，先找一个金属物体摸一下，以释放人体上可能带有的静电。
 - 拿取板卡时，请使用抓取电路板板边这种方式，以尽可能确保不用手接触芯片，以防止人体多余的静电传导到芯片引脚上。
@@ -139,9 +150,9 @@ FPGA核心板PS侧的BANK有BANK502，BANK500，BNAK501。其中BANK502电平标
 - 板卡上有电源选择开关，滑动开关和拨码开关，上电前请确认它们都被正确拨动到某一侧，而非中间位置 **(死区)**。另外，尽量确保所有开关都不要在带电情况下被拨动。
 - SoC板卡和FPGA核心板不要在带电情况下插接，以防止这种非正确的热插拔操作导致的栓锁效应，损坏芯片。
 - 电源一经接通，若观察到有如冒烟、异常气味、放电的声光、元器件发烫等异常现象时，尤其当听到 “滋滋滋” 的 **噪声啸叫** 时，请立即 **切断电源**。
-:::
+  :::
 
-::: info 噪声啸叫
+:::info 噪声啸叫
 噪声啸叫英文为Acoustic Noise，常分为电感啸叫和电容啸叫。其中电感啸叫最常见，电感啸叫多是由于未正确选择器件参数，负载不稳定或轻载过载等情况导致的，而 **负载不稳定** 往往是主因，这意味着板卡上某个地方可能存在短路。
 :::
 
@@ -151,11 +162,9 @@ FPGA核心板PS侧的BANK有BANK502，BANK500，BNAK501。其中BANK502电平标
 
 ![一生一芯SoC支持的三种数据通路](/res/images/board/res/v1p2/datapath.png)
 
-
 实际上板卡背面已经提前插入好了FPGA核心板，**不需要同学们自己安装了**。另外SoC板卡上还需要插入晶振才能正确工作，**这个晶振也已经提前插入到了板卡上的晶振插座中**，同学们只需要确认下即可。
 
-::: info 安装/拆卸FPGA核心板和晶振
-本SoC配套的FPGA核心板是一种 [SoM(System on Module)](https://en.wikipedia.org/wiki/System_on_module)，采用的是SODIMM 204P的接口设计 **(DDR3标准兼容接口)**。这种接口常用于笔记本电脑内存模组。默认FPGA核心板已经插入到插槽中，**一般不需要拆卸**。如果确有拆卸需求，需要同学们自己操作，具体方法如下：
+:::info 安装/拆卸FPGA核心板和晶振
 
 ![安装FPGA核心板](/res/images/board/fpga/v1p2/sodimm-black-1.png)
 
@@ -169,12 +178,14 @@ FPGA核心板PS侧的BANK有BANK502，BANK500，BNAK501。其中BANK502电平标
 
 :::
 ::: warning
+
 - 不要将晶振的方向插反了，**这个上电前同学们需要再次确认下**。
 - 可以用手直接取出和插拔晶振，但是要注意手尽量不要触碰到晶振的管脚。
 - 可以通过抓住晶振的金属外壳来插拔晶振。
-:::
+  :::
 
 晶振正确插入后，硬件上还需要使用 **微动拨码开关** 正确设置SoC芯片的工作状态，具体来说需要两步：
+
 - 使能PLL输出，选择PLL输出核时钟的频率
 - 选通特定学号的处理器核
 
@@ -185,14 +196,16 @@ FPGA核心板PS侧的BANK有BANK502，BANK500，BNAK501。其中BANK502电平标
 ![拨码开关位功能定义](/res/images/board/perip/v1p2/dip-switch-1.png)
 
 4位拨码开关功能定义 **(从左到右)**：
+
 - PLL时钟使能位 **(1位)**
 - PLL输出时钟频率选择位 **(3位)**
 
 6位拨码开关功能定义 **(从左到右)**：
+
 - 未定义 **(1位)**
 - 处理器核选择位 **(5位)**
 
-::: warning 核选通拨码定义
+:::warning 核选通拨码定义
 6位拨码开关的最高位 **(左边数第一个)** 没有定义功能。
 :::
 
@@ -217,27 +230,27 @@ FPGA核心板PS侧的BANK有BANK502，BANK500，BNAK501。其中BANK502电平标
 <div class="freq_table_center">
 
 | PLL输出时钟频率选择位(0表示OFF档位, 1表示ON档位) | 处理器核时钟频率 |
-| :-: | :-: |
-| 3'b000 | 25MHz  |
-| 3'b001 | 50MHz  |
-| 3'b010 | 100MHz |
-| 3'b011 | 150MHz |
-| 3'b100 | 200MHz |
-| 3'b101 | 250MHz |
-| 3'b110 | 300MHz |
-| 3'b111 | 350MHz |
+| :------------------------------------------------: | :------: |
+|                       3'b000                       |   25MHz  |
+|                       3'b001                       |   50MHz  |
+|                       3'b010                       |  100MHz  |
+|                       3'b011                       |  150MHz  |
+|                       3'b100                       |  200MHz  |
+|                       3'b101                       |  250MHz  |
+|                       3'b110                       |  300MHz  |
+|                       3'b111                       |  350MHz  |
 
 </div>
 
-比如将PLL输出位拨码调整到`OFF-OFF-OFF`时，表示此时PLL输出核时钟频率为25MHz，事实上 ***拨码开关位功能定义*** 一图中的时钟设置就恰好是25MHz。
+比如将PLL输出位拨码调整到`OFF-OFF-OFF`时，表示此时PLL输出核时钟频率为25MHz，事实上 _**拨码开关位功能定义**_ 一图中的时钟设置就恰好是25MHz。
 
-::: tip 时钟拨码开关设置
-上面 ***拨码开关位和核时钟频率对应表*** 中的**PLL输出时钟频率选择位** 设置的最低位对应于板卡上拨码开关的4号位。所以如果要设置PLL输出时钟频率为200MHz，则需要将PLL输出时钟选择位拨码调整到`ON-OFF-OFF` **(对应拨码开关的2位-3位-4位)**，如下图所示：
+:::tip 时钟拨码开关设置
 
 ![使能PLL并将时钟倍频到200MHz的拨码开关设置](/res/images/board/perip/v1p2/dip-switch-2.png)
 :::
 
 ::: tip
+
 - 拨码开关上面 **如果带有黄色防尘薄膜**，需要先撕下来才能拨动。
 - 板卡上的机械拨码开关选用的是 1.27mm 间距的微动拨码开关。这种开关每一位拨码比较小，直接用手不好拨动，可以使用镊子，曲别针等带尖头的物品拨动，**当使用尖头物品请注意使用安全**。
 - 为了方便测量处理器核时钟的频率，板卡上面设计有 **核时钟四分频测试点** 和 **外置晶振时钟测试点**：
@@ -261,14 +274,16 @@ FPGA核心板PS侧的BANK有BANK502，BANK500，BNAK501。其中BANK502电平标
 
 ![使能PLL，PLL输出核时钟为25MHz，选择核序号为7的拨码开关设置](/res/images/board/perip/v1p2/dip-switch-4.png)
 
-::: danger 拨码开关切换
+:::danger 拨码开关切换
+
 - 拨码开关也需要和滑动开关一样上电前被正确拨动到某一侧，而非中间位置 **(机械死区)**，以防止SoC采样到的拨码状态电平值是不稳定的。
 - 不要带电拨动拨码开关，带电操作可能会导致板卡电源网络出现较大的浪涌电流，影响板卡的工作稳定性，甚至会烧坏板卡。
-:::
+  :::
 
 至此已经介绍完所有的硬件操作内容，下面将介绍软件工具的安装和使用。板卡在发放给同学们前已经提前烧录好了RT-Thread程序，可以用来检测板卡和SoC芯片是否能够正常工作。
 
 #### 安装串口驱动
+
 目前板卡上使用的是CP2102这款串口转USB芯片，所以需要提前在电脑上安装CP2102串口的驱动，否则电脑无法识别出该串口。如果大家电脑上已经安装过该驱动，则不需要再次安装。检查自己电脑上是否安装有CP2102驱动的具体方法如下：
 
 同学们先将配件中的 Type-C USB 线缆的一头插入到SoC板卡的 **`VBUS1`** 插座中，另一头插入到电脑的USB接口中，并确认滑动开关 **`SW1`** 和 **`SW2`** 都拨动到了上侧，SoC功能切换开关 **`HFP-MODE`** 拨动到了右侧：
@@ -279,15 +294,15 @@ FPGA核心板PS侧的BANK有BANK502，BANK500，BNAK501。其中BANK502电平标
 
 ![给板卡供电](/res/images/board/perip/v1p2/uart-2.png)
 
-接着按下键盘上的 ***WIN+X*** 组合键，在弹出的选项中点击 ***设备管理器*** 选项，如果 ***设备管理器--->端口(COM和LPT)*** 中显示类似下图中带有 `CP210x` 字样的端口图标，则说明CP2102驱动以前安装成功过，不需要再安装了：
+接着按下键盘上的 _**WIN+X**_ 组合键，在弹出的选项中点击 _**设备管理器**_ 选项，如果 _**设备管理器--->端口(COM和LPT)**_ 中显示类似下图中带有 `CP210x` 字样的端口图标，则说明CP2102驱动以前安装成功过，不需要再安装了：
 
 ![设备管理器显示CP2102端口](/res/images/board/tool/cp2102-1.png)
 
-::: tip
+:::tip
 上图中 **`COMx`** 末尾的数字 **`x`** 不一定是图中的 **`15`**，这个是电脑自动分配的，具体是几都没有问题，**但是要确定这个端口是板卡上电后新识别出来的**。
 :::
 
-如果在 ***其他设备*** 选项中出现类似下图中的黄色叹号图标，则说明电脑没有安装过CP2102驱动，需要使用CP2102官方驱动软件包安装该驱动。为了方便同学们使用，项目组已经将该驱动安装包提前准备好了并放在 [StarrySky-res](https://github.com/maksyuki/StarrySky-res/) 仓库中供同学们下载，具体地址为 [CP2102.zip](https://github.com/maksyuki/StarrySky-res/tree/main/driver/CP2102.zip)：
+如果在 _**其他设备**_ 选项中出现类似下图中的黄色叹号图标，则说明电脑没有安装过CP2102驱动，需要使用CP2102官方驱动软件包安装该驱动。为了方便同学们使用，项目组已经将该驱动安装包提前准备好了并放在 [StarrySky-res](https://github.com/maksyuki/StarrySky-res/) 仓库中供同学们下载，具体地址为 [CP2102.zip](https://github.com/maksyuki/StarrySky-res/tree/main/driver/CP2102.zip)：
 
 ![在其他设备中出现黄色叹号](/res/images/board/tool/cp2102-2.png)
 
@@ -295,10 +310,9 @@ CP2102驱动的具体安装方法如下：同学们需要先从Github下载`Star
 
 ![安装CP2102驱动程序](/res/images/board/tool/cp2102-3.png)
 
-之后按照安装程序引导界面来安装驱动。当驱动安装完成后，再次使用前面介绍的方法打开设备管理器，如果在 ***端口(COM和LPT)*** 中显示出CP2102的端口号，则说明驱动安装成功。
+之后按照安装程序引导界面来安装驱动。当驱动安装完成后，再次使用前面介绍的方法打开设备管理器，如果在 _**端口(COM和LPT)**_ 中显示出CP2102的端口号，则说明驱动安装成功。
 
-::: details CP2102 设备识别问题
-如果在 ***其他设备*** 选项中显示 **Verifone USB to Printer** 或者 **Verifone USB to Modem** ，则说明电脑已经安装过CP2102的驱动，但是没有被成功识别出来：
+:::details CP2102 设备识别问题
 
 ![CP2102设备识别问题](/res/images/board/tool/cp2102-prb-1.png)
 
@@ -308,20 +322,19 @@ CP2102驱动的具体安装方法如下：同学们需要先从Github下载`Star
 
 ![右键点击更新驱动](/res/images/board/tool/cp2102-prb-2.png)
 
-- 然后在弹出的窗口中点击 ***让我从计算机上的可用驱动程序程序列表中选取*** ：
+- 然后在弹出的窗口中点击 _**让我从计算机上的可用驱动程序程序列表中选取**_ ：
 
 ![从电脑上选取驱动程序](/res/images/board/tool/cp2102-prb-3.png)
 
-- 在弹出的窗口中，选择显示 ***所有设备*** ，并点击 ***下一页*** ：
+- 在弹出的窗口中，选择显示 _**所有设备**_ ，并点击 _**下一页**_ ：
 
 ![选择设备类型](/res/images/board/tool/cp2102-prb-4.png)
 
-
-- 在弹出的窗口的左边设备列表中选择 ***Silicon Labs*** ，然后在右边详细列表中选择第一个，然后点击 ***下一页*** ：
+- 在弹出的窗口的左边设备列表中选择 _**Silicon Labs**_ ，然后在右边详细列表中选择第一个，然后点击 _**下一页**_ ：
 
 ![选择驱动程序](/res/images/board/tool/cp2102-prb-5.png)
 
-- 在弹出的警告框中，点击 ***是*** ：
+- 在弹出的警告框中，点击 _**是**_ ：
 
 ![更新驱动](/res/images/board/tool/cp2102-prb-6.png)
 
@@ -330,13 +343,14 @@ CP2102驱动的具体安装方法如下：同学们需要先从Github下载`Star
 :::
 
 #### 安装串口调试软件
+
 当电脑能够成功识别出串口的端口号后，还需要使用串口调试软件打开串口才能和板卡进行通信。目前市场上常用的串口调试软件有很多，比如Minicom、MobaXterm、Xshell、SecureCRT、Cutecom和WindTerm 等等，为了方便展示串口运行的结果，**本文档选择使用MobaXterm介绍后续的软件操作**：
 
 ![MobaXterm软件](/res/images/board/tool/mobaxterm-intro-1.png)
 
 MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL等多种协议的强大终端工具。可以访问 [MobaXterm的官网](https://mobaxterm.mobatek.net/) 获得更加详细的信息。
 
-::: info 串口调试软件选择
+:::info 串口调试软件选择
 推荐同学们使用MobaXterm软件，但是同学们也可以自行选择其他串口调试软件使用。
 :::
 
@@ -348,16 +362,16 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
 
 ![新建串口会话](/res/images/board/tool/mobaxterm-intro-3.png)
 
-- 点击MobaXterm工具栏中第一个图标 ***Session***
-- 然后在弹出的窗口中选择 ***Serial***
-- 在 ***Basic Serial settings*** 中的 ***Serial port*** 下拉框中选择前面识别出的带有 ***Silicon Labs CP210x USB to UART xxx*** 字样的串口，**这步骤需要板卡上电并被识别出串口端口号**
-- 在 ***Speed(bps)*** 下拉框中设置波特率为 ***115200***
-- 在下面 ***Advanced Serial settings*** 窗口中确认参数为：
-  - ***Serial engine:*** PuTTY (allows manual COM port setting)
-  - ***Data bits:*** 8
-  - ***Stop bits:*** 1
-  - ***Parity:*** None
-  - ***Flow control:*** None
+- 点击MobaXterm工具栏中第一个图标 _**Session**_
+- 然后在弹出的窗口中选择 _**Serial**_
+- 在 _**Basic Serial settings**_ 中的 _**Serial port**_ 下拉框中选择前面识别出的带有 _**Silicon Labs CP210x USB to UART xxx**_ 字样的串口，**这步骤需要板卡上电并被识别出串口端口号**
+- 在 _**Speed(bps)**_ 下拉框中设置波特率为 _**115200**_
+- 在下面 _**Advanced Serial settings**_ 窗口中确认参数为：
+  - _**Serial engine:**_ PuTTY (allows manual COM port setting)
+  - _**Data bits:**_ 8
+  - _**Stop bits:**_ 1
+  - _**Parity:**_ None
+  - _**Flow control:**_ None
 
 当创建完一个串口会话后，将板卡用Type-C线缆和电脑相连并上电，**然后双击左边垂直导航栏中之前创建好的串口会话图标**，如果没问题，则会打开一个黑色背景的窗口：
 
@@ -369,10 +383,10 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
 
 ![修改串口换行显示2](/res/images/board/tool/mobaxterm-intro-5.png)
 
-- 在打开的窗口中任意地方鼠标右击，在弹出的选项中点击 ***Change terminal settings...***
-- 然后在弹出的窗口中勾选 ***Implicit CR in every LF*** 复选框
+- 在打开的窗口中任意地方鼠标右击，在弹出的选项中点击 _**Change terminal settings...**_
+- 然后在弹出的窗口中勾选 _**Implicit CR in every LF**_ 复选框
 
-::: tip Implicit CR in every LF 选项含义
+:::tip Implicit CR in every LF 选项含义
 由于板卡上的测试程序是使用 **`"\n"(LF)`** 进行换行输出的，但是Win下换行格式是 **`"\r\n"(CR LF)`** ，而且前面创建的串口会话时使用的内置串口引擎是PuTTY，所以需要设置PuTTY在每次接收到 **`"\n"(LF)`** 时在其前面隐式添加 **`"\r"(CR)`** ，这样才能在 Win 下正确地显示换行。这个选项与 Win，Linux 和 Mac 系统下对换行的处理方式不同有关，感兴趣的同学们可以自行上网了解相关内容。
 :::
 
@@ -381,29 +395,31 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
 ![FPGA核心板启动模式设置](/res/images/board/perip/v1p2/uart-3.png)
 
 #### 板卡复位
+
 确认完FPGA启动模式设置成 **`FLASH`** 后，按照上面 [安装串口驱动](#安装串口驱动) 一节介绍的步骤再次确认下电源选择和SoC功能切换开关 **`SW1`**，**`SW2`** 和 **`HFP-MODE`** 被正确设置。接着对板卡上电并使用串口调试软件MobaXterm打开串口，最后按动SoC复位按键 **`CORE-RST`** 对SoC芯片执行一次手动复位：
 
 ![按动复位按键执行SoC复位](/res/images/board/perip/v1p2/uart-4.png)
 
-::: warning 复位功能注意事项
+:::warning 复位功能注意事项
+
 - 由于SoC板卡上没有 **上电自动复位电路**，所以需要同学们在板卡上电后按动复位按键 **`CORE-RST`** 执行 **一次手动复位**。
 - 复位信号是通过机械开关产生的，**没有设计去抖电路**，而且FPGA核心板侧复位 **异步于** SoC板卡侧复位，如果SoC板卡的复位在FPGA核心板复位之前完成，则会由于访存请求得不到响应而卡死，现象是串口只输出 `Loading program size ...` 。**此时只需再次按动板卡上的复位按键 `CORE-RST` 即可**。
 - 复位按键的按动时间可以长一些，以产生稳定的低电平复位信号。
 - 如果按动 **`CORE-RST`** 多次都没法正确启动程序，则可以先按动FPGA侧的复位按键 **`PS-RST`**，然后等待 **`PL-LED`** 灯亮起后，再按动 **`CORE-RST`**。
 
 <!-- fpga-rst.png -->
+
 :::
 
 当复位按键 **`CORE-RST`** 被按下后，如果一切设置都正确的话，串口会打印出RT-Thread程序的加载和执行过程。串口打印出 **`msh />`** 之后会停止，并开始等待用户输入。同学们可以直接使用键盘在窗口中键入命令。比如输入 **`help`** 会打印RT-Thread支持的命令，输入 **`list_timer`** 则会打印RT-Thread正在运行中的所有定时器。和其他shell一样，**`msh`** 在键入命令时也支持tab键补全：
 
 ![运行RT-Thread测试程序](/res/images/board/res/v1p2/rtthread.png)
 
-::: warning RT-Thread程序运行异常
+:::warning RT-Thread程序运行异常
 有的同学核在打印出 **`msh`** 后，会出现无法在窗口中键入命令，或者多次复位后程序运行不一致，不稳定的异常。这种异常往往是处理器核存在 **时序相关问题**，可以尝试多次复位或者降频。
 :::
 
-::: info 丰富应用实例
-星空V1.2板卡上面有不少同学的核能够启动Linux，比如唐浩晋同学设计的处理器核。当时他参加一生一芯三期的时候还是中国科学院大学电子信息工程的一名大三学生，他在自己的核上成功启动了Linux并运行了应用程序([视频](https://www.bilibili.com/video/BV1CL411X7wV/))：
+:::info 丰富应用实例
 
 ![启动Linux并运行程序](/res/images/board/res/v1p2/app-1.png)
 :::
@@ -411,9 +427,10 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
 至此，上电运行RT-Thread程序的所有步骤就已经全部介绍完毕了。后面将会介绍一些更深入的内容。
 
 ### 程序烧写
+
 这一章节主要介绍如何将程序下载到板卡板载的NOR Flash中，使得同学们自己写的核可以运行其他的应用程序，而不仅仅是RT-Thread。为了方便进行程序烧写，星空开发板集成有板载NOR Flash烧写器，可以像DAPLink一样实现 [拖拽式烧录(drag-and-drop programming)](https://daplink.io/) ，具体的软硬件原理见 [板载烧写器(HFPLink)](#板载烧写器-hfplink) 一节。
 
-::: info 板载烧写器适用的操作系统
+:::info 板载烧写器适用的操作系统
 目前板载烧写器能够在 **Win10** 和 **Win11** 平台上正常工作，同学们需要确认下自己电脑的操作系统版本。
 :::
 
@@ -427,48 +444,49 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
 
 接着将想要烧写的bin格式的应用程序拷贝到 `YSYX-HFPLnk` 这个U盘中，然后等待拷贝完成。在拷贝的同时板载烧写器旁的蓝色LED会一直闪烁。当拷贝完成时，蓝色LED会常亮。项目组已经在 [StarrySky-res](https://github.com/maksyuki/StarrySky-res) 中 `software/v1p2` 目录下提前准备了一些已经编译好的测试程序，可以供同学们拷贝到 `YSYX-HFPLnk` 中进行烧写。当拷贝完成后，程序烧写也就完成了，此时关闭板卡电源，并重新将 **`HFP-MODE`** 的滑动开关拨码到右侧，然后上电就可以运行新的程序了。
 
-::: info 更新板载烧写器固件
-板载烧写器默认已经提前烧录有系统固件，一般使用是没有问题的，但有时候需要对固件进行更新以修复bug或者添加新的功能，这样就需要了解更新固件的方法。目前板载烧写器上使用的主控是CH32V103，这个MCU是支持ISP程序更新的，但是需要配合 **WCHISPTool** 一起使用。所以为了更新固件，首先需要安装 **WCHISPTool** 这个软件。同学们可以访问这个 [网址](https://www.wch.cn/download/WCHISPTool_Setup_exe.html) 来下载 **WCHISPTool** 并完成安装。
+:::info 更新板载烧写器固件
 
 当按照指示安装完 **WCHISPTool** 后，双击打开该软件，可以看到如下界面：
 
 ![WCHISPTool界面](/res/images/board/tool/hfp-3.png)
 
 然后将开发板切换到 [程序烧写模式](#程序烧写)，此时上电后，电脑会识别出一个名为 `YSYX-HFPLnk` U盘，这个上面已经介绍过了。在这个模式下，需要2个步骤才能让CH32V103进入到ISP下载模式：
+
 - 先按住板载烧写器的系统复位按键 **`NRST`**，然后再按住板载烧写器的BOOT模式按键 **`BOOT`**，使得CH32V103进入复位状态并设置启动模式为ISP下载模式 **(BOOT=1，也就是按下BOOT按键)**
 - 接着释放板载烧写器的系统复位按键 **`NRST`**，最后释放板载烧写器的BOOT模式按键 **`BOOT`**，此时CH32V103退出复位状态并进入ISP下载模式
 
 ![板载烧写器复位和模式选择按键位置](/res/images/board/tool/hfplink-fireware-update.png)
 
-
 **`NRST`** 和 **`BOOT`** 这两个按键旁边有白色丝印指示，比较容易找到。当按照上面步骤操作完之后，WSHISPTool会自动识别出 `CH32V103` 这个芯片型号：
 
 ![识别出CH32V103](/res/images/board/tool/hfp-4.png)
 
-当识别出 `CH32V103` 后，同学们点击 ***用户程序文件*** 后的文件图标选择需要更新的固件 **(hex格式)**，项目组已经在 [StarrySky-res](https://github.com/maksyuki/StarrySky-res) 中 `firmware/v1p2` 目录下准备好了该固件。当选择完需要更新的固件后，点击 ***下载*** 按钮并等待更新完成即可：
+当识别出 `CH32V103` 后，同学们点击 _**用户程序文件**_ 后的文件图标选择需要更新的固件 **(hex格式)**，项目组已经在 [StarrySky-res](https://github.com/maksyuki/StarrySky-res) 中 `firmware/v1p2` 目录下准备好了该固件。当选择完需要更新的固件后，点击 _**下载**_ 按钮并等待更新完成即可：
 
 ![下载固件](/res/images/board/tool/hfp-5.png)
 
 最后再按一下板载烧写器的系统复位按键 **`NRST`** 就可以恢复到正常烧写器工作模式了。
 :::
 
-::: info 两线串行调试接口固件更新
-实际上，板卡的板载烧写器还支持WCH自定义的**两线串行调试接口协议**，可以使用支持该调试接口的下载器比如WCH-Link来更新固件，板卡通过测试点的方式上引出了该接口，有需要的同学可以自行取用：
+:::info 两线串行调试接口固件更新
 
 ![两线调试接口测试点](/res/images/board/tool/hfplink-2wire.png)
 
 :::
 
-::: warning 固件更新
+:::warning 固件更新
+
 - 更新固件不是必须的，**因为板卡在发给同学们之前已经烧录过固件了**，上面介绍更新固件的方法，是为了方便将板卡发给同学们之后，还能够便捷地对烧写器功能进行升级用的。
 - 目前板载烧写器的固件 **不支持连续拷贝烧写功能**，也就是说每次烧写完成之后 **都需要复位并重新进入ISP模式才能开始新的一次应用程序烧写**。
-- 有时候在更新固件点击 ***下载*** 之后，**WCHISPTool** 软件提示存在 **写保护**。此时可以先点击上面的 **解除保护**，之后再重复上面更新固件操作即可。
-:::
+- 有时候在更新固件点击 _**下载**_ 之后，**WCHISPTool** 软件提示存在 **写保护**。此时可以先点击上面的 **解除保护**，之后再重复上面更新固件操作即可。
+  :::
 
 至此，程序烧写内容就全部介绍完毕，下面将开始介绍板卡的硬件设计，为后面的FPGA开发做好铺垫。
 
 ### 硬件设计
+
 这个章节主要会详细地介绍星空V1.2版本的硬件设计，先简单概括下V1.2版本板卡的硬件设计上的主要特点：
+
 - 使用Cadence Orcad/Allegro设计 **(三周)**，采用 **六层** 层叠设计 **(TOP-GND02-ART03-PWR04-GND05-BOT)** 和沉金表面工艺，并完成四线低阻测试。
 - 板卡等长设置：ChipLink走线分别参照 **tx_clk** 和 **rx_clk** 做 **0/50mil** 组内等长，2个SDIO参照clk做 **0/30mil** 组内等长，USB2.0参照clk做 **0/50mil** 组内等长，5对USB差分信号按照 **0/25mil** 做对内等长。
 - SDIO WiFi的IPEX天线两侧按 **30mil** 间距打地过孔，功率电感PAD间做了 **挖空处理**。
@@ -483,21 +501,23 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
 
 ![板卡底层贴片](/res/images/board/res/v1p2/board-smt-bot.png)
 
-::: info 板卡设计资源文件
+:::info 板卡设计资源文件
+
 - 项目组在Github上 **开源了星空板卡各个版本的原理图，PCB设计，BOM和制造文件等内容**，同学们可以访问Github仓库 [StarrySky](https://github.com/maksyuki/StarrySky) 来获取所有资源。其中：
 - 星空V1.2的PDF版本原理图：[STARRYSKY_SCH.pdf](https://github.com/maksyuki/StarrySky/blob/main/CAD/V1.2/STARRYSKY_SCH.pdf)
 - 星空V1.2的PDF版本PCB布线图：[STARRYSKY_PCB.pdf](https://github.com/maksyuki/StarrySky/blob/main/CAD/V1.2/STARRYSKY_PCB.pdf)
-:::
+  :::
 
 下面将结合原理图详细介绍板卡的硬件设计。并按照 **电源网络**，**SoC电路**， **FPGA PS侧外设** 和 **FPGA PL侧外设** 的顺序依次介绍。
 
 #### 电源网络
+
 SoC板卡的电源网络拓扑结构如下图所示：
 
 ![板卡电源网络拓扑](/res/images/board/res/v1p2/power-tp.png)
 
-
 从上图可以看到，整个板卡统一使用5V的电源供电，为了灵活地控制外设的供电，板卡上设计有三路电源输入：
+
 - SoC的USB串口的5V电源
 - FPGA的PS侧的USB串口的5V电源
 - 外置USB接口的5V DC电源适配器电源
@@ -508,7 +528,7 @@ SoC板卡的电源网络拓扑结构如下图所示：
 
 其中 USB_PWR， PS_PWR，DC_PWR为三个标准Type-C母座，且USB_PWR上引出电源网络 **`5V_VBUS1`** 和SoC串口需要的差分输入信号 **`MAIN_DP/DN`**，PS_PWR上引出电源网络 **`5V_VBUS2`** 和FPGA的PS侧串口需要的差分输入信号 **`PS_UART_DP/DN`**。DC_PWR由于只用于供电，所以在接口上只引出电源网络 **`5V_DC`**。
 
-::: info Type-C母座上CC引脚接5.1K下拉电阻的作用
+:::info Type-C母座上CC引脚接5.1K下拉电阻的作用
 Type-C上的CC引脚全称为 [Configuration Channel](https://en.wikipedia.org/wiki/USB-C) ，用于对线缆的插入进行检测，识别线缆方向，配置工作模式 **(电流，PD模式)**，协商建立DFP **(下行端口，主机端)** 和UFP **(上行端口，设备端)** 身份等。相对于PC上位机来说，板卡的Type-C接口是做作为设备端接口的，也就是具有UFP身份。而协议规定UFP的 **`CC1`** 和 **`CC2`** 引脚都需要一个下拉电阻 **`Rd=5.1KΩ`**。
 :::
 
@@ -516,17 +536,18 @@ Type-C上的CC引脚全称为 [Configuration Channel](https://en.wikipedia.org/w
 
 ![电源选择开关](/res/images/board/sch/v1p2/sch-pwr-sel.png)
 
-
 之后电源 **`5V_IN`** 会进入三个LDO芯片RT2515H中被降压成三种电源3.3V，1.8V和1.2V。其中RT2515H是一款高性能的电压调节器，支持最低200mV的输入输出压降差和最大2A的电流输出。通过配置其 **`ADJ`** 引脚上的电阻值可以产生不同电压的电源输出。另外3.3V电源网络 **`VCC_3V3`** 还连接有红色LED，用于指示电源电路是否正常工作：
 
 ![电源转换电路](/res/images/board/sch/v1p2/sch-pwr-ldo.png)
 
 #### SoC 核心电路
+
 一生一芯三期第一批的4个SoC采用QFP176规格的封装，为了保证整个芯片供电的稳定性，IC后端在做Floorplan时每隔一些功能引脚就会放置一组数字电源引脚 **`VDDIO`**，**`VDD`** 和 **`GND`**。其中 **`VDDIO`** 为数字IO电源引脚，电压为3.3V。而 **`VDD`** 为内核电源引脚，电压为1.2V。**`GND`** 为数字地引脚。另外SoC中的PLL模块还需要独立的模拟3.3V电源 **`PLL_AVDD33`** ，模拟地 **`PLL_AVSS33`**，数字1.2V电源 **`PLL_DVDD12`** 和数字地 **`PLL_DVSS12`**。最后所有电源引脚都连接有 **`100nF`**，以滤除一些干扰杂波。该部分原理图如下所示：
 
 ![SoC核心电路局部](/res/images/board/sch/v1p2/sch-soc-core.png)
 
 #### SoC 板载烧写器(HFPLink)
+
 板卡SoC部分搭载了一个名为 **HFPLink** 的NOR Flash烧写器。实际上 **HFPLink** 是项目组自行设计的一款Flash烧写器，名字中 **HFP** 全称为 **High-speed QSPI-Flash Programmer**，又因为功能上和 **DAPlink** 一样支持拖拽式烧录，所以仿照其命名方式增加后缀 **Link**，最终组合成 **HFPLink** 这个名字。HFPLink的拖拽式烧录的核心原理是利用主控CH32V103的USB从机通信功能，使用软件模拟出一个USB的可移动设备 **(USB的仅数据传输协议)**，然后将PC上位机对USB可移动设备的bin文件拷贝 **重定向** 为写NOR Flash数据扇区的操作。其中有很多的细节需要处理，比如FAT16文件系统的模拟，扇区数据的划分等，其原理图如下所示：
 
 ![板载烧写器](/res/images/board/sch/v1p2/sch-hfplink.png)
@@ -534,6 +555,7 @@ Type-C上的CC引脚全称为 [Configuration Channel](https://en.wikipedia.org/w
 HFPLink部分原理图其实就是CH32V103的最小系统再外扩了一个NOR Flash **(SPI协议)** 和USB接口，核心的功能其实是通过软件实现的。
 
 #### SoC 拨码开关和复位按键
+
 板卡SoC部分设计有两个微动拨码开关，一个是4位拨码的PLL-SEL，另一个是6位拨码的CORE-SEL，其各自的功能前面已经介绍过了，这里就不再赘述。两个拨码上的信号线都通过 **`33Ω`** 的上拉电阻接3.3V，**`5KΩ`** 的下拉电阻接地，这样在拨码拨在 **`OFF`** 一侧时，信号线上为低电平。而当拨码拨在 **`ON`** 一侧时，通过电阻分压，信号线上为高电平：
 
 ![SoC拨码开关](/res/images/board/sch/v1p2/sch-soc-sw.png)
@@ -553,6 +575,7 @@ HFPLink部分原理图其实就是CH32V103的最小系统再外扩了一个NOR F
 ![SoC TF接口](/res/images/board/sch/v1p2/sch-soc-tf.png)
 
 #### SoC 功能切换开关
+
 SoC部分电路的功能切换开关是为了实现SoC的USB转串口和HFPLink能够共享一个Type-C接口，并同步切换NOR Flash的工作状态而设计的。这个功能是通过一个名为HFP-SW的单刀双掷滑动开关进行控制的。当HFP-SW拨动使得其 **`1`** 和 **`2`** 引脚导通时，**`PROG_SW_SEL`** 网络电平为低，此时所有模拟开关WAS3157B的 **`6`** 脚均为低电平，这样会将每个模拟开关 **`1`** 和 **`4`** 引脚上的信号网络导通。而当HFP-SW拨动使得其 **`3`** 和 **`2`** 引脚导通时，**`PROG_SW_SEL`** 网络电平为高，此时所有模拟开关WAS3157B的 **`6`** 脚均为高电平，会将每个模拟开关 **`3`** 和 **`4`** 引脚上的信号网络导通：
 
 ![SoC功能切换开关](/res/images/board/sch/v1p2/sch-soc-func-sw.png)
@@ -560,6 +583,7 @@ SoC部分电路的功能切换开关是为了实现SoC的USB转串口和HFPLink�
 之所以能设计这样的电路是因为 **HFPLink和SoC的USB转串口不会同时工作**，所以可以复用一个Type-C接口上的差分信号 **`MAIN_DP/DN`**。而且当HFPLink烧写NOR Flash时，需要断开SoC连接NOR Flash的SPI信号线，反之当SoC需要从NOR Flash中取指执行程序时，也需要断开HFPLink连接NOR Flash的SPI信号线。也就说需要在HFPLink和SoC正常工作这两个状态下 **同步切换** 2个差分+4个SPI信号共6个信号线的通断状态。
 
 #### PS启动模式和复位按键
+
 ZYNQ芯片支持4种启动模式，分别是SD，Flash，JTAG和NAND。由于硬件设计上有PS MIO管脚的复用，所以目前星空开发板仅支持前3种启动模式，该部分原理图如下所示：
 
 ![SoC启动模式和复位按键](/res/images/board/sch/v1p2/sch-ps-boot-rst.png)
@@ -567,54 +591,61 @@ ZYNQ芯片支持4种启动模式，分别是SD，Flash，JTAG和NAND。由于硬
 通过组合拨码开关FPGA-BOOT的不同拨码，可以实现前面介绍的3种启动模式。具体的拨码位置所对应的启动模式在该拨码开关旁的白色丝印处有标注。另外，板卡上还有PS侧的两个低电平复位按键。这两个按键都能够实现对ZYNQ的PS侧系统的复位功能，但是对PS子系统的复位范围稍有区别，具体差异可以查看ZYNQ的应用手册。
 
 #### FPGA JTAG调试接口
+
 板卡上搭载了一个5X2P的牛角插座，用于连接配件中的FPGA JTAG调试器。这个接口是用来实现FPGA硬件系统的下载，固化和调试用的，其原理图如下所示：
 
 ![FPGA JTAG调试接口](/res/images/board/sch/v1p2/sch-ps-jtag.png)
 
 #### PS UART
+
 板卡上FPGA PS侧也搭载了一个USB转串口芯片CP2102，用于实现PS侧的串口数据通信。由于PS侧的串口位于BANK500的 **`MIO8~9`**，而该BANK的电平标准为3.3V，所以可以将串口信号线连接到Type-C接口上：
 
 ![PS UART](/res/images/board/sch/v1p2/sch-ps-uart.png)
 
 #### PS SDIO
+
 板卡上FPGA PS侧设计有一个SDIO接口，该接口信号位于BANK501的 **`MIO40~44`**。由于该BANK的电平标准为1.8V，所以需要通过一个电平转换芯片TXS010E将1.8V的信号转换成3.3V电平标准才能满足TF插槽的使用。该SDIO接口可以用于固化FPGA核心板的硬件系统或者存储应用数据，该部分原理图如下所示：
 
 ![PS SDIO](/res/images/board/sch/v1p2/sch-ps-tf.png)
 
 #### PS SDIO WiFi
+
 板卡上FPGA PS侧还搭载了一个支持SDIO数据协议的WiFi模组AP6212，可用于实现无线网络通信功能。该接口信号位于BANK501的 **`MIO46~51`**。和上面介绍的SDIO一样，WiFi模块也需要使用电平转换芯片进行信号电平标准转换，其原理图如下所示：
 
 ![PS SDIO WiFi](/res/images/board/sch/v1p2/sch-ps-wifi.png)
 
 #### PS CAN
+
 CAN是 [控制局域网(Controller Area Network)](https://en.wikipedia.org/wiki/CAN_bus) 的简称，是一种能够实现分布式实时控制的串行通信网络，由德国的Bosh公司最先提出。板卡上FPGA PS侧的CAN接口上挂载有一个高速CAN收发器芯片TJA1050，TJA1050的 **`CANL`** 和 **`CANH`** 引脚上连接有 **`120Ω`** 终端匹配电阻。该CAN接口信号位于BANK501的 **`MIO52~53`**，具体原理图如下所示：
 
 ![PS CAN](/res/images/board/sch/v1p2/sch-ps-can.png)
 
-
 #### PS USB HOST
+
 板卡上FPGA PS侧搭载有一个兼容USB2.0的驱动芯片USB3320C，用于实现Host模式下的数据通信。该芯片支持高速ULPI标准接口，能通过该接口和FPGA PS侧的MIO之间进行高速数据传输。该接口信号位于BANK500的 **`MIO28~39`**，并使用标准的USB接口 **(Type-A)** 连接外设，其原理图如下所示：
 
 ![PS USB HOST](/res/images/board/sch/v1p2/sch-ps-usb.png)
 
 #### PS WS2812和PMOD
+
 板卡FPGA PS侧位于BANK500的 **`MIO20`** 接口上串联有4个WS2812C炫彩灯珠，可以用WS2812C支持的单线协议实现动态炫彩灯效。另外板卡上还使用排针的方式额外引出了FPGA PS侧剩余的MIO信号 **`MIO21~25`**，这些信号可以用于扩展其他外设：
 
 ![PS WS2812和PMOD](/res/images/board/sch/v1p2/sch-ps-ws-pmod.png)
 
 #### PS LED和KEY
+
 板卡上FPGA PS侧还搭载了2个蓝色LED和2个按键，这些信号位于BANK500的 **`MIO16~19`**。由于LED接有上拉电阻，所以当 **`PS_MIO16(17)`** 为高电平时，LED是熄灭状态。反之当 **`PS_MIO16(17)`** 为低电平时，LED会点亮。另外两个按键均采用低电平触发，所以只有当 **`PS_MIO18(19)`** 上检测到低电平时，才表示有按键按下：
 
 ![PS LED和KEY](/res/images/board/sch/v1p2/sch-ps-led-key.png)
 
-
 #### PL VGA
+
 板卡上FPGA PL侧搭载了一个标准VGA接口，可以用于图片或者视频的显示。数据信号线的颜色模式是RGB444，并且RGB每路数据信号均通过 **电阻网络** 实现DAC。该部分原理图如下所示：
 
 ![PL VGA](/res/images/board/sch/v1p2/sch-pl-vga.png)
 
-::: info 电阻网络阻值计算
-VGA标准规定接口的`VGA_R`，`VGA_G`和`VGA_B`管脚上传输的是模拟信号，范围为`0~0.714V`。每路模拟信号上的电压为`0V`时表示无色，为`0.714V`表示满色。由于采用的是RGB444的模式，所以每路上有2^4=16级颜色层次。比如对于`VGA_R`这一路，设组合后的输入信号 VGA_R3~VGA_R0 的值为 $VGA_R[3:0]$，设 `VGA_R`网络的电压值为 $V_{R}$，如果想要正确显示`VGA_R`这一路的颜色，只需满足：
+:::info 电阻网络阻值计算
+
 - 当 $VGA_R[3:0]=4'b0000$ 时，$V_{R}=0V$
 - 当 $VGA_R[3:0]=4'b1111$ 时，$V_{R}<=0.714V$
 - 当 $VGA_R[3:0]$ 取 $[4'b0000, 4'b1111]$ 中的任意一个值时，对于任意两个 $VGA_R[3:0]_1 <= VGA_R[3:0]_2$，均满足 $V_{R1}<=V_{R2}$
@@ -627,83 +658,93 @@ VGA标准规定接口的`VGA_R`，`VGA_G`和`VGA_B`管脚上传输的是模拟�
 :::
 
 #### PL PS/2
+
 板卡上FPGA PL侧搭载了一个PS/2键盘母座，用于连接键盘实现按键输入功能。由于PS/2接口电平标准为5V，所以需要通过一个电平转换芯片TXS0102将PS/2信号转换成3.3V的标准。该部分原理图如下所示：
 
 ![PL PS/2](/res/images/board/sch/v1p2/sch-pl-ps2.png)
 
 #### PL RTC和EEPROM
+
 板卡上FPGA PL侧搭载了支持I2C协议的RTC芯片PCF8563B和EEPROM芯片AT24C64，I2C总线通过两个 **`4.7KΩ`** 的电阻上拉到3.3V电源网络。该部分原理图如下所示：
 
 ![PL RTC和EEPROM](/res/images/board/sch/v1p2/sch-pl-i2c.png)
 
-
 #### PL SPI Flash
+
 板卡上FPGA PL侧搭载了一个NOR Flash芯片，可以使用SPI标准四线协议对其进行读写，该部分原理图如下所示：
 
 ![PL SPI Flash](/res/images/board/sch/v1p2/sch-pl-spi.png)
 
-
 #### PL I2S
+
 板卡上FPGA PL侧设计有一个支持I2S标准的音频外设。该外设使用的是WM8960这款低功耗的立体声编码器芯片。该芯片支持MIC音频输入和标准音频输入两种输入接口，以及耳机和扬声器两种音频输出接口，其原理图如下所示：
 
 ![PL I2S](/res/images/board/sch/v1p2/sch-pl-i2s.png)
 
-
 #### PL LED和KEY
+
 板卡上FPGA PL侧搭载了1个蓝色LED和1个按键，这部分电路和PS侧的LED和按键是一样的，这里就不再赘述了。该部分原理图如下所示：
 
 ![PL LED和KEY](/res/images/board/sch/v1p2/sch-pl-led-key.png)
 
 #### PL WS2812和UCLK
+
 和FPGA PS侧一样，板卡上FPGA PL侧也串联了4个WS2812C炫彩灯珠，另外还通过排针引出了一个名为PL_UCLK的PL侧IO。引出这个IO是为了 **能够给SoC提供一个可变时钟输入用的，方便同学们配合SoC上的PLL模块产生更多的核时钟频率**。具体来说，可以使用排线将PL_UCLK引脚连接到SoC晶振插座的时钟输出脚，然后使用FPGA上的时钟IP来输出自定义频率的时钟信号。因为PL_UCLK上的时钟输出会先经过SoC上的PLL，所以对该输出时钟频率稳定度不需要特别严格：
 
 ![PL WS2812和UCLK](/res/images/board/sch/v1p2/sch-pl-ws-uclk.png)
 
 #### PL 外设切换开关
+
 板卡上FPGA PL侧设计有一个 **外设切换开关**，这个切换开关的工作原理和 [SoC 功能切换开关](#soc-功能切换开关) 的一样，其主要功能是复用PL端的IO，**使得FPGA PL侧能够搭载尽可能多的外设**。
 
 ![PL 外设切换开关](/res/images/board/sch/v1p2/sch-pl-func-sw.png)
 
 #### SO-DIMM 204P接口
+
 SoC底板上设计有一个标准204P的SODIMM插座，用于连接FPGA核心板上的各个信号线并为FPGA核心板提供电源，该部分原理图如下所示：
 
 ![SO-DIMM 204P接口](/res/images/board/sch/v1p2/sch-sodimm.png)
 
 至此，板卡的所有硬件设计已经介绍完毕，下面将介绍FPGA部分内容。
 
-::: info FPGA选用Xilinx ZYNQ系列的原因
+:::info FPGA选用Xilinx ZYNQ系列的原因
+
 - 市面上售卖的Xilinx ZYNQ系列开发板相比其他型号FPGA数量要多一些，这样可以参考的软硬件资料也会比较多一些。
 - ZYNQ PS侧的外设控制器可以通过EMIO的方式路由到PL侧的IO上，方便与项目组自行开发的IP功能作对比验证。
 - 该版本板卡所搭载的FPGA核心板不仅为SoC提供了必需的ChipLink访存支持，也是 **为了下一代SoC的FPGA原型验证提供板卡支持**。为了实现这个目标，就要求FPGA器件能够有高效，稳定的软件开发工具和IP组件支持。项目组之前在做FPGA选型时也试用过多款国产FPGA，但是软件开发环境相比Xilinx的 **Vivado+Vitis** 还有很多可以优化的地方，故最终项目组选用了Xilinx ZYNQ系列FPGA器件。
-::::
+  ::::
 
 ### FPGA开发
+
 这个章节主要将会介绍如何设计并驱动板卡FPGA端的众多外设，该部分代码在 **StarrySky-res** 仓库中的`fpga/v1p2`里面([代码地址](https://github.com/maksyuki/StarrySky-res/tree/main/fpga/v1p2))。项目组使用的FPGA开发工具软件版本是 **`Vivado 2022.2`** 和 **`Vitis IDE 2022.2`**。
 
 ::: info Vivado+Vitis 软件使用和ZYNQ开发入门
-本章节内容需要同学们熟练掌握 **Vivado+Vitis** 工具的使用和ZYNQ开发流程，网上已经有很多比较好的，公开的ZYNQ入门学习资料了，比如 [ZYNQ领航者V2开发板](http://47.111.11.73/docs/boards/fpga/zdyz_linhanz(V2).html)，有需要的同学可以自己下载下来学习。
+本章节内容需要同学们熟练掌握 **Vivado+Vitis** 工具的使用和ZYNQ开发流程，网上已经有很多比较好的，公开的ZYNQ入门学习资料了，比如 [ZYNQ领航者V2开发板](http://47.111.11.73/docs/boards/fpga/zdyz_linhanz\(V2\).html)，有需要的同学可以自己下载下来学习。
 :::
 
 #### PL侧外设集合测试1
+
 这里主要介绍I2C，SPI，LED，KEY和UCLK这5个PL外设的功能。该部分代码在`fpga/V1p2/pl_i2c_spi_led_uclk`，具体实现功能：使用I2C总线访问并配置RTC芯片PCF8563，然后不停读取其三个时间寄存器的值，最后使用ILA对该寄存器值进行采样查看。使用SPI总线发送 **`0x9F`** 指令给NOR Flash，并使用ILA对读取的设备ID进行检查。LED会每隔1s翻转闪烁，按键则用作系统复位信号`rst_n`输入，另外还会在UCLK引脚上输出 **1Hz的波形**。
 
 同学们基于项目组提供的代码和约束文件自行创建Vivado工程并生成bitstream文件，不过在下载程序之前还需要对板卡进行一些硬件操作：
+
 - 将JTAG调试器插入到板卡上的牛角插座中，牛角插座有防呆设计，**仅支持单方向输入**，插入时需要让插头的凸出和插座缺口恰好重合。最后将JTAG调试器另一端插入到PC的USB接口上 **(需要在板卡未上电时操作)**。
 - 将FPGA启动模式开关 **FPGA-BOOT** 从 **`FLASH`** 切换到 **`JTAG`**，并确认外设切换开关 **PERIP-MODE** 滑动到下侧，具体开关设置如下所示：
 
 ![PL外设开关设置1](/res/images/board/fpga/v1p2/pl-perip-1.png)
 
-::: warning JTAG调试器和板卡上/下电顺序
-因为JTAG调试器的插头 **不像USB接口那样支持热插拔设计**，所以同学们不要在板卡上电的情况下，插拔JTAG调试器的的插头到牛角插座上，否则有可能损坏FPGA的JTAG接口。一个合理的操作顺序是先插入JTAG调试器插头，**板卡再上电**：
+:::warning JTAG调试器和板卡上/下电顺序
+
 - 将JTAG插入到牛角插座中
 - 将JTAG另一端插入到PC的USB口上
 - 打开板卡的电源
 
 反之，如果需要拔出JTAG调试器，则要 **先确认板卡已经下电**：
+
 - 关闭板卡电源
 - 将JTAG另一端从PC的USB口上拔出
 - 将JTAG插头从牛角插座中拔出
-:::
+  :::
 
 当确认JTAG调试器已经和板卡连接好，并且启动模式和功能切换开关都设置正确后，再给板卡上电。然后使用Vivado软件打开 **Hardware Manager** 并下载bitstream到板卡。下载完成后，板卡上PL侧的LED开始闪烁：
 
@@ -725,13 +766,12 @@ SoC底板上设计有一个标准204P的SODIMM插座，用于连接FPGA核心板
 
 ![PL KEY](/res/images/board/fpga/v1p2/pl-key.png)
 
-
 此时可以看到ILA采样出了波形，并且`rd_data[7:0]`在读数据结束后返回了设备ID`0xEF17`的低8位`0x17`：
 
 ![SPI ILA采样结果](/res/images/board/fpga/v1p2/pl-spi-ila-2.png)
 
-
 #### PL侧EEPROM测试
+
 这里主要介绍使用I2C总线对EEPROM芯片AT24C64进行读写测试，并使用ILA采样相关寄存器的值。该部分代码在`fpga/v1p2/pl_eeprom`。另外所有滑动开关的设置和上面 [PL侧外设集合测试1](#pl侧外设集合测试1) 的完全一致。
 
 同学们需要自行创建完工程并生成bitstream文件，并将bistream下载到板卡上。成功下载完后Vivado会弹出ILA波形窗口，此时需要切换到 **hw_ila_1** 这个窗口，该信号窗口中显示有EERPOM控制器相关信号。为了捕获读写EEPROM芯片的波形，需要将`u_e2prom_ctrl/i2c_data_r[7:0]=215`作为触发条件，并点击 **运行采样** 按钮，此时ILA会显示正等待触发：
@@ -743,11 +783,12 @@ SoC底板上设计有一个标准204P的SODIMM插座，用于连接FPGA核心板
 ![EEPROM ILA采样结果](/res/images/board/fpga/v1p2/pl-eeprom-ila-2.png)
 
 #### PL侧外设集合测试2
+
 这里主要测试的是VGA，PS/2和WS2812C这3个PL外设的功能。该部分代码在`fpga/v1p2/pl_vga_ps2_ws2812`，具体实现功能：驱动VGA在屏幕上显示彩条，当按下PS/2键盘的 **`A`** 键后，屏幕显示绿色，而当按下键盘上的其他按键后，屏幕会恢复显示彩条。另外板卡上还会驱动WS2812C显示4种不同的颜色。运行该测试需要在板卡上插入VGA数据线和支持PS/2模式的键盘：
 
 ![VGA和PS/2线与板卡连接](/res/images/board/fpga/v1p2/pl-vga-kdb.png)
 
-::: warning VGA和PS/2注意事项
+:::warning VGA和PS/2注意事项
 VGA和PS/2接口 **均不支持热插拔**，同学们需要在板卡上电前将VGA和PS/2线缆插入到板卡上，然后需要等待板卡下电后再从板卡上拔出VGA和PS/2线缆。
 :::
 
@@ -755,7 +796,7 @@ VGA和PS/2接口 **均不支持热插拔**，同学们需要在板卡上电前�
 
 ![PL外设开关设置2](/res/images/board/fpga/v1p2/pl-perip-2.png)
 
-::: warning 外设切换开关位置
+:::warning 外设切换开关位置
 注意这个测试要把外设切换开关 **PERIP-MODE** 滑动到 **上侧**，而上一个测试 **PERIP-MODE** 要滑动到 **下侧**，**这两个测试中外设切换开关的滑动位置是不一样的**。切换开关每个滑动位置对应连接的外设见 [PL 外设切换开关](#pl-外设切换开关) 部分原理图。
 :::
 
@@ -771,7 +812,7 @@ VGA和PS/2接口 **均不支持热插拔**，同学们需要在板卡上电前�
 
 #### ChipLink硬件系统
 
-::: info ChipLink固化
+:::info ChipLink固化
 FPGA核心板在发给同学们之前已经将该部分介绍的ChipLink硬件系统固化在了FPGA板载的Flash中，同学们直接使用就可以了，不需要自己编译并下载。
 :::
 
@@ -790,7 +831,6 @@ assign chiplink_cpu_int = 1'b0;
 这样将`chiplink_ctrl`添加到 **Block Design** 中并连接到ZYNQ系统上就完成了硬件设计，最终搭建好的硬件系统如下图所示：
 
 ![ChipLink硬件系统Block Design](/res/images/board/fpga/v1p2/chiplink-bd.png)
-
 
 其中，**ZYNQ Processing System** 使能了AXI HP从机接口、`FCLK_CLK0`、`FCLK_CLK1`时钟输出和`FCLK_RESET0_N`复位输出。其中`FCLK_CLK0`设置时钟频率为25MHz，用于连接`chiplink_ctrl`的输入时钟。`FCLK_CLK1`设置时钟频率为100MHz，用于 **AXI Innterconnect** 进行AXI主机通信。另外两个时钟分别接入到各自的 **Processor System Reset** 产生复位信号。最后再接入一个ILA核以采样`chiplink_ctrl`的AXI4信号。
 
@@ -838,13 +878,18 @@ int main()
 
 经过对比，我们确认了ILA采样的`chiplink_ctrl`波形与 **VCS上仿真的一致**，`chiplink_ctrl`能够正确处理SoC的访存请求。
 
-## 其他资源
+## Other resources
+
 <!-- 对接PPT内容，你可以从这里获得。 -->
+
 ### 硅后测试
+
 ## 勘误与致谢
+
 项目组鼓励和欢迎同学们对本文档提出宝贵的意见和反馈，目前项目组使用 [Github issue](https://github.com/oscc-ysyx-web-project/ysyx-website/issues) 来追踪这些反馈，本文档致力于遵守开源软件开发中公认的最佳实践，所以当你觉得有提出的必要时，请大胆地发起issue吧！:smile:
 
 ### 致谢列表
+
 - 感谢粟金伦同学在测试板卡时发现的板卡插接深度不够可能导致板卡信号断路问题，现在已经补充到相关注意事项中。
 - 感谢粟金伦同学建议使用 PuTTY/MobaXterm 软件来做板卡测试流程演示用的串口上位机软件，本文档已经使用 MobaXterm 重写了有关章节。
 - 在FPGA开发章节介绍时使用了正点原子公开的 **ZYNQ领航者V2开发板** 在线文档资源，对此表示感谢。

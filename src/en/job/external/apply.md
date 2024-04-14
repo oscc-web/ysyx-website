@@ -1,5 +1,5 @@
 ---
-title: "Application"
+title: Application
 ---
 
 ## 合作须知

@@ -1,3 +1,3 @@
 ---
-title: "Tape-out progress"
+title: Tap-out Progress
 ---
