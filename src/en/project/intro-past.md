@@ -43,22 +43,22 @@ As of now, the number of applicants for the fifth session of "One Student One Ch
 
 ### **The first batch of tape-out list for the fifth session of "One Student One Chip"**
 
-| No. |             Student ID             |                 School                 |                   Major                   | Grade |
-| :-----------------: | :--------------------------------: | :------------------------------------: | :---------------------------------------: | :---: |
-|          1          | ysyx_22050228 |         Northeastern University        |     Electronic Science and Technology     |   大三  |
-|          2          | ysyx_22050133 |            Peking University           |                 Mechanical                |   研二  |
-|          3          | ysyx_22050920 |       Hangzhou Dianzi University       |     Electronic Science and Technology     |   大四  |
-|          4          | ysyx_22040501 |     Harbin Institute of Technology     | Information and Communication Engineering |   研一  |
-|          5          | ysyx_22040502 |                 北京理工大学                 |                    电子信息                   |   大三  |
-|          6          | ysyx_22041461 |                  四川大学                  |                  微电子科学与工程                 |   大三  |
-|          7          | ysyx_22050550 |                  南京大学                  |                 微电子与固体电子学                 |   研一  |
-|          8          | ysyx_22040750 |                  南京大学                  |     Electronic Science and Technology     |   博一  |
-|          9          | ysyx_22040318 |                  同济大学                  |                    计算机                    |   研二  |
-|          10         | ysyx_22051098 | Chinese Academy of Sciences University |                  计算机科学与技术                 |   大三  |
-|          11         | ysyx_22051110 | Chinese Academy of Sciences University |                  计算机科学与技术                 |   大三  |
-|          12         | ysyx_22051094 | Chinese Academy of Sciences University |                  计算机科学与技术                 |   大三  |
-|          13         | ysyx_22050369 |                  湖北大学                  |                    电子信息                   |   研二  |
-|          14         | ysyx_22051106 | Chinese Academy of Sciences University |                  计算机科学与技术                 |   大三  |
-|          15         | ysyx_22051085 | Chinese Academy of Sciences University |                  计算机科学与技术                 |   大三  |
+| No. |             Student ID             |                   School                  |                     Major                    |           Grade          |
+| :-----------------: | :--------------------------------: | :---------------------------------------: | :------------------------------------------: | :----------------------: |
+|          1          | ysyx_22050228 |          Northeastern University          |       Electronic Science and Technology      |          Junior          |
+|          2          | ysyx_22050133 |             Peking University             |                  Mechanical                  | The 2nd year of graduate |
+|          3          | ysyx_22050920 |         Hangzhou Dianzi University        |       Electronic Science and Technology      |          Senior          |
+|          4          | ysyx_22040501 |       Harbin Institute of Technology      |   Information and Communication Engineering  | The 1st year of graduate |
+|          5          | ysyx_22040502 |      Beijing Institute of Technology      |            Electronic Information            |          Junior          |
+|          6          | ysyx_22041461 |             Sichuan University            |   Microelectronics Science and Engineering   |          Junior          |
+|          7          | ysyx_22050550 |             Nanjing University            | Microelectronics and Solid State Electronics | The 1st year of graduate |
+|          8          | ysyx_22040750 |             Nanjing University            |       Electronic Science and Technology      |    The 1st year of PhD   |
+|          9          | ysyx_22040318 |             TongJi University             |                   Computer                   | The 2nd year of graduate |
+|          10         | ysyx_22051098 |   Chinese Academy of Sciences University  |        Computer Science and Technology       |          Junior          |
+|          11         | ysyx_22051110 |   Chinese Academy of Sciences University  |        Computer Science and Technology       |          Junior          |
+|          12         | ysyx_22051094 |   Chinese Academy of Sciences University  |        Computer Science and Technology       |          Junior          |
+|          13         | ysyx_22050369 |              Hubei University             |            Electronic Information            | The 2nd year of graduate |
+|          14         | ysyx_22051106 |   Chinese Academy of Sciences University  |        Computer Science and Technology       |          Junior          |
+|          15         | ysyx_22051085 | University of Chinese Academy of Sciences |        Computer Science and Technology       |          Junior          |
 
 </el-row>
