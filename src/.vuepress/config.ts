@@ -75,7 +75,7 @@ export default defineUserConfig({
             sortStrategy: "max"
         }),
         googleAnalyticsPlugin({
-            id: "G-JE9FFL5P3Q"
+            id: ""
         })
     ],
     theme: theme,
