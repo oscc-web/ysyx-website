@@ -5,4 +5,4 @@ containerClass: home
 home: true
 ---
 
-<TheHomeEn />
+<TheHome />
