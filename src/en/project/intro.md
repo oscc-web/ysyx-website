@@ -94,7 +94,7 @@ As shown in the picture below, the learning route of the "One Student One Chip" 
 |          9          |         Certification of Completion of Stage A Studies         |
 |          10         |           Mission content is constantly being updated          |
 
-
+</el-col>
 <el-col span=12>
 
 | No. |      Redeemable peripherals (some)     |
@@ -106,8 +106,8 @@ As shown in the picture below, the learning route of the "One Student One Chip" 
 |          5          | **Shuttle tape-out area (customized)** |
 |          6          | More peripherals will be launched soon, please stay tuned |
 
-
-
+</el-col>
+</el-row>
 
 ![](/res/images/project/info-exchange.png)
 
