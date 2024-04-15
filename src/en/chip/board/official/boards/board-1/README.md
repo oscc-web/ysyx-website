@@ -43,7 +43,6 @@ SoC上丝印编号的格式为：**`202112-3-yx`** ，其中 **`x`** 取值 **`1
 同学们可以提前将 **StarrySky-res** 下载下来，这个仓库中的软件资源后面会经常用到。
 
 :::info 资料更新
-:::info 资料更新
 目前上面介绍的板卡软硬件资料仍在持续更新中，推荐使用`git`管理仓库并使用`git pull`来获取最新的内容。
 :::
 
@@ -142,7 +141,7 @@ FPGA核心板PS侧的BANK有BANK502，BANK500，BNAK501。其中BANK502电平标
 
 其中黄色框为纯硬件操作部分，而蓝色框内涉及有软件操作。
 
-:::warning :::warning 调试注意事项
+:::warning 调试注意事项
 
 - 接触板卡和其他物料前请确认双手已经保持干燥。
 - 接触板卡之前，先找一个金属物体摸一下，以释放人体上可能带有的静电。
@@ -153,7 +152,6 @@ FPGA核心板PS侧的BANK有BANK502，BANK500，BNAK501。其中BANK502电平标
 - 电源一经接通，若观察到有如冒烟、异常气味、放电的声光、元器件发烫等异常现象时，尤其当听到 “滋滋滋” 的 **噪声啸叫** 时，请立即 **切断电源**。
   :::
 
-:::info 噪声啸叫
 :::info 噪声啸叫
 噪声啸叫英文为Acoustic Noise，常分为电感啸叫和电容啸叫。其中电感啸叫最常见，电感啸叫多是由于未正确选择器件参数，负载不稳定或轻载过载等情况导致的，而 **负载不稳定** 往往是主因，这意味着板卡上某个地方可能存在短路。
 :::
@@ -207,7 +205,6 @@ FPGA核心板PS侧的BANK有BANK502，BANK500，BNAK501。其中BANK502电平标
 - 未定义 **(1位)**
 - 处理器核选择位 **(5位)**
 
-:::warning 核选通拨码定义
 :::warning 核选通拨码定义
 6位拨码开关的最高位 **(左边数第一个)** 没有定义功能。
 :::
@@ -301,7 +298,6 @@ FPGA核心板PS侧的BANK有BANK502，BANK500，BNAK501。其中BANK502电平标
 
 ![设备管理器显示CP2102端口](/res/images/board/tool/cp2102-1.png)
 
-:::tip
 :::tip
 上图中 **`COMx`** 末尾的数字 **`x`** 不一定是图中的 **`15`**，这个是电脑自动分配的，具体是几都没有问题，**但是要确定这个端口是板卡上电后新识别出来的**。
 :::
@@ -505,7 +501,7 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
 
 ![板卡底层贴片](/res/images/board/res/v1p2/board-smt-bot.png)
 
-:::info :::info 板卡设计资源文件
+:::info 板卡设计资源文件
 
 - 项目组在Github上 **开源了星空板卡各个版本的原理图，PCB设计，BOM和制造文件等内容**，同学们可以访问Github仓库 [StarrySky](https://github.com/maksyuki/StarrySky) 来获取所有资源。其中：
 - 星空V1.2的PDF版本原理图：[STARRYSKY_SCH.pdf](https://github.com/maksyuki/StarrySky/blob/main/CAD/V1.2/STARRYSKY_SCH.pdf)
@@ -532,7 +528,6 @@ SoC板卡的电源网络拓扑结构如下图所示：
 
 其中 USB_PWR， PS_PWR，DC_PWR为三个标准Type-C母座，且USB_PWR上引出电源网络 **`5V_VBUS1`** 和SoC串口需要的差分输入信号 **`MAIN_DP/DN`**，PS_PWR上引出电源网络 **`5V_VBUS2`** 和FPGA的PS侧串口需要的差分输入信号 **`PS_UART_DP/DN`**。DC_PWR由于只用于供电，所以在接口上只引出电源网络 **`5V_DC`**。
 
-:::info Type-C母座上CC引脚接5.1K下拉电阻的作用
 :::info Type-C母座上CC引脚接5.1K下拉电阻的作用
 Type-C上的CC引脚全称为 [Configuration Channel](https://en.wikipedia.org/wiki/USB-C) ，用于对线缆的插入进行检测，识别线缆方向，配置工作模式 **(电流，PD模式)**，协商建立DFP **(下行端口，主机端)** 和UFP **(上行端口，设备端)** 身份等。相对于PC上位机来说，板卡的Type-C接口是做作为设备端接口的，也就是具有UFP身份。而协议规定UFP的 **`CC1`** 和 **`CC2`** 引脚都需要一个下拉电阻 **`Rd=5.1KΩ`**。
 :::
@@ -724,7 +719,7 @@ SoC底板上设计有一个标准204P的SODIMM插座，用于连接FPGA核心板
 这个章节主要将会介绍如何设计并驱动板卡FPGA端的众多外设，该部分代码在 **StarrySky-res** 仓库中的`fpga/v1p2`里面([代码地址](https://github.com/maksyuki/StarrySky-res/tree/main/fpga/v1p2))。项目组使用的FPGA开发工具软件版本是 **`Vivado 2022.2`** 和 **`Vitis IDE 2022.2`**。
 
 ::: info Vivado+Vitis 软件使用和ZYNQ开发入门
-本章节内容需要同学们熟练掌握 **Vivado+Vitis** 工具的使用和ZYNQ开发流程，网上已经有很多比较好的，公开的ZYNQ入门学习资料了，比如 [ZYNQ领航者V2开发板](http://47.111.11.73/docs/boards/fpga/zdyz_linhanz\\(V2\\).html)，有需要的同学可以自己下载下来学习。
+本章节内容需要同学们熟练掌握 **Vivado+Vitis** 工具的使用和ZYNQ开发流程，网上已经有很多比较好的，公开的ZYNQ入门学习资料了，比如 [ZYNQ领航者V2开发板](http://47.111.11.73/docs/boards/fpga/zdyz_linhanz\(V2\).html)，有需要的同学可以自己下载下来学习。
 :::
 
 #### PL侧外设集合测试1
@@ -793,7 +788,6 @@ SoC底板上设计有一个标准204P的SODIMM插座，用于连接FPGA核心板
 
 ![VGA和PS/2线与板卡连接](/res/images/board/fpga/v1p2/pl-vga-kdb.png)
 
-:::warning VGA和PS/2注意事项
 :::warning VGA和PS/2注意事项
 VGA和PS/2接口 **均不支持热插拔**，同学们需要在板卡上电前将VGA和PS/2线缆插入到板卡上，然后需要等待板卡下电后再从板卡上拔出VGA和PS/2线缆。
 :::
