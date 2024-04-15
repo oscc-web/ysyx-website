@@ -293,6 +293,8 @@ FPGA核心板PS侧的BANK有BANK502，BANK500，BNAK501。其中BANK502电平标
 ![设备管理器显示CP2102端口](/res//images/board/tool/cp2102-1.png)
 
 :::tip
+:::tip
+:::tip
 上图中 **`COMx`** 末尾的数字 **`x`** 不一定是图中的 **`15`**，这个是电脑自动分配的，具体是几都没有问题，**但是要确定这个端口是板卡上电后新识别出来的**。
 :::
 
@@ -495,7 +497,7 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
 
 ![板卡底层贴片](/res/images/board/res/v1p3/board-smt-bot.png)
 
-:::info 板卡设计资源文件
+:::info :::info :::info 板卡设计资源文件
 
 - 项目组在Github上 **开源了星空板卡各个版本的原理图，PCB设计，BOM和制造文件等内容**，同学们可以访问Github仓库 [StarrySky](https://github.com/maksyuki/StarrySky) 来获取所有资源。其中：
 - 星空V1.3的PDF版本原理图：[STARRYSKY_SCH.pdf](https://github.com/maksyuki/StarrySky/blob/main/CAD/V1.3/STARRYSKY_SCH.pdf)
@@ -522,6 +524,8 @@ SoC板卡的电源网络拓扑结构如下图所示：
 
 其中 USB_PWR， PS_PWR，DC_PWR为三个标准Type-C母座，且USB_PWR上引出电源网络 **`5V_VBUS1`** 和SoC串口需要的差分输入信号 **`MAIN_DP/DN`**，PS_PWR上引出电源网络 **`5V_VBUS2`** 和FPGA的PS侧串口需要的差分输入信号 **`PS_UART_DP/DN`**。DC_PWR由于只用于供电，所以在接口上只引出电源网络 **`5V_DC`**。
 
+:::info Type-C母座上CC引脚接5.1K下拉电阻的作用
+:::info Type-C母座上CC引脚接5.1K下拉电阻的作用
 :::info Type-C母座上CC引脚接5.1K下拉电阻的作用
 Type-C上的CC引脚全称为 [Configuration Channel](https://en.wikipedia.org/wiki/USB-C) ，用于对线缆的插入进行检测，识别线缆方向，配置工作模式 **(电流，PD模式)**，协商建立DFP **(下行端口，主机端)** 和UFP **(上行端口，设备端)** 身份等。相对于PC上位机来说，板卡的Type-C接口是做作为设备端接口的，也就是具有UFP身份。而协议规定UFP的 **`CC1`** 和 **`CC2`** 引脚都需要一个下拉电阻 **`Rd=5.1KΩ`**。
 :::
@@ -713,7 +717,7 @@ SoC底板上设计有一个标准204P的SODIMM插座，用于连接FPGA核心板
 这个章节主要将会介绍如何设计并驱动板卡FPGA端的众多外设，该部分代码在 **StarrySky-res** 仓库中的`fpga/v1p3`里面([代码地址](https://github.com/maksyuki/StarrySky-res/tree/main/fpga/v1p3))。项目组使用的FPGA开发工具软件版本是 **`Vivado 2022.2`** 和 **`Vitis IDE 2022.2`**。
 
 ::: info Vivado+Vitis 软件使用和ZYNQ开发入门
-本章节内容需要同学们熟练掌握 **Vivado+Vitis** 工具的使用和ZYNQ开发流程，网上已经有很多比较好的，公开的ZYNQ入门学习资料了，比如 [ZYNQ领航者V2开发板](http://47.111.11.73/docs/boards/fpga/zdyz_linhanz\(V2\).html)，有需要的同学可以自己下载下来学习。
+本章节内容需要同学们熟练掌握 **Vivado+Vitis** 工具的使用和ZYNQ开发流程，网上已经有很多比较好的，公开的ZYNQ入门学习资料了，比如 [ZYNQ领航者V2开发板](http://47.111.11.73/docs/boards/fpga/zdyz_linhanz\\\(V2\\\).html)，有需要的同学可以自己下载下来学习。
 :::
 
 #### PL侧外设集合测试1
@@ -782,6 +786,8 @@ SoC底板上设计有一个标准204P的SODIMM插座，用于连接FPGA核心板
 
 ![VGA和PS/2线与板卡连接](/res/images/board/fpga/v1p3/pl-vga-kdb.png)
 
+:::warning VGA和PS/2注意事项
+:::warning VGA和PS/2注意事项
 :::warning VGA和PS/2注意事项
 VGA和PS/2接口 **均不支持热插拔**，同学们需要在板卡上电前将VGA和PS/2线缆插入到板卡上，然后需要等待板卡下电后再从板卡上拔出VGA和PS/2线缆。
 :::
