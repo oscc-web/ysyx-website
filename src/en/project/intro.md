@@ -24,7 +24,7 @@ In order to solve the current "bottleneck" problem of processor chips and face t
 
 The core concept of "One Student One Chip" is **simply "allowing a student to graduate with a processor chip designed by himself"**. It is hoped that the threshold of processor chip design can be lowered through a teaching mechanism that pays equal attention to theory and practice, so that more students can participate in every aspect of processor chip design throughout the process.
 
-"Public welfare" is an important attribute of "One Student One Chip". The registration and study of "One Student One Chip" is free. Both current students and graduates can participate in the "One Student One Chip" study. However, due to limited funds, free tape-out is only for current students.As long as you have a strong interest in processor chip learning and want to develop in the direction of processor chips, students with zero foundation can join. **Regardless of grade, major and school, you can sign up**.
+"Public welfare" is an important attribute of "One Student One Chip". The registration and study of "One Student One Chip" is free. Both current students and graduates can participate in the "One Student One Chip" study. However, due to limited funds, free tape-out is only for current students. As long as you have a strong interest in processor chip learning and want to develop in the direction of processor chips, students with zero foundation can join. **Regardless of grade, major and school, you can sign up**.
 
 ![](/res/images/project/intro-goal.png)
 
@@ -94,7 +94,7 @@ As shown in the picture below, the learning route of the "One Student One Chip" 
 |          9          |         Certification of Completion of Stage A Studies         |
 |          10         |           Mission content is constantly being updated          |
 
-
+</el-col>
 <el-col span=12>
 
 | No. |      Redeemable peripherals (some)     |
@@ -106,8 +106,8 @@ As shown in the picture below, the learning route of the "One Student One Chip" 
 |          5          | **Shuttle tape-out area (customized)** |
 |          6          | More peripherals will be launched soon, please stay tuned |
 
-
-
+</el-col>
+</el-row>
 
 ![](/res/images/project/info-exchange.png)
 
