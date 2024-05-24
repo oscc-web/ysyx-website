@@ -1,5 +1,5 @@
 ---
-title: 证书申请
+title: Certificate Application
 ---
 
 ## 实习证明
