@@ -103,11 +103,11 @@ title: FAQ
 
 **What are the quotas for participating in "One Student One Chip" and the quotas for tape-out?**
 
-- There is currently no limit to the number of people who can participate in the "One Student One Chip" and students can learn as they go.In extreme cases, due to the size of the support team, we will make a decision based on comprehensive consideration based on the number of applicants and the status of the TA team.
+- There is currently no limit to the number of people who can participate in the "One Student One Chip" and students can learn as they go. In extreme cases, due to the size of the support team, we will make a decision based on comprehensive consideration based on the number of applicants and the status of the TA team.
 
 **Is it ready for tape-out after the front-end is completed in six months?**
 
-- See if the content of A stage is completed.It’s not about the length of time.
+- See if the content of A stage is completed. It’s not about the length of time.
   :::
 
 :::details Learning Process
@@ -157,7 +157,7 @@ title: FAQ
 
 **What is the maximum preliminary time limit?**
 
-- There is no limit to study time.It’s just that there are time nodes for tape-out.
+- There is no limit to study time. It’s just that there are time nodes for tape-out.
 
 **Is the recommended tutorial in English or Chinese?**
 
@@ -171,7 +171,7 @@ title: FAQ
 - We recommend learning materials for `Chisel` in the reference materials.
 - `VHDL` is not supported yet. If there are multiple languages, `SoC` integration will be more complicated.
 
-\*\* "One Student One Chip" must be based on RISC-V?\*\*
+**"One Student One Chip" must be based on RISC-V?**
 
 - Yes, `RV64`.
 
@@ -190,7 +190,7 @@ title: FAQ
 
 :::details Others
 
-- We have.There is [official video account](https://space.bilibili.com/2107852263) on BiliBili.
+- We have. There is [official video account](https://space.bilibili.com/2107852263) on BiliBili.
 
 **How to add contact information for the father of Chisel?**
 
