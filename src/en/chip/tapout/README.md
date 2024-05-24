@@ -1,3 +1,0 @@
----
-title: Tap-out Progress
----

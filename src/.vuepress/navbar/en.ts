@@ -23,10 +23,10 @@ export const enNavbar = navbar([
         text: "Study Record",
         link: "https://docs.qq.com/sheet/DT29weHpIRWNnYlFl?tab=BB08J2"
     }, {
-        text: "Tap-Out & Board",
+        text: "Tape-Out & Board",
         prefix: "/en/chip/",
         children: [
-            "tapout/",
+            "tapeout/",
             "board/official/"
         ]
     }, {

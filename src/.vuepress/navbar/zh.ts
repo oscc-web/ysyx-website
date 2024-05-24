@@ -26,7 +26,7 @@ export const zhNavbar = navbar([
         text: "流片&板卡",
         prefix: "/chip/",
         children: [
-            "tapout/",
+            "tapeout/",
             "board/official/"
         ]
     }, {
