@@ -60,7 +60,7 @@ title: Team
 
 ## 招聘活动
 
-:::tip :::tip :::tip 进行中：长期有效的招聘活动
+:::tip :::tip :::tip :::tip 进行中：长期有效的招聘活动
 
 - **招聘类型**
   - 实习生。
@@ -72,7 +72,7 @@ title: Team
   - 接收到邮件后会及时安排面试。
     :::
 
-:::details :::details :::details 已结束：2023-06暑期招生招聘
+:::details :::details :::details :::details 已结束：2023-06暑期招生招聘
 
 - **招聘类型**
   - 2023暑期夏令营。
