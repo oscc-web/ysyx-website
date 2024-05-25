@@ -45,6 +45,7 @@ SoC上丝印编号的格式为：**`202112-3-yx`** ，其中 **`x`** 取值 **`1
 :::info 资料更新
 :::info 资料更新
 :::info 资料更新
+:::info 资料更新
 目前上面介绍的板卡软硬件资料仍在持续更新中，推荐使用`git`管理仓库并使用`git pull`来获取最新的内容。
 :::
 
@@ -157,6 +158,7 @@ FPGA核心板PS侧的BANK有BANK502，BANK500，BNAK501。其中BANK502电平标
 :::info 噪声啸叫
 :::info 噪声啸叫
 :::info 噪声啸叫
+:::info 噪声啸叫
 噪声啸叫英文为Acoustic Noise，常分为电感啸叫和电容啸叫。其中电感啸叫最常见，电感啸叫多是由于未正确选择器件参数，负载不稳定或轻载过载等情况导致的，而 **负载不稳定** 往往是主因，这意味着板卡上某个地方可能存在短路。
 :::
 
@@ -209,6 +211,7 @@ FPGA核心板PS侧的BANK有BANK502，BANK500，BNAK501。其中BANK502电平标
 - 未定义 **(1位)**
 - 处理器核选择位 **(5位)**
 
+:::warning 核选通拨码定义
 :::warning 核选通拨码定义
 :::warning 核选通拨码定义
 :::warning 核选通拨码定义
@@ -304,6 +307,7 @@ FPGA核心板PS侧的BANK有BANK502，BANK500，BNAK501。其中BANK502电平标
 
 ![设备管理器显示CP2102端口](/res/images/board/tool/cp2102-1.png)
 
+:::tip
 :::tip
 :::tip
 :::tip
@@ -509,7 +513,7 @@ MobaXterm是一款面向Window平台的，支持 SSH、X11、VNC、FTP和SERIAL�
 
 ![板卡底层贴片](/res/images/board/res/v1p2/board-smt-bot.png)
 
-:::info :::info :::info 板卡设计资源文件
+:::info :::info :::info :::info 板卡设计资源文件
 
 - 项目组在Github上 **开源了星空板卡各个版本的原理图，PCB设计，BOM和制造文件等内容**，同学们可以访问Github仓库 [StarrySky](https://github.com/maksyuki/StarrySky) 来获取所有资源。其中：
 - 星空V1.2的PDF版本原理图：[STARRYSKY_SCH.pdf](https://github.com/maksyuki/StarrySky/blob/main/CAD/V1.2/STARRYSKY_SCH.pdf)
@@ -536,6 +540,7 @@ SoC板卡的电源网络拓扑结构如下图所示：
 
 其中 USB_PWR， PS_PWR，DC_PWR为三个标准Type-C母座，且USB_PWR上引出电源网络 **`5V_VBUS1`** 和SoC串口需要的差分输入信号 **`MAIN_DP/DN`**，PS_PWR上引出电源网络 **`5V_VBUS2`** 和FPGA的PS侧串口需要的差分输入信号 **`PS_UART_DP/DN`**。DC_PWR由于只用于供电，所以在接口上只引出电源网络 **`5V_DC`**。
 
+:::info Type-C母座上CC引脚接5.1K下拉电阻的作用
 :::info Type-C母座上CC引脚接5.1K下拉电阻的作用
 :::info Type-C母座上CC引脚接5.1K下拉电阻的作用
 :::info Type-C母座上CC引脚接5.1K下拉电阻的作用
@@ -729,7 +734,7 @@ SoC底板上设计有一个标准204P的SODIMM插座，用于连接FPGA核心板
 这个章节主要将会介绍如何设计并驱动板卡FPGA端的众多外设，该部分代码在 **StarrySky-res** 仓库中的`fpga/v1p2`里面([代码地址](https://github.com/maksyuki/StarrySky-res/tree/main/fpga/v1p2))。项目组使用的FPGA开发工具软件版本是 **`Vivado 2022.2`** 和 **`Vitis IDE 2022.2`**。
 
 ::: info Vivado+Vitis 软件使用和ZYNQ开发入门
-本章节内容需要同学们熟练掌握 **Vivado+Vitis** 工具的使用和ZYNQ开发流程，网上已经有很多比较好的，公开的ZYNQ入门学习资料了，比如 [ZYNQ领航者V2开发板](http://47.111.11.73/docs/boards/fpga/zdyz_linhanz\\\(V2\\\).html)，有需要的同学可以自己下载下来学习。
+本章节内容需要同学们熟练掌握 **Vivado+Vitis** 工具的使用和ZYNQ开发流程，网上已经有很多比较好的，公开的ZYNQ入门学习资料了，比如 [ZYNQ领航者V2开发板](http://47.111.11.73/docs/boards/fpga/zdyz_linhanz\\\\(V2\\\\).html)，有需要的同学可以自己下载下来学习。
 :::
 
 #### PL侧外设集合测试1
@@ -798,6 +803,7 @@ SoC底板上设计有一个标准204P的SODIMM插座，用于连接FPGA核心板
 
 ![VGA和PS/2线与板卡连接](/res/images/board/fpga/v1p2/pl-vga-kdb.png)
 
+:::warning VGA和PS/2注意事项
 :::warning VGA和PS/2注意事项
 :::warning VGA和PS/2注意事项
 :::warning VGA和PS/2注意事项
