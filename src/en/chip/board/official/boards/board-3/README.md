@@ -40,6 +40,7 @@ toc: false
 :::info 资料更新
 :::info 资料更新
 :::info 资料更新
+:::info 资料更新
 目前上面介绍的板卡软硬件资料仍在持续更新中，推荐使用`git`管理仓库并使用`git pull`来获取最新的内容。
 :::
 
@@ -169,6 +170,7 @@ FPGA核心板PS侧的BANK有BANK502，BANK500和BNAK501。其中BANK502电平标
 - 电源一经接通，若观察到有如冒烟、异常气味、放电的声光、元器件发烫等异常现象时，尤其当听到 “滋滋滋” 的 **噪声啸叫** 时，请立即 **切断电源**。
   :::
 
+:::info 噪声啸叫
 :::info 噪声啸叫
 :::info 噪声啸叫
 :::info 噪声啸叫
@@ -320,6 +322,7 @@ FPGA核心板PS侧的BANK有BANK502，BANK500和BNAK501。其中BANK502电平标
 
 ![设备管理器显示CP2102端口](/res/images/board/tool/cp2102-1.png)
 
+:::tip
 :::tip
 :::tip
 :::tip
@@ -552,7 +555,7 @@ SoC上除了UART外设外，还支持PS/2键盘输入，连接该外设需要先
 
 ![板卡底层贴片](/res/images/board/res/v2p1/board-smt-bot.png)
 
-:::info :::info :::info 板卡设计资源文件
+:::info :::info :::info :::info 板卡设计资源文件
 
 - 项目组在Github上 **开源了星空板卡各个版本的原理图，PCB设计，BOM和制造文件等内容**，同学们可以访问Github仓库 [StarrySky](https://github.com/maksyuki/StarrySky) 来获取相关设计资料。其中：
 - 星空V2.1的PDF版本原理图：[STARRYSKY_SCH.pdf](https://github.com/maksyuki/StarrySky/blob/main/CAD/V2.1/STARRYSKY_SCH.pdf)
@@ -579,6 +582,7 @@ SoC板卡的电源网络拓扑结构如下图所示：
 
 其中 USB_PWR， PS_PWR，DC_PWR为三个标准Type-C母座，且USB_PWR上引出电源网络 **`5V_VBUS1`** 和SoC串口需要的差分输入信号 **`MAIN_DP/DN`**，PS_PWR上引出电源网络 **`5V_VBUS2`** 和FPGA的PS侧串口需要的差分输入信号 **`PS_UART_DP/DN`**。DC_PWR由于只用于供电，所以在接口上只引出电源网络 **`5V_DC`**。
 
+:::info Type-C母座上CC引脚接5.1K下拉电阻的作用
 :::info Type-C母座上CC引脚接5.1K下拉电阻的作用
 :::info Type-C母座上CC引脚接5.1K下拉电阻的作用
 :::info Type-C母座上CC引脚接5.1K下拉电阻的作用
@@ -831,7 +835,7 @@ SoC底板背面设计有四个型号为DF40C-100DS的100P BTB母座，用于连�
 这个章节主要将会介绍如何设计并驱动板卡FPGA端的众多外设，该部分代码在 **StarrySky-res** 仓库中的`fpga/v2p1`里面([代码地址](https://github.com/maksyuki/StarrySky-res/tree/main/fpga/v2p1))。项目组使用的FPGA开发工具软件版本是 **`Vivado 2022.2`** 和 **`Vitis IDE 2022.2`**，其中大部分RTL代码修改自正点原子的FPGA教程，相关代码版权由正点原子所有。
 
 ::: info Vivado+Vitis 软件使用和ZYNQ开发入门
-本章节内容需要同学们熟练掌握 **Vivado+Vitis** 工具的使用和ZYNQ开发流程，网上已经有很多比较好的，公开的ZYNQ入门学习资料了，比如 [ZYNQ领航者V2开发板](http://47.111.11.73/docs/boards/fpga/zdyz_linhanz\\\(V2\\\).html)，有需要的同学可以自己下载下来学习。
+本章节内容需要同学们熟练掌握 **Vivado+Vitis** 工具的使用和ZYNQ开发流程，网上已经有很多比较好的，公开的ZYNQ入门学习资料了，比如 [ZYNQ领航者V2开发板](http://47.111.11.73/docs/boards/fpga/zdyz_linhanz\\\\(V2\\\\).html)，有需要的同学可以自己下载下来学习。
 :::
 
 #### PL侧外设集合测试
@@ -877,6 +881,7 @@ SoC底板背面设计有四个型号为DF40C-100DS的100P BTB母座，用于连�
 
 ![各线缆与板卡连接](/res/images/board/fpga/v2p1/pl-wire.png)
 
+:::warning VGA和PS/2注意事项
 :::warning VGA和PS/2注意事项
 :::warning VGA和PS/2注意事项
 :::warning VGA和PS/2注意事项
