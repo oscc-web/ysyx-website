@@ -9,7 +9,7 @@
                     type="default"
                     @click="jumpToProjectInfo">{{ i18n[prop.lang].projectInfo }}
             </el-button>
-            <a href="/res/files/ysyx.pdf"
+            <a :href="i18n[prop.lang].pdf"
                target="_blank"
                style="margin-top:5px;
                       font-weight:bold;
@@ -32,12 +32,14 @@
         "/": {
             projectInfo: "项目介绍",
             signup: "报名参与",
-            pdfDownload: "PDF下载"
+            pdfDownload: "PDF下载",
+            pdf: "/res/files/ysyx.pdf"
         },
         "/en": {
             projectInfo: "Project Info",
             signup: "Signup",
-            pdfDownload: "PDF Download"
+            pdfDownload: "PDF Download",
+            pdf: "/res/files/ysyx-en.pdf"
         }
     }
 
