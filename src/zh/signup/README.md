@@ -7,7 +7,7 @@ title: 报名参与
 
 ![](./images/process.png)
 
-## <span id="understandPlan" style="display: block; padding-top: 70px; margin-top: -70px">:mag_right: 了解“一生一芯”计划</span>
+## :mag_right: 了解“一生一芯”计划 {data-ysyx-nav=了解计划}
 
 在正式报名参加“一生一芯”计划之前，请您先阅读[《项目概述》](/project/intro.html)部分，文章从【背景现状】、【目标理念】、【项目亮点】、【学习路线】、【预期收获】等不同角度对“一生一芯”计划进行了全面且详细的阐述，可以让同学们在正式报名前对“一生一芯”计划有一个基本的认识，并消除一些因信息不对称所产生的误解。
 
@@ -25,7 +25,7 @@ title: 报名参与
 :::
 
 
-## <span id="entryForm" style="display: block; padding-top: 70px; margin-top: -70px">🔥 填写报名问卷</span>
+## 🔥 填写报名问卷 {data-ysyx-nav=报名参加}
 
 相信您已经充分了解“一生一芯”计划了，在开始学习之前，请先填写 ✨ **“一生一芯”报名问卷**。
 
@@ -85,85 +85,7 @@ title: 报名参与
    <span style="color: #e81224;">:x: 答辩不通过</span>，则需要根据助教意见修复问题，返回步骤 1，重新申请答辩
 4. 进入正式学习组
 
-<!-- -----------------------  bottom-bar  ------------------------- -->
-<!-- #4d4d4d -->
-<div class="bottom-bar">
-    <!-- #3e3e3e -->
-    <div style="display: flex; justify-content: center; align-items: center;
-        background-color: #353535;
-        padding: 4px 6px;
-        height:40px;
-        border-radius: 8px;
-        ">
-        <a href="https://ysyx.oscc.cc/" class="bottom-button">
-            <!-- <img alt="ysyxLogo" src="./images/ysyx.png" width="40" 
-            style="background-color: #fff; 
-                    border-radius: 4px;
-                    padding: 3px;
-                    "> -->
-            ❮❮ 返回主页
-        </a>
-    </div>
-    <div style="display: flex; justify-content: center; align-items: center;
-    background-color: #353535;
-    padding: 4px 6px;
-    height:40px;
-    border-radius: 8px;
-    margin-left: 6px
-    ">
-        <a  href="#understandPlan" class="bottom-button" id="understandPlanButton">了解计划</a>
-        <a  href="#entryForm" class="bottom-button" id="entryFormButton" style="margin-left: 8px">报名参加</a>
-        <!-- <a  href="#entryForm" class="bottom-button" id="entryFormButton" style="margin-left: 10px">入学答辩</a> -->
-    </div>
-    <div style="display: flex; justify-content: center; align-items: center;
-    background-color: #353535;
-    padding: 4px 6px;
-    height:40px;
-    border-radius: 8px;
-    margin-left: 6px
-    ">
-        <a  href="https://ysyx.oscc.cc/docs/2306/preliminary/preliminary.html" target="_blank" 
-            class="bottom-button" id="startLearnButton"
-            >
-            开始学习 ❯❯
-        </a>
-    </div>
-</div>
-
-<!-- ---------------------  phone-bottom-bar  ----------------------- -->
-<div class="phone-bottom-bar">
-    <a href="https://ysyx.oscc.cc/" class="phone-bottom-button">
-        <span class="emoji" style="padding-left: 4px; margin-bottom: -2px">◀</span>
-        <span class="text">返回主页</span>
-    </a>
-    <a href="#understandPlan" class="phone-bottom-button">
-        <span class="emoji" style="padding-left: 4px; margin-bottom: -2px">🧐</span>
-        <span class="text">了解计划</span>
-    </a>
-    <a href="#entryForm" class="phone-bottom-button">
-        <span class="emoji" style="padding-left: 4px; margin-bottom: -2px">🔥</span>
-        <span class="text">报名参加</span>
-    </a>
-    <a  href="https://ysyx.oscc.cc/docs/2306/preliminary/preliminary.html" target="_blank"
-        class="phone-bottom-button">
-        <span class="emoji" style="padding-left: 4px; margin-bottom: -2px">🚀</span>
-        <span class="text">开始学习</span>
-    </a>
-</div>
-
-
-<!-- -------------------------------------------------------------- -->
-
-<script setup>
-    const jumpToEntryForm = () => {
-        window.open("https://fa45epzd9c7.feishu.cn/share/base/form/shrcn96EZ1pUYKJXtKdCgDhtsUd", "_blank");
-    }
-
-    const jumpToCourseHome = () => {
-        window.open("https://ysyx.oscc.cc/docs/2306/preliminary/preliminary.html", "_blank");
-    }
-
-</script>
+<bottom-nav-bar />
 
 <script>
     import QrcodeVue from "qrcode.vue";
@@ -212,125 +134,6 @@ title: 报名参与
     .custom-button:hover {
         background-color: #4caeff; /* 鼠标悬停时的背景色 */
         color: #f0f8ff; /* 鼠标悬停时的文字颜色 */
-    }
-
-    .bottom-button {
-        font-size: 15px;
-        /* background-color: #ff9100;  */
-        /* color: #dbdbdb;  */
-        /* border: 1px groove #c9c9c9; */
-
-        color: #e6e6e6; 
-        border: 1px groove #616161;
-
-        border-radius: 8px; 
-        padding: 7px 12px;   
-
-        text-decoration: none; /* 移除下划线 */
-        display: flex;
-        justify-content: center; 
-        align-items: center
-    }
-
-    .bottom-button:hover {
-        /* background-color: #ff8800; 鼠标悬停时的背景色 */
-        color: #30c4ff; /* 鼠标悬停时的文字颜色 */
-        border: 1px groove #30c4ff;
-
-        text-decoration: none;
-    }
-
-    .phone-bottom-button {
-        /* background-color: #ff9100;  */
-
-        color: #2b2b2b; 
-        /* border: 1px groove #616161; */
-
-        border-radius: 8px; 
-        padding: 10px 12px;   
-
-        text-decoration: none; /* 移除下划线 */
-
-        display: flex;
-        flex-direction: column; /* 设置子项垂直排列 */
-        justify-content: center; 
-        align-items: center
-    }
-
-    .phone-bottom-button:hover {
-        /* background-color: #ff8800; 鼠标悬停时的背景色 */
-        color: #096dd9; /* 鼠标悬停时的文字颜色 */
-        /* border: 1px groove #30c4ff; */
-
-        text-decoration: none;
-    }
-
-    .phone-bottom-button .emoji {
-        width: 24px; /* 图标大小 */
-        height: 24px;
-        margin-bottom: 1px; /* 图标和文本之间的间距 */
-    }
-
-    .phone-bottom-button .text {
-        display: block;
-        font-size: 12px; /* 文本大小 */
-    }
-
-    /* 先设置导航条在屏幕宽度大于900像素时正常显示 */
-    @media (min-width: 500px) {
-        .bottom-bar {
-            position: fixed; 
-            bottom: 17px; 
-            padding: 5px 4px;
-            display: flex; 
-            justify-content: center; 
-            align-items: center;
-            background-color: #4d4d4d;
-    
-            /* height:40px; */
-            left: 50%; 
-            transform: translateX(-50%);
-            width: 441.4px;
-            border-radius: 8px;
-            box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.3); 
-            
-            z-index: 1000;
-        }
-
-        .phone-bottom-bar {
-            display: none;
-        }
-    }
-
-    /* 然后设置在屏幕宽度小于900像素时导航条不显示 */
-    @media (max-width: 499px) {
-        .bottom-bar {
-            display: none;
-        }
-
-        .theme-hope-content .phone-bottom-bar {
-            padding: 0 !important;  
-        }
-
-        .phone-bottom-bar {
-            position: fixed; 
-            bottom: 0px; 
-            padding: 5px 4px;
-
-            margin: 0px -25px; /* 父级元素 padding=24px */
-
-            display: flex; 
-            justify-content: center; 
-            align-items: center;
-            background-color: #fbfbfb;
-    
-            height: 50px;
-            width: 100%;
-            box-shadow: 0px 0px 2px 0 rgba(0, 0, 0, 0.3); 
-            
-            z-index: 1000;
-        }
-
     }
 </style>
 
