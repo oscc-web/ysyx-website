@@ -85,7 +85,7 @@ title: 报名参与
    <span style="color: #e81224;">:x: 答辩不通过</span>，则需要根据助教意见修复问题，返回步骤 1，重新申请答辩
 4. 进入正式学习组
 
-<bottom-nav-bar />
+<ClientOnly><bottom-nav-bar/></ClientOnly>
 
 <script>
     import QrcodeVue from "qrcode.vue";
