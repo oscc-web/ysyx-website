@@ -1,14 +1,16 @@
 <template>
   <el-affix ref="affix" position="bottom" :offset="50">
     <div class="nav">
-      <router-link to="/"><el-icon><DArrowLeft /></el-icon> 返回主页</router-link>
+      <router-link to="/">返回主页</router-link>
+      <span class="divider"></span>
       <router-link
         v-for="item in navList"
         :to="`#${item.attributes['id'].value}`"
         :class="{ active: hash === `#${item.attributes['id'].value}` }">
         {{ item.attributes['data-ysyx-nav'].value }}
       </router-link>
-      <router-link to="/docs/">开始学习 <el-icon><DArrowRight /></el-icon></router-link>
+      <span class="divider"></span>
+      <router-link to="/docs/">开始学习</router-link>
     </div>
   </el-affix>
 </template>
@@ -36,34 +38,52 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;  
+  right: 0; 
   display: flex;
   justify-content: center;
   align-items: center;
-  column-gap: 50px;
 
-  @media (max-width: 767px) {
-    column-gap: 10px;
-  }
+  background-color: #ffffff;
+  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.3); 
+  /* width: 100%; */
+  height: 65px;
+  z-index: 999;
+
+  column-gap: 10px;
+
+  // @media (max-width: 767px) {
+  //   column-gap: 10px;
+  // }
 
   > a {
     display: flex;
-    padding: 15px 20px 15px 20px;
+    padding: 15px 7px 15px 7px;
     justify-content: center;
     align-items: center;
-    border-radius: 25px;
-    background: #F0F8FF;
-    border: #409EFF 1px solid;
+    // border-radius: 25px;
+    // background: #F0F8FF;
+    // border: #409EFF 1px solid;
     transition: background-color .2s, color .2s;
-    color: #008cff;
+    color: #666666;
   }
 
   > a.active, > a:hover {
-    background: #409EFF;
-    color: #FFFFFF;
+    // background: #409EFF;
+    color: #008cff;
   }
 
   > a, > a:hover, > a:visited {
     text-decoration: none;
+  }
+
+  > .divider {
+    height: 30%;  // 根据需要调整高度
+    width: 1px;
+    background-color: #d1d1d1;  // 竖线颜色
+    margin: 0;  // 竖线两侧的间距
   }
 }
 </style>

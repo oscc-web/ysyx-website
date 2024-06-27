@@ -8,7 +8,7 @@ declare const __AHL_OFFSET__: number;
 
 const headerAnchorSelector = __AHL_HEADER_ANCHOR_SELECTOR__;
 const delay = __AHL_DELAY__;
-const offset = __AHL_OFFSET__;
+const offset = __AHL_OFFSET__ + 150;
 
 export const useActiveHeaderHash = () => {
   const hash = ref('');

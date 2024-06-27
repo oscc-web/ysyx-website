@@ -1,6 +1,6 @@
 ---
 sidebar: false
-title: 报名参与
+title: 报名参与 
 ---
 
 感谢参与“一生一芯”计划！😊 以下是“一生一芯”**从报名到正式入学**的流程：
@@ -85,7 +85,18 @@ title: 报名参与
    <span style="color: #e81224;">:x: 答辩不通过</span>，则需要根据助教意见修复问题，返回步骤 1，重新申请答辩
 4. 进入正式学习组
 
+
 <ClientOnly><bottom-nav-bar/></ClientOnly>
+
+<script setup>
+    const jumpToEntryForm = () => {
+        window.open("https://fa45epzd9c7.feishu.cn/share/base/form/shrcn96EZ1pUYKJXtKdCgDhtsUd", "_blank");
+    }
+
+    const jumpToCourseHome = () => {
+        window.open("https://ysyx.oscc.cc/docs/2306/preliminary/preliminary.html", "_blank");
+    }
+</script>
 
 <script>
     import QrcodeVue from "qrcode.vue";
