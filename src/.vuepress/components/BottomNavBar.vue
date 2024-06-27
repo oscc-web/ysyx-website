@@ -54,9 +54,10 @@ onMounted(() => {
 
   column-gap: 10px;
 
-  // @media (max-width: 767px) {
-  //   column-gap: 10px;
-  // }
+  @media (max-width: 600px) {
+    // column-gap: 10px;
+    display: none;
+  }
 
   > a {
     display: flex;
@@ -65,14 +66,23 @@ onMounted(() => {
     align-items: center;
     // border-radius: 25px;
     // background: #F0F8FF;
-    // border: #409EFF 1px solid;
+    height: 25%;
+    border-radius: 7px;
+    // margin-left: 5px;
+    // margin-right: 5px;
+    border: #e2e2e262 1px solid;
     transition: background-color .2s, color .2s;
     color: #666666;
   }
 
   > a.active, > a:hover {
-    // background: #409EFF;
-    color: #008cff;
+    background: #409EFF;
+    // color: #008cff;
+    color: #fff;
+    height: 25%;
+    border-radius: 7px;
+    margin-left: 5px;
+    margin-right: 5px;
   }
 
   > a, > a:hover, > a:visited {
