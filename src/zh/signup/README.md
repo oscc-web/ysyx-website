@@ -1,72 +1,130 @@
 ---
-title: "报名参与"
+sidebar: false
+title: 报名参与 
 ---
 
-## 报名流程
+感谢参与“一生一芯”计划！😊 以下是“一生一芯”**从报名到正式入学**的流程：
 
-```mermaid
----
-<!-- title: 报名流程图 -->
----
-flowchart LR
-    project[了解计划] --> survey[填写问卷] --> record[创建记录] --> study[开始学习]
-    click project "#_1、了解计划" _self
-    click survey "#_2、填写问卷" _self
-    click record "#_3、创建记录" _self
-    click study "#_4、开始学习" _self
-```
+![](./images/process.png)
 
-### 1、了解计划
+## <span id="understandPlan" style="display: block; padding-top: 70px; margin-top: -70px">:mag_right: 了解“一生一芯”计划</span> {data-ysyx-nav=了解计划}
 
-**在正式报名参加“一生一芯”计划之前，请大家先阅读网站中的[《项目概述》](/project/intro.html)部分**，文章从【背景现状】、【目标理念】、【项目亮点】、【学习路线】、【预期收获】等不同角度对“一生一芯”计划进行了全面且详细的阐述，可以让同学们在正式报名前对“一生一芯”计划有一个基本的认识，并消除一些因信息不对称所产生的误解。
-
-<!-- 此外，从第六期开始，“一生一芯”计划的学习流程发生了比较大的变化，建议每位同学都点击[这里](https://docs.qq.com/doc/DY1huTURndXpTdlZW)了解一下，便于大家在报名结束后规划和制订自己专属的学习路线。 -->
+在正式报名参加“一生一芯”计划之前，请您先阅读[《项目概述》](/project/intro.html)部分，文章从【背景现状】、【目标理念】、【项目亮点】、【学习路线】、【预期收获】等不同角度对“一生一芯”计划进行了全面且详细的阐述，可以让同学们在正式报名前对“一生一芯”计划有一个基本的认识，并消除一些因信息不对称所产生的误解。
 
 - [概述视频](https://www.bilibili.com/video/BV12e4y1Y76i/)
 - [介绍课件](https://ysyx.oscc.cc/slides/2205/01.html#/)
 - [常见问题](/project/faq.html)
 
-::: info 交流渠道
+::: info 如果您想进一步了解“一生一芯”计划，和大家交流探讨，可以加入 QQ 群
+
+> 您可以扫描二维码，或者点击二维码唤起 QQ 加入群聊
 > | QQ 5群 | QQ 4群<el-badge value="已满"></el-badge> | QQ 3群 <el-badge value="已满"></el-badge> | QQ 2群 <el-badge value="已满"></el-badge> | QQ 1群 <el-badge value="已满"></el-badge> |
 > |:---:|:---:|:---:|:---:|:---:|
 > | <a qrcode-container :href="qrcodeQQGroup5" target="_blank"><qrcode-vue :value="qrcodeQQGroup5" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> | <a qrcode-container :href="qrcodeQQGroup4" target="_blank"><qrcode-vue :value="qrcodeQQGroup4" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> | <a qrcode-container :href="qrcodeQQGroup3" target="_blank"><qrcode-vue :value="qrcodeQQGroup3" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> | <a qrcode-container :href="qrcodeQQGroup2" target="_blank"><qrcode-vue :value="qrcodeQQGroup2" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> | <a qrcode-container :href="qrcodeQQGroup1" target="_blank"><qrcode-vue :value="qrcodeQQGroup1" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> |
 > | <a :href="qrcodeQQGroup5" target="_blank">513870270</a> | <a :href="qrcodeQQGroup4" target="_blank">884767063</a> | <a :href="qrcodeQQGroup3" target="_blank">621039593</a> | <a :href="qrcodeQQGroup2" target="_blank">528994030</a> | <a :href="qrcodeQQGroup1" target="_blank">663797655</a> |
 :::
 
-### 2、填写问卷
 
-为了确保追踪数据的准确性，请大家务必认真填写[《报名问卷》](https://www.wenjuan.com/s/YRBnamK/)，问卷填写完成即可扫码加入“一生一芯”[预学习交流群](https://docs.qq.com/doc/DSU1teVZLR1hDcG9P)开始正式学习。等大家完成所有预学习阶段的任务后，可以在线向助教提交入学答辩申请，**答辩考核通过会得到专属学号**，这个学号非常重要，涉及后期【学习追踪】、【组会汇报】、【答辩考核】、【流片对接】等诸多环节，因此请务必记住（最好是记到一个本地或在线的文档中）。
+## <span id="entryForm" style="display: block; padding-top: 70px; margin-top: -70px">🔥 填写报名问卷</span> {data-ysyx-nav=报名参加}
 
-::: info 二维码信息
-> | 报名问卷 | 预学习交流群 |
-> |:---:|:---:|
-> | <a qrcode-container :href="qrcodeSignup" target="_blank"><qrcode-vue :value="qrcodeSignup" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> | <a qrcode-container :href="qrCodePreliminary" target="_blank"><qrcode-vue :value="qrCodePreliminary" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> |
+相信您已经充分了解“一生一芯”计划了，在开始学习之前，请先填写 ✨ **“一生一芯”报名问卷**。
+
+“一生一芯”项目组希望了解您的基本情况，用于后续的【🎈 学习组织】和【🔎 统计分析】，不作其他任何用途。我们尊重您的隐私，填写内容将严格保密 🔒。
+
+
+
+::: warning 
+如果报名问卷显示【**暂不支持填写**】，说明正在进行**更新或维护**，请稍后再来填写。
 :::
 
-### 3、创建记录
-
-大家在学习“一生一芯”的过程中，**请务必详细记录自己的学习过程**（不一定每天都要记录，但是要尽可能详实），**这是助教掌握大家学习进展并进行指导的重要参考**。此外，经过对前几期“一生一芯”计划学员流片情况的统计分析，我们发现**往往学习记录填写的比较详细的同学，最后有很大的概率能够坚持到流片阶段**，所以记录好自己的学习记录是非常重要的。关于创建学习记录的具体操作方法和注意事项如下所示：
-
-- 复制[学习记录模版](https://docs.qq.com/sheet/DT2RPaWFzVGlzaG1T)到自己的腾讯文档账号中。
-- 按照模版提示修改文档的名字，格式为【ysyx_姓名-学校-学习记录】。
-- 学习记录中的内容是允许自定义的，你可以根据自己的需求添加或修改一些表格列。
-- 通过入学答辩后，**助教会为每一位同学再创建一个学习记录表**，届时大家需要将自己预学习阶段的所有记录内容复制到新表格中。
-- **不要在学习记录中粘贴自己完成某个任务的代码**，以防止别的同学借鉴你的思路而失去锻炼的机会。
-- 完整的学习记录是大家申请流片和认证考核的**必要条件**，如果学习记录缺失比较严重，你的申请将无法正常通过。
-
-### 4、开始学习
+<br>
 
 <el-row justify="center">
-    <el-button size="large"
-               type="primary"
-               style="height:45px; font-size:16px;"
-               @click="jumpToCourseHome">课程资料传送门
+    <el-button  size="large"
+                type="primary"
+                class="custom-button"
+                @click="jumpToEntryForm">🚀 点击填写报名问卷
     </el-button>
 </el-row>
 
+<br>
+
+
+## 📫 查收邮件
+
+提交“报名问卷”之后，“一生一芯”项目组会给您<span style="background-color: #fff895;">发送一封邮件</span>。
+
+您会收到一封【:white_check_mark: <span style="color: #2ea121;">**报名成功**</span>】的邮件，该邮件会告知您初次学习“一生一芯”的**学习流程和注意事项**。如果没有收到，请先检查 🗑 **邮件垃圾箱**。如果几小时后依然没有收到，请进行问题反馈。
+
+
+## 🚩 开始学习
+
+报名之后，您就可以开始学习“一生一芯”了！您现在需要完成**预学习阶段**的学习任务。
+
+<br>
+
+<el-row justify="center">
+    <el-button size="large"
+                type="primary"
+                class="custom-button"
+                @click="jumpToCourseHome">😎 开始学习“一生一芯”
+    </el-button>
+</el-row>
+
+<br>
+
+## 🔰 后续流程
+
+在完成**预学习阶段**的学习任务之后，您就可以看到**入学答辩申请入口**，之后的流程如下：
+
+> 注意：以下流程的具体细节，在您完成预学习任务之后可以看到，此处帮助您**了解整个过程**
+
+1. 申请入学答辩
+2. 进行入学答辩
+3. <span style="color: #2ea121;">:heavy_check_mark: 答辩通过</span>，成为“一生一芯”正式学员；
+   <span style="color: #e81224;">:x: 答辩不通过</span>，则需要根据助教意见修复问题，返回步骤 1，重新申请答辩
+4. 进入正式学习组
+
+## ❓ 问题反馈
+如果有解决不了的问题，请加微信群反馈。只有当您报名遇到问题时（比如，填写时遇到 BUG ，未收到邮件，对邮件通知内容有疑问等）才需要加入该群。注意，此群**不是**学习问题交流群。
+
+<img src="./images/wxproblem.png" width="200px" height="200px" style="display: block; margin-left: auto;
+margin-right: auto"/>
+
+<!-- ---------------------------------------------- -->
+
+<ClientOnly><bottom-nav-bar/></ClientOnly>
+
+
+<!-- ---------------------  phone-bottom-bar  ----------------------- -->
+<div class="phone-bottom-bar">
+    <a href="https://ysyx.oscc.cc/" class="phone-bottom-button">
+        <span class="emoji" style="padding-left: 4px; margin-bottom: -2px">◀</span>
+        <span class="text">返回主页</span>
+    </a>
+    <a href="#understandPlan" class="phone-bottom-button">
+        <span class="emoji" style="padding-left: 4px; margin-bottom: -2px">🧐</span>
+        <span class="text">了解计划</span>
+    </a>
+    <a href="#entryForm" class="phone-bottom-button">
+        <span class="emoji" style="padding-left: 4px; margin-bottom: -2px">🔥</span>
+        <span class="text">报名参加</span>
+    </a>
+    <a  href="https://ysyx.oscc.cc/docs/2306/preliminary/preliminary.html" target="_blank"
+        class="phone-bottom-button">
+        <span class="emoji" style="padding-left: 4px; margin-bottom: -2px">🚀</span>
+        <span class="text">开始学习</span>
+    </a>
+</div>
+
+<!-- -------------------------------------------------- -->
 <script setup>
+    const jumpToEntryForm = () => {
+        window.open("https://fa45epzd9c7.feishu.cn/share/base/form/shrcn96EZ1pUYKJXtKdCgDhtsUd", "_blank");
+    }
+
     const jumpToCourseHome = () => {
-        window.open("https://ysyx.oscc.cc/docs/", "_blank");
+        window.open("https://ysyx.oscc.cc/docs/2306/preliminary/preliminary.html", "_blank");
     }
 </script>
 
@@ -85,12 +143,12 @@ flowchart LR
                 qrcodeQQGroup4: "https://qm.qq.com/q/rQGNQqLbOg",
                 qrcodeQQGroup5: "https://qm.qq.com/q/FaKCzlkLLi",
                 qrcodeSignup: "https://www.wenjuan.com/s/YRBnamK",
-                qrCodePreliminary: "https://docs.qq.com/doc/DSU1teVZLR1hDcG9P"
+                qrCodePreliminary: "https://docs.qq.com/doc/DSU1teVZLR1hDcG9P",
             }
         },
         components: {
             QrcodeVue
-        }
+        },
     }
 </script>
 
@@ -102,4 +160,78 @@ flowchart LR
         width: 100px;
         height: 100px;
     }
+
+    .custom-button {
+        height: 50px;
+        font-size: 18px;
+        background-color: #f0f8ff;
+        color: #008cff;
+        border-radius: 25px;
+        padding-left: 30px;
+        padding-right: 30px;
+        transition: background-color 0.2s, color 0.2s; /* 平滑过渡效果 */
+    }
+
+    .custom-button:hover {
+        background-color: #4caeff; /* 鼠标悬停时的背景色 */
+        color: #f0f8ff; /* 鼠标悬停时的文字颜色 */
+    }
+
+        .phone-bottom-button {
+        /* background-color: #ff9100;  */
+        color: #2b2b2b; 
+        /* border: 1px groove #616161; */
+        border-radius: 8px; 
+        padding: 10px 12px;   
+        text-decoration: none; /* 移除下划线 */
+        display: flex;
+        flex-direction: column; /* 设置子项垂直排列 */
+        justify-content: center; 
+        align-items: center
+    }
+
+    .phone-bottom-button:hover {
+        /* background-color: #ff8800; 鼠标悬停时的背景色 */
+        color: #096dd9; /* 鼠标悬停时的文字颜色 */
+        /* border: 1px groove #30c4ff; */
+        text-decoration: none;
+    }
+
+    .phone-bottom-button .emoji {
+        width: 24px; /* 图标大小 */
+        height: 24px;
+        margin-bottom: 1px; /* 图标和文本之间的间距 */
+    }
+
+    .phone-bottom-button .text {
+        display: block;
+        font-size: 12px; /* 文本大小 */
+    }
+
+    @media (min-width: 600px) {
+        .phone-bottom-bar {
+            display:none;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .phone-bottom-bar {
+            display:none;
+
+            /* position: fixed;  */
+            /* bottom: 0px;  */
+            /* padding: 5px 4px; */
+            /* margin: 0px -25px; 父级元素 padding=24px */
+            /* display: flex;  */
+            /* justify-content: center;  */
+            /* align-items: center; */
+            /* background-color: #fbfbfb; */
+            /* height: 50px; */
+            /* width: 100%; */
+            /* box-shadow: 0px 0px 2px 0 rgba(0, 0, 0, 0.3);  */
+
+            /* z-index: 1000; */
+        }
+    }
 </style>
+

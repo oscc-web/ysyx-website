@@ -11,6 +11,8 @@ import IconsResolver from "unplugin-icons/resolver"
 
 import { searchProPlugin } from "vuepress-plugin-search-pro";
 
+import attrs from "markdown-it-attrs";
+
 import theme from "./theme.js";
 
 export default defineUserConfig({
@@ -89,5 +91,8 @@ export default defineUserConfig({
         [
             "script", { type: "text/javascript", src: "/js/cnzz.js" }
         ]
-    ]
+    ],
+    extendsMarkdown(md) {
+        md.use(attrs)
+    }
 });
