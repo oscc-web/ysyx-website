@@ -85,6 +85,13 @@ title: 报名参与
    <span style="color: #e81224;">:x: 答辩不通过</span>，则需要根据助教意见修复问题，返回步骤 1，重新申请答辩
 4. 进入正式学习组
 
+## ❓ 问题反馈
+如果有解决不了的问题，请加微信群反馈。只有当您报名遇到问题时（比如，填写时遇到 BUG ，未收到邮件，对邮件通知内容有疑问等）才需要加入该群。注意，此群**不是**学习问题交流群。
+
+<img src="./images/wxproblem.png" width="200px" height="200px" style="display: block; margin-left: auto;
+margin-right: auto"/>
+
+<!-- ---------------------------------------------- -->
 
 <ClientOnly><bottom-nav-bar/></ClientOnly>
 
