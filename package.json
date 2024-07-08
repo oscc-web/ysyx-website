@@ -27,6 +27,7 @@
         "axios": "^1.6.2",
         "element-plus": "^2.3.14",
         "imagemin": "^8.0.1",
+        "imagemin-giflossy": "^5.1.10",
         "imagemin-jpegtran": "^7.0.0",
         "imagemin-pngquant": "^9.0.2",
         "moment": "^2.30.1",
