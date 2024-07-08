@@ -56,7 +56,7 @@ onMounted(() => {
 
   @media (max-width: 600px) {
     // column-gap: 10px;
-    display: none;
+    // display: none;
   }
 
   > a {

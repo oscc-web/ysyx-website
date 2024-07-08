@@ -209,19 +209,21 @@ title: 报名参与
 
     @media (max-width: 600px) {
         .phone-bottom-bar {
-            position: fixed; 
-            bottom: 0px; 
-            padding: 5px 4px;
-            margin: 0px -25px; /* 父级元素 padding=24px */
-            display: flex; 
-            justify-content: center; 
-            align-items: center;
-            background-color: #fbfbfb;
-            height: 50px;
-            width: 100%;
-            box-shadow: 0px 0px 2px 0 rgba(0, 0, 0, 0.3); 
+            display:none;
 
-            z-index: 1000;
+            /* position: fixed;  */
+            /* bottom: 0px;  */
+            /* padding: 5px 4px; */
+            /* margin: 0px -25px; 父级元素 padding=24px */
+            /* display: flex;  */
+            /* justify-content: center;  */
+            /* align-items: center; */
+            /* background-color: #fbfbfb; */
+            /* height: 50px; */
+            /* width: 100%; */
+            /* box-shadow: 0px 0px 2px 0 rgba(0, 0, 0, 0.3);  */
+
+            /* z-index: 1000; */
         }
     }
 </style>
