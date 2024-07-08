@@ -10,7 +10,8 @@
         {{ item.attributes['data-ysyx-nav'].value }}
       </router-link>
       <span class="divider"></span>
-      <router-link to="/docs/">开始学习</router-link>
+      <!-- <router-link to="/docs/">开始学习</router-link> -->
+      <a href="https://ysyx.oscc.cc/docs/">开始学习</a>
     </div>
   </el-affix>
 </template>
@@ -40,14 +41,14 @@ onMounted(() => {
 .nav {
   position: fixed;
   bottom: 0;
-  left: 0;  
-  right: 0; 
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: center;
   align-items: center;
 
   background-color: #ffffff;
-  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.3); 
+  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.3);
   /* width: 100%; */
   height: 65px;
   z-index: 999;
