@@ -1,6 +1,6 @@
 ---
 sidebar: false
-title: 报名参与 
+title: 报名参与
 ---
 
 感谢参与“一生一芯”计划！😊 以下是“一生一芯”**从报名到正式入学**的流程：
@@ -22,6 +22,9 @@ title: 报名参与
 > |:---:|:---:|:---:|:---:|:---:|
 > | <a qrcode-container :href="qrcodeQQGroup5" target="_blank"><qrcode-vue :value="qrcodeQQGroup5" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> | <a qrcode-container :href="qrcodeQQGroup4" target="_blank"><qrcode-vue :value="qrcodeQQGroup4" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> | <a qrcode-container :href="qrcodeQQGroup3" target="_blank"><qrcode-vue :value="qrcodeQQGroup3" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> | <a qrcode-container :href="qrcodeQQGroup2" target="_blank"><qrcode-vue :value="qrcodeQQGroup2" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> | <a qrcode-container :href="qrcodeQQGroup1" target="_blank"><qrcode-vue :value="qrcodeQQGroup1" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> |
 > | <a :href="qrcodeQQGroup5" target="_blank">513870270</a> | <a :href="qrcodeQQGroup4" target="_blank">884767063</a> | <a :href="qrcodeQQGroup3" target="_blank">621039593</a> | <a :href="qrcodeQQGroup2" target="_blank">528994030</a> | <a :href="qrcodeQQGroup1" target="_blank">663797655</a> |
+> | QQ 6群 | | | | |
+> | <a qrcode-container :href="qrcodeQQGroup6" target="_blank"><qrcode-vue :value="qrcodeQQGroup6" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> | | | | |
+> | <a :href="qrcodeQQGroup6" target="_blank">958585695</a> | | | | |
 :::
 
 
@@ -33,7 +36,7 @@ title: 报名参与
 
 
 
-::: warning 
+::: warning
 如果报名问卷显示【**暂不支持填写**】，说明正在进行**更新或维护**，请稍后再来填写。
 :::
 
@@ -142,6 +145,7 @@ margin-right: auto"/>
                 qrcodeQQGroup3: "https://qm.qq.com/q/ZXRVu5DYGe",
                 qrcodeQQGroup4: "https://qm.qq.com/q/rQGNQqLbOg",
                 qrcodeQQGroup5: "https://qm.qq.com/q/FaKCzlkLLi",
+                qrcodeQQGroup6: "https://qm.qq.com/q/cYoH3sQizu",
                 qrcodeSignup: "https://www.wenjuan.com/s/YRBnamK",
                 qrCodePreliminary: "https://docs.qq.com/doc/DSU1teVZLR1hDcG9P",
             }
@@ -179,14 +183,14 @@ margin-right: auto"/>
 
         .phone-bottom-button {
         /* background-color: #ff9100;  */
-        color: #2b2b2b; 
+        color: #2b2b2b;
         /* border: 1px groove #616161; */
-        border-radius: 8px; 
-        padding: 10px 12px;   
+        border-radius: 8px;
+        padding: 10px 12px;
         text-decoration: none; /* 移除下划线 */
         display: flex;
         flex-direction: column; /* 设置子项垂直排列 */
-        justify-content: center; 
+        justify-content: center;
         align-items: center
     }
 
@@ -232,6 +236,10 @@ margin-right: auto"/>
 
             /* z-index: 1000; */
         }
+    }
+
+    td {
+        font-weight: bold;
     }
 </style>
 
