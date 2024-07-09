@@ -74,6 +74,11 @@ onMounted(() => {
     border: #e2e2e262 1px solid;
     transition: background-color .2s, color .2s;
     color: #666666;
+
+    @media (max-width: 370px) and (min-width: 244px) {
+      padding: 12px 3px;
+      font-size: 14px;
+    }
   }
 
   > a.active, > a:hover {
