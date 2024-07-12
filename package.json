@@ -5,7 +5,8 @@
     "license": "GPL-3.0",
     "type": "module",
     "scripts": {
-        "command": "./common/cmd.sh"
+        "command": "./common/cmd.sh",
+        "dev": "vuepress dev src"
     },
     "devDependencies": {
         "@types/markdown-it-attrs": "^4.1.3",
