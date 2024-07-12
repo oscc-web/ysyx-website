@@ -6,7 +6,7 @@
     "type": "module",
     "scripts": {
         "command": "./common/cmd.sh",
-        "dev": "vuepress dev src"
+        "dev": "vuepress dev src --clean-cache"
     },
     "devDependencies": {
         "@types/markdown-it-attrs": "^4.1.3",
