@@ -34,10 +34,9 @@
 
 ### 将以下ip添加到本机host文件
 ```
+182.43.124.6 raw.githubusercontent.com
+20.205.243.166 raw.githubusercontent.com
 185.199.108.133 raw.githubusercontent.com
-185.199.109.133 raw.githubusercontent.com
-185.199.110.133 raw.githubusercontent.com
-185.199.111.133 raw.githubusercontent.com
 ```
 
 
