@@ -48,7 +48,7 @@ title: "项目概述"
 
 ![](/res/images/project/intro-stage.png)
 
-![](/res/images/project/intro-group-certificate.png)
+![](/res/images/project/intro-stage-certificate.png)
 
 ## 分组机制
 
