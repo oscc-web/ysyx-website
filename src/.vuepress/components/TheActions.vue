@@ -32,8 +32,8 @@
         "/": {
             projectInfo: "项目介绍",
             signup: "报名参与",
-            pdfDownload: "PDF下载",
-            pdf: "/res/files/ysyx.pdf"
+            pdfDownload: "资料下载",
+            pdf: "/res/files/ysyx.pptx"
         },
         "/en": {
             projectInfo: "Project Info",
