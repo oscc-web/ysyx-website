@@ -10,6 +10,7 @@ export const zhNavbar = navbar([
         children: [
             "intro",
             "intro-past",
+            "community",
             "faq",
             "assistants"
         ]
