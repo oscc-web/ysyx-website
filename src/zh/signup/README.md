@@ -18,7 +18,7 @@ title: 报名参与
 ::: info 如果您想进一步了解“一生一芯”计划，和大家交流探讨，可以加入 QQ 群
 
 > 您可以扫描二维码，或者点击二维码唤起 QQ 加入群聊
-> | QQ 5群 | QQ 4群<el-badge value="已满"></el-badge> | QQ 3群 <el-badge value="已满"></el-badge> | QQ 2群 <el-badge value="已满"></el-badge> | QQ 1群 <el-badge value="已满"></el-badge> |
+> | QQ 5群<el-badge value="已满"></el-badge> | QQ 4群<el-badge value="已满"></el-badge> | QQ 3群 <el-badge value="已满"></el-badge> | QQ 2群 <el-badge value="已满"></el-badge> | QQ 1群 <el-badge value="已满"></el-badge> |
 > |:---:|:---:|:---:|:---:|:---:|
 > | <a qrcode-container :href="qrcodeQQGroup5" target="_blank"><qrcode-vue :value="qrcodeQQGroup5" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> | <a qrcode-container :href="qrcodeQQGroup4" target="_blank"><qrcode-vue :value="qrcodeQQGroup4" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> | <a qrcode-container :href="qrcodeQQGroup3" target="_blank"><qrcode-vue :value="qrcodeQQGroup3" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> | <a qrcode-container :href="qrcodeQQGroup2" target="_blank"><qrcode-vue :value="qrcodeQQGroup2" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> | <a qrcode-container :href="qrcodeQQGroup1" target="_blank"><qrcode-vue :value="qrcodeQQGroup1" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> |
 > | <a :href="qrcodeQQGroup5" target="_blank">513870270</a> | <a :href="qrcodeQQGroup4" target="_blank">884767063</a> | <a :href="qrcodeQQGroup3" target="_blank">621039593</a> | <a :href="qrcodeQQGroup2" target="_blank">528994030</a> | <a :href="qrcodeQQGroup1" target="_blank">663797655</a> |
@@ -59,7 +59,7 @@ title: 报名参与
 
 您会收到一封【:white_check_mark: <span style="color: #2ea121;">**报名成功**</span>】的邮件，该邮件会告知您初次学习“一生一芯”的**学习流程和注意事项**。如果没有收到，请先检查 🗑 **邮件垃圾箱**。如果几小时后依然没有收到，请进行问题反馈。
 
-::: tip 邮件为新增功能，在2024年7月8日 15：00 之前报名的学员，不会收到邮件，这些学员均已报名成功，不会影响后续学习
+::: tip 邮件为新增功能，在 2024 年 7 月 8 日 15:00 之前报名的学员，不会收到邮件，这些学员均已报名成功，不会影响后续学习
 :::
 
 ## 🚩 开始学习

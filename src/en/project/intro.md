@@ -50,7 +50,7 @@ The sixth session of "One Student One Chip" was officially launched on July 2, 2
 
 ## Knowledge Diagram
 
-![](/res/images/project/intro-knowledge-map.png)
+<!-- ![](/res/images/project/intro-knowledge-map.png) -->
 
 ## Learning Route
 
