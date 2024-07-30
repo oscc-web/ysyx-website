@@ -6,8 +6,7 @@
   "type": "module",
   "scripts": {
       "command": "./common/cmd.sh",
-      "dev": "vuepress dev src --clean-cache",
-      "preinstall": "sh ./patch/postinstall.sh"
+      "postinstall": "sh ./patch/postinstall.sh"
   },
   "devDependencies": {
       "@types/markdown-it-attrs": "^4.1.3",

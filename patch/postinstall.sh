@@ -5,5 +5,4 @@ set -e
 SOURCE=./patch/macos/pngquant
 DIST=./node_modules/pngquant-bin/vendor/
 
-scp ${SOURCE} ${DIST}
-echo 11112
+# scp ${SOURCE} ${DIST}

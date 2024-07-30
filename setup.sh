@@ -48,7 +48,7 @@ fi
 if [ ! -d ${PATH_NODE} ]; then
     echo ""
     echo "Downloading Node.js packages..."
-    npm install
+    npm install --ignore-scripts
 # else
     # echo ""
     # echo -n "Do you want to update Node.js packages? [Y/n]: "
