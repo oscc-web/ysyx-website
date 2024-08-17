@@ -18,13 +18,13 @@ flowchart LR
 
 ### 1. Learn about the initiative
 
-**Before you formally sign up to participate in the "One Student One Chip" Initiative, please read the [Project Overview](/project/intro.html) section on the website**. The article starts with _Background_, _Goal_, _Highlights_, _Learning Route_, _Expected Harvest_ and other different perspectives provide a comprehensive and detailed explanation of the "One Student One Chip" Initiative, which allows students to have an basic understanding of the "One Student One Chip" Initiative before formal registration, and eliminate some misunderstandings caused by information asymmetry.
+**Before you formally sign up to participate in the "One Student One Chip" Initiative, please read the [Project Overview](/en/project/intro.html) section on the website**. The article starts with _Background_, _Goal_, _Highlights_, _Learning Route_, _Expected Harvest_ and other different perspectives provide a comprehensive and detailed explanation of the "One Student One Chip" Initiative, which allows students to have an basic understanding of the "One Student One Chip" Initiative before formal registration, and eliminate some misunderstandings caused by information asymmetry.
 
 <!-- 此外，从第六期开始，“一生一芯”计划的学习流程发生了比较大的变化，建议每位同学都点击[这里](https://docs.qq.com/doc/DY1huTURndXpTdlZW)了解一下，便于大家在报名结束后规划和制订自己专属的学习路线。 -->
 
 - [Overview video](https://www.bilibili.com/video/BV12e4y1Y76i/)
 - [Introduction handout](https://ysyx.oscc.cc/slides/2205/01.html#/)
-- [FAQ](/project/faq.html)
+- [FAQ](/en/project/faq.html)
 
 :::info Exchange ways
 
