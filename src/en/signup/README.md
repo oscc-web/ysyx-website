@@ -3,12 +3,9 @@ sidebar: false
 title: Signup
 ---
 
-Thank you for participating in the "One Student One Chip" program! 😊 Here is the process for **One Student One Chip** from registration to official enrollment:
-
-![](./images/process.png)
+Thank you for participating in the "One Student One Chip" program! 😊
 
 ## <span id="understandPlan" style="display: block; padding-top: 70px; margin-top: -70px">:mag_right: Learn about the "One Student One Chip" project</span> {data-ysyx-nav=Learn about project}
-
 
 Before officially registering for the "One Student One Chip" program, please take the time to read the [**Project Overview**](/en/project/intro.html) section. This article provides a comprehensive and detailed explanation of the "One Student One Chip" program from various perspectives, including **Background and Current Situation**, **Goals and Philosophy**, **Project Highlights**, **Learning Path**, and **Expected Gains**. This will help students gain a basic understanding of the program before officially signing up and eliminate any misunderstandings that may arise due to information asymmetry.
 
@@ -16,26 +13,21 @@ Before officially registering for the "One Student One Chip" program, please tak
 - [Introduction Slides](https://ysyx.oscc.cc/slides/2205/01.html#/)
 - [FAQ](/en/project/faq.html)
 
-::: info If you want to learn more about the "One Student, One Chip" program and engage in discussions with others, you can join the QQ group.
+::: info
+If you want to learn more about the "One Student, One Chip" program and engage in discussions with others, you can join the Telegram or Discord group.
 
-> You can scan the QR code or click on the QR code to open QQ and join the group chat.
-> | QQ Group 5<el-badge value="Full"></el-badge> | QQ Group 4<el-badge value="已满"></el-badge> | QQ Group 3 <el-badge value="Full"></el-badge> | QQ Group 2 <el-badge value="Full"></el-badge> | QQ Group 1 <el-badge value="Full"></el-badge> |
-> |:---:|:---:|:---:|:---:|:---:|
-> | <a qrcode-container :href="qrcodeQQGroup5" target="_blank"><qrcode-vue :value="qrcodeQQGroup5" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> | <a qrcode-container :href="qrcodeQQGroup4" target="_blank"><qrcode-vue :value="qrcodeQQGroup4" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> | <a qrcode-container :href="qrcodeQQGroup3" target="_blank"><qrcode-vue :value="qrcodeQQGroup3" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> | <a qrcode-container :href="qrcodeQQGroup2" target="_blank"><qrcode-vue :value="qrcodeQQGroup2" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> | <a qrcode-container :href="qrcodeQQGroup1" target="_blank"><qrcode-vue :value="qrcodeQQGroup1" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> |
-> | <a :href="qrcodeQQGroup5" target="_blank">513870270</a> | <a :href="qrcodeQQGroup4" target="_blank">884767063</a> | <a :href="qrcodeQQGroup3" target="_blank">621039593</a> | <a :href="qrcodeQQGroup2" target="_blank">528994030</a> | <a :href="qrcodeQQGroup1" target="_blank">663797655</a> |
-> | QQ Group 6 | | | | |
-> | <a qrcode-container :href="qrcodeQQGroup6" target="_blank"><qrcode-vue :value="qrcodeQQGroup6" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> | | | | |
-> | <a :href="qrcodeQQGroup6" target="_blank">958585695</a> | | | | |
+> You can scan the QR code or click on the QR code to open Telegram or Discord and join the group chat.
+> | Telegram | Discord |
+> |:---:|:---:|
+> | <a class="qrcode-container" :href="qrcodeTelegram" target="_blank"><qrcode-vue :value="qrcodeTelegram" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> | <a class="qrcode-container" :href="qrcodeDiscord" target="_blank"><qrcode-vue :value="qrcodeDiscord" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> |
+> | <a :href="qrcodeTelegram" target="_blank">Telegram Group</a> | <a :href="qrcodeDiscord" target="_blank">Discord Group</a> |
 :::
-
 
 ## <span id="entryForm" style="display: block; padding-top: 70px; margin-top: -70px">🔥 Fill out the Signup Form</span> {data-ysyx-nav=Signup}
 
 We believe that you fully understand the "One Student One Chip" project. Before learning, please fill out the ✨ **"One Student One Chip" Signup Form**.
 
 The "One Student One Chip" project team would like to understand your basic information for the purposes of [🎈 Learning Organization] and [🔎 Statistical Analysis] only, and will not be used for any other purposes. We respect your privacy, and the information provided will be kept strictly confidential 🔒.
-
-
 
 ::: warning
 If the registration questionnaire displays **Not Available for Submission**, it means that **updates or maintenance** are in progress. Please come back and fill it out later.
@@ -44,25 +36,10 @@ If the registration questionnaire displays **Not Available for Submission**, it 
 <br>
 
 <el-row justify="center">
-    <el-button  size="large"
-                type="primary"
-                class="custom-button"
-                @click="jumpToEntryForm">🚀 Click to fill Signup Form
-    </el-button>
+    <el-button size="large" type="primary" class="custom-button" @click="jumpToEntryForm">🚀 Click to Fill Out the Signup Form</el-button>
 </el-row>
 
 <br>
-
-
-## 📫 Check your email
-
-After submitting the **Signup Form**, the "One Student One Chip" project team will <span style="background-color: #fff895;">send you an email</span>.
-
-You will receive an email marked 【:white_check_mark: <span style="color: #2ea121;">**Signup Successful**</span>】. This email will provide you with the **learning process and important notes** for the initial study of "One Student One Chip." If you do not receive it, please first check your 🗑 **spam folder**. If you still do not receive it after a few hours, please provide feedback on the issue.
-
-::: tip 
-The email is a new feature. Participants who registered before 15:00 on July 8, 2024, will not receive the email. These participants are successfully registered and it will not affect their subsequent learning.
-:::
 
 ## 🚩 Starting
 
@@ -71,16 +48,12 @@ After registration, you can start learning "One Student One Chip"! You now need 
 <br>
 
 <el-row justify="center">
-    <el-button size="large"
-                type="primary"
-                class="custom-button"
-                @click="jumpToCourseHome">😎 Start learning "One Student One Chip"
-    </el-button>
+    <el-button size="large" type="primary" class="custom-button" @click="jumpToCourseHome">😎 Start Learning "One Student One Chip"</el-button>
 </el-row>
 
 <br>
 
-## 🔰 Subsequent Profcess
+## 🔰 Subsequent Process
 
 After completing the **pre-learning phase** tasks, you will be able to see the **admission defense application entry**. The subsequent process is as follows:
 
@@ -92,46 +65,38 @@ After completing the **pre-learning phase** tasks, you will be able to see the *
    <span style="color: #e81224;">:x: Defense Not Passed</span>, you will need to address the issues according to the assistant’s feedback, return to step 1, and reapply for the defense.
 4. Join the formal learning group.
 
-## ❓ Problem Feedback
-If you encounter issues that you cannot resolve, please join the WeChat group to provide feedback. You should only join this group if you experience problems during registration (e.g., encountering a bug while filling out the form, not receiving the email, having questions about the email notifications, etc.). Note that this group is **not** for learning-related questions.
-
-<img src="./images/wxproblem.png" width="200px" height="200px" style="display: block; margin-left: auto;
-margin-right: auto"/>
-
 <!-- ---------------------------------------------- -->
 
 <ClientOnly><bottom-nav-bar/></ClientOnly>
-
 
 <!-- ---------------------  phone-bottom-bar  ----------------------- -->
 <div class="phone-bottom-bar">
     <a href="https://ysyx.oscc.cc/" class="phone-bottom-button">
         <span class="emoji" style="padding-left: 4px; margin-bottom: -2px">◀</span>
-        <span class="text">返回主页</span>
+        <span class="text">Back to Home</span>
     </a>
     <a href="#understandPlan" class="phone-bottom-button">
         <span class="emoji" style="padding-left: 4px; margin-bottom: -2px">🧐</span>
-        <span class="text">了解计划</span>
+        <span class="text">Learn this project</span>
     </a>
     <a href="#entryForm" class="phone-bottom-button">
         <span class="emoji" style="padding-left: 4px; margin-bottom: -2px">🔥</span>
-        <span class="text">报名参加</span>
+        <span class="text">Signup</span>
     </a>
-    <a  href="https://ysyx.oscc.cc/docs/2306/preliminary/preliminary.html" target="_blank"
-        class="phone-bottom-button">
+    <a href="https://ysyx.oscc.cc/docs/2306/preliminary/preliminary.html" target="_blank" class="phone-bottom-button">
         <span class="emoji" style="padding-left: 4px; margin-bottom: -2px">🚀</span>
-        <span class="text">开始学习</span>
+        <span class="text">Start</span>
     </a>
 </div>
 
 <!-- -------------------------------------------------- -->
 <script setup>
     const jumpToEntryForm = () => {
-        window.open("https://fa45epzd9c7.feishu.cn/share/base/form/shrcn96EZ1pUYKJXtKdCgDhtsUd", "_blank");
+        window.open("https://docs.google.com/forms/d/e/1FAIpQLSdKaNiHEzBz9Ti38zNyq66HhTpb2QPPn7NeboJDEWAyozUoAw/viewform", "_blank");
     }
 
     const jumpToCourseHome = () => {
-        window.open("https://ysyx.oscc.cc/docs/2306/preliminary/preliminary.html", "_blank");
+        window.open("https://ysyx.oscc.cc/docs/en/2306/preliminary/preliminary.html", "_blank");
     }
 </script>
 
@@ -144,14 +109,8 @@ margin-right: auto"/>
                 qrcodeRenderAs: "svg",
                 qrcodeMargin: 3,
                 qrcodeLevel: "L",
-                qrcodeQQGroup1: "https://qm.qq.com/q/sNcWv7KEiA",
-                qrcodeQQGroup2: "https://qm.qq.com/q/BVzmGhz0v8",
-                qrcodeQQGroup3: "https://qm.qq.com/q/ZXRVu5DYGe",
-                qrcodeQQGroup4: "https://qm.qq.com/q/rQGNQqLbOg",
-                qrcodeQQGroup5: "https://qm.qq.com/q/FaKCzlkLLi",
-                qrcodeQQGroup6: "https://qm.qq.com/q/cYoH3sQizu",
-                qrcodeSignup: "https://www.wenjuan.com/s/YRBnamK",
-                qrCodePreliminary: "https://docs.qq.com/doc/DSU1teVZLR1hDcG9P",
+                qrcodeDiscord: "https://discord.com/invite/7HJx7UWd",
+                qrcodeTelegram: "https://t.me/+iqdvAT3BOHZhYTk1",
             }
         },
         components: {
@@ -185,7 +144,7 @@ margin-right: auto"/>
         color: #f0f8ff; /* 鼠标悬停时的文字颜色 */
     }
 
-        .phone-bottom-button {
+    .phone-bottom-button {
         /* background-color: #ff9100;  */
         color: #2b2b2b;
         /* border: 1px groove #616161; */
@@ -246,4 +205,3 @@ margin-right: auto"/>
         font-weight: bold;
     }
 </style>
-
