@@ -6,9 +6,9 @@ export default hopeTheme({
     // Theme Basic
     hostname: "https://ysyx.oscc.cc",
     author: {
-        name: "Miao Yuyang",
-        url: "https://myyerrol.github.io",
-        email: "myyerrol@126.com"
+        name: "Team YSYX",
+        url: "https://ysyx.oscc.cc",
+        email: "ysyx@bosc.ac.cn"
     },
     favicon: "/res/images/logo/ysyx.png",
 
@@ -67,7 +67,6 @@ export default hopeTheme({
             navbar: zhNavbar,
             sidebar: zhSidebar,
             footer: "GPL协议 | 版权所有 © 2023-现在 一生一芯团队",
-            // footer: "GPL协议 | 版权所有 © 2023-现在 一生一芯团队<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=tt&d=NStOp2ovvf-01kSmytqAw3uDAcLnPiCun5ot-wTg86k&co=2d78ad&cmo=3acc3a&cmn=ff5353&ct=ffffff'></script>",
             metaLocales: {
                 editLink: "在 GitHub 上编辑此页",
             }
@@ -76,7 +75,6 @@ export default hopeTheme({
             navbar: enNavbar,
             sidebar: enSidebar,
             footer: "GPL License | Copyright © 2023-Team YSYX",
-            // footer: "GPL License | Copyright © 2023-Team YSYX<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=tt&d=NStOp2ovvf-01kSmytqAw3uDAcLnPiCun5ot-wTg86k&co=2d78ad&cmo=3acc3a&cmn=ff5353&ct=ffffff'></script>",
             metaLocales: {
                 editLink: "Edit this page on GitHub",
             }
@@ -88,7 +86,7 @@ export default hopeTheme({
         blog: false,
         comment: false,
         copyright: {
-            author: "myyerrol",
+            author: "Team YSYX",
             license: "GPL-3.0",
             triggerWords: 1,
             global: true,
