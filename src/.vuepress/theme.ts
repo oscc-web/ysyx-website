@@ -38,10 +38,10 @@ export default hopeTheme({
     nextLink: true,
     // Title
     titleIcon: true,
-    pageInfo: false,
+    pageInfo: ["Author", "Original", "Date", "PageView", "ReadingTime", "Category", "Tag"],
     // Meta
     lastUpdated: true,
-    contributors: true,
+    contributors: false,
     editLink: false,
     docsRepo: "repo",
     docsBranch: "main",

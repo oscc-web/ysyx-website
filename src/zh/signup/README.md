@@ -1,6 +1,7 @@
 ---
 sidebar: false
 title: 报名参与
+author: myyerrol
 ---
 
 感谢参与“一生一芯”计划！😊 以下是“一生一芯”**从报名到正式入学**的流程：
