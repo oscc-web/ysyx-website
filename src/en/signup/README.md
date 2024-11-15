@@ -109,7 +109,7 @@ After completing the **pre-learning phase** tasks, you will be able to see the *
                 qrcodeRenderAs: "svg",
                 qrcodeMargin: 3,
                 qrcodeLevel: "L",
-                qrcodeDiscord: "https://discord.gg/bBAsCwyH",
+                qrcodeDiscord: "https://discord.gg/Y9PGkCuU4U",
                 qrcodeTelegram: "https://t.me/+iqdvAT3BOHZhYTk1",
             }
         },
