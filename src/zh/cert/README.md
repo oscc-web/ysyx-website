@@ -2,6 +2,10 @@
 title: "证书申请"
 ---
 
+## 阶段考核证书
+
+“一生一芯”项目组为正式学习的学员提供阶段性考核证书。目前完成 C 阶段学习的学员们可以申请 C 阶段考核，并在通过后一段时间内收到项目组制作的考核通过证书。项目组所有发放的证书均可访问此链接公开查询：[https://fa45epzd9c7.feishu.cn/share/base/query/shrcnJAgaE4ZG4y5OsB1iAcwyjc](https://fa45epzd9c7.feishu.cn/share/base/query/shrcnJAgaE4ZG4y5OsB1iAcwyjc)
+
 ## 实习证明
 
 “一生一芯”项目组为入职开源芯片研究院的实习生提供实习证明，实习生实习满3个月可申请实习证明，实习证明开具请下载附件1，填写并通过导师审核签字后，可提交至项目组盖章。（模板仅供参考，大家可以根据实际需要修改）。
