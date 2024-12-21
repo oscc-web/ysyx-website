@@ -4,7 +4,11 @@ title: "证书申请"
 
 ## 阶段考核证书
 
-“一生一芯”项目组为正式学习的学员提供阶段性考核证书。目前完成 C 阶段学习的学员们可以申请 C 阶段考核，并在通过后一段时间内收到项目组制作的考核通过证书。项目组所有发放的证书均可访问此链接公开查询：[https://fa45epzd9c7.feishu.cn/share/base/query/shrcnJAgaE4ZG4y5OsB1iAcwyjc](https://fa45epzd9c7.feishu.cn/share/base/query/shrcnJAgaE4ZG4y5OsB1iAcwyjc)
+“一生一芯”项目组为正式学习的学员提供阶段性考核证书。目前完成 C 阶段学习的学员们可以申请 C 阶段考核，并在通过后一段时间内收到项目组制作的考核通过证书。
+
+[C 阶段考核申请入口](https://fa45epzd9c7.feishu.cn/docx/D72DdHB0Vor2Gvxs2Fkc5wzfnCd)
+
+[C 阶段考核证书查询](https://fa45epzd9c7.feishu.cn/share/base/query/shrcnJAgaE4ZG4y5OsB1iAcwyjc)
 
 ## 实习证明
 
