@@ -24,6 +24,9 @@ export const zhNavbar = navbar([
         text: "学习记录",
         link: "https://docs.qq.com/sheet/DT29weHpIRWNnYlFl?tab=BB08J2"
     }, {
+        text: "双周分享",
+        link: "https://bcnlxajen32s.feishu.cn/docx/Ub3odGqTso9KFlxxeSZcStePnyb?from=from_copylink"
+    }, {
         text: "流片&板卡",
         prefix: "/chip/",
         children: [
