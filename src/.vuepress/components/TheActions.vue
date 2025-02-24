@@ -16,6 +16,13 @@
                       font-size:14px;">{{ i18n[prop.lang].pdfDownload }}
             </a>
         </div>
+        <div style="margin-right:35px;">
+            <el-button class="button button-solid"
+                   size="large"
+                   type="info"
+                   @click="jumpToMasterProgram">{{ "硕士招生" }}
+            </el-button>
+        </div>
         <div>
             <el-button class="button"
                    size="large"
@@ -50,6 +57,9 @@
     const jumpToSignup = () => {
         window.location.href = ((prop.lang === "/") ? "" : prop.lang) +
                                "/signup/index.html";
+    }
+    const jumpToMasterProgram = () => {
+        window.location.href = "https://fa45epzd9c7.feishu.cn/docx/FgGRdXeARoDZjExO146cMk6tn6P";
     }
 </script>
 
