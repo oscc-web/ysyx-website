@@ -3,7 +3,7 @@
         <div style="display:flex;
                     flex-direction:column;
                     align-items:center;
-                    margin-right:30px;">
+                    position: relative;">
             <el-button class="button button-solid"
                     size="large"
                     type="default"
@@ -11,12 +11,12 @@
             </el-button>
             <a :href="i18n[prop.lang].pdf"
                target="_blank"
-               style="margin-top:5px;
+               style="bottom:calc(-1em - 14px);
                       font-weight:bold;
-                      font-size:14px;">{{ i18n[prop.lang].pdfDownload }}
+                      position: absolute;">{{ i18n[prop.lang].pdfDownload }}
             </a>
         </div>
-        <div style="margin-right:35px;">
+        <div>
             <el-button class="button button-solid"
                    size="large"
                    type="info"
@@ -80,12 +80,20 @@
         flex-direction: row;
         justify-content: center;
         margin: 1rem 0;
+        column-gap: 35px;
         & button {
-            margin: 0.5rem;
             flex-grow: 1;
             min-width: 8em;
             @media (min-width: 720px) {
                 font-size: 1.2em;
+            }
+        }
+        @media (max-width: 720px) {
+            flex-direction: column;
+            align-items: center;
+            row-gap: 50px;
+            & button {
+                width: 200px;
             }
         }
     }
