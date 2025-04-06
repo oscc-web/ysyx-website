@@ -16,13 +16,14 @@
                       position: absolute;">{{ i18n[prop.lang].pdfDownload }}
             </a>
         </div>
-        <div>
-            <el-button class="button button-solid"
-                   size="large"
-                   type="info"
-                   @click="jumpToMasterProgram">{{ "硕士招生" }}
-            </el-button>
-        </div>
+        <!-- Only for Master Program, Maybe delete this comment/codes later -->
+        <!-- <div> -->
+        <!--     <el-button class="button button-solid" -->
+        <!--            size="large" -->
+        <!--            type="info" -->
+        <!--            @click="jumpToMasterProgram">{{ "硕士招生" }} -->
+        <!--     </el-button> -->
+        <!-- </div> -->
         <div>
             <el-button class="button"
                    size="large"
