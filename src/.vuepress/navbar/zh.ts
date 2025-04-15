@@ -34,7 +34,7 @@ export const zhNavbar = navbar([
             "board/official/"
         ]
     }, {
-        text: "证书申请",
+        text: "证书&简历",
         link: "/cert/"
     }, {
         text: "兴趣小组",

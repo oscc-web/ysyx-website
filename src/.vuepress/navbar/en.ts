@@ -33,7 +33,7 @@ export const enNavbar = navbar([
     //     ]
     // },
     // {
-    //     text: "Certificate",
+    //     text: "Certificate & CV",
     //     link: "/en/cert/"
     // },
     // {
