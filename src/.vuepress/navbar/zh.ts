@@ -22,7 +22,7 @@ export const zhNavbar = navbar([
         link: "https://ysyx.oscc.cc/docs/"
     }, {
         text: "学习记录",
-        link: "https://docs.qq.com/sheet/DT29weHpIRWNnYlFl?tab=BB08J2"
+        link: "https://fa45epzd9c7.feishu.cn/base/Ftq7bp8IhakPHGsN4AIc5xXuncf"
     }, {
         text: "双周分享",
         link: "https://bcnlxajen32s.feishu.cn/docx/Ub3odGqTso9KFlxxeSZcStePnyb?from=from_copylink"

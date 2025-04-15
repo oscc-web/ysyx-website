@@ -22,7 +22,7 @@ export const enNavbar = navbar([
     },
     // {
     //     text: "Study Record",
-    //     link: "https://docs.qq.com/sheet/DT29weHpIRWNnYlFl?tab=BB08J2"
+    //     link: "https://fa45epzd9c7.feishu.cn/base/Ftq7bp8IhakPHGsN4AIc5xXuncf"
     // },
     // {
     //     text: "Tape-Out & Board",
