@@ -51,6 +51,9 @@ export const zhNavbar = navbar([
             ]
         }]
     }, {
+        text: "线下基地招生",
+        link: "https://fa45epzd9c7.feishu.cn/docx/Jdl7d1ZWtoLD6ZxXDdcc7Reonsc"
+    }, {
         text: "联系我们",
         link: "/contact/"
     }
