@@ -319,6 +319,10 @@ https://talent-holding.alibaba.com/campus/qrcode/home?code=NrBxJ0W4t50QxDRQ1kV35
 - 能量补充：工作午餐、各种零食
 - 人文关怀：免费工装、团队周边
 
+**岗位投递直通车：请扫描二维码**
+
+![](/res/images/job/kxy-qrcode.png =150x)
+
 ## 长期招聘岗位
 
 ### 北京微核芯科技有限公司
