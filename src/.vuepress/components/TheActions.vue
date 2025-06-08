@@ -16,19 +16,18 @@
                       position: absolute;">{{ i18n[prop.lang].pdfDownload }}
             </a>
         </div>
-        <!-- Only for Master Program, Maybe delete this comment/codes later -->
-        <!-- <div> -->
-        <!--     <el-button class="button button-solid" -->
-        <!--            size="large" -->
-        <!--            type="info" -->
-        <!--            @click="jumpToMasterProgram">{{ "硕士招生" }} -->
-        <!--     </el-button> -->
-        <!-- </div> -->
         <div>
             <el-button class="button"
                    size="large"
                    type="info"
                    @click="jumpToSignup">{{ i18n[prop.lang].signup }}
+            </el-button>
+        </div>
+        <div>
+            <el-button class="button button-solid"
+                   size="large"
+                   type="info"
+                   @click="jumpToAdvice">{{ "问题反馈" }}
             </el-button>
         </div>
     </div>
@@ -59,8 +58,8 @@
         window.location.href = ((prop.lang === "/") ? "" : prop.lang) +
                                "/signup/index.html";
     }
-    const jumpToMasterProgram = () => {
-        window.location.href = "https://fa45epzd9c7.feishu.cn/docx/FgGRdXeARoDZjExO146cMk6tn6P";
+    const jumpToAdvice = () => {
+        window.location.href = "https://fa45epzd9c7.feishu.cn/share/base/form/shrcnVC245Ha0hGNPmXF9jJMkHc";
     }
 </script>
 
