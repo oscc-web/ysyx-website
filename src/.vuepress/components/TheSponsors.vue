@@ -45,6 +45,7 @@
     import ByteDance from "./sponsors/ByteDance.vue";
     import YouDao from "./sponsors/YouDao.vue";
     import CRVA from "./sponsors/CRVA.vue";
+    import SUAT from "";
 
     import { onMounted, onUnmounted, ref, shallowRef } from "vue";
 
@@ -100,6 +101,11 @@
         elem: CRVA,
         scale: 1.0,
         link: "http://crva.ict.ac.cn"
+    }, {
+        name: "深圳理工大学",
+        image: "/res/images/logo/suat.png",
+        scale: 1.0,
+        link: "https://www.suat-sz.edu.cn"
     }]);
     const sponsorObj = ref({
         col: 8,
