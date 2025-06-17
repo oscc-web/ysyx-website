@@ -106,6 +106,11 @@
         image: "/res/images/logo/suat.png",
         scale: 1.0,
         link: "https://www.suat-sz.edu.cn"
+    }, {
+        name: "深圳技术大学",
+        image: "/res/images/logo/sztu.png",
+        scale: 1.0,
+        link: "https://www.sztu.edu.cn"
     }]);
     const sponsorObj = ref({
         col: 8,
