@@ -111,6 +111,11 @@
         image: "/res/images/logo/sztu.png",
         scale: 1.0,
         link: "https://www.sztu.edu.cn"
+    }, {
+        name: "太原理工大学",
+        image: "/res/images/logo/tyut.jpg",
+        scale: 1.0,
+        link: "https://www.tyut.edu.cn"
     }]);
     const sponsorObj = ref({
         col: 8,
