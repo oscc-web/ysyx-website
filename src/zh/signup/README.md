@@ -23,9 +23,9 @@ author: myyerrol
 > |:---:|:---:|:---:|:---:|:---:|
 > | <a qrcode-container :href="qrcodeQQGroup5" target="_blank"><qrcode-vue :value="qrcodeQQGroup5" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> | <a qrcode-container :href="qrcodeQQGroup4" target="_blank"><qrcode-vue :value="qrcodeQQGroup4" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> | <a qrcode-container :href="qrcodeQQGroup3" target="_blank"><qrcode-vue :value="qrcodeQQGroup3" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> | <a qrcode-container :href="qrcodeQQGroup2" target="_blank"><qrcode-vue :value="qrcodeQQGroup2" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> | <a qrcode-container :href="qrcodeQQGroup1" target="_blank"><qrcode-vue :value="qrcodeQQGroup1" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> |
 > | <a :href="qrcodeQQGroup5" target="_blank">513870270</a> | <a :href="qrcodeQQGroup4" target="_blank">884767063</a> | <a :href="qrcodeQQGroup3" target="_blank">621039593</a> | <a :href="qrcodeQQGroup2" target="_blank">528994030</a> | <a :href="qrcodeQQGroup1" target="_blank">663797655</a> |
-> | QQ 6群<el-badge value="已满"></el-badge> | QQ 7群 | | | |
-> | <a qrcode-container :href="qrcodeQQGroup6" target="_blank"><qrcode-vue :value="qrcodeQQGroup6" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> | <a qrcode-container :href="qrcodeQQGroup7" target="_blank"><qrcode-vue :value="qrcodeQQGroup7" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> | | | |
-> | <a :href="qrcodeQQGroup6" target="_blank">958585695</a> | <a :href="qrcodeQQGroup7" target="_blank">765703181</a> | | |
+> | QQ 6群<el-badge value="已满"></el-badge> | QQ 7群<el-badge value="已满"></el-badge> | QQ 8群 | | |
+> | <a qrcode-container :href="qrcodeQQGroup6" target="_blank"><qrcode-vue :value="qrcodeQQGroup6" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> | <a qrcode-container :href="qrcodeQQGroup7" target="_blank"><qrcode-vue :value="qrcodeQQGroup7" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> | <a qrcode-container :href="qrcodeQQGroup8" target="_blank"><qrcode-vue :value="qrcodeQQGroup8" :render-as="qrcodeRenderAs" :margin="qrcodeMargin" :level="qrcodeLevel" /></a> | | |
+> | <a :href="qrcodeQQGroup6" target="_blank">958585695</a> | <a :href="qrcodeQQGroup7" target="_blank">765703181</a> | <a :href="qrcodeQQGroup8" target="_blank">864637558</a> | |
 :::
 
 
@@ -150,6 +150,7 @@ margin-right: auto"/>
                 qrcodeQQGroup5: "https://qm.qq.com/q/FaKCzlkLLi",
                 qrcodeQQGroup6: "https://qm.qq.com/q/cYoH3sQizu",
                 qrcodeQQGroup7: "https://qm.qq.com/q/uTEPRmEZwc",
+                qrcodeQQGroup8: "https://qm.qq.com/q/BYDl12NCAU",
                 qrcodeSignup: "https://www.wenjuan.com/s/YRBnamK",
                 qrCodePreliminary: "https://docs.qq.com/doc/DSU1teVZLR1hDcG9P",
             }
