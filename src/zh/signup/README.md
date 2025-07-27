@@ -130,7 +130,7 @@ margin-right: auto"/>
     }
 
     const jumpToCourseHome = () => {
-        window.open("https://ysyx.oscc.cc/docs/2306/preliminary/preliminary.html", "_blank");
+        window.open("https://ysyx.oscc.cc/docs/", "_blank");
     }
 </script>
 

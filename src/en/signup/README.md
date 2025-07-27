@@ -96,7 +96,7 @@ After completing the **pre-learning phase** tasks, you will be able to see the *
     }
 
     const jumpToCourseHome = () => {
-        window.open("https://ysyx.oscc.cc/docs/en/2306/preliminary/preliminary.html", "_blank");
+        window.open("https://ysyx.oscc.cc/docs/en/", "_blank");
     }
 </script>
 
