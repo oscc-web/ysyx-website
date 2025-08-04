@@ -11,7 +11,10 @@ export const enNavbar = navbar([
             "intro",
             "intro-past",
             "faq",
-            "assistants"
+            {
+              text: "TA Team",
+              link: "https://fa45epzd9c7.feishu.cn/docx/ClBIdKNVIo0n3gxkNGIcizw6nZz"
+            }
         ]
     }, {
         text: "Signup",

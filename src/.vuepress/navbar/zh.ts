@@ -12,7 +12,10 @@ export const zhNavbar = navbar([
             "intro-past",
             "community",
             "faq",
-            "assistants"
+            {
+              text: "助教团队",
+              link: "https://fa45epzd9c7.feishu.cn/docx/ClBIdKNVIo0n3gxkNGIcizw6nZz"
+            }
         ]
     }, {
         text: "报名参与",
