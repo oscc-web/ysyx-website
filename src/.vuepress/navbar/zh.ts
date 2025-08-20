@@ -27,8 +27,8 @@ export const zhNavbar = navbar([
         text: "学习记录",
         link: "https://fa45epzd9c7.feishu.cn/base/Ftq7bp8IhakPHGsN4AIc5xXuncf"
     }, {
-        text: "双周分享",
-        link: "https://bcnlxajen32s.feishu.cn/docx/Ub3odGqTso9KFlxxeSZcStePnyb?from=from_copylink"
+        text: "专题分享",
+        link: "https://fa45epzd9c7.feishu.cn/wiki/MKNowVYskijDGGkpTyQcN8BenIe"
     }, {
         text: "流片&板卡",
         prefix: "/chip/",
