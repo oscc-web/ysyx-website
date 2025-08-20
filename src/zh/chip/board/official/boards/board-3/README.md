@@ -447,7 +447,7 @@ SoC上除了UART外设外，还支持PS/2键盘输入，连接该外设需要先
 ![运行PS/2键盘测试程序](/res/images/board/res/v2p1/app-kdb.png)
 
 ::: info 更新板载烧写器固件
-板载烧写器默认已经提前烧录有系统固件，一般使用是没有问题的，但有时候需要对固件进行更新以修复bug或者添加新的功能，这样就需要更新固件。目前板载烧写器上使用的主控是CH32V103，这个MCU是支持ISP程序更新的，但是需要配合 **WCHISPTool** 一起使用。所以为了更新固件，首先需要安装 **WCHISPTool** 这个软件。同学们可以访问这个 [网址](https://www.wch.cn/download/WCHISPTool_Setup_exe.html) 来下载 **WCHISPTool** 并完成安装。
+板载烧写器默认已经提前烧录有系统固件，一般使用是没有问题的，但有时候需要对固件进行更新以修复bug或者添加新的功能，这样就需要更新固件。目前板载烧写器上使用的主控是CH32V103，这个MCU是支持ISP程序更新的，但是需要配合 **WCHISPTool** 一起使用。所以为了更新固件，首先需要安装 **WCHISPTool** 这个软件。同学们可以访问这个 [网址](https://www.wch.cn/downloads/WCHISPTool_Setup_exe.html) 来下载 **WCHISPTool** 并完成安装。
 
 当按照指示安装完 **WCHISPTool** 后，双击打开该软件，可以看到如下界面：
 
