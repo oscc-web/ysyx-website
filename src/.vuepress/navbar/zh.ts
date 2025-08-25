@@ -13,7 +13,7 @@ export const zhNavbar = navbar([
             "community",
             "faq",
             {
-              text: "助教团队",
+              text: "贡献名单",
               link: "https://fa45epzd9c7.feishu.cn/docx/ClBIdKNVIo0n3gxkNGIcizw6nZz"
             }
         ]
