@@ -27,7 +27,7 @@
             <el-button class="button button-solid"
                    size="large"
                    type="info"
-                   @click="jumpToAdvice">{{ "问题反馈" }}
+                   @click="jumpToAdvice">{{ i18n[prop.lang].feedback }}
             </el-button>
         </div>
     </div>
@@ -40,13 +40,15 @@
             projectInfo: "项目介绍",
             signup: "报名参与",
             pdfDownload: "资料下载",
-            pdf: "/res/files/ysyx.pptx"
+            pdf: "/res/files/ysyx.pptx",
+            feedback: "问题反馈"
         },
         "/en": {
             projectInfo: "Project Info",
             signup: "Signup",
             pdfDownload: "PDF Download",
-            pdf: "/res/files/ysyx-en.pdf"
+            pdf: "/res/files/ysyx-en.pdf",
+            feedback: "Feedback"
         }
     }
 
